@@ -24,17 +24,21 @@ ModalContent.addEventListener("click",(e)=>{
 
 const MenuModalBtn=document.querySelector(".menu-icon")
 const MenuModalContainer=document.querySelector(".MenuModal-container")
+const Menusidebar=document.querySelector(".menusidebar .MenuModal-content")
 const MenuModalContent=document.querySelector(".MenuModal-content")
 
 
 MenuModalBtn.addEventListener("click", (x) => {
     MenuModalContainer.style.display="block";
+    Menusidebar.style.display="none";
+
     x.preventDefault();
 
 });
 
 MenuModalContainer.addEventListener("click",()=>{
     MenuModalContainer.style.display="none";
+    Menusidebar.style.display="block";
 });
 
 MenuModalContent.addEventListener("click",(e)=>{
@@ -53,3 +57,25 @@ MenuModalContent.addEventListener("click",(e)=>{
 //     MenuModalvisiblecontainer.style.height="580px";
 // })
 
+var headerproductmenu=Array.from(document.querySelectorAll(".header-MenuModal-Container .product-menu li"));
+var headerproductmenuopentop=2;
+for (let index = 0; index < headerproductmenu.length; index++) {
+    headerproductmenu[index].addEventListener("mouseover",()=>{
+    headerproductmenuopentop=-(index*38);
+    headerproductmenu[index].querySelector(".menuopen").style.top=`${headerproductmenuopentop}px`
+    headerproductmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
+  })
+
+}
+
+var productmenu=Array.from(document.querySelectorAll(".menusidebar .product-menu li"));
+var productmenuopentop=2;
+for (let index = 0; index < productmenu.length; index++) {
+  productmenu[index].addEventListener("mouseover",()=>{
+    productmenuopentop=-(index*38+1);
+    productmenu[index].querySelector(".menuopen").style.top=`${productmenuopentop}px`;
+    productmenu[index].querySelector(".menuopen").style.height=`${productmenu.length*39.5+2}px`;
+    productmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
+  })
+
+}

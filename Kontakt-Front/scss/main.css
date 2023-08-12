@@ -378,6 +378,8 @@ body {
   background-color: #fff;
   position: relative;
   list-style: none;
+  transition: 5s;
+  padding: 0;
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli {
   padding: 4px 10px;
@@ -386,12 +388,15 @@ body {
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli .menuopen {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 0;
+  height: 590px;
   left: 100%;
-  margin-top: 0;
-  background-color: #fff;
   transition: 0.5s;
+  background-color: #fff;
+}
+.MenuModal-container .MenuModal-content .product-menu .menuli .menuopen .menuopencontent {
+  width: 100%;
+  height: 100%;
   display: none;
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli a:nth-child(1) {
@@ -432,6 +437,9 @@ body {
   background-color: #eeeff2;
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli:hover .menuopen {
+  width: 891px;
+}
+.MenuModal-container .MenuModal-content .product-menu .menuli:hover .menuopen .menuopencontent {
   display: block;
 }
 
@@ -1163,38 +1171,103 @@ a {
   border: 2px solid rgba(0, 0, 0, 0.08);
   background-color: #fff;
   position: relative;
-  max-width: 240.4px;
+  min-width: 219.6;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-#index .Container .roww .menusidebar .productmenuu {
+#index .Container .roww .menusidebar .MenuModal-content {
+  position: relative;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 0px;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+  outline: 0;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu {
   width: 100%;
   margin-bottom: 0;
   background-color: #fff;
-  padding: 0;
   position: relative;
-  visibility: visible;
+  list-style: none;
+  padding: 0;
 }
-#index .Container .roww .menusidebar .productmenuu .menuuli {
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli {
+  padding: 4px 10px;
   width: 100%;
-  padding: 10px;
-  position: static;
+  position: relative;
 }
-#index .Container .roww .menusidebar .productmenuu .menuuli a {
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen {
+  position: absolute;
+  width: 0;
+  height: 700px;
+  left: 100%;
+  transition: 0.5s;
+  background-color: #fff;
+  z-index: 999;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen .menuopencontent {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen .menuopencontent ul {
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: flex-start;
+  padding: 0 10px;
+  min-height: 435px;
+  overflow-y: auto;
+  margin: 0;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen .menuopencontent ul li {
+  padding: 14px 10px 15px;
+  width: calc(25% - 1px);
+  background-color: transparent;
+  border-radius: 0;
+  transition: 0.5s;
+  position: static;
+  margin: 0;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen .menuopencontent ul li a {
+  font-size: 14px;
+  letter-spacing: -0.32px;
+  color: #545353;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen .menuopencontent ul li a .menurightbanner {
+  max-width: 100%;
+  width: auto;
+  float: right;
+  max-height: 360px;
+  padding-bottom: 10px;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli a:nth-child(1) {
   display: flex;
   align-items: center;
+  font-size: 16px;
   text-decoration: none;
 }
-#index .Container .roww .menusidebar .productmenuu .menuuli a .menuuliicon {
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli a:nth-child(1) .menuproducticon {
   width: 30px;
   height: 30px;
-  position: relative;
+  display: flex;
+  align-items: center;
 }
-#index .Container .roww .menusidebar .productmenuu .menuuli a .menuuliicon img {
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli a:nth-child(1) .menuproducticon img {
   width: 22px;
   max-height: 30px;
-  vertical-align: middle;
-  border-style: none;
 }
-#index .Container .roww .menusidebar .productmenuu .menuuli a .menuulititle {
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli a:nth-child(1) span {
+  width: 70%;
   font-size: 14px;
   letter-spacing: -0.32px;
   color: #545353;
@@ -1202,14 +1275,23 @@ a {
   width: 100%;
   position: relative;
 }
-#index .Container .roww .menusidebar .productmenuu .menuuli:after {
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli::after {
   content: "";
   position: absolute;
   width: calc(100% - 85px);
   opacity: 0.1;
   left: 50px;
-  margin-top: 9px;
+  margin-top: 4px;
   border-bottom: 1px solid #253444;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli:hover {
+  background-color: #eeeff2;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli:hover .menuopen {
+  width: 892px;
+}
+#index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli:hover .menuopen .menuopencontent {
+  display: block;
 }
 #index .Container .roww .discountsidebar {
   display: grid;
@@ -1234,7 +1316,7 @@ a {
   gap: 10px;
 }
 #index .Container .roww .discountsidebar .discountsidebartop .discountsidebartopslider .discountsidebartopslidertop {
-  min-width: 645px;
+  min-width: 649.8px;
   border: solid 2px rgba(0, 0, 0, 0.08);
 }
 #index .Container .roww .discountsidebar .discountsidebartop .discountsidebartopslider .discountsidebartopslidertop .carousel-item {
