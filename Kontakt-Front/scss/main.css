@@ -784,7 +784,7 @@ footer .roww:nth-child(2) .copy-right p {
   position: relative;
 }
 #best-seller-similar .daily-discount-inner .shop-slider .owl-carousel .cart-item {
-  width: 247.1px;
+  width: 250px;
   padding: 10px;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
   transition: 0.5s;
@@ -917,15 +917,6 @@ footer .roww:nth-child(2) .copy-right p {
   color: #ff003c;
   -webkit-text-decoration-color: #ff003c !important;
           text-decoration-color: #ff003c !important;
-}
-@font-face {
-  #best-seller-similar .daily-discount-inner .shop-slider .owl-carousel .cart-item .cart-body-top .cart-footer p span:first-child {
-    font-family: "JISAZNRegular";
-    src: url("../../assets/fonts/jaznr.ttf");
-    src: url("../../assets/fonts/jaznr.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/jaznr.woff") format("woff"), url("../../assets/fonts/jaznr.ttf") format("truetype"), url("../../assets/fonts/jaznr.svg#jaznr") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
 }
 #best-seller-similar .daily-discount-inner .shop-slider .owl-carousel .cart-item .cart-body-top .cart-footer p span:first-child small {
   font-size: 80%;
@@ -1596,12 +1587,14 @@ a {
   padding: 0;
 }
 #index .Container .roww .discountsidebar .discountsidebartop .discountsidebartopright #daily-offer .offer-card-body .owl-carousel .item .dailyofferslideprice .gridprice span small {
+  font-family: JISAZNRegular;
   font-size: 80%;
   font-weight: 400;
 }
 #index .Container .roww .discountsidebar .discountsidebartop .discountsidebartopright #daily-offer .offer-card-body .owl-carousel .item .dailyofferslideprice .gridprice .nprice {
   color: #ff003c;
   font-weight: bold !important;
+  text-decoration: none;
 }
 #index .Container .roww .discountsidebar .discountsidebartop .discountsidebartopright #daily-offer .offer-card-body .owl-carousel .item .dailyofferslideprice .cart-button {
   padding-left: 5px;
