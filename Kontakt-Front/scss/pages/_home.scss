@@ -12,12 +12,14 @@
             grid-gap: 12px;
             align-items: stretch;
             margin-bottom: 0;
+
             .menusidebar {
                 border: 2px solid rgba(0, 0, 0, .08);
                 background-color: #fff;
                 position: relative;
                 min-width: 219.6;
                 height: fit-content;
+
                 .MenuModal-content {
                     position: relative;
                     display: flex;
@@ -31,6 +33,7 @@
                     background-clip: padding-box;
                     border-radius: 0.3rem;
                     outline: 0;
+
                     .product-menu {
                         width: 100%;
                         margin-bottom: 0;
@@ -38,13 +41,14 @@
                         position: relative;
                         list-style: none;
                         padding: 0;
-                
-             
-            
+
+
+
                         .menuli {
                             padding: 4px 10px;
                             width: 100%;
                             position: relative;
+
                             .menuopen {
                                 position: absolute;
                                 width: 0;
@@ -53,72 +57,72 @@
                                 transition: 0.5s;
                                 background-color: #fff;
                                 z-index: 999;
-                      
-                    
-            
-                                .menuopencontent{
+
+
+
+                                .menuopencontent {
                                     width: 100%;
                                     height: 100%;
                                     display: none;
 
-                                ul{
-                                    background-color: #fff;
-                                    display: flex;
-                                    width: 100%;
-                                    flex-wrap: wrap;
-                                    height: 100%;
-                                    align-content: flex-start;
-                                    padding: 0 10px;
-                                    min-height: 435px;
-                                    overflow-y: auto;
-                                    margin: 0;
-
-                                    li{
-                                        padding: 14px 10px 15px;
-                                        width: calc(100%/4 - 1px);
-                                        background-color: transparent;
-                                        border-radius: 0;
-                                        transition: .5s;
-                                        position: static;
+                                    ul {
+                                        background-color: #fff;
+                                        display: flex;
+                                        width: 100%;
+                                        flex-wrap: wrap;
+                                        height: 100%;
+                                        align-content: flex-start;
+                                        padding: 0 10px;
+                                        min-height: 435px;
+                                        overflow-y: auto;
                                         margin: 0;
 
-                                        a{
-                                            font-size: 14px;
-                                            letter-spacing: -.32px;
-                                            color: #545353;
+                                        li {
+                                            padding: 14px 10px 15px;
+                                            width: calc(100%/4 - 1px);
+                                            background-color: transparent;
+                                            border-radius: 0;
+                                            transition: .5s;
+                                            position: static;
+                                            margin: 0;
 
-                                            .menurightbanner {
-                                                max-width: 100%;
-                                                width: auto;
-                                                float: right;
-                                                max-height: 360px;
-                                                padding-bottom: 10px;
+                                            a {
+                                                font-size: 14px;
+                                                letter-spacing: -.32px;
+                                                color: #545353;
+
+                                                .menurightbanner {
+                                                    max-width: 100%;
+                                                    width: auto;
+                                                    float: right;
+                                                    max-height: 360px;
+                                                    padding-bottom: 10px;
+                                                }
                                             }
                                         }
                                     }
                                 }
-                                }
-                              
+
                             }
-            
+
                             a:nth-child(1) {
                                 display: flex;
                                 align-items: center;
                                 font-size: 16px;
                                 text-decoration: none;
-            
+
                                 .menuproducticon {
                                     width: 30px;
                                     height: 30px;
                                     display: flex;
                                     align-items: center;
-            
+
                                     img {
                                         width: 22px;
                                         max-height: 30px
                                     }
                                 }
-            
+
                                 span {
                                     width: 70%;
                                     font-size: 14px;
@@ -128,10 +132,10 @@
                                     width: 100%;
                                     position: relative;
                                 }
-            
+
                             }
                         }
-            
+
                         .menuli::after {
                             content: "";
                             position: absolute;
@@ -141,13 +145,14 @@
                             margin-top: 4px;
                             border-bottom: 1px solid #253444;
                         }
-            
+
                         .menuli:hover {
                             background-color: #eeeff2;
+
                             .menuopen {
                                 width: 892px;
-            
-                                .menuopencontent{
+
+                                .menuopencontent {
                                     display: block;
                                 }
                             }
@@ -268,8 +273,333 @@
                     }
 
                     .discountsidebartopright {
-                        background-color: burlywood;
-                        height: 520px;
+                        height: 560px;
+                        height: fit-content;
+                        overflow: hidden;
+
+                        #daily-offer {
+                            margin: 0;
+                            padding: 0;
+                            border: 2px solid rgba(0, 0, 0, .08);
+                            background-color: #fff;
+                            height: 100%;
+                            padding-bottom: 39px;
+                            position: relative;
+
+                            .offer-card-body {
+                                margin: 15px 10px;
+
+                                .label {
+                                    margin: 0;
+                                    padding: 0;
+
+                                    .head1 {
+                                        font-size: 20px;
+                                        font-weight: 700;
+                                        text-align: center;
+                                        margin-bottom: .5rem;
+                                        color: #282828;
+                                        padding: 0;
+                                    }
+                                }
+
+                                .time {
+                                    display: flex;
+                                    justify-content: center;
+                                    padding: 0;
+                                    margin: 0;
+
+                                    li {
+                                        text-align: center;
+                                        padding: 5px 20px;
+                                        background-color: #fff;
+                                        font-size: 10px;
+                                        color: #323232;
+                                        position: relative;
+                                        margin: 0;
+
+                                        p {
+                                            font-size: 16px;
+                                            margin-bottom: 0;
+                                        }
+                                    }
+
+                                    li:after {
+                                        content: "";
+                                        position: absolute;
+                                        border: .1px solid #777;
+                                        height: 35%;
+                                        top: 33%;
+                                        right: 0;
+                                    }
+
+                                    li:last-child:after {
+                                        border: none;
+                                    }
+                                }
+
+                                .owl-carousel {
+                                    .item {
+                                        .lbl-percentage-grid-2022 {
+                                            top: -6px;
+                                            position: absolute;
+                                            width: 100% !important;
+                                            left: 0;
+
+                                            .lbl-badge-2022 {
+                                                border-width: 1px;
+                                                border-style: solid;
+                                                border-color: rgb(0, 153, 204);
+                                                border-image: initial;
+                                                background: #fff;
+                                                border-radius: 4px;
+                                                display: inline-block;
+                                                width: auto;
+                                                margin-right: 2px;
+
+                                                p {
+                                                    color: rgb(0, 153, 204);
+                                                    font-size: 10px;
+                                                    font-weight: 500;
+                                                    padding: 1px 6px;
+                                                    margin: 0;
+                                                }
+                                            }
+
+
+                                            .lbl-badge-2022-faizsiz {
+                                                border: 1px solid #ff023c;
+
+                                                p {
+                                                    color: #ff023c;
+                                                }
+                                            }
+
+
+                                            .lbl-badge-2022-topsatilan {
+                                                border: 1px solid #9c3;
+
+                                                p {
+                                                    color: #9c3;
+                                                }
+                                            }
+                                        }
+
+                                        .img-holder {
+                                            width: 80%;
+                                            margin: 0 auto;
+                                            padding-top: 100%;
+                                            position: relative;
+
+                                            a {
+                                                margin: 10px auto;
+                                                font-size: 14px;
+                                                font-weight: 700;
+                                                text-align: center;
+                                                color: #282828;
+                                                max-width: 80%;
+                                                height: 40px;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                display: -webkit-box;
+                                                -webkit-box-orient: vertical;
+                                                -webkit-line-clamp: 2;
+                                                line-height: 20px;
+                                                max-height: 40;
+                                                margin: 0;
+                                                height: 0;
+                                                padding: 0;
+                                                text-decoration: none;
+
+                                                img {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    object-fit: contain;
+                                                    object-position: center center;
+                                                }
+                                            }
+                                        }
+
+                                        a {
+                                            margin: 10px auto;
+                                            font-size: 14px;
+                                            font-weight: 700;
+                                            text-align: center;
+                                            color: #282828;
+                                            max-width: 80%;
+                                            height: 40px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                            -webkit-box-orient: vertical;
+                                            -webkit-line-clamp: 2;
+                                            line-height: 20px;
+                                            max-height: 40;
+                                            text-decoration: none;
+                                        }
+
+                                        .dailyofferslideprice {
+                                            display: flex;
+                                            justify-content: space-around;
+                                            align-items: center;
+                                            padding: 15px 0;
+                                            border-top: 1px solid #f0f1f2;
+                                            border-bottom: 1px solid #f0f1f2;
+                                            position: relative;
+
+                                            .gridprice {
+                                                margin: 0;
+                                                padding: 0;
+
+                                                span {
+                                                    text-decoration: line-through;
+                                                    font-weight: normal;
+                                                    text-decoration-color: #ff003c !important;
+                                                    margin: 0;
+                                                    padding: 0;
+
+                                                    small {
+                                                        font-size: 80%;
+                                                        font-weight: 400;
+                                                    }
+                                                }
+
+                                                .nprice {
+                                                    color: #ff003c;
+                                                    font-weight: bold !important;
+                                                }
+
+
+                                            }
+
+                                            .cart-button {
+                                                padding-left: 5px;
+                                                width: 50%;
+                                                display: flex;
+                                                margin: 0;
+
+                                                .btn-add-to-cart {
+                                                    cursor: pointer;
+                                                    background-color: #9c3;
+                                                    border-radius: 4px;
+                                                    border: none;
+                                                    font-weight: 700;
+                                                    text-align: center;
+                                                    color: #fff;
+                                                    transition: .5s;
+                                                    position: relative;
+                                                    width: 95px !important;
+                                                    height: 30px !important;
+                                                    font-size: 14px;
+                                                    margin: 0 auto;
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .owl-nav {
+                                        position: absolute;
+                                        top: 0%;
+                                        left: 0;
+                                        right: 0;
+                                        margin-top: 2px;
+                                        text-align: center;
+                
+                
+                
+                                        .owl-prev {
+                                            position: absolute;
+                                            z-index: 1;
+                                            top: 80px;
+                                            left: -10px;
+                                            height: 40px;
+                                            width: 40px;
+                                            background-color: transparent;
+                                        }
+                
+                                        .owl-next {
+                                            position: absolute;
+                                            z-index: 1;
+                                            top: 80px;
+                                            right: -10px;
+                                            height: 40px;
+                                            width: 40px;
+                                            background-color: transparent;
+                                     
+                                        }
+                                    }
+
+                                    .owl-dots {
+                                        text-align: center;
+                                        -webkit-tap-highlight-color: transparent;
+                                        margin-top: 10px !important;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        .owl-dot {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            outline: none;
+                                            width: 15px;
+                                            zoom: 1;
+
+                                            span {
+                                                width: 10px;
+                                                height: 10px;
+                                                margin: 5px 7px;
+                                                display: block;
+                                                transition: opacity .2s ease;
+                                                border-radius: 30px;
+                                                background: #869791;
+                                                flex: 0 0 auto;
+                                                height: 8px;
+                                                width: 8px;
+
+
+                                            }
+                                        }
+
+                                        .owl-dot.active {
+                                            span {
+                                                background-color: red;
+                                            }
+                                        }
+
+                                        .owl-dot:hover {
+                                            span {
+                                                background-color: red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .all-offers {
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: #f0f1f2;
+                                padding: 10px;
+                                display: flex;
+                                transition: .5s;
+
+                                a {
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    text-align: center;
+                                    color: #282828;
+                                    margin: 0 auto;
+                                    transition: .5s;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
 
                     }
                 }
@@ -317,6 +647,7 @@
         position: relative;
         max-width: 1500px;
         margin: 50px auto 0;
+
 
         .partnerheader {
             margin-bottom: 10px;
@@ -379,6 +710,7 @@
                         right: 0;
                         margin-top: 2px;
                         text-align: center;
+
 
 
                         .owl-prev {

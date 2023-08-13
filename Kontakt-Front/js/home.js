@@ -53,17 +53,6 @@ function nextpartnerfunction() {
 
 }
 
-
-//----------------------------------------------------------------------------------------
-
-//partner slider setinterval
-
-
-
-
-
-
-
 //-----------------------topsellerdə active category dəyişməsi--------------------------------------------------
 var topselleritemslink = document.querySelectorAll(".round-edge-tab .nav-item  .nav-link");
 var topselleritems = Array.from(document.querySelectorAll(".round-edge-tab .nav-item"));

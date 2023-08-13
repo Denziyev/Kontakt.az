@@ -61,6 +61,7 @@ var headerproductmenu=Array.from(document.querySelectorAll(".header-MenuModal-Co
 var headerproductmenuopentop=2;
 for (let index = 0; index < headerproductmenu.length; index++) {
     headerproductmenu[index].addEventListener("mouseover",()=>{
+        console.log(index)
     headerproductmenuopentop=-(index*38);
     headerproductmenu[index].querySelector(".menuopen").style.top=`${headerproductmenuopentop}px`
     headerproductmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
@@ -72,7 +73,8 @@ var productmenu=Array.from(document.querySelectorAll(".menusidebar .product-menu
 var productmenuopentop=2;
 for (let index = 0; index < productmenu.length; index++) {
   productmenu[index].addEventListener("mouseover",()=>{
-    productmenuopentop=-(index*38+1);
+    console.log(index)
+    productmenuopentop=-(index*38);
     productmenu[index].querySelector(".menuopen").style.top=`${productmenuopentop}px`;
     productmenu[index].querySelector(".menuopen").style.height=`${productmenu.length*39.5+2}px`;
     productmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
