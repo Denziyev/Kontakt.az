@@ -57,27 +57,47 @@ MenuModalContent.addEventListener("click",(e)=>{
 //     MenuModalvisiblecontainer.style.height="580px";
 // })
 
-var headerproductmenu=Array.from(document.querySelectorAll(".header-MenuModal-Container .product-menu li"));
+var headerproductmenu=Array.from(document.querySelectorAll(".header-MenuModal-Container .product-menu>li"));
 var headerproductmenuopentop=2;
 for (let index = 0; index < headerproductmenu.length; index++) {
     headerproductmenu[index].addEventListener("mouseover",()=>{
-        console.log(index)
-    headerproductmenuopentop=-(index*38);
-    headerproductmenu[index].querySelector(".menuopen").style.top=`${headerproductmenuopentop}px`
-    headerproductmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
+      headerproductmenuopentop=-((index)*38+1);
+      headerproductmenu[index].querySelector(".menuopen").style.top=`${headerproductmenuopentop}px`;
+      headerproductmenu[index].querySelector(".menuopen").style.height=`${(headerproductmenu.length)*38+27}px`;
+      headerproductmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
   })
 
 }
 
-var productmenu=Array.from(document.querySelectorAll(".menusidebar .product-menu li"));
-var productmenuopentop=2;
+var productmenu=Array.from(document.querySelectorAll(".menusidebar .product-menu>li"));
+
+var productmenuopentop=0;
 for (let index = 0; index < productmenu.length; index++) {
   productmenu[index].addEventListener("mouseover",()=>{
-    console.log(index)
-    productmenuopentop=-(index*38);
+  
+    productmenuopentop=-((index)*46+1);
     productmenu[index].querySelector(".menuopen").style.top=`${productmenuopentop}px`;
-    productmenu[index].querySelector(".menuopen").style.height=`${productmenu.length*39.5+2}px`;
+    productmenu[index].querySelector(".menuopen").style.height=`${(productmenu.length)*46+27}px`;
     productmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
   })
 
 }
+
+
+//-----------------------------------------------------------------------
+var  headertop=document.querySelector(".header-top");
+var headerbottom=document.querySelector(".header-bottom");
+
+
+    window.onscroll = function() {myFunction()};
+function myFunction() {
+    if (window.pageYOffset > headertop.offsetHeight) {
+      headerbottom.style.position="fixed"
+      headerbottom.style.borderBottom="2px solid rgba(0, 0, 0, .08)"
+      headerbottom.style.width="100%"
+    } else {
+        headerbottom.style.position="initial"
+    }
+  }
+
+  //-----------------------------------------------------------------------------
