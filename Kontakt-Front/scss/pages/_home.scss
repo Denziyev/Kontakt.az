@@ -45,8 +45,9 @@
 
 
                         .menuli {
-                            padding: 4px 10px;
+                            padding: 8px 10px;
                             width: 100%;
+                          
                             position: relative;
 
                             .menuopen {
@@ -82,9 +83,53 @@
                                             width: calc(100%/4 - 1px);
                                             background-color: transparent;
                                             border-radius: 0;
-                                            transition: .5s;
+                                      
                                             position: static;
                                             margin: 0;
+
+                                            .menulicontainer{
+                                                margin: 1px 0;
+                                                margin-bottom: 10px;
+                                                .menuliparent_a{
+                                                    font-size: 14px;
+                                                    letter-spacing: -0.32px;
+                                                    color: #545353;
+                                                    font-weight: 700;
+                                                    padding: 3px 0;
+                                                    text-decoration: none;
+                                                    display: block;
+
+                                                    span{
+                                                        width: 70%;
+                                                        font-size: 14px;
+                                                        letter-spacing: -0.32px;
+                                                        color: #545353;
+                                                       margin: 0;
+                                                       padding: 0;
+                                                        width: 100%;
+                                                        position: relative;
+                                                    }
+
+                                                    svg{
+                                                        transform: rotate(180deg);
+                                                        width: 15px;
+                                                        margin-left: auto;
+                                                        flex: 0 0 auto;
+                                                        display: none;
+                                                        overflow: hidden;
+                                                    }
+                                                }
+
+                                                .subsub_a{
+                                                    font-size: 14px;
+                                                    letter-spacing: -0.32px;
+                                                    color: #545353;
+                                                    text-decoration: none;
+                                                    display: block;
+                                                    padding: 1px 0;
+                                                    text-align: left;
+                                                }
+                                            }
 
                                             a {
                                                 font-size: 14px;
@@ -142,8 +187,12 @@
                             width: calc(100% - 85px);
                             opacity: .1;
                             left: 50px;
-                            margin-top: 4px;
+                            margin-top: 9px;
                             border-bottom: 1px solid #253444;
+                        }
+
+                        .menuli:last-child::after{
+                            display: none;
                         }
 
                         .menuli:hover {
