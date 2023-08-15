@@ -2108,9 +2108,9 @@
                                                 <option value="+996" data-country="kg">[kg] +996</option>
                                                 <option value="+998" data-country="uz">[uz] +998</option>
                                             </select>
-                                            <h5 class="select_header"><img
+                                            <h5 class="select_header selecttheaderr"><img
                                                     src="https://kontakt.az/wp-content/uploads/flags/az.svg"> +994</h5>
-                                            <div class="select_body_holder">
+                                            <div class="select_body_holder  myselect_body_holder">
                                                 <ul class="select_body">
                                                     <li data-value="+994" data-disabled="false"><img
                                                             src="https://kontakt.az/wp-content/uploads/flags/az.svg">
@@ -2876,10 +2876,10 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <input oninput="wa_constrainUserInput(this.id)"
-                                            style="width: 75%;margin-left:0%" maxlength="7" type="number"
+                                        <input 
+                                            style="width: 62%;margin-left:0%" maxlength="7" type="number"
                                             placeholder="Whatsapp nömrəniz..."
-                                            class="ocinputnumber ocinput form-control form-control-lg"
+                                            class="ocinputnumber myphonee  form-control form-control-lg"
                                             name="wtsp_mobile" id="wtsp_mobile" inputmode="text">
                                     </div>
                                 </div>
@@ -2912,57 +2912,7 @@
                         <img class="lazy" src="" data-src="" alt="">
                     </div>
                 </div>
-                <script>
-                            
-                    function kontakt_wpcallreq_full(){
-                        jQuery("#wtsp_result").hide();
-                        wtsp_name= jQuery("#wtsp_name").val();
-                        wtsp_prefix= jQuery("#wtsp_mobile_prefix").val();
-                        wtsp_mobile= jQuery("#wtsp_mobile").val();
-                        wtsp_country= jQuery("#wtsp_country").val();
-                        wtsp_products= jQuery("#wtsp_products").val();
-                        jQuery.ajax( {
-                            url: kontakt_cart.url+"/wpcallreq",
-                            method: 'POST',
-                            beforeSend: function ( xhr ) {
-                                xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
-                            },
-                            data:{
-                                wtsp_name: wtsp_name,
-                                wtsp_country: wtsp_country,
-                                wtsp_prefix: wtsp_prefix,
-                                wtsp_mobile: wtsp_mobile,
-                                wtsp_products: wtsp_products,
-                            },
-                        } ).done( function ( response ) {
-                            if(response[0]=='error'){
-                                jQuery("#wtsp_result").addClass("btn-danger");jQuery("#wtsp_result").removeClass("btn-success");
-                                jQuery("#wpcaler_sub").removeAttr("disabled");
-                                jQuery("#wtsp_result").html(response[1]);
-                                jQuery("#wtsp_result").show();
-                            }else{
-                                jQuery("#wtsp_result").hide();
-                                
-                                window.location.href='https://kontakt.az/video-meslehetci/?received=bjdVKzFLOWppZExhelZzSmtMcGhRVUE3MjRIR0U5a2tIMWVmOHU1b3hUdz0=';
-                            }
-                        } );
-                    }
-        
-                    jQuery("#wtsp_country").on("change",function(){
-                        if(jQuery(this).val()!='+994'){
-                            jQuery(".selectHolderpref").hide();
-                            jQuery(".ocinputnumber").addClass("ocinputnumber_xl");
-                            jQuery(".ocinputnumber").attr("maxlength",20);
-                            jQuery("#wtsp_mobile").css('max-width','calc(100% - 88px)');
-                        }
-                        else{
-                            jQuery(".ocinputnumber").removeClass("ocinputnumber_xl");
-                            jQuery(".selectHolderpref").show();
-                            jQuery(".ocinputnumber").attr("maxlength",7);
-                            jQuery("#wtsp_mobile").css('max-width','calc(100% - 183px)');
-                        }
-                    });
-                    </script>
+ 
             </div>
         </section>
     </main>
@@ -3066,5 +3016,6 @@
 </body>
 <script src="../js/Header.js"></script>
 <script src="../js/home.js"></script>
+<script src="../js/videocall.js"></script>
 
 </html>
