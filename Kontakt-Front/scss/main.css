@@ -1338,6 +1338,7 @@ a {
 #index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli {
   padding: 8px 10px;
   width: 100%;
+  max-height: 46px;
   position: relative;
 }
 #index .Container .roww .menusidebar .MenuModal-content .product-menu .menuli .menuopen {
@@ -1989,6 +1990,108 @@ a {
   width: 40;
   height: 40;
 }
+#index #kontakt-tv {
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #253444;
+  width: 100%;
+}
+#index #kontakt-tv .title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+#index #kontakt-tv .title img {
+  width: 67px;
+  height: 58px;
+}
+#index #kontakt-tv .title .head4 {
+  margin-left: 15px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+}
+#index #kontakt-tv .owl-carousel {
+  margin-top: 30px;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+#index #kontakt-tv .owl-carousel .item-video {
+  position: relative;
+  transition: 0.5s;
+}
+#index #kontakt-tv .owl-carousel .item-video .vdo-container {
+  height: 160px;
+}
+#index #kontakt-tv .owl-carousel .item-video .vdo-container a {
+  cursor: auto;
+}
+#index #kontakt-tv .owl-carousel .item-video .vdo-container a .play {
+  content: "";
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff003c;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#index #kontakt-tv .owl-carousel .item-video .vdo-container a .play svg {
+  width: 35px;
+  height: 38px;
+  transform: translate(20px, 20px);
+  transition: 0.5s;
+  overflow: hidden;
+  vertical-align: middle;
+}
+#index #kontakt-tv .owl-carousel .item-video .vdo-container a .play svg path {
+  fill: #fff;
+}
+#index #kontakt-tv .owl-carousel .item-video .vdo-container a img {
+  height: 100%;
+  display: block;
+  width: 100%;
+  border-style: none;
+}
+#index #kontakt-tv .owl-carousel .item-video .title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  overflow: visible;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.24rem;
+  max-height: 2.48rem;
+  transition: 0.5s;
+  box-sizing: border-box;
+}
+
+#whatsap-video-modal-opener {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 1000001 !important;
+  width: 95px;
+}
+#whatsap-video-modal-opener a {
+  text-decoration: none;
+}
+#whatsap-video-modal-opener a img {
+  width: 100%;
+  border-style: none;
+}
 
 #videoCall {
   padding-bottom: 90px;
@@ -2081,6 +2184,13 @@ a {
   border-radius: 4px;
   color: gray;
   padding: 5px 10px;
+}
+#videoCall .roww .videoright .inputarea .videocall-body .form-group .ocinput:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 #videoCall .roww .videoright .inputarea .videocall-body .phonearea {
   margin: 0;
@@ -2283,12 +2393,22 @@ a {
   border-radius: 0.3rem;
   color: gray;
   padding: 5px 10px;
-  width: 62% !important;
+  width: 62%;
   border-radius: 4px;
   background: #fff !important;
-  width: 75%;
   margin-left: 0%;
-  max-width: calc(100% - 183px);
+}
+#videoCall .roww .videoright .inputarea .videocall-body .ocinputnumber:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+#videoCall .roww .videoright .inputarea .videocall-body .ocinputnumber::-webkit-outer-spin-button,
+#videoCall .roww .videoright .inputarea .videocall-body .ocinputnumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 #videoCall .roww .videoright .inputarea .videocall-body .form-group p #wpcaler_sub {
   display: inline-block;
@@ -2323,6 +2443,14 @@ a {
   line-height: 25px;
 }
 
+.actived {
+  max-height: 165px !important;
+}
+
+.notaz {
+  width: 77% !important;
+}
+
 #videocall {
   padding: 0;
   padding-bottom: 90px;
@@ -2342,4 +2470,20 @@ a {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.roww {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding: 0px 20px;
+  margin-bottom: 30px;
+  overflow-x: hidden;
+}
+.roww .owl-carouse div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }

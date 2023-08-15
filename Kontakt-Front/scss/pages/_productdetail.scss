@@ -1,0 +1,17 @@
+.roww{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 0px 20px;
+    margin-bottom: 30px;
+    overflow-x: hidden;  
+
+    .owl-carouse{
+
+        div{
+            width: fit-content;
+        }
+    }
+}

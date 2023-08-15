@@ -97,6 +97,13 @@
                             color: gray;
                             padding: 5px 10px;
                         }
+                        .ocinput:focus {
+                            color: #495057;
+                            background-color: #fff;
+                            border-color: #80bdff;
+                            outline: 0;
+                            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+                        }
                     }
 
                     .phonearea {
@@ -323,14 +330,25 @@
                         border-radius: 0.3rem;
                         color: gray;
                         padding: 5px 10px;
-                        width: 62% !important;
+                        width: 62% ;
                         border-radius: 4px;
                         background: #fff !important;
-                        width: 75%;
                         margin-left: 0%;
-                        max-width: calc(100% - 183px);
+                       
+                      
                     }
-
+                    .ocinputnumber:focus {
+                        color: #495057;
+                        background-color: #fff;
+                        border-color: #80bdff;
+                        outline: 0;
+                        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+                    }
+                    .ocinputnumber::-webkit-outer-spin-button,
+                    .ocinputnumber::-webkit-inner-spin-button {
+                      -webkit-appearance: none;
+                      margin: 0;
+                    }
                     .form-group {
                         p {
                             #wpcaler_sub {
@@ -371,4 +389,14 @@
             }
         }
     }
+}
+
+.actived{
+    max-height: 165px !important;
+}
+
+
+
+.notaz{
+    width: 77% !important;
 }
