@@ -16,10 +16,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" type="text/css" href="path/to/slick.css">
-    <link rel="stylesheet" type="text/css" href="path/to/slick-theme.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
     <title>Kontakt/Detail</title>
 </head>
 
@@ -141,6 +143,78 @@
                         </ul>
                     </div>
                 </div>
+                <!-- <div class="roww" id="sticky_buttons" style="display:none">
+                    <div class="col-md-1" >
+                        <img class="lazy loaded"
+                            src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min-150x150_png.webp"
+                            data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min-150x150_png.webp"
+                            style="width:90%;max-height:60px" data-was-processed="true">
+                    </div>
+                    <div class="col-md-5" style="font-size:12px">
+                        <p style="font-size:14px">iPhone 13 Pro Max 1TB Graphite</p>
+                        <br>
+                        <p class="success">
+                            <img class="skip_lazy"
+                                src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/check.png" alt="">
+                            Məhsul mövcuddur
+                        </p>
+                    </div>
+                    <div class="col-md-2 stickyqiymet">
+                        <div>
+                            <p>qiymət</p>
+                            <p class="gridprice gridprice_cash endirimvar">
+                                <span style="text-decoration:line-through;font-weight:normal">4349.99 <small
+                                        class="azn_span">M</small></span><br><span class="nprice"
+                                    id="price-926004">4149.99 <small class="azn_span">M</small></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 lastcolcta">
+                        <button type="button" class="buttonfull cash btn-mop "
+                            onclick="kontakt_push_cart_modal(926004,1)">
+                            Nağd al
+                        </button>
+                        <button type="button" class="buttonfull partial btn-mop" data-toggle="modal"
+                            data-target="#partial-pay-modal"> Hissə - hissə al </button>
+                        <button class="buttonsvg feedback-action feaheart select-item" data-id="926004"
+                            data-reserve-id="926004" data-mid="TM-DG-SBP-1105-SM-1490" data-price="4149.99">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" fill="white"></rect>
+                                <path
+                                    d="M11.9995 22C11.7381 22 11.4766 21.9532 11.228 21.8604C4.91019 19.4892 1 13.3619 1 9.04564C1 7.00964 1.61226 5.24548 2.76958 3.94416C3.88454 2.69061 5.40368 2 7.04712 2C9.39766 2 10.7363 3.22142 11.5392 4.14069C11.6589 4.27753 11.8228 4.35283 12.0005 4.35283C12.1782 4.35283 12.343 4.27753 12.4626 4.14069C13.2646 3.22233 14.6033 2 16.9538 2C18.5972 2 20.1155 2.69061 21.2304 3.94325C22.3887 5.24456 23 7.00872 23 9.04472C23 10.481 22.57 12.1084 21.7561 13.7513C21.5646 14.1379 21.0951 14.2968 20.7075 14.1049C20.3199 13.9139 20.1615 13.4455 20.353 13.0589C21.0509 11.651 21.4348 10.2248 21.4348 9.04381C21.4348 5.44384 19.18 3.55937 16.9529 3.55937C15.6142 3.55937 14.6235 4.03967 13.6421 5.16466C13.2268 5.64037 12.6284 5.91312 12.0005 5.91312C11.3725 5.91312 10.7741 5.64037 10.3589 5.16466C9.37556 4.04151 8.38581 3.56121 7.04712 3.56121C4.81996 3.56121 2.56518 5.44476 2.56518 9.04564C2.56518 10.8741 3.4647 13.1819 4.97188 15.2179C6.70739 17.5634 9.12513 19.4029 11.7795 20.3993C11.9213 20.4526 12.0787 20.4526 12.2205 20.3993C13.9661 19.7445 15.5709 18.7582 16.9906 17.4688C17.3101 17.1786 17.8054 17.2016 18.0964 17.5202C18.3873 17.8389 18.3643 18.333 18.0448 18.6232C16.4778 20.0457 14.7045 21.1349 12.772 21.8604C12.5225 21.9532 12.261 22 11.9995 22Z"
+                                    fill="#1D1D1B"></path>
+                            </svg> </button>
+                        <button class="buttonsvg feedback-action feascale compare-button" data-id="926004"
+                            data-reserve-id="926004" data-mid="TM-DG-SBP-1105-SM-1490" data-price="4149.99">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_53_606)">
+                                    <rect width="24" height="24" fill="white"></rect>
+                                    <path
+                                        d="M9.63593 15.4195H0.651704C0.433424 15.4195 0.230348 15.311 0.108719 15.1287C-0.0118234 14.9475 -0.0335427 14.7175 0.0500769 14.5168L4.14852 4.75231C4.24735 4.51794 4.47323 4.36169 4.72734 4.35301C4.98255 4.34325 5.2182 4.48539 5.33223 4.71217L10.2191 14.4766C10.3201 14.6784 10.3092 14.9182 10.1909 15.1103C10.0725 15.3023 9.86181 15.4195 9.63593 15.4195ZM1.63125 14.1175H8.58145L4.80119 6.56436L1.63125 14.1175Z"
+                                        fill="#1D1E1C"></path>
+                                    <path
+                                        d="M5.14315 19.8819C2.30768 19.8819 0 17.7291 0 15.0827C0 14.7235 0.292126 14.4316 0.651581 14.4316C1.01104 14.4316 1.30316 14.7235 1.30316 15.0827C1.30316 17.0108 3.02551 18.5798 5.14315 18.5798C7.26079 18.5798 8.98314 17.0108 8.98314 15.0827C8.98314 14.7235 9.27526 14.4316 9.63472 14.4316C9.99417 14.4316 10.2863 14.7235 10.2863 15.0827C10.2874 17.7291 7.9797 19.8819 5.14315 19.8819Z"
+                                        fill="#1D1E1C"></path>
+                                    <path
+                                        d="M18.8568 19.8819C16.0202 19.8819 13.7136 17.7291 13.7136 15.0827C13.7136 14.7235 14.0057 14.4316 14.3652 14.4316C14.7247 14.4316 15.0168 14.7235 15.0168 15.0827C15.0168 17.0108 16.7391 18.5798 18.8568 18.5798C20.9744 18.5798 22.6968 17.0108 22.6968 15.0827C22.6968 14.7235 22.9889 14.4316 23.3483 14.4316C23.7078 14.4316 23.9999 14.7235 23.9999 15.0827C23.9999 17.7291 21.6922 19.8819 18.8568 19.8819Z"
+                                        fill="#1D1E1C"></path>
+                                    <path
+                                        d="M23.3483 15.4193H14.3641C14.1458 15.4193 13.9427 15.3108 13.8211 15.1285C13.7006 14.9473 13.6789 14.7173 13.7625 14.5166L17.8609 4.75213C17.9597 4.51776 18.1856 4.36151 18.4397 4.35283C18.6939 4.34524 18.9306 4.48521 19.0446 4.71199L23.9304 14.4764C24.0314 14.6782 24.0205 14.918 23.9022 15.1101C23.7838 15.3022 23.5742 15.4193 23.3483 15.4193ZM15.3436 14.1173H22.2938L18.5136 6.56418L15.3436 14.1173Z"
+                                        fill="#1D1E1C"></path>
+                                    <path
+                                        d="M20.5119 5.65461H2.85837C2.49891 5.65461 2.20679 5.36273 2.20679 5.00357C2.20679 4.64442 2.49891 4.35254 2.85837 4.35254H20.5119C20.8713 4.35254 21.1635 4.64442 21.1635 5.00357C21.1635 5.36273 20.8713 5.65461 20.5119 5.65461Z"
+                                        fill="#FF003C"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_53_606">
+                                        <rect width="24" height="24" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg> </button>
+                    </div>
+                </div> -->
             </div>
         </div>
     </header>
@@ -1846,6 +1920,1832 @@
     <!--Page Map Area End-->
 
     <main>
+        <section id="product-view">
+
+
+            <div class="Container">
+                <div id="product-details">
+                    <div class="product-headline">
+                        <div class="product-status">
+                            <p class="success">
+                                <img class="skip_lazy"
+                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/check.png"
+                                    alt="">
+                                Məhsul mövcuddur
+                            </p>
+                            <p>
+                                <span>TM-DG-SBP-1105-SM-1490</span>
+                            </p>
+                        </div>
+                        <div class="product-feedback ">
+                            <div class="apple_cert_icon_full_single">
+                                <img class="lazy loaded"
+                                    src="https://kontakt.az/wp-content/uploads/2020/08/apple-auth-res.png"
+                                    data-src="https://kontakt.az/wp-content/uploads/2020/08/apple-auth-res.png"
+                                    data-was-processed="true">
+                            </div>
+                            <button type="button"
+                                onclick=`window.location.href="https://kontakt.az/video-meslehetci/?vcpid=926004" `
+                                class=" select-item-vco" data-id="926004" data-reserve-id="926004"
+                                data-mid="TM-DG-SBP-1105-SM-1490" data-price="4149.99">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white"></rect>
+                                    <path
+                                        d="M12.4139 18H1.58607C0.711799 18 0 17.1821 0 16.1775V7.82249C0 6.8179 0.711799 6 1.58607 6H12.4139C13.2882 6 14 6.8179 14 7.82249V16.1775C14 17.1821 13.289 18 12.4139 18ZM1.58607 7.51134C1.43907 7.51134 1.31528 7.65358 1.31528 7.82249V16.1775C1.31528 16.3464 1.43907 16.4887 1.58607 16.4887H12.4139C12.5609 16.4887 12.6847 16.3464 12.6847 16.1775V7.82249C12.6847 7.65358 12.5609 7.51134 12.4139 7.51134H1.58607Z"
+                                        fill="#323232"></path>
+                                    <path
+                                        d="M22.3817 18C22.3067 18 22.2325 17.9858 22.1615 17.9582L15.4507 15.3363C15.1808 15.2305 15 14.9442 15 14.6224V9.66037C15 9.34741 15.1713 9.06735 15.4302 8.95533L22.141 6.05068C22.2175 6.01778 22.2996 6 22.3817 6C23.2737 6 24 6.81796 24 7.82263V16.1783C24 17.182 23.2737 18 22.3817 18ZM16.342 14.0845L22.4607 16.4752C22.5735 16.4361 22.658 16.3152 22.658 16.1774V7.82174C22.658 7.6866 22.5775 7.56924 22.4686 7.52656L16.342 10.1787V14.0845Z"
+                                        fill="#323232"></path>
+                                    <path
+                                        d="M4.2 11.4C4.86274 11.4 5.4 10.8627 5.4 10.2C5.4 9.53726 4.86274 9 4.2 9C3.53726 9 3 9.53726 3 10.2C3 10.8627 3.53726 11.4 4.2 11.4Z"
+                                        fill="#FF003C"></path>
+                                </svg>
+                                <span>Canlı Video Məsləhətçi</span>
+                                <span class="vcomob">Video Məsləhətçi</span>
+                            </button>
+                            <button type="button" class="feedback-action feaheart select-item" data-id="926004"
+                                data-reserve-id="926004" data-mid="TM-DG-SBP-1105-SM-1490" data-price="4149.99">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="24" height="24" fill="white"></rect>
+                                    <path
+                                        d="M11.9995 22C11.7381 22 11.4766 21.9532 11.228 21.8604C4.91019 19.4892 1 13.3619 1 9.04564C1 7.00964 1.61226 5.24548 2.76958 3.94416C3.88454 2.69061 5.40368 2 7.04712 2C9.39766 2 10.7363 3.22142 11.5392 4.14069C11.6589 4.27753 11.8228 4.35283 12.0005 4.35283C12.1782 4.35283 12.343 4.27753 12.4626 4.14069C13.2646 3.22233 14.6033 2 16.9538 2C18.5972 2 20.1155 2.69061 21.2304 3.94325C22.3887 5.24456 23 7.00872 23 9.04472C23 10.481 22.57 12.1084 21.7561 13.7513C21.5646 14.1379 21.0951 14.2968 20.7075 14.1049C20.3199 13.9139 20.1615 13.4455 20.353 13.0589C21.0509 11.651 21.4348 10.2248 21.4348 9.04381C21.4348 5.44384 19.18 3.55937 16.9529 3.55937C15.6142 3.55937 14.6235 4.03967 13.6421 5.16466C13.2268 5.64037 12.6284 5.91312 12.0005 5.91312C11.3725 5.91312 10.7741 5.64037 10.3589 5.16466C9.37556 4.04151 8.38581 3.56121 7.04712 3.56121C4.81996 3.56121 2.56518 5.44476 2.56518 9.04564C2.56518 10.8741 3.4647 13.1819 4.97188 15.2179C6.70739 17.5634 9.12513 19.4029 11.7795 20.3993C11.9213 20.4526 12.0787 20.4526 12.2205 20.3993C13.9661 19.7445 15.5709 18.7582 16.9906 17.4688C17.3101 17.1786 17.8054 17.2016 18.0964 17.5202C18.3873 17.8389 18.3643 18.333 18.0448 18.6232C16.4778 20.0457 14.7045 21.1349 12.772 21.8604C12.5225 21.9532 12.261 22 11.9995 22Z"
+                                        fill="#1D1D1B"></path>
+                                </svg> <span class="vcomob">Seçilmişlər</span>
+                            </button>
+                            <button type="button" class="feedback-action feascale compare-button" data-id="926004"
+                                data-reserve-id="926004" data-mid="TM-DG-SBP-1105-SM-1490" data-price="4149.99">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_53_606)">
+                                        <rect width="24" height="24" fill="white"></rect>
+                                        <path
+                                            d="M9.63593 15.4195H0.651704C0.433424 15.4195 0.230348 15.311 0.108719 15.1287C-0.0118234 14.9475 -0.0335427 14.7175 0.0500769 14.5168L4.14852 4.75231C4.24735 4.51794 4.47323 4.36169 4.72734 4.35301C4.98255 4.34325 5.2182 4.48539 5.33223 4.71217L10.2191 14.4766C10.3201 14.6784 10.3092 14.9182 10.1909 15.1103C10.0725 15.3023 9.86181 15.4195 9.63593 15.4195ZM1.63125 14.1175H8.58145L4.80119 6.56436L1.63125 14.1175Z"
+                                            fill="#1D1E1C"></path>
+                                        <path
+                                            d="M5.14315 19.8819C2.30768 19.8819 0 17.7291 0 15.0827C0 14.7235 0.292126 14.4316 0.651581 14.4316C1.01104 14.4316 1.30316 14.7235 1.30316 15.0827C1.30316 17.0108 3.02551 18.5798 5.14315 18.5798C7.26079 18.5798 8.98314 17.0108 8.98314 15.0827C8.98314 14.7235 9.27526 14.4316 9.63472 14.4316C9.99417 14.4316 10.2863 14.7235 10.2863 15.0827C10.2874 17.7291 7.9797 19.8819 5.14315 19.8819Z"
+                                            fill="#1D1E1C"></path>
+                                        <path
+                                            d="M18.8568 19.8819C16.0202 19.8819 13.7136 17.7291 13.7136 15.0827C13.7136 14.7235 14.0057 14.4316 14.3652 14.4316C14.7247 14.4316 15.0168 14.7235 15.0168 15.0827C15.0168 17.0108 16.7391 18.5798 18.8568 18.5798C20.9744 18.5798 22.6968 17.0108 22.6968 15.0827C22.6968 14.7235 22.9889 14.4316 23.3483 14.4316C23.7078 14.4316 23.9999 14.7235 23.9999 15.0827C23.9999 17.7291 21.6922 19.8819 18.8568 19.8819Z"
+                                            fill="#1D1E1C"></path>
+                                        <path
+                                            d="M23.3483 15.4193H14.3641C14.1458 15.4193 13.9427 15.3108 13.8211 15.1285C13.7006 14.9473 13.6789 14.7173 13.7625 14.5166L17.8609 4.75213C17.9597 4.51776 18.1856 4.36151 18.4397 4.35283C18.6939 4.34524 18.9306 4.48521 19.0446 4.71199L23.9304 14.4764C24.0314 14.6782 24.0205 14.918 23.9022 15.1101C23.7838 15.3022 23.5742 15.4193 23.3483 15.4193ZM15.3436 14.1173H22.2938L18.5136 6.56418L15.3436 14.1173Z"
+                                            fill="#1D1E1C"></path>
+                                        <path
+                                            d="M20.5119 5.65461H2.85837C2.49891 5.65461 2.20679 5.36273 2.20679 5.00357C2.20679 4.64442 2.49891 4.35254 2.85837 4.35254H20.5119C20.8713 4.35254 21.1635 4.64442 21.1635 5.00357C21.1635 5.36273 20.8713 5.65461 20.5119 5.65461Z"
+                                            fill="#FF003C"></path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_53_606">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                        </clipPath>
+                                    </defs>
+                                </svg> <span class="vcomob">Müqayisə</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="product-info">
+                        <div class="product-img-view">
+                            <div class="menu-view">
+                                <div class="side-menu">
+                                    <div class="">
+                                        <button onclick="kt_videosetter('HhCqXiFmJxk')" class="btn-menu btn-video"
+                                            data-toggle="modal" data-target="#video-lighbox-modal">
+                                            <img class="lazy loaded"
+                                                src="https://kontakt.az/wp-content/uploads/2020/12/playicon-150x150.png"
+                                                data-src="https://kontakt.az/wp-content/uploads/2020/12/playicon-150x150.png"
+                                                alt="" data-was-processed="true">
+                                        </button>
+                                    </div>
+                                    <div class="slick_evvel slick-arrow slick-disabled" aria-disabled="true">
+                                        <svg style="transform:rotate(180deg);cursor:pointer;margin-bottom:-20px;width:40px;margin-left:17.5px"
+                                            version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 330 330" xml:space="preserve">
+                                            <path id="XMLID_225_"
+                                                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                                        c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                                        s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                        </svg>
+                                    </div>
+                                    <div class="slider">
+
+                                        <div><button type="button" class="item active"
+                                                style="width: 100%; display: inline-block;" tabindex="0">
+                                                <img class="lazy loaded" style="max-width:75px"
+                                                    src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                                    data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                                    alt="iPhone 13 Pro Max 1TB Graphite - 1" data-was-processed="true">
+                                            </button></div>
+
+                                        <div><button type="button" class="item"
+                                                style="width: 100%; display: inline-block;" tabindex="0">
+                                                <img class="lazy loaded" style="max-width:75px" data-qazy="true"
+                                                    src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-1-I-637675022549552315_800x800-min_png.webp"
+                                                    data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-1-I-637675022549552315_800x800-min_png.webp"
+                                                    alt="iPhone 13 Pro Max 1TB Graphite - 2" data-was-processed="true">
+                                            </button></div>
+
+                                        <div><button type="button" class="item"
+                                                style="width: 100%; display: inline-block;" tabindex="0">
+                                                <img class="lazy loaded" style="max-width:75px" data-qazy="true"
+                                                    src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-2-I-637675022552521057_800x800-min_png.webp"
+                                                    data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-2-I-637675022552521057_800x800-min_png.webp"
+                                                    alt="iPhone 13 Pro Max 1TB Graphite - 3" data-was-processed="true">
+                                            </button></div>
+
+                                        <div><button type="button" class="item"
+                                                style="width: 100%; display: inline-block;" tabindex="0">
+                                                <img class="lazy loaded" style="max-width:75px" data-qazy="true"
+                                                    src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-3-I-637675022549239828_800x800-min_png.webp"
+                                                    data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-3-I-637675022549239828_800x800-min_png.webp"
+                                                    alt="iPhone 13 Pro Max 1TB Graphite - 4" data-was-processed="true">
+                                            </button></div>
+
+                                        <div><button type="button" class="item"
+                                                style="width: 100%; display: inline-block;" tabindex="0">
+                                                <img class="lazy loaded" style="max-width:75px" data-qazy="true"
+                                                    src="https://kontakt.az/wp-content/uploads/2021/09/Kontakt-Home-min-1_png.webp"
+                                                    data-src="https://kontakt.az/wp-content/uploads/2021/09/Kontakt-Home-min-1_png.webp"
+                                                    alt="iPhone 13 Pro Max 1TB Graphite - 5" data-was-processed="true">
+                                            </button></div>
+
+                                        <div><button type="button" class="item"
+                                                style="width: 100%; display: inline-block;" tabindex="-1">
+                                                <img class="lazy loaded" style="max-width:75px" data-qazy="true"
+                                                    src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-8-I-637675022549708561_800x800-min_png.webp"
+                                                    data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-8-I-637675022549708561_800x800-min_png.webp"
+                                                    alt="iPhone 13 Pro Max 1TB Graphite - 6" data-was-processed="true">
+                                            </button></div>
+
+
+
+                                    </div>
+                                    <div class="slick_davam slick-arrow" aria-disabled="false">
+                                        <svg style="cursor:pointer;margin-top:-50px;width:40px;margin-left:17.5px"
+                                            version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 330 330" xml:space="preserve">
+                                            <path id="XMLID_225_"
+                                                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                                        c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                                        s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"></path>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                            <g></g>
+                                        </svg>
+                                    </div>
+                                </div>
+
+
+                                <div class="mainImg" style="position:relative">
+                                    <div class="lbl-percentage-grid-2022">
+                                        <div class="lbl-badge-2022 lbl-badge-2022-faizsiz">
+                                            <p>faizsiz</p>
+                                        </div>
+                                        <div class="lbl-badge-2022 lbl-badge-2022-catdırılma">
+                                            <p>pulsuz çatdırılma</p>
+                                        </div>
+                                    </div>
+                                    <div class="imgContainer">
+                                        <a class="single-product-link"
+                                            href="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                            data-lightbox="single-product" data-title="iPhone 13 Pro Max 1TB Graphite">
+                                            <img class="lazy loaded"
+                                                src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                                data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                                alt="" data-was-processed="true">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="" class="product-features" style="width:100%">
+                            <div class="wrapper">
+                                <div class="feature-container">
+                                    <h1 class="title">iPhone 13 Pro Max 1TB Graphite</h1>
+                                    <div class="feature">
+                                        <div class="color">
+                                            <p>Rəng:</p><button
+                                                onclick="window.location.href='https://kontakt.az/?p=1063024'"
+                                                type="button" class="c1 "
+                                                style="border:1px solid #e4dddd;background:#4fa59a"
+                                                title="Green"></button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925997'"
+                                                type="button" class="c1 "
+                                                style="border:1px solid #e4dddd;background:blue" title="Blue"></button>
+                                        </div>
+                                        <div class="memory">
+                                            <p>Yaddaş:</p><button
+                                                onclick="window.location.href='https://kontakt.az/?p=926004'"
+                                                type="button" class="active" title="1TB">1TB</button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925991'"
+                                                type="button" class="" title="512GB">512GB</button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925987'"
+                                                type="button" class="" title="256GB">256GB</button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925979'"
+                                                type="button" class="" title="128GB">128GB</button>
+                                        </div>
+                                        <div class="labels labels_popovers" style="margin-left:-20px">
+                                            <a href="javascript://" data-toggle="tooltip" data-placement="bottom"
+                                                class="lbl-box-new" data-html="true" title=""
+                                                data-original-title="<p>Kartla ödəmə imkanı.</p>">
+                                                <img class="lazy loaded"
+                                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/icons/kart.png"
+                                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/icons/kart.png"
+                                                    alt="" data-was-processed="true">
+                                            </a>
+                                            <a href="javascript://" data-toggle="tooltip" data-placement="bottom"
+                                                class="lbl-box-new" data-html="true" title=""
+                                                data-original-title="<p>Online ödəmə imkanı.</p>">
+                                                <img class="lazy loaded"
+                                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/icons/online.png"
+                                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/icons/online.png"
+                                                    alt="" data-was-processed="true">
+                                            </a>
+                                            <a href="javascript://" data-toggle="tooltip" data-placement="bottom"
+                                                class="lbl-box-new" data-html="true" title=""
+                                                data-original-title="<p>Qapıda ödəmə imkanı.</p>">
+                                                <img class="lazy loaded"
+                                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/icons/qapida.png"
+                                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/icons/qapida.png"
+                                                    alt="" data-was-processed="true">
+                                            </a>
+                                            <a id="taksitmetn" name="taksitmetn" href="javascript://"
+                                                data-toggle="popover" data-placement="bottom" data-btshow="Ətraflı..."
+                                                data-bthide="Daha az göstər..." class="lbl-box-new bstaksit"
+                                                data-html="true"
+                                                data-content="<p>§ <b>BirKartla</b> Apple məhsulları və smartfonlar 12 ay, televizor, məişət texnikası və tekstil 18 ay, mebel isə 24 ay FAİZSİZ TAKSİTLƏ.</p><p class='taksitmoretext' >§ <b>TamKartla</b> Apple məhsulları 18 ay, smartfonlar 12 ay, televizor, məişət texnikası və tekstil 18 ay, mebel 18 ay FAİZSİZ TAKSİTLƏ.<br>§ <b>UCard</b> ilə Apple məhsulları 18 ay, smartfonlar 12 ay, televizor, məişət texnikası və tekstil 18 ay, mebel 18 ay FAİZSİZ TAKSİTLƏ. <br>§ <b>Bolkartla</b>  Apple məhsulları 18 ay, smartfonlar 18 ay, televizor, məişət texnikası və tekstil 18 ay, mebel 18 ay FAİZSİZ TAKSİTLƏ. <br> </p><a href='#taksitmetn' class='taksitshow_hide' >Ətraflı...</a><i class='fa fa-close fa-closep fa-closetaksit'></i>"
+                                                data-original-title="" title="">
+                                                <img class="lazy loaded"
+                                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/2021/taksit_az.png"
+                                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/2021/taksit_az.png"
+                                                    alt="" data-was-processed="true">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="div3dvideomob"
+                                        style="position: absolute;padding-top:25px;left: 15px;z-index: 9;">
+                                        <button onclick="kt_videosetter('HhCqXiFmJxk')" type="button"
+                                            style="border:none;display:block;margin-bottom:11px;background:transparent"
+                                            class="btn-menu btn-video" data-toggle="modal"
+                                            data-target="#video-lighbox-modal">
+                                            <img class="lazy" style="width: 65px;"
+                                                src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/videomobil.png"
+                                                data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/videomobil.png"
+                                                alt="">
+                                        </button>
+                                    </div>
+                                    <div class="product-feedback ">
+                                        <div class="apple_cert_icon_full_single">
+                                            <img class="lazy"
+                                                src="https://kontakt.az/wp-content/uploads/2020/08/apple-auth-res.png"
+                                                data-src="https://kontakt.az/wp-content/uploads/2020/08/apple-auth-res.png">
+                                        </div>
+                                        <button type="button"
+                                            onclick="window.location.href='https://kontakt.az/video-meslehetci/?vcpid=926004'"
+                                            class=" select-item-vco" data-id="926004" data-reserve-id="926004"
+                                            data-mid="TM-DG-SBP-1105-SM-1490" data-price="4149.99">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" fill="white"></rect>
+                                                <path
+                                                    d="M12.4139 18H1.58607C0.711799 18 0 17.1821 0 16.1775V7.82249C0 6.8179 0.711799 6 1.58607 6H12.4139C13.2882 6 14 6.8179 14 7.82249V16.1775C14 17.1821 13.289 18 12.4139 18ZM1.58607 7.51134C1.43907 7.51134 1.31528 7.65358 1.31528 7.82249V16.1775C1.31528 16.3464 1.43907 16.4887 1.58607 16.4887H12.4139C12.5609 16.4887 12.6847 16.3464 12.6847 16.1775V7.82249C12.6847 7.65358 12.5609 7.51134 12.4139 7.51134H1.58607Z"
+                                                    fill="#323232"></path>
+                                                <path
+                                                    d="M22.3817 18C22.3067 18 22.2325 17.9858 22.1615 17.9582L15.4507 15.3363C15.1808 15.2305 15 14.9442 15 14.6224V9.66037C15 9.34741 15.1713 9.06735 15.4302 8.95533L22.141 6.05068C22.2175 6.01778 22.2996 6 22.3817 6C23.2737 6 24 6.81796 24 7.82263V16.1783C24 17.182 23.2737 18 22.3817 18ZM16.342 14.0845L22.4607 16.4752C22.5735 16.4361 22.658 16.3152 22.658 16.1774V7.82174C22.658 7.6866 22.5775 7.56924 22.4686 7.52656L16.342 10.1787V14.0845Z"
+                                                    fill="#323232"></path>
+                                                <path
+                                                    d="M4.2 11.4C4.86274 11.4 5.4 10.8627 5.4 10.2C5.4 9.53726 4.86274 9 4.2 9C3.53726 9 3 9.53726 3 10.2C3 10.8627 3.53726 11.4 4.2 11.4Z"
+                                                    fill="#FF003C"></path>
+                                            </svg>
+                                            <span>Canlı Video Məsləhətçi</span>
+                                            <span class="vcomob">Video Məsləhətçi</span>
+                                        </button>
+                                        <button type="button" class="feedback-action feaheart select-item"
+                                            data-id="926004" data-reserve-id="926004" data-mid="TM-DG-SBP-1105-SM-1490"
+                                            data-price="4149.99">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" fill="white"></rect>
+                                                <path
+                                                    d="M11.9995 22C11.7381 22 11.4766 21.9532 11.228 21.8604C4.91019 19.4892 1 13.3619 1 9.04564C1 7.00964 1.61226 5.24548 2.76958 3.94416C3.88454 2.69061 5.40368 2 7.04712 2C9.39766 2 10.7363 3.22142 11.5392 4.14069C11.6589 4.27753 11.8228 4.35283 12.0005 4.35283C12.1782 4.35283 12.343 4.27753 12.4626 4.14069C13.2646 3.22233 14.6033 2 16.9538 2C18.5972 2 20.1155 2.69061 21.2304 3.94325C22.3887 5.24456 23 7.00872 23 9.04472C23 10.481 22.57 12.1084 21.7561 13.7513C21.5646 14.1379 21.0951 14.2968 20.7075 14.1049C20.3199 13.9139 20.1615 13.4455 20.353 13.0589C21.0509 11.651 21.4348 10.2248 21.4348 9.04381C21.4348 5.44384 19.18 3.55937 16.9529 3.55937C15.6142 3.55937 14.6235 4.03967 13.6421 5.16466C13.2268 5.64037 12.6284 5.91312 12.0005 5.91312C11.3725 5.91312 10.7741 5.64037 10.3589 5.16466C9.37556 4.04151 8.38581 3.56121 7.04712 3.56121C4.81996 3.56121 2.56518 5.44476 2.56518 9.04564C2.56518 10.8741 3.4647 13.1819 4.97188 15.2179C6.70739 17.5634 9.12513 19.4029 11.7795 20.3993C11.9213 20.4526 12.0787 20.4526 12.2205 20.3993C13.9661 19.7445 15.5709 18.7582 16.9906 17.4688C17.3101 17.1786 17.8054 17.2016 18.0964 17.5202C18.3873 17.8389 18.3643 18.333 18.0448 18.6232C16.4778 20.0457 14.7045 21.1349 12.772 21.8604C12.5225 21.9532 12.261 22 11.9995 22Z"
+                                                    fill="#1D1D1B"></path>
+                                            </svg> <span class="vcomob">Seçilmişlər</span>
+                                        </button>
+                                        <button type="button" class="feedback-action feascale compare-button"
+                                            data-id="926004" data-reserve-id="926004" data-mid="TM-DG-SBP-1105-SM-1490"
+                                            data-price="4149.99">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_53_606)">
+                                                    <rect width="24" height="24" fill="white"></rect>
+                                                    <path
+                                                        d="M9.63593 15.4195H0.651704C0.433424 15.4195 0.230348 15.311 0.108719 15.1287C-0.0118234 14.9475 -0.0335427 14.7175 0.0500769 14.5168L4.14852 4.75231C4.24735 4.51794 4.47323 4.36169 4.72734 4.35301C4.98255 4.34325 5.2182 4.48539 5.33223 4.71217L10.2191 14.4766C10.3201 14.6784 10.3092 14.9182 10.1909 15.1103C10.0725 15.3023 9.86181 15.4195 9.63593 15.4195ZM1.63125 14.1175H8.58145L4.80119 6.56436L1.63125 14.1175Z"
+                                                        fill="#1D1E1C"></path>
+                                                    <path
+                                                        d="M5.14315 19.8819C2.30768 19.8819 0 17.7291 0 15.0827C0 14.7235 0.292126 14.4316 0.651581 14.4316C1.01104 14.4316 1.30316 14.7235 1.30316 15.0827C1.30316 17.0108 3.02551 18.5798 5.14315 18.5798C7.26079 18.5798 8.98314 17.0108 8.98314 15.0827C8.98314 14.7235 9.27526 14.4316 9.63472 14.4316C9.99417 14.4316 10.2863 14.7235 10.2863 15.0827C10.2874 17.7291 7.9797 19.8819 5.14315 19.8819Z"
+                                                        fill="#1D1E1C"></path>
+                                                    <path
+                                                        d="M18.8568 19.8819C16.0202 19.8819 13.7136 17.7291 13.7136 15.0827C13.7136 14.7235 14.0057 14.4316 14.3652 14.4316C14.7247 14.4316 15.0168 14.7235 15.0168 15.0827C15.0168 17.0108 16.7391 18.5798 18.8568 18.5798C20.9744 18.5798 22.6968 17.0108 22.6968 15.0827C22.6968 14.7235 22.9889 14.4316 23.3483 14.4316C23.7078 14.4316 23.9999 14.7235 23.9999 15.0827C23.9999 17.7291 21.6922 19.8819 18.8568 19.8819Z"
+                                                        fill="#1D1E1C"></path>
+                                                    <path
+                                                        d="M23.3483 15.4193H14.3641C14.1458 15.4193 13.9427 15.3108 13.8211 15.1285C13.7006 14.9473 13.6789 14.7173 13.7625 14.5166L17.8609 4.75213C17.9597 4.51776 18.1856 4.36151 18.4397 4.35283C18.6939 4.34524 18.9306 4.48521 19.0446 4.71199L23.9304 14.4764C24.0314 14.6782 24.0205 14.918 23.9022 15.1101C23.7838 15.3022 23.5742 15.4193 23.3483 15.4193ZM15.3436 14.1173H22.2938L18.5136 6.56418L15.3436 14.1173Z"
+                                                        fill="#1D1E1C"></path>
+                                                    <path
+                                                        d="M20.5119 5.65461H2.85837C2.49891 5.65461 2.20679 5.36273 2.20679 5.00357C2.20679 4.64442 2.49891 4.35254 2.85837 4.35254H20.5119C20.8713 4.35254 21.1635 4.64442 21.1635 5.00357C21.1635 5.36273 20.8713 5.65461 20.5119 5.65461Z"
+                                                        fill="#FF003C"></path>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_53_606">
+                                                        <rect width="24" height="24" fill="white"></rect>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg> <span class="vcomob">Müqayisə</span>
+                                        </button>
+                                    </div>
+                                    <div class="mob-carousel" style="position:relative">
+                                        <div class="lbl-percentage-grid-2022">
+                                            <div class="lbl-badge-2022 lbl-badge-2022-faizsiz">
+                                                <p>faizsiz</p>
+                                            </div>
+                                            <div class="lbl-badge-2022 lbl-badge-2022-catdırılma">
+                                                <p>pulsuz çatdırılma</p>
+                                            </div>
+                                        </div>
+                                        <div class="owl-carousel owl-theme owl-loaded owl-drag"
+                                            style="visibility: visible;">
+
+
+
+
+
+
+                                            <div class="owl-stage-outer">
+                                                <div class="owl-stage"
+                                                    style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
+                                                    <div class="owl-item">
+                                                        <div class="item">
+                                                            <div class="imgHolder">
+                                                                <a class="single-product-link"
+                                                                    href="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                                                    data-lightbox="single-product"
+                                                                    data-title="iPhone 13 Pro Max 1TB Graphite">
+                                                                    <img class="lazy"
+                                                                        alt="iPhone 13 Pro Max 1TB Graphite - 1"
+                                                                        data-qazy="true"
+                                                                        src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp"
+                                                                        data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-0-I-637672995149189975_800x800-min_png.webp">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item">
+                                                        <div class="item">
+                                                            <div class="imgHolder">
+                                                                <a class="single-product-link"
+                                                                    href="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-1-I-637675022549552315_800x800-min_png.webp"
+                                                                    data-lightbox="single-product"
+                                                                    data-title="iPhone 13 Pro Max 1TB Graphite">
+                                                                    <img class="lazy"
+                                                                        alt="iPhone 13 Pro Max 1TB Graphite - 2"
+                                                                        data-qazy="true"
+                                                                        src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-1-I-637675022549552315_800x800-min_png.webp"
+                                                                        data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-1-I-637675022549552315_800x800-min_png.webp">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item">
+                                                        <div class="item">
+                                                            <div class="imgHolder">
+                                                                <a class="single-product-link"
+                                                                    href="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-2-I-637675022552521057_800x800-min_png.webp"
+                                                                    data-lightbox="single-product"
+                                                                    data-title="iPhone 13 Pro Max 1TB Graphite">
+                                                                    <img class="lazy"
+                                                                        alt="iPhone 13 Pro Max 1TB Graphite - 3"
+                                                                        data-qazy="true"
+                                                                        src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-2-I-637675022552521057_800x800-min_png.webp"
+                                                                        data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-2-I-637675022552521057_800x800-min_png.webp">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item">
+                                                        <div class="item">
+                                                            <div class="imgHolder">
+                                                                <a class="single-product-link"
+                                                                    href="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-3-I-637675022549239828_800x800-min_png.webp"
+                                                                    data-lightbox="single-product"
+                                                                    data-title="iPhone 13 Pro Max 1TB Graphite">
+                                                                    <img class="lazy"
+                                                                        alt="iPhone 13 Pro Max 1TB Graphite - 4"
+                                                                        data-qazy="true"
+                                                                        src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-3-I-637675022549239828_800x800-min_png.webp"
+                                                                        data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-3-I-637675022549239828_800x800-min_png.webp">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item">
+                                                        <div class="item">
+                                                            <div class="imgHolder">
+                                                                <a class="single-product-link"
+                                                                    href="https://kontakt.az/wp-content/uploads/2021/09/Kontakt-Home-min-1_png.webp"
+                                                                    data-lightbox="single-product"
+                                                                    data-title="iPhone 13 Pro Max 1TB Graphite">
+                                                                    <img class="lazy"
+                                                                        alt="iPhone 13 Pro Max 1TB Graphite - 5"
+                                                                        data-qazy="true"
+                                                                        src="https://kontakt.az/wp-content/uploads/2021/09/Kontakt-Home-min-1_png.webp"
+                                                                        data-src="https://kontakt.az/wp-content/uploads/2021/09/Kontakt-Home-min-1_png.webp">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="owl-item">
+                                                        <div class="item">
+                                                            <div class="imgHolder">
+                                                                <a class="single-product-link"
+                                                                    href="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-8-I-637675022549708561_800x800-min_png.webp"
+                                                                    data-lightbox="single-product"
+                                                                    data-title="iPhone 13 Pro Max 1TB Graphite">
+                                                                    <img class="lazy"
+                                                                        alt="iPhone 13 Pro Max 1TB Graphite - 6"
+                                                                        data-qazy="true"
+                                                                        src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-8-I-637675022549708561_800x800-min_png.webp"
+                                                                        data-src="https://kontakt.az/wp-content/uploads/2021/09/530301-Product-8-I-637675022549708561_800x800-min_png.webp">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="owl-nav disabled"><button type="button" role="presentation"
+                                                    class="owl-prev"><span
+                                                        aria-label="Previous">‹</span></button><button type="button"
+                                                    role="presentation" class="owl-next"><span
+                                                        aria-label="Next">›</span></button></div>
+                                            <div class="owl-dots"><button role="button"
+                                                    class="owl-dot active"><span></span></button><button role="button"
+                                                    class="owl-dot"><span></span></button><button role="button"
+                                                    class="owl-dot"><span></span></button><button role="button"
+                                                    class="owl-dot"><span></span></button><button role="button"
+                                                    class="owl-dot"><span></span></button><button role="button"
+                                                    class="owl-dot"><span></span></button></div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-mobile" style="position:relative;min-height:68px">
+                                        <div class="color">
+                                            <p>Rəng:</p><button
+                                                onclick="window.location.href='https://kontakt.az/?p=1063024'"
+                                                type="button" class="c1 "
+                                                style="border:1px solid #e4dddd;background:#4fa59a"
+                                                title="Green"></button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925997'"
+                                                type="button" class="c1 "
+                                                style="border:1px solid #e4dddd;background:blue" title="Blue"></button>
+                                        </div>
+                                        <div class="memory">
+                                            <p>Yaddaş:</p><button
+                                                onclick="window.location.href='https://kontakt.az/?p=926004'"
+                                                type="button" class="active" title="1TB">1TB</button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925991'"
+                                                type="button" class="" title="512GB">512GB</button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925987'"
+                                                type="button" class="" title="256GB">256GB</button>
+                                            <button onclick="window.location.href='https://kontakt.az/?p=925979'"
+                                                type="button" class="" title="128GB">128GB</button>
+                                        </div>
+                                    </div>
+                                    <div class="cont-price">
+                                        <div class="calculator-responsive-select-mother">
+                                            <div class="price">
+                                                <small class="qiymeti  qiymeti_endirim" "="">
+            qiymət</small>
+            <p class=" gridprice gridprice_cash endirimvar">
+                                                    <span
+                                                        style="text-decoration:line-through;font-weight:normal">4349.99
+                                                        <small class="azn_span">M</small></span><br><span class="nprice"
+                                                        id="price-926004">4149.99 <small
+                                                            class="azn_span">M</small></span></p>
+                                                    <div class="lbl-price-discount">
+                                                    </div>
+                                            </div>
+                                            <div class="calculator-responsive-select">
+                                                <div class="menu">
+                                                    <p>Kredit Kalkulyatoru</p>
+                                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                        width="451.847px" height="451.847px"
+                                                        viewBox="0 0 451.847 451.847"
+                                                        style="enable-background:new 0 0 451.847 451.847;"
+                                                        xml:space="preserve">
+                                                        <g>
+                                                            <path
+                                                                d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                                    c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z">
+                                                            </path>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="drop_down">
+                                            <div class="drop_down_inner">
+                                                <div class="child_drop_down_inner">
+                                                    <label class="container-radio-btns">
+                                                        <input type="radio" checked="checked" name="month" value="6"
+                                                            oninput="toggleSteps(this);">
+                                                        <span class="checkmark" data-amount="725" data-prepay="0">6
+                                                            ay</span>
+                                                    </label>
+                                                    <label class="container-radio-btns">
+                                                        <input type="radio" name="month" value="9"
+                                                            oninput="toggleSteps(this);">
+                                                        <span class="checkmark" data-amount="505.2" data-prepay="0">9
+                                                            ay</span>
+                                                    </label>
+                                                    <label class="container-radio-btns">
+                                                        <input type="radio" name="month" value="12"
+                                                            oninput="toggleSteps(this);">
+                                                        <span class="checkmark" data-amount="395.1" data-prepay="0">12
+                                                            ay</span>
+                                                    </label>
+                                                    <label class="container-radio-btns">
+                                                        <input type="radio" name="month" value="15"
+                                                            oninput="toggleSteps(this);">
+                                                        <span class="checkmark" data-amount="329.2" data-prepay="0">15
+                                                            ay</span>
+                                                    </label>
+                                                    <label class="container-radio-btns">
+                                                        <input type="radio" name="month" value="18"
+                                                            oninput="toggleSteps(this);">
+                                                        <span class="checkmark" data-amount="285.2" data-prepay="0">18
+                                                            ay</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="payment-info">
+                                                <ul>
+                                                    <li
+                                                        style="height: 42px; background: rgb(255, 0, 60); padding-top: 10px; opacity: 0;">
+                                                        <p class="faizsizmi faizsizmimob"
+                                                            style="color: white;font-weight: bold;font-size: 18px;"></p>
+                                                    </li>
+                                                    <li>
+                                                        <p> İlkin ödəniş </p>
+                                                        <p><span class="ilkin">0</span> <small
+                                                                class="azn_span">M</small></p>
+                                                    </li>
+                                                    <li>
+                                                        <p> Aylıq ödəniş </p>
+                                                        <p><span class="ayliq">285.2</span> <small
+                                                                class="azn_span">M</small></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="credit-calculation">
+                                <div class="title" style="padding-bottom:12px">
+                                    <p>Kredit Kalkulyatoru</p>
+                                </div>
+                                <div class="payment-option">
+                                    <div class="range-section">
+                                        <div id="range-tooltip" style="left: 100%;"></div>
+                                        <div class="range-container">
+                                            <span class="bar"><span class="fill" style="width: 100%;"></span></span>
+                                            <input type="range" class="range-slider" style="display:inherit" min="6"
+                                                max="18" valuehtml="6 ay" oninput="toggleSteps(this);" step="1"
+                                                value="6" id="cc-range" data-popup-enabled="true">
+                                        </div>
+
+                                        
+
+                                        <script>
+                                            jQuery(document).on('input', '#cc-range', function () {
+                                                jthisval = jQuery(this).val();
+                                                setTimeout(function () {
+                                                    perwidther = jQuery('.range-section').find('[data-month="' + jthisval + '"]');
+                                                    barfillwidth = perwidther.attr("data-perwidth") + '%';
+                                                    //if(barfillwidth=='0%') barfillwidth='24px';
+                                                    jQuery(".bar .fill").css("width", barfillwidth);
+                                                    jQuery("#range-tooltip").css("left", barfillwidth);
+                                                }, 10);
+                                            });
+                                        </script>
+                                        <ul>
+                                            <li style="width:10px">
+                                                <p data-perwidth="0" data-amount="725" data-prepay="0" data-noper="0%"
+                                                    data-count="1" class="nisye_ay" data-month="6">6</p>
+                                            </li>
+                                            <li style="width:92px">
+                                                <p data-perwidth="25" data-amount="505.2" data-prepay="0" data-noper=""
+                                                    data-count="1" class="nisye_ay" data-month="9">9</p>
+                                            </li>
+                                            <li style="width:92px">
+                                                <p data-perwidth="50" data-amount="395.1" data-prepay="0" data-noper=""
+                                                    data-count="1" class="nisye_ay" data-month="12">12</p>
+                                            </li>
+                                            <li style="width:92px">
+                                                <p data-perwidth="75" data-amount="329.2" data-prepay="0" data-noper=""
+                                                    data-count="1" class="nisye_ay" data-month="15">15</p>
+                                            </li>
+                                            <li style="width:92px">
+                                                <p data-perwidth="100" data-amount="285.2" data-prepay="0" data-noper=""
+                                                    data-count="1" class="nisye_ay" data-month="18">18</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="payment-info">
+                                        <ul>
+                                            <li
+                                                style="width: 48px; height: 42px; background: rgb(255, 0, 60); padding-top: 10px; opacity: 0;">
+                                                <p class="faizsizmi"
+                                                    style="color: white;font-weight: bold;font-size: 18px;"></p>
+                                            </li>
+                                            <li>
+                                                <p> İlkin ödəniş </p>
+                                                <p><span class="ilkin">0</span> <small class="azn_span"> M</small></p>
+                                            </li>
+                                            <li>
+                                                <p> Aylıq ödəniş </p>
+                                                <p><span class="ayliq">285.2</span> <small class="azn_span"> M</small>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mop">
+                                <button type="button" class="on-click btn-mop kontakt-button-birklik"
+                                    data-toggle="modal" data-target="#kontakt-modal-birklik"> Bir kliklə al </button>
+                                <button type="button" class="cash btn-mop " onclick="kontakt_push_cart_modal(926004,1)">
+                                    Nağd al </button>
+                                <button type="button" class="partial btn-mop" data-toggle="modal"
+                                    data-target="#partial-pay-modal"> Hissə - hissə al </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="kontakt-modal-birklik" class="modal fade" role="dialog" style="z-index:99999991;">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <img class="k7closebut lazy"
+                                        src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/x_button2.png"
+                                        data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/x_button2.png">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="" style="font-size:18px">Mobil telefon nömrənizi daxil edin</label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" style="width:100%"
+                                        class="ocinput form-control form-control-lg phone-no-mask-dis"
+                                        name="mobile_number" inputmode="text" value="">
+                                    <input type="hidden" name="pid" value="926004" data-guid="TM-DG-SBP-1105-SM-1490"
+                                        data-guid-mk="TM-DG-SBP-1105-SM-1490">
+                                </div>
+                                <div class="form-group" style="padding-top:20px">
+                                    <label for="" style="font-size:18px">Sifariş formasını seçin</label>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-6">
+                                        <div class="form-check form-check-inline ocinput">
+                                            <input class="form-check-input" type="radio" name="oc_payment_type"
+                                                id="inlineRadio1" value="0"
+                                                onclick="jQuery('.nisye_onc').hide();jQuery('#oc_fin').removeAttr('required');">
+                                            <label class="form-check-label" for="inlineRadio1">Nağd al <span
+                                                    class="oc_error" style="display:none;">*</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-check form-check-inline ocinput">
+                                            <input class="form-check-input" type="radio" name="oc_payment_type"
+                                                id="inlineRadio2" value="1"
+                                                onclick="jQuery('.nisye_onc').show();jQuery('#oc_fin').attr('required','required');">
+                                            <label class="form-check-label" for="inlineRadio2">Hissə-hissə ödənişlə al
+                                                <span class="oc_error" style="display:none;">*</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <style>
+                                    .nisye_onc .form-group {
+                                        margin-bottom: 0px
+                                    }
+                                </style>
+                                <div class="row nisye_onc form-group" style="display:none">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="oc_fin" style="font-size:18px">Fin kodu qeyd edin <span
+                                                    class="oc_error">*</span>
+                                                <a class="finpopover" href="javascript://" data-placement="top"
+                                                    data-toggle="popover" data-html="true"
+                                                    data-content="FİN kodu, şəxsiyyət vəsiqəsinin sağ aşağı küncündə yerləşir və sonuncu simvolu buraxmaqla, ondan öncəki 7 simvolu təşkil edir.<img class='svfinimg no-lazy' src='https://kontakt.az/wp-content/uploads/2020/12/Azerb_ID-cards-872x1024.jpg' style='max-width:55%;width:200px'>"
+                                                    data-original-title="" title="">
+                                                    <span style="color: black;font-size: 10px;">
+                                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12"
+                                                            height="14" viewBox="0 0 12 14">
+                                                            <path style="fill:#858585"
+                                                                d="M8 10.75v-1.25q0-0.109-0.070-0.18t-0.18-0.070h-0.75v-4q0-0.109-0.070-0.18t-0.18-0.070h-2.5q-0.109 0-0.18 0.070t-0.070 0.18v1.25q0 0.109 0.070 0.18t0.18 0.070h0.75v2.5h-0.75q-0.109 0-0.18 0.070t-0.070 0.18v1.25q0 0.109 0.070 0.18t0.18 0.070h3.5q0.109 0 0.18-0.070t0.070-0.18zM7 3.75v-1.25q0-0.109-0.070-0.18t-0.18-0.070h-1.5q-0.109 0-0.18 0.070t-0.070 0.18v1.25q0 0.109 0.070 0.18t0.18 0.070h1.5q0.109 0 0.18-0.070t0.070-0.18zM12 7q0 1.633-0.805 3.012t-2.184 2.184-3.012 0.805-3.012-0.805-2.184-2.184-0.805-3.012 0.805-3.012 2.184-2.184 3.012-0.805 3.012 0.805 2.184 2.184 0.805 3.012z">
+                                                            </path>
+                                                        </svg>
+                                                        FİN Kodu nədir?</span>
+                                                </a>
+                                                <script>
+                                                    jQuery(document).ready(function () {
+                                                        jQuery('.finpopover').popover({
+                                                            trigger: 'click',
+                                                            delay: { "hide": 15000 }
+                                                        });
+                                                    });
+                                                </script>
+                                                <style>
+                                                    .popover {
+                                                        z-index: 99999992
+                                                    }
+
+                                                    .svfinimg {
+                                                        width: 220px
+                                                    }
+
+                                                    @media(max-width:768px) {
+                                                        .finpopover {
+                                                            display: block
+                                                        }
+                                                    }
+                                                </style>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" style="width:100%" class="ocinput form-control"
+                                                id="oc_fin" name="oc_fin" inputmode="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="oc_localphone" style="font-size:18px">Şəhər nömrənizi qeyd
+                                                edin</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="phone" style="width:100%" class="ocinput form-control"
+                                                name="oc_localphone" inputmode="text" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" value="" name="promokod_birklik">
+                                <div class="form-group" style="padding-top:10px">
+                                    <p style="text-align:center"><button type="button"
+                                            onclick="kontakt_birkliker('#kontakt-modal-birklik');jQuery(this).prop('disabled','disabled');"
+                                            class="birkliker_sub btn btn-info ocinput">
+                                            Sifarişi göndər</button>
+                                    </p>
+                                </div>
+                                <div class="oc_error oc_error_all" style="display:none">Sifarişi göndərmək üçün sifariş
+                                    formasını seçin</div>
+                                <div class="oc_error_2 oc_error_all" style="display:none">Fin kodu qeyd edin</div>
+                                <p>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="birkliker_res alert alert-info" style="display:none">
+                                    <p class="birkliklegvet temporary_hidden">Sifariş göndərilir...
+                                        <small>Dayandır</small>
+                                    </p>
+                                </div>
+                                <div class="birkliker_stopped alert alert-info" style="display:none">
+                                    Əməliyyat dayandırıldı </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="partial-pay-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Hissə-hissə ödəniş</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <img class="k7closebut lazy"
+                                        src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/x_button2.png"
+                                        data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/x_button2.png">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <section>
+                                    <section id="selected-cart-item-926004" data-product-guid="TM-DG-SBP-1105-SM-1490"
+                                        class="selected-cart-item cart_object">
+                                        <div class="chosen-cart">
+                                            <div class="checkbox">
+                                                <input type="checkbox" class="form-check-input cart_select_item"
+                                                    id="select-926004" data-id="926004">
+                                                <label class="form-check-label" for="select-926004"></label>
+                                            </div>
+                                            <div class="photo-box">
+                                                <div class="imgHolder">
+                                                    <img class="lazy" alt="iPhone 13 Pro Max 1TB Graphite"
+                                                        data-qazy="true"
+                                                        src="https://kontakt.az/wp-content/uploads/gallery-tum/TM-DG-SBP-1105-SM-1490_a4fcea2c9518430033c35a2d4f001ec1_w_png.webp"
+                                                        data-src="https://kontakt.az/wp-content/uploads/gallery-tum/TM-DG-SBP-1105-SM-1490_a4fcea2c9518430033c35a2d4f001ec1_w_png.webp">
+                                                </div>
+                                            </div>
+                                            <div class="details">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-9">
+                                                        <div class="features">
+                                                            <p>
+                                                                <a href="https://kontakt.az/iphone-13-pro-max-1tb-graphite/"
+                                                                    data-id="926004" data-reserve-id="926004"
+                                                                    data-mid="TM-DG-SBP-1105-SM-1490"
+                                                                    data-price="4149.99" data-quantity="1">
+                                                                    iPhone 13 Pro Max 1TB Graphite </a>
+                                                            </p>
+                                                            <p></p>
+                                                            <div class="labels">
+                                                                <div class="lbl-percentage">
+                                                                    <p>6 ay <span>Faizsiz</span></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-3">
+                                                        <div class="second-half">
+                                                            <div class="quantity">
+                                                                <p>Miqdar</p>
+                                                                <button type="button" class="nisye_decrease">-</button>
+                                                                <input type="number" id="amount_926004" value="1"
+                                                                    min="0" readonly="readonly" max="3"
+                                                                    class="amount nisye_amount nisye_amount_926004"
+                                                                    data-id="926004">
+                                                                <button type="button" class="nisye_increase">+</button>
+                                                            </div>
+                                                            <div class="price">
+                                                                <b>4349.99 <small class="azn_span">M</small></b>
+                                                            </div>
+                                                            <div class="cart-summary">
+                                                                <button type="button" class="remove cart_remove"
+                                                                    data-id="926004">
+                                                                    <img class="lazy"
+                                                                        src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/bin.png"
+                                                                        data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/bin.png"
+                                                                        alt="">
+                                                                </button>
+                                                                <p><span id="price-926004">4349.99</span><span
+                                                                        class="azn_span">‎M</span></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="detail-mob">
+                                                    <div class="quantity">
+                                                        <p>Miqdar</p>
+                                                        <button type="button" class="nisye_decrease">-</button>
+                                                        <input type="number" id="nisye_amount_926004" value="1" min="0"
+                                                            max="3" readonly="readonly"
+                                                            class="amount nisye_amount nisye_amount_926004"
+                                                            data-id="926004">
+                                                        <button type="button" class="nisye_increase">+</button>
+                                                    </div>
+                                                    <div class="price">
+                                                        <p> 4349.99<span class="azn_span">‎M</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="total-price">
+                                            <p style="display:none">Cəmi: <span class="itemtotals itemtotal-926004"
+                                                    data-id="926004">
+                                                    4349.99 </span><span class="azn_span">‎M</span>
+                                            </p>
+                                            <p style="display:none" class="catdirilma_p">Çatdırılma:
+                                                <span class="catdirilma_span"></span> <span>‎₼</span>
+                                            </p>
+                                        </div>
+                                    </section>
+                                </section>
+                                <div class="selected-period">
+                                    <ul class="selected-month">
+                                        <li class="nisye_ay_modal" data-period="6ay" value="6" data-month="6"
+                                            data-amount="725" data-prepay="0">6ay</li>
+                                        <li class="nisye_ay_modal" data-period="9ay" value="9" data-month="9"
+                                            data-amount="505.2" data-prepay="0">9ay</li>
+                                        <li class="nisye_ay_modal" data-period="12ay" value="12" data-month="12"
+                                            data-amount="395.1" data-prepay="0">12ay</li>
+                                        <li class="nisye_ay_modal" data-period="15ay" value="15" data-month="15"
+                                            data-amount="329.2" data-prepay="0">15ay</li>
+                                        <li class="nisye_ay_modal active" data-period="18ay" value="18" data-month="18"
+                                            data-amount="285.2" data-prepay="0">18ay</li>
+                                    </ul>
+                                    <ul class="payment-info">
+                                        <li>
+                                            <p>Müddət:</p>
+                                            <h4><span class="aysay">18</span> ay <span class="faizsizmi"></span></h4>
+                                        </li>
+                                        <li>
+                                            <p>İlkin ödəniş:</p>
+                                            <h4><span class="ilkin">0</span> <small class="azn_span">M</small></h4>
+                                        </li>
+                                        <li>
+                                            <p>Aylıq ödəniş:</p>
+                                            <h4><span class="ayliq">285.2</span> <small class="azn_span">M</small></h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="gotocheckout btn-add-to-cart"
+                                    href="https://kontakt.az/checkout/?hisse_hisse=1&amp;pid=926004&amp;aysay=18&amp;qizilzemanet=0"
+                                    data-href="https://kontakt.az/checkout/?hisse_hisse=1&amp;pid=926004">
+                                    Sifarişi rəsmiləşdir <svg version="1.1" id="Capa_1"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        x="0px" y="0px" width="792.033px" height="792.033px"
+                                        viewBox="0 0 792.033 792.033" style="enable-background:new 0 0 792.033 792.033;"
+                                        xml:space="preserve">
+                                        <g>
+                                            <g id="_x38_">
+                                                <g>
+                                                    <path
+                                                        d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874
+                                            l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191
+                                            c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="product_notes">
+                                <p>*İlkin ödəniş məbləği ümumi dövriyyə və ödəniş tarixçəsindən asılı olaraq dəyişə
+                                    bilər.
+                                </p>
+                                <p>**</p>
+                                <p style="display:none">**Məhsul nisyə satılan zaman sistemdə yuvarlaqlaşdırma tətbiq
+                                    olunduğuna görə ümumi qiymətdə fərq yarana bilər.</p>
+                                <p>**Bu məhsulu endirimli qiymətlə (endirim olduqda) BirKart vasitəsilə ala bilərsniz.
+                                </p>
+                            </div>
+                            <style>
+                                .product_notes {
+                                    padding: 5px;
+                                    margin-top: 5px
+                                }
+
+                                .product_notes p {
+                                    font-size: 12px
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="video-lighbox-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="video-lighbox-modal" aria-hidden="true">
+                    <div class="modal-dialog" role="document" style="max-width: 840px;width: auto;">
+                        <div class="modal-content" style="background: transparent;border:none !important">
+                            <div class="modal-body">
+                                <div class="embed-container">
+                                    <iframe allow="fullscreen;" id="video-lighbox-modal-iframe"
+                                        src="https://www.youtube.com/embed/HhCqXiFmJxk" frameborder="0"
+                                        allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="review-tabs">
+                    <div class="tabs">
+                        <ul class="nav nav-tabs round-edge-tab" id="myTab" role="tablist">
+                            <li class="nav-item nav-item-first nav-item-zero" style="margin-right:0px;">
+                                <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab"
+                                    aria-controls="first" aria-selected="true"
+                                    style="border-left-color:#ebebeb;border-right-color:#ebebeb;"> Xüsusiyyətlər
+                                </a>
+                            </li>
+                            <li class="nav-item nav-item-second">
+                                <a class="nav-link " id="second-tab" data-toggle="tab" href="#second" role="tab"
+                                    aria-controls="second" aria-selected="false"> İstifadəçi rəyləri
+                                </a>
+                            </li>
+                        </ul>
+                        <style>
+                            .nav-item-second a {
+                                border-radius: 0px 13px 0 0 !important
+                            }
+
+                            .nav-item-first-real a {
+                                border-radius: 13px 0px 0 0 !important
+                            }
+
+                            .nav-item-first:after,
+                            .nav-item-second:after,
+                            .nav-item-first a:after,
+                            .nav-item-second a:after,
+                            .nav-item-zero a:after,
+                            .nav-item-zero a:after {
+                                display: none !important
+                            }
+
+                            .nav-tabs .nav-item {
+                                margin-bottom: -3px !important;
+                                margin-right: 0px !important;
+                            }
+                        </style>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade  show active" id="first" role="tabpanel"
+                                aria-labelledby="first-tab">
+                                <div class="roww">
+                                    <div class="tabcontent-left">
+                                        <ul class="features-review-tabs submenuItems_params">
+                                            <li class="gray-line">
+                                                Ekran
+                                            </li>
+                                            <li>
+                                                Daxili yaddaş
+                                            </li>
+                                            <li class="gray-line">
+                                                Operativ yaddaş
+                                            </li>
+                                            <li>
+                                                Əsas kamera
+                                            </li>
+                                            <li class="gray-line">
+                                                Ön kamera
+                                            </li>
+                                            <li>
+                                                Nüvə sayı
+                                            </li>
+                                            <li class="gray-line">
+                                                SIM kartların sayı
+                                            </li>
+                                            <li>
+                                                SIM kartın növü
+                                            </li>
+                                            <li class="gray-line">
+                                                Prosessorun adı
+                                            </li>
+                                            <li>
+                                                Prosessor tezliyi
+                                            </li>
+                                            <li class="gray-line">
+                                                Əməliyyat sistemi
+                                            </li>
+                                            <li>
+                                                Əməliyyat sistemin versiyası
+                                            </li>
+                                            <li class="gray-line">
+                                                3G
+                                            </li>
+                                            <li>
+                                                4G
+                                            </li>
+                                            <li class="gray-line">
+                                                NFC
+                                            </li>
+                                            <li>
+                                                Prosessorun növü
+                                            </li>
+                                            <li class="gray-line">
+                                                Şəbəkə
+                                            </li>
+                                            <li>
+                                                Displey növü
+                                            </li>
+                                            <li class="gray-line">
+                                                Simsiz enerji
+                                            </li>
+                                            <li>
+                                                İnfraqırmızı port
+                                            </li>
+                                            <li class="gray-line">
+                                                Göz tanıma funksiyası
+                                            </li>
+                                            <li>
+                                                Suyadavamlılıq
+                                            </li>
+                                            <li class="gray-line">
+                                                Tozkeçirməzlik
+                                            </li>
+                                            <li>
+                                                Zərbəyədavamlılıq
+                                            </li>
+                                            <li class="gray-line">
+                                                Üz tanıma
+                                            </li>
+                                            <li>
+                                                Sürətli enerji yığma
+                                            </li>
+                                            <li class="gray-line">
+                                                Ön fləş
+                                            </li>
+                                            <li>
+                                                Qorunma dərəcəsi
+                                            </li>
+                                            <li class="gray-line">
+                                                Ölçülər
+                                            </li>
+                                            <li>
+                                                Ekran rənglərinin sayı
+                                            </li>
+                                            <li class="gray-line">
+                                                Yaddaş kartı dəstəyi
+                                            </li>
+                                            <li>
+                                                Barometr
+                                            </li>
+                                            <li class="gray-line">
+                                                Giroskop
+                                            </li>
+                                            <li>
+                                                İşıq sensoru
+                                            </li>
+                                            <li class="gray-line">
+                                                Yaxınlaşdırma sensoru
+                                            </li>
+                                            <li>
+                                                Optik sabitləşmə
+                                            </li>
+                                            <li class="gray-line">
+                                                Video formatı
+                                            </li>
+                                            <li>
+                                                Bluetooth versiyası
+                                            </li>
+                                            <li class="gray-line">
+                                                Zoom (video)
+                                            </li>
+                                            <li>
+                                                Zoom (şəkil)
+                                            </li>
+                                            <li class="gray-line">
+                                                Avtofokus əsas kamera
+                                            </li>
+                                            <li>
+                                                Avtofokus ön kamera
+                                            </li>
+                                            <li class="gray-line">
+                                                Video icazəsi və kadr tezliyi
+                                            </li>
+                                            <li>
+                                                Video asta çəkiliş
+                                            </li>
+                                            <li class="gray-line">
+                                                Rəng
+                                            </li>
+                                            <li>
+                                                Enerji toplama növü
+                                            </li>
+                                            <li class="gray-line">
+                                                LED bildiriş göstəricisi
+                                            </li>
+                                            <li>
+                                                Qulaqlıq interfeysi
+                                            </li>
+                                            <li class="gray-line">
+                                                Batareya növü
+                                            </li>
+                                            <li>
+                                                Çıxarıla bilən batareya
+                                            </li>
+                                            <li class="gray-line">
+                                                Akselerometr
+                                            </li>
+                                            <li>
+                                                Enerji yığma gücü
+                                            </li>
+                                            <li class="gray-line">
+                                                Batareyanın həcmi
+                                            </li>
+                                            <li>
+                                                İstehsal ili
+                                            </li>
+                                            <li class="gray-line">
+                                                Barmaq izi oxuyucusu
+                                            </li>
+                                            <li>
+                                                Korpusun materialı
+                                            </li>
+                                            <li class="gray-line">
+                                                Görüntü imkanı
+                                            </li>
+                                            <li>
+                                                Çəki
+                                            </li>
+                                            <li class="gray-line">
+                                                Seriya
+                                            </li>
+                                            <li>
+                                                İstehsalçı
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tabcontent-right">
+                                        <ul class="features-review-tabs submenuItems_params">
+                                            <li class="gray-line">
+                                                6.7"
+                                            </li>
+                                            <li>
+                                                1 TB
+                                            </li>
+                                            <li class="gray-line">
+                                                6 GB
+                                            </li>
+                                            <li>
+                                                12 MP + 12 MP + 12 MP
+                                            </li>
+                                            <li class="gray-line">
+                                                12 MP
+                                            </li>
+                                            <li>
+                                                6
+                                            </li>
+                                            <li class="gray-line">
+                                                1
+                                            </li>
+                                            <li>
+                                                Nano SIM
+                                            </li>
+                                            <li class="gray-line">
+                                                Apple
+                                            </li>
+                                            <li>
+                                                3.2 GHz
+                                            </li>
+                                            <li class="gray-line">
+                                                iOS
+                                            </li>
+                                            <li>
+                                                iOS 15
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Apple A15 Bionic (5 nm)
+                                            </li>
+                                            <li class="gray-line">
+                                                5G
+                                            </li>
+                                            <li>
+                                                Super Retina XDR OLED
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Yox
+                                            </li>
+                                            <li class="gray-line">
+                                                Yox
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Yox
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                Yox
+                                            </li>
+                                            <li>
+                                                IP68
+                                            </li>
+                                            <li class="gray-line">
+                                                160.8 × 78.1 × 7.7 mm
+                                            </li>
+                                            <li>
+                                                16 mln
+                                            </li>
+                                            <li class="gray-line">
+                                                Yox
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                4K / 1080p
+                                            </li>
+                                            <li>
+                                                5.0
+                                            </li>
+                                            <li class="gray-line">
+                                                9x-ə qədər
+                                            </li>
+                                            <li>
+                                                15x-ə qədər
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                4K - 1080p, 24-240 kadr/s
+                                            </li>
+                                            <li>
+                                                Var
+                                            </li>
+                                            <li class="gray-line">
+                                                Graphite
+                                            </li>
+                                            <li>
+                                                Lightning
+                                            </li>
+                                            <li class="gray-line">
+                                                Yox
+                                            </li>
+                                            <li>
+                                                Lightning
+                                            </li>
+                                            <li class="gray-line">
+                                                Li-Po
+                                            </li>
+                                            <li>
+                                                Yox
+                                            </li>
+                                            <li class="gray-line">
+                                                Var
+                                            </li>
+                                            <li>
+                                                20 Vt
+                                            </li>
+                                            <li class="gray-line">
+                                                4352 mAh
+                                            </li>
+                                            <li>
+                                                2021
+                                            </li>
+                                            <li class="gray-line">
+                                                Yox
+                                            </li>
+                                            <li>
+                                                Metal və şüşə
+                                            </li>
+                                            <li class="gray-line">
+                                                1284 × 2778
+                                            </li>
+                                            <li>
+                                                240 q
+                                            </li>
+                                            <li class="gray-line">
+                                                iPhone 13 Pro Max
+                                            </li>
+                                            <li>
+                                                Apple
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="second" role="tabpanel" aria-labelledby="second-tab">
+                                <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
+                                <section id="user-feedback">
+                                    <div class="existing-feedbacks">
+                                        <ul>
+                                        </ul>
+                                    </div>
+                                    <div class="feedback-form">
+                                        <h4>Rəy yaz</h4>
+                                        <form id="kontakt_review">
+                                            <div class="form-row roww justify-space-between">
+                                                <div class="comment-row-left">
+                                                    <div class="form-group">
+                                                        <label for="">Adınız <span>*</span></label>
+                                                        <input required="" type="text" name="review_ad"
+                                                            class="form-control" id="review_ad">
+                                                    </div>
+                                                </div>
+                                                <div class="comment-row-right">
+                                                    <div class="form-group">
+                                                        <label for="">E-poçt <span>*</span></label>
+                                                        <input required="" name="review_email" type="email"
+                                                            class="form-control" id="review_email">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Rəyiniz <span>*</span></label>
+                                                <textarea name="review_metn" required="" class="form-control"
+                                                    id="review_metn" rows="5"></textarea>
+                                            </div>
+                                            <div class="g-recaptcha"
+                                                data-sitekey="6Ld9ArMZAAAAACyX12yR41il5GvtLFgqyiOZRvqT"
+                                                style="text-align:right">
+                                                <div style="width: 304px; height: 78px;">
+                                                    <div><iframe title="reCAPTCHA"
+                                                            src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6Ld9ArMZAAAAACyX12yR41il5GvtLFgqyiOZRvqT&amp;co=aHR0cHM6Ly9rb250YWt0LmF6OjQ0Mw..&amp;hl=en&amp;v=3kTz7WGoZLQTivI-amNftGZO&amp;size=normal&amp;cb=izll2ou9nywt"
+                                                            width="304" height="78" role="presentation"
+                                                            name="a-s1bax88455ua" frameborder="0" scrolling="no"
+                                                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                                    </div><textarea id="g-recaptcha-response"
+                                                        name="g-recaptcha-response" class="g-recaptcha-response"
+                                                        style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                                </div><iframe style="display: none;"></iframe>
+                                            </div>
+                                            <div class="rate-submit">
+                                                <div class="rate">
+                                                    <button class="star" id="s1" score="1">
+                                                        <svg enable-background="new 0 0 49.94 49.94" version="1.1"
+                                                            viewBox="0 0 49.94 49.94" xml:space="preserve"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="m48.856 22.73c0.983-0.958 1.33-2.364 0.906-3.671-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757c-0.515-0.075-0.96-0.398-1.19-0.865l-5.406-10.956c-0.607-1.231-1.839-1.996-3.212-1.996-1.372 0-2.604 0.765-3.211 1.996l-5.407 10.957c-0.23 0.467-0.676 0.79-1.191 0.865l-12.092 1.757c-1.359 0.197-2.467 1.131-2.892 2.438-0.424 1.307-0.077 2.713 0.906 3.671l8.749 8.528c0.373 0.364 0.544 0.888 0.456 1.4l-2.064 12.042c-0.183 1.06 0.095 2.091 0.781 2.904 1.066 1.267 2.927 1.653 4.415 0.871l10.814-5.686c0.452-0.237 1.021-0.235 1.472 0l10.815 5.686c0.526 0.277 1.087 0.417 1.666 0.417 1.057 0 2.059-0.47 2.748-1.288 0.687-0.813 0.964-1.846 0.781-2.904l-2.065-12.042c-0.088-0.513 0.083-1.036 0.456-1.4l8.749-8.529z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="star" id="s2" score="2">
+                                                        <svg enable-background="new 0 0 49.94 49.94" version="1.1"
+                                                            viewBox="0 0 49.94 49.94" xml:space="preserve"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="m48.856 22.73c0.983-0.958 1.33-2.364 0.906-3.671-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757c-0.515-0.075-0.96-0.398-1.19-0.865l-5.406-10.956c-0.607-1.231-1.839-1.996-3.212-1.996-1.372 0-2.604 0.765-3.211 1.996l-5.407 10.957c-0.23 0.467-0.676 0.79-1.191 0.865l-12.092 1.757c-1.359 0.197-2.467 1.131-2.892 2.438-0.424 1.307-0.077 2.713 0.906 3.671l8.749 8.528c0.373 0.364 0.544 0.888 0.456 1.4l-2.064 12.042c-0.183 1.06 0.095 2.091 0.781 2.904 1.066 1.267 2.927 1.653 4.415 0.871l10.814-5.686c0.452-0.237 1.021-0.235 1.472 0l10.815 5.686c0.526 0.277 1.087 0.417 1.666 0.417 1.057 0 2.059-0.47 2.748-1.288 0.687-0.813 0.964-1.846 0.781-2.904l-2.065-12.042c-0.088-0.513 0.083-1.036 0.456-1.4l8.749-8.529z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="star" id="s3" score="3">
+                                                        <svg enable-background="new 0 0 49.94 49.94" version="1.1"
+                                                            viewBox="0 0 49.94 49.94" xml:space="preserve"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="m48.856 22.73c0.983-0.958 1.33-2.364 0.906-3.671-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757c-0.515-0.075-0.96-0.398-1.19-0.865l-5.406-10.956c-0.607-1.231-1.839-1.996-3.212-1.996-1.372 0-2.604 0.765-3.211 1.996l-5.407 10.957c-0.23 0.467-0.676 0.79-1.191 0.865l-12.092 1.757c-1.359 0.197-2.467 1.131-2.892 2.438-0.424 1.307-0.077 2.713 0.906 3.671l8.749 8.528c0.373 0.364 0.544 0.888 0.456 1.4l-2.064 12.042c-0.183 1.06 0.095 2.091 0.781 2.904 1.066 1.267 2.927 1.653 4.415 0.871l10.814-5.686c0.452-0.237 1.021-0.235 1.472 0l10.815 5.686c0.526 0.277 1.087 0.417 1.666 0.417 1.057 0 2.059-0.47 2.748-1.288 0.687-0.813 0.964-1.846 0.781-2.904l-2.065-12.042c-0.088-0.513 0.083-1.036 0.456-1.4l8.749-8.529z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="star" id="s4" score="4">
+                                                        <svg enable-background="new 0 0 49.94 49.94" version="1.1"
+                                                            viewBox="0 0 49.94 49.94" xml:space="preserve"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="m48.856 22.73c0.983-0.958 1.33-2.364 0.906-3.671-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757c-0.515-0.075-0.96-0.398-1.19-0.865l-5.406-10.956c-0.607-1.231-1.839-1.996-3.212-1.996-1.372 0-2.604 0.765-3.211 1.996l-5.407 10.957c-0.23 0.467-0.676 0.79-1.191 0.865l-12.092 1.757c-1.359 0.197-2.467 1.131-2.892 2.438-0.424 1.307-0.077 2.713 0.906 3.671l8.749 8.528c0.373 0.364 0.544 0.888 0.456 1.4l-2.064 12.042c-0.183 1.06 0.095 2.091 0.781 2.904 1.066 1.267 2.927 1.653 4.415 0.871l10.814-5.686c0.452-0.237 1.021-0.235 1.472 0l10.815 5.686c0.526 0.277 1.087 0.417 1.666 0.417 1.057 0 2.059-0.47 2.748-1.288 0.687-0.813 0.964-1.846 0.781-2.904l-2.065-12.042c-0.088-0.513 0.083-1.036 0.456-1.4l8.749-8.529z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                    <button class="star" id="s5" score="5">
+                                                        <svg enable-background="new 0 0 49.94 49.94" version="1.1"
+                                                            viewBox="0 0 49.94 49.94" xml:space="preserve"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="m48.856 22.73c0.983-0.958 1.33-2.364 0.906-3.671-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757c-0.515-0.075-0.96-0.398-1.19-0.865l-5.406-10.956c-0.607-1.231-1.839-1.996-3.212-1.996-1.372 0-2.604 0.765-3.211 1.996l-5.407 10.957c-0.23 0.467-0.676 0.79-1.191 0.865l-12.092 1.757c-1.359 0.197-2.467 1.131-2.892 2.438-0.424 1.307-0.077 2.713 0.906 3.671l8.749 8.528c0.373 0.364 0.544 0.888 0.456 1.4l-2.064 12.042c-0.183 1.06 0.095 2.091 0.781 2.904 1.066 1.267 2.927 1.653 4.415 0.871l10.814-5.686c0.452-0.237 1.021-0.235 1.472 0l10.815 5.686c0.526 0.277 1.087 0.417 1.666 0.417 1.057 0 2.059-0.47 2.748-1.288 0.687-0.813 0.964-1.846 0.781-2.904l-2.065-12.042c-0.088-0.513 0.083-1.036 0.456-1.4l8.749-8.529z">
+                                                            </path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <input type="hidden" id="review_score" name="review_score">
+                                                <input type="hidden" name="review_product" value="926004">
+                                                <input type="hidden" id="review_nonce" name="review_nonce"
+                                                    value="715d82cbcf"><input type="hidden" name="_wp_http_referer"
+                                                    value="/iphone-13-pro-max-1tb-graphite/?_sgm_campaign=scn_af784b3476000&amp;_sgm_source=TM-DG-SBP-1105-SM-1490&amp;_sgm_action=click">
+                                                <button type="submit" class="btn-add-to-review"
+                                                    disabled="disabled">Göndər</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                                <script>
+                                    jQuery(document).ready(function () {
+
+                                        jQuery(".rate .star").on('click', function () {
+                                            jQuery(".btn-add-to-review").removeAttr("disabled");
+                                            jQuery("#review_score").val(jQuery(this).attr("score"));
+                                        });
+
+                                        jQuery("#kontakt_review").validate({
+                                            rules: {
+                                            },
+                                            messages: {
+                                                review_ad: "Ad və soyadınızı daxil edin",
+                                                review_email: "Email daxil edin (Gizli saxlanılacaq)",
+                                                review_metn: "Rəyinizi daxil edin",
+                                            },
+                                            errorElement: 'small',
+                                            errorClass: 'text-danger',
+                                            // submitHandler: function(form) {  
+                                            //     //jQuery('.btn-add-to-review').prop("disabled","disabled");
+                                            //     return true;
+                                            // }
+                                        });
+                                    });
+
+                                </script>
+                            </div>
+                            <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+                            </div>
+                            <div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+                            </div>
+                        </div>
+                    </div>
+                    <section id="accordion-product-view" class="">
+                        <ul class="accordion-menu accordion-menu-tabs">
+                            <li>
+                                <div class="dropdownlink">
+                                    Xüsusiyyətlər
+                                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                                <ul class="submenuItems submenuItems_params submenuItems_params_mob">
+                                    <li>
+                                        <ul class="features-review-tabs left-items">
+                                            <li class="gray-line"> <span>Ekran</span>
+                                                <span>6.7"</span>
+                                            </li>
+                                            <li> <span>Daxili yaddaş</span>
+                                                <span>1 TB</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Operativ yaddaş</span>
+                                                <span>6 GB</span>
+                                            </li>
+                                            <li> <span>Əsas kamera</span>
+                                                <span>12 MP + 12 MP + 12 MP</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Ön kamera</span>
+                                                <span>12 MP</span>
+                                            </li>
+                                            <li> <span>Nüvə sayı</span>
+                                                <span>6</span>
+                                            </li>
+                                            <li class="gray-line"> <span>SIM kartların sayı</span>
+                                                <span>1</span>
+                                            </li>
+                                            <li> <span>SIM kartın növü </span>
+                                                <span>Nano SIM</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Prosessorun adı</span>
+                                                <span>Apple</span>
+                                            </li>
+                                            <li> <span>Prosessor tezliyi</span>
+                                                <span>3.2 GHz</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Əməliyyat sistemi</span>
+                                                <span>iOS</span>
+                                            </li>
+                                            <li> <span>Əməliyyat sistemin versiyası</span>
+                                                <span>iOS 15</span>
+                                            </li>
+                                            <li class="gray-line"> <span>3G</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>4G</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>NFC</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>Prosessorun növü</span>
+                                                <span>Apple A15 Bionic (5 nm)</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Şəbəkə</span>
+                                                <span>5G</span>
+                                            </li>
+                                            <li> <span>Displey növü</span>
+                                                <span>Super Retina XDR OLED</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Simsiz enerji</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>İnfraqırmızı port</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Göz tanıma funksiyası</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li> <span>Suyadavamlılıq</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Tozkeçirməzlik</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>Zərbəyədavamlılıq</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Üz tanıma</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>Sürətli enerji yığma</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Ön fləş</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li> <span>Qorunma dərəcəsi</span>
+                                                <span>IP68</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Ölçülər</span>
+                                                <span>160.8 × 78.1 × 7.7 mm</span>
+                                            </li>
+                                            <li> <span>Ekran rənglərinin sayı</span>
+                                                <span>16 mln</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Yaddaş kartı dəstəyi</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li> <span>Barometr</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Giroskop</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>İşıq sensoru</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Yaxınlaşdırma sensoru</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>Optik sabitləşmə</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Video formatı</span>
+                                                <span>4K / 1080p</span>
+                                            </li>
+                                            <li> <span>Bluetooth versiyası</span>
+                                                <span>5.0</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Zoom (video)</span>
+                                                <span>9x-ə qədər</span>
+                                            </li>
+                                            <li> <span>Zoom (şəkil)</span>
+                                                <span>15x-ə qədər</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Avtofokus əsas kamera</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>Avtofokus ön kamera</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Video icazəsi və kadr tezliyi</span>
+                                                <span>4K - 1080p, 24-240 kadr/s</span>
+                                            </li>
+                                            <li> <span>Video asta çəkiliş</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Rəng</span>
+                                                <span>Graphite</span>
+                                            </li>
+                                            <li> <span>Enerji toplama növü</span>
+                                                <span>Lightning</span>
+                                            </li>
+                                            <li class="gray-line"> <span>LED bildiriş göstəricisi</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li> <span>Qulaqlıq interfeysi</span>
+                                                <span>Lightning</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Batareya növü</span>
+                                                <span>Li-Po</span>
+                                            </li>
+                                            <li> <span>Çıxarıla bilən batareya</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Akselerometr</span>
+                                                <span>Var</span>
+                                            </li>
+                                            <li> <span>Enerji yığma gücü</span>
+                                                <span>20 Vt</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Batareyanın həcmi</span>
+                                                <span>4352 mAh</span>
+                                            </li>
+                                            <li> <span>İstehsal ili</span>
+                                                <span>2021</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Barmaq izi oxuyucusu</span>
+                                                <span>Yox</span>
+                                            </li>
+                                            <li> <span>Korpusun materialı</span>
+                                                <span>Metal və şüşə</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Görüntü imkanı</span>
+                                                <span>1284 × 2778</span>
+                                            </li>
+                                            <li> <span>Çəki</span>
+                                                <span>240 q</span>
+                                            </li>
+                                            <li class="gray-line"> <span>Seriya</span>
+                                                <span>iPhone 13 Pro Max</span>
+                                            </li>
+                                            <li> <span>İstehsalçı</span>
+                                                <span>Apple</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="dropdownlink">
+                                    İstifadəçi rəyləri <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                </div>
+                                <div class="submenuItems submenuItems_reviews">
+                                </div>
+                                <script>
+                                    jQuery(document).ready(function () {
+                                        setTimeout(function () {
+                                            if (jQuery(window).width() < 768) {
+                                                jQuery("#user-feedback").appendTo(".submenuItems_reviews");
+                                            }
+                                        }, 500);
+                                    });
+                                </script>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </section>
         <section id="best-seller-similar" class="universal-carousel">
             <div class="Container">
                 <article class="daily-discount-inner position-relative">
@@ -4187,8 +6087,7 @@
                     </div>
                 </article>
                 <div class="roww" style="padding:0px 20px;margin-bottom:30px;overflow-x:hidden">
-                    <div class="owl-carousel tags-theme owl-theme owl-loaded owl-drag"
-                        style="visibility: visible;">
+                    <div class="owl-carousel tags-theme owl-theme owl-loaded owl-drag" style="visibility: visible;">
 
                         <div class="item"><a href="https://kontakt.az/iphone-x-qiymeti/"
                                 class="btn btn-default btn-mg20" style="width: 100%; display: inline-block;"
@@ -4334,13 +6233,21 @@
             </div>
         </div>
     </footer>
+    <div id="whatsap-video-modal-opener">
+        <a href="../html/videoCall.html">
+            <img class="lazy loaded" src="https://kontakt.az/wp-content/uploads/2021/05/video_az.png"
+                data-src="https://kontakt.az/wp-content/uploads/2021/05/video_az.png" style="width:100%"
+                data-was-processed="true">
+        </a>
+    </div>
 </body>
 <script src="jquery-3.5.1.min.js"></script>
 <script src="index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script type="text/javascript" src="path/to/jquery.js"></script>
-<script type="text/javascript" src="path/to/slick.js"></script>
 <script>
     $(document).ready(function () {
         $('.best_seller_theme').owlCarousel({
@@ -4366,12 +6273,12 @@
         $('.tags-theme').owlCarousel({
             loop: true,
             margin: 10,
-            autoWidth:true, 
+            autoWidth: true,
             autoplay: true,
             autoplayTimeout: 2200,
             autoplayHoverPause: false,
             nav: false,
-            dots:false,
+            dots: false,
             responsive: {
                 0: {
                     items: 1
@@ -4386,6 +6293,19 @@
         })
 
     });
+
+    window.onload = function () {
+        $('.slider').slick({
+            vertical: true,
+            verticalSwiping: true,
+            autoplay: true,
+            autoplaySpeed: 200,
+            arrows: false,
+            centerMode: false,
+            slidesToShow: 5,
+            slidesToScroll: 1
+        });
+    };
 
 
 </script>
