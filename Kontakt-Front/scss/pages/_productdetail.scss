@@ -310,7 +310,7 @@
                                 text-decoration: none;
                             }
 
-                            img{
+                            img {
                                 border-style: none;
                             }
 
@@ -327,7 +327,8 @@
                         display: none;
                     }
 
-                    .product-feedback, .vcomob {
+                    .product-feedback,
+                    .vcomob {
                         display: none;
                     }
 
@@ -358,7 +359,7 @@
                                 align-items: center;
                                 margin: 0;
                                 position: relative;
-                                cursor:default;
+                                cursor: default;
 
                                 .qiymeti_endirim {
                                     display: block;
@@ -394,6 +395,7 @@
                                         .azn_span {
                                             font-family: jisaznregular;
                                         }
+
                                         small {
                                             font-size: 80%;
                                             font-weight: 400;
@@ -402,15 +404,16 @@
 
                                     .nprice {
                                         color: #ff003c;
-                                    
-                                            font-weight: bold !important;
-                                        small{
+
+                                        font-weight: bold !important;
+
+                                        small {
                                             font-size: 80%;
                                             font-weight: 400;
                                         }
                                     }
 
-                                  
+
                                 }
                             }
 
@@ -418,6 +421,7 @@
                                 display: none;
                             }
                         }
+
                         .drop_down {
                             border-radius: 6px 6px 6px 6px;
                             border: solid 1px #cfcfcf;
@@ -436,7 +440,7 @@
                 padding: 0 10px;
                 margin-top: 20px;
 
-                .title{
+                .title {
                     cursor: default;
 
                     p {
@@ -535,7 +539,7 @@
 
                             li {
                                 font-size: 14px;
-                                color: rgba(40,40,40,.7);
+                                color: rgba(40, 40, 40, .7);
                                 text-align: left;
                                 position: relative;
                                 width: calc(100%/8);
@@ -566,7 +570,7 @@
                         }
                     }
 
-                    .payment-info{
+                    .payment-info {
                         ul {
                             display: flex;
                             float: right;
@@ -617,9 +621,9 @@
                     transition: .5s;
                 }
 
-             button:nth-child(1){
-                color:red;
-             }
+                button:nth-child(1) {
+                    color: red;
+                }
 
                 button:hover {
                     background-color: #ff003c;
@@ -632,7 +636,7 @@
                 }
             }
 
-     
+
         }
 
     }
@@ -661,7 +665,7 @@
                 }
 
                 .nav-link {
-                    font-family: montserrat,sans-serif;
+                    font-family: montserrat, sans-serif;
                     font-size: 14px;
                     font-weight: 700;
                     color: #282828;
@@ -716,6 +720,196 @@
                 .fade {
                     transition: opacity .15s linear;
                 }
+
+                #user-feedback {
+
+                    border: 2px solid rgba(0, 0, 0, .08);
+                    background-color: #fff;
+                    border: none;
+                    padding: 0;
+
+                    .existing-feedbacks {
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin-bottom: 0;
+                            max-height: 500px;
+                            width: 100%;
+                            overflow: hidden;
+                            overflow-y: auto;
+                            position: relative;
+                        }
+                    }
+
+                    h4 {
+                        font-family: montserrat, sans-serif;
+                        font-size: 21.5px;
+                        font-weight: 400;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: normal;
+                        letter-spacing: .11px;
+                        text-align: left;
+                        color: #282828;
+                        margin-bottom: 30px;
+                    }
+
+
+
+                    .form-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -5px;
+                        margin-left: -5px;
+                    }
+
+                    .feedback-form {
+                        padding-top: 30px;
+
+                        form {
+                            .form-row {
+                                justify-content: space-between;
+                            }
+
+                            .form-group {
+                                width: 100%;
+                                margin-bottom: 1rem;
+
+                                input:focus,
+                                textarea:focus {
+                                    outline: none;
+                                    box-shadow: none;
+                                }
+
+
+                                label {
+                                    font-size: 16px;
+                                    color: #282828;
+                                    margin-bottom: 10px;
+                                    display: inline-block;
+
+                                    span {
+                                        color: #ff003c;
+                                    }
+                                }
+
+                                input {
+                                    border: 2px solid rgba(0, 0, 0, .08);
+                                    background-color: #f0efef;
+                                }
+
+                                .form-control {
+                                    display: block;
+                                    width: 100%;
+                                    padding: 0.375rem 0.75rem;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    color: #495057;
+                                    background-color: #fff;
+                                    background-clip: padding-box;
+                                    border: 1px solid #ced4da;
+                                    border-radius: 0.25rem;
+                                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                                    resize: none !important;
+                                    border: 2px solid rgba(0, 0, 0, .08);
+                                    background-color: #f0efef;
+                                    height: auto;
+                                }
+
+
+
+
+
+                            }
+
+                            .comment-row-left {
+                                padding-right: 5px;
+                                padding-left: 5px;
+                                flex: 0 0 50%;
+                                max-width: 50%;
+                                position: relative;
+                                width: 100%;
+
+                                .form-group{
+                                    width: 90%;
+                                }
+                            }
+
+                            .comment-row-right {
+                                padding-right: 5px;
+                                padding-left: 5px;
+                                flex: 0 0 50%;
+                                max-width: 50%;
+                                position: relative;
+                                width: 100%;
+
+                                .form-group{
+                                    width: 90%;
+                                }
+                            }
+
+                            textarea {
+                                resize: none !important;
+                                border: 2px solid rgba(0, 0, 0, .08);
+                                background-color: #f0efef;
+                                height: auto;
+                            }
+
+                            .g-recaptcha {
+                                min-height: 85px;
+                            }
+
+                            .g-recaptcha>div {
+                                float: right;
+                            }
+
+                            .rate-submit {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+
+                                .rate {
+                                    button {
+                                        width: 20px;
+                                        height: 20px;
+                                        background-color: transparent;
+                                        border: none;
+
+                                        svg {
+                                            width: 20px;
+                                            height: 20px;
+                                            overflow: hidden;
+
+                                            path {
+                                                fill: #616e7c;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btn-add-to-review {
+                                    margin-left: 20px;
+                                    background-color: #e3e3e3;
+                                    border: none;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    text-align: center;
+                                    color: #282828;
+                                    height: 35px;
+                                    width: 110px;
+                                    border-radius: 5px;
+                                    transition: .5s;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                    }
+
+
+
+                }
             }
 
             .tab-content>.tab-pane {
@@ -723,7 +917,7 @@
             }
 
             .features-review-tabs li {
-                font-family: montserrat,sans-serif;
+                font-family: montserrat, sans-serif;
                 font-size: 16px;
                 line-height: 2.38;
                 letter-spacing: normal;
@@ -735,27 +929,27 @@
             .tab-content>.active {
                 display: block;
 
-                .roww{
+                .roww {
                     display: flex;
 
-                    .tabcontent-left{
-              
-                            flex: 0 0 33.33333%;
-                            max-width: 33.33333%;
-                            position: relative;
-                            width: 100%;
-                            padding-right: 15px;
-                            padding-left: 15px;
+                    .tabcontent-left {
 
-                            ul {
-                                list-style: none;
-                                padding: 0;
-                                margin-bottom: 0;
-                            }
-                    
+                        flex: 0 0 33.33333%;
+                        max-width: 33.33333%;
+                        position: relative;
+                        width: 100%;
+                        padding-right: 15px;
+                        padding-left: 15px;
+
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin-bottom: 0;
+                        }
+
                     }
 
-                    .tabcontent-right{
+                    .tabcontent-right {
                         flex: 0 0 66.66667%;
                         max-width: 66.66667%;
                         position: relative;
