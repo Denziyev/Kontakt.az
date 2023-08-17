@@ -2565,6 +2565,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
+#product-view #product-info .btn-mop {
+  background: #ddd;
+}
 #product-view #product-info .product-img-view img {
   border-style: none;
 }
@@ -2839,12 +2842,173 @@ a {
 #product-view #product-info .product-features .credit-calculation .title {
   cursor: default;
 }
+#product-view #product-info .product-features .credit-calculation .title p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #282828;
+  position: relative;
+  margin: 0;
+}
 #product-view #product-info .product-features .credit-calculation .payment-option {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section {
+  width: 50%;
+  position: relative;
+  margin-top: 20px;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section #range-tooltip {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  background-color: #ff003c;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 5px;
+  position: absolute;
+  top: -32px;
+  display: none;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section #range-tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 5px 5px 0;
+  border-color: #ff003c transparent transparent transparent;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section .range-container {
+  width: 100%;
+  position: relative;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section .range-container .bar {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: #e3e3e4;
+  overflow: hidden;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section .range-container .bar .fill {
+  position: absolute;
+  display: block;
+  width: 0;
+  background-color: #ff003c;
+  height: 100%;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section .range-container .range-slider {
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: 0 0;
+  outline: none;
+  transition: opacity 0.2s;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+  justify-content: space-between;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section ul li {
+  font-size: 14px;
+  color: rgba(40, 40, 40, 0.7);
+  text-align: left;
+  position: relative;
+  width: 12.5%;
+  display: flex;
+  justify-content: flex-end;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section ul li p {
+  min-width: unset;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  min-width: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .range-section ul li p:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  border: 1px solid #e3e3e4;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .payment-info ul {
+  display: flex;
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .payment-info ul li {
+  position: relative;
+  display: table;
+  background-color: #ebebeb;
+  margin-left: 10px;
+  border-radius: 4px;
+  padding: 0 10px;
+  max-width: 100px;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .payment-info ul li p {
+  font-size: 14px;
+  color: #282828;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+#product-view #product-info .product-features .credit-calculation .payment-option .payment-info ul li p .azn_span {
+  font-family: jisaznregular;
+  font-size: 80%;
+  font-weight: 400;
+}
 #product-view #product-info .product-features .mop {
   margin-top: 30px;
   display: flex;
+}
+#product-view #product-info .product-features .mop button {
+  width: 33.33333%;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 15px 0;
+  line-height: 1;
+  transition: 0.5s;
+}
+#product-view #product-info .product-features .mop button:nth-child(1) {
+  color: red;
+}
+#product-view #product-info .product-features .mop button:hover {
+  background-color: #ff003c;
+  color: #fff;
+}
+#product-view #product-info .product-features .mop button:nth-child(2) {
+  margin: 0 20px;
 }
