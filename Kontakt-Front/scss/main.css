@@ -3270,3 +3270,12 @@ a {
 #product-view #review-tabs #accordion-product-view {
   display: none;
 }
+
+#product-search #mob-main-menu {
+  display: none;
+}
+#product-search .ustmetnslider {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
