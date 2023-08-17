@@ -636,4 +636,139 @@
         }
 
     }
+
+    #review-tabs {
+        margin-top: 33px;
+
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .nav-tabs {
+            .nav-item {
+                margin-bottom: -3px !important;
+                margin-right: 0px !important;
+                position: relative;
+                margin-top: 2px;
+
+                .nav-link {
+                    display: block;
+                    padding: 0.5rem 1rem;
+                }
+
+                .nav-link {
+                    font-family: montserrat,sans-serif;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #282828;
+                    background-color: #edf1f5;
+                    position: relative;
+                    border: 1px solid #edf1f5;
+                    border-radius: 0;
+                    padding-right: 16px;
+                }
+
+                .nav-link.active {
+                    background-color: #fff;
+                    border-top-color: #ebebeb;
+                    border-left-color: #ebebeb;
+                    border-bottom: none;
+                    z-index: 20;
+                    padding-right: 16px;
+                    border: 1px solid #fff;
+                }
+            }
+
+            .nav-item-second a {
+                border-radius: 0px 13px 0 0 !important;
+            }
+        }
+
+        .round-edge-tab {
+            padding-bottom: 0;
+            margin-bottom: -1px;
+        }
+
+        .round-edge-tab {
+            border: none;
+            justify-content: flex-end;
+            overflow: hidden;
+            padding-left: 10px;
+        }
+
+        .gray-line {
+            background-color: #f9fbfc;
+        }
+
+        .tabs {
+            margin-bottom: 30px;
+            padding: 0;
+
+            .tab-content {
+                background-color: #fff;
+                padding: 30px 18px;
+                border: 1px solid #ebebeb;
+
+                .fade {
+                    transition: opacity .15s linear;
+                }
+            }
+
+            .tab-content>.tab-pane {
+                display: none;
+            }
+
+            .features-review-tabs li {
+                font-family: montserrat,sans-serif;
+                font-size: 16px;
+                line-height: 2.38;
+                letter-spacing: normal;
+                text-align: left;
+                color: #282828;
+                padding-left: 10px;
+            }
+
+            .tab-content>.active {
+                display: block;
+
+                .roww{
+                    display: flex;
+
+                    .tabcontent-left{
+              
+                            flex: 0 0 33.33333%;
+                            max-width: 33.33333%;
+                            position: relative;
+                            width: 100%;
+                            padding-right: 15px;
+                            padding-left: 15px;
+
+                            ul {
+                                list-style: none;
+                                padding: 0;
+                                margin-bottom: 0;
+                            }
+                    
+                    }
+
+                    .tabcontent-right{
+                        flex: 0 0 66.66667%;
+                        max-width: 66.66667%;
+                        position: relative;
+                        width: 100%;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+
+        #accordion-product-view {
+            display: none;
+        }
+    }
 }
