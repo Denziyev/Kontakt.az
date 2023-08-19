@@ -331,6 +331,50 @@
                             position: relative;
                             display: inline-flex;
                             vertical-align: middle;
+
+                            .btn {
+                                display: inline-block;
+                                font-weight: 400;
+                                color: #212529;
+                                text-align: center;
+                                vertical-align: middle;
+                                user-select: none;
+                                background-color: transparent;
+                                border: 1px solid transparent;
+                                padding: 0.375rem 0.75rem;
+                                font-size: 1rem;
+                                line-height: 1.5;
+                                border-radius: 0.25rem;
+                                transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                            }
+
+                            .btn {
+                                position: relative;
+                                flex: 1 1 auto;
+                            }
+                            .btn:not(:first-child) {
+                                border-top-left-radius: 0;
+                                border-bottom-left-radius: 0;
+                            }
+                            .btn:not(:first-child) {
+                                margin-left: -1px;
+                            }
+
+                            .btn-secondary {
+                                color: #fff;
+                                background-color: #6c757d;
+                                border-color: #6c757d;
+                            }
+
+                            button{
+                                text-transform: none;
+                                overflow: visible;
+                            }
+
+                            .active {
+                                border: none!important;
+                                background-color: #ff003c!important;
+                            }
                         }
 
                         .center-nav {

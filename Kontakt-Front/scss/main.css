@@ -3545,6 +3545,55 @@ a {
   display: inline-flex;
   vertical-align: middle;
 }
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group .btn,
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical .btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group .btn,
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group .btn:not(:first-child),
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical .btn:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group .btn:not(:first-child),
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical .btn:not(:first-child) {
+  margin-left: -1px;
+}
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group .btn-secondary,
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical .btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group button,
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical button {
+  text-transform: none;
+  overflow: visible;
+}
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group .active,
+#product-search .roww .searchpageright #product-list #product-list-header .list-view-by .btn-group-vertical .active {
+  border: none !important;
+  background-color: #ff003c !important;
+}
 #product-search .roww .searchpageright #product-list #product-list-header .list-view-by .center-nav {
   display: none;
 }
