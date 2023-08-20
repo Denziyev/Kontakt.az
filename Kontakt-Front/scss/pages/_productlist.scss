@@ -9,6 +9,7 @@
         margin: 0;
         margin-bottom: 30px;
         padding: 0;
+   
     }
 
     .seg-clear {
@@ -81,7 +82,8 @@
         display: flex;
         flex-wrap: wrap;
         margin-right: -15px;
-        margin-left: -15px;
+        margin-left: 0;
+        width: 100%;
 
         .searchpageleft {
             position: relative;
@@ -831,7 +833,8 @@
         display: flex;
         flex-wrap: wrap;
         margin-right: -15px;
-        margin-left: -15px;
+        margin-left: 0;
+        width: 100%;
 
         .col-12 {
             flex: 0 0 100%;

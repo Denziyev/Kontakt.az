@@ -293,7 +293,9 @@ body {
         }
     }
 
-
+    .mob-tablet-header{
+        display: none;
+    }
 }
 
 .discountarea {
@@ -566,6 +568,7 @@ body {
         flex-wrap: wrap;
         margin-right: -15px;
         margin-left: -15px;
+        width: 100%;
 
         .htmlmap {
             position: relative;
@@ -644,3 +647,26 @@ body {
         }
     }
 }
+
+
+@media only screen and (max-width: 1140px) {
+   
+    .Container {
+        width: 768px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .header-top{
+        display: none;
+    }
+
+    .header-bottom{
+        display: none;
+    }
+
+    .mob-tablet-header{
+        display: block;
+    }
+
+}
+  

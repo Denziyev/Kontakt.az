@@ -104,7 +104,7 @@
     }
 
     #product-info {
-        padding: 30px 15px;
+        padding: 30px 5px;
         display: flex;
         justify-content: space-between;
 
@@ -154,6 +154,7 @@
                     width: 420px;
                     display: flex;
                     align-items: center;
+                    padding-right: 5px;
 
                     .lbl-percentage-grid-2022 {
                         position: absolute;
@@ -223,7 +224,6 @@
         }
 
         .product-features {
-            padding-left: 15px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
