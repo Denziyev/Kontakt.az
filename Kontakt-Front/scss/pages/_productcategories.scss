@@ -1,0 +1,100 @@
+body {
+    background: #f3f3f3;
+}
+
+#category-widget-main {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+
+    .container__elem--15 {
+        flex-basis: calc(100%/15 * 15 - 10px);
+        max-width: calc(100%/15 * 15 - 10px);
+    }
+
+    .container__elem {
+        -webkit-box-flex: 1;
+        box-sizing: border-box;
+        flex-grow: 1;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 100%;
+
+        .cont__top {
+            background: #fff;
+            height: 80px;
+            display: flex;
+            padding-left: 20px;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 10px;
+
+            h1 {
+                font-weight: 600;
+                font-size: 20px;
+                margin: 0;
+                line-height: 30px;
+                letter-spacing: -0.03em;
+            }
+        }
+
+        .cont__top--catalog {
+            display: flex;
+            padding-right: 20px;
+            height: 70px;
+            justify-content: space-between;
+           
+            
+
+            .catalog__item {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .cont__bottomM {
+            display: none;
+            flex-direction: column;
+        }
+    }
+
+
+    .category.Container {
+        gap: 1.28%;
+        padding: 0 5px;
+        display: flex;
+        flex-wrap: wrap;
+        
+  
+
+        .category-list {
+            background: #fff;
+            padding: 25px 16px;
+            border-radius: 10px;
+            width: 32.4%;
+            margin: 0 0 10px 0;
+            font-size: 12px;
+            display: flex;
+
+            a {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                flex-direction: row;
+                color: black;
+
+                img {
+                    max-width: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
