@@ -293,7 +293,7 @@ body {
         }
     }
 
-    .mob-tablet-header{
+    .tablet-header {
         display: none;
     }
 }
@@ -650,23 +650,127 @@ body {
 
 
 @media only screen and (max-width: 1140px) {
-   
+
     .Container {
         width: 768px;
         margin-right: auto;
         margin-left: auto;
     }
-    .header-top{
+
+    .header-top {
         display: none;
     }
 
-    .header-bottom{
+    .header-bottom {
         display: none;
     }
 
-    .mob-tablet-header{
-        display: block;
+    .tablet-header {
+        top: 0;
+        border: none;
+        z-index: 9999 !important;
+        display: flex !important;
+        background-color: white;
+
+        .roww {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 20px;
+            width: 100%;
+
+            .HamburgerIcon {
+                padding: 0;
+
+                .logo {
+                    img {
+                        width: 22px;
+                    }
+                }
+            }
+
+            .logodiv {
+                margin-left: 15px;
+                margin-right: auto;
+
+                .logo {
+                    img {
+                        height: 24px;
+                    }
+                }
+            }
+
+            .search-basketsection {
+                margin-left: auto;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    list-style: none;
+                    margin: 0;
+
+                    li {
+                        margin-left: 15px;
+                        align-items: center;
+                        margin-right: 0;
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 1;
+                            color: #777;
+                            margin-bottom: auto;
+                            display: flex;
+                            align-items: center;
+                            transition: .5s;
+                            text-decoration: none;
+
+                            p {
+                                margin: 0;
+                                padding: 0;
+                            }
+
+
+                        }
+
+                        .basketbtn {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+
+                            span {
+                                color: #000;
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 1;
+                                text-decoration: none;
+                            }
+
+                            .cart_count {
+                                font-size: 10px;
+                                height: 15px;
+                                width: 15px;
+                                background-color: #fff;
+                                border-radius: 50%;
+                                color: #ff003c;
+                                position: absolute;
+                                top: -2px;
+                                left: 8px;
+                                text-align: center;
+                                line-height: 18px;
+                                display: block !important;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
     }
 
+    .discountarea {
+        display: none;
+    }
+   
 }
-  
