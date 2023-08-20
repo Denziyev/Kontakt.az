@@ -87,6 +87,7 @@ for (let index = 0; index < productmenu.length; index++) {
 //-----------------------------------------------------------------------
 var  headertop=document.querySelector(".header-top");
 var headerbottom=document.querySelector(".header-bottom");
+var tabheader=document.querySelector(".tablet-header");
 
 
     window.onscroll = function() {myFunction()};
@@ -95,8 +96,15 @@ function myFunction() {
       headerbottom.style.position="fixed"
       headerbottom.style.borderBottom="2px solid rgba(0, 0, 0, .08)"
       headerbottom.style.width="100%"
+      if(tabheader.style.display!="none"){
+        tabheader.style.position="fixed"
+        tabheader.style.borderBottom="2px solid rgba(0, 0, 0, .08)"
+        tabheader.style.width="100%"
+      }
     } else {
-        headerbottom.style.position="initial"
+        headerbottom.style.position="initial";
+        tabheader.style.position="initial";
+
     }
   }
 

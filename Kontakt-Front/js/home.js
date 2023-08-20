@@ -84,3 +84,37 @@ topselleritems.forEach((item) => {
 
 
 //------------------------------------------------------------------------------------------------------------------
+var nextBtn1 = document.querySelector(".respdiscountsidebartopslidertop .carousel-control-next");
+var PrevBtn1 = document.querySelector(".respdiscountsidebartopslidertop .carousel-control-prev");
+var currentslide1 = document.querySelectorAll(".respdiscountsidebartopslidertop .carousel-inner .active")[0];
+var firstslide1 = document.querySelectorAll(".respdiscountsidebartopslidertop .carousel-inner .carousel-item")[0];
+var lastslide1 = document.querySelectorAll(".respdiscountsidebartopslidertop .carousel-inner .carousel-item")[document.querySelectorAll(".carousel-inner .carousel-item").length - 1]
+
+nextBtn1.addEventListener("click", nextslidefunction1);
+PrevBtn1.addEventListener("click", previousslidefunction1);
+function nextslidefunction1() {
+    currentslide1 = document.querySelectorAll(".respdiscountsidebartopslidertop .carousel-inner .active")[0];
+
+    if (currentslide1.nextElementSibling == null) {
+        firstslide1.classList.add("active");
+    }
+    else {
+        currentslide1.nextElementSibling.classList.add("active");
+    }
+    currentslide1.classList.remove("active");
+}
+
+
+function previousslidefunction1() {
+    currentslide1 = document.querySelectorAll(".respdiscountsidebartopslidertop .carousel-inner .active")[0];
+    if (currentslide1.previousElementSibling == null) {
+        lastslide1.classList.add("active");
+    }
+    else {
+        currentslide1.previousElementSibling.classList.add("active");
+    }
+    currentslide1.classList.remove("active");
+}
+
+
+setInterval(nextslidefunction1, 3000);
