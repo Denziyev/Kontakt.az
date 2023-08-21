@@ -774,3 +774,13 @@ body {
     }
    
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    .Container {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
