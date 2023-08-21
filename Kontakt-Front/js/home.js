@@ -118,3 +118,61 @@ function previousslidefunction1() {
 
 
 setInterval(nextslidefunction1, 3000);
+
+
+//===============================================================
+
+var selectheader=document.querySelector(".select_header");
+
+selectheader.addEventListener("click",()=>{
+    selectheader.classList.toggle("active")
+    selectheader.nextElementSibling.classList.toggle("active");
+})
+
+selectheader.nextElementSibling.querySelectorAll("li").forEach((onecateitem)=>{
+    onecateitem.addEventListener("click",()=>{
+        selectheader.textContent=onecateitem.textContent
+        selectheader.classList.remove("active")
+        selectheader.nextElementSibling.classList.remove("active");
+    })
+})
+
+//=============================================================
+
+var cardlikbuttons=Array.from(document.querySelectorAll(".cart-action>button:nth-child(1)"));
+var cardscalebuttons=Array.from(document.querySelectorAll(".cart-action>button:nth-child(2)"));
+console.log(cardscalebuttons)
+cardlikbuttons.forEach((btn)=>{
+    btn.addEventListener("click",()=>{
+    console.log("hrllo");
+       if(btn.style.backgroundColor=="red"){
+        btn.style.backgroundColor="white";
+       }
+       else{
+        btn.style.backgroundColor="red"
+       }
+    })
+})
+cardscalebuttons.forEach((btn)=>{
+    btn.addEventListener("click",()=>{
+    
+       if(btn.style.backgroundColor=="red"){
+        btn.style.backgroundColor="white"
+       }
+       else{
+        btn.style.backgroundColor="red"
+       }
+    })
+})
+
+//====================================================================
+
+var mobmainmenu=document.querySelector("#mob-main-menu");
+var hamburgericon=document.querySelector(".HamburgerIcon");
+var menuxiconmobs=document.querySelector(".menu-icon-mobs");
+hamburgericon.addEventListener("click",()=>{
+    mobmainmenu.classList.add("active");
+})
+menuxiconmobs.addEventListener("click",()=>{
+    mobmainmenu.classList.remove("active");
+})
