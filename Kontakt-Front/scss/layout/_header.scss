@@ -294,7 +294,7 @@ body {
     }
 
     .tablet-header {
-        display: none;
+        display: none ;
     }
 }
 
@@ -322,7 +322,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    background-color: rgb(193, 190, 190, 0.4);
+    background-color: rgba(1, 1, 1, 0.7);
     z-index: 100;
 
 
@@ -648,6 +648,13 @@ body {
     }
 }
 
+@media only screen and (min-width:1141px){
+
+    #monthly-payment-modall{
+        display: none;
+    }
+}
+
 
 @media only screen and (max-width: 1140px) {
 
@@ -769,6 +776,59 @@ body {
         }
     }
 
+ 
+
+    #monthly-payment-modall {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(1, 1, 1, 0.7);
+        z-index: 100;
+    
+    
+        .Modal-content {
+            position: relative;
+            display: flex;
+            margin-top: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: column;
+            width: 85%;
+            gap: 20px;
+            max-width: 96%;
+            padding: 10px 20px 0 20px;
+            pointer-events: auto;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, .2);
+            border-radius: 0.3rem;
+            outline: 0;
+    
+    
+            .roww {
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -15px;
+                margin-left: -15px;
+    
+                .paymentitem {
+                    width: 33%;
+                    padding: 30px;
+    
+    
+                    .lazy {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+    }
+
     .discountarea {
         display: none;
     }
@@ -784,6 +844,7 @@ body {
         margin-left: auto;
     }
 
+    
     #monthly-payment-modall {
         position: fixed;
         top: 60px;
@@ -831,4 +892,6 @@ body {
             }
         }
     }
+
+   
 }
