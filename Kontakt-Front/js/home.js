@@ -141,7 +141,7 @@ selectheader.nextElementSibling.querySelectorAll("li").forEach((onecateitem)=>{
 
 var cardlikbuttons=Array.from(document.querySelectorAll(".cart-action>button:nth-child(1)"));
 var cardscalebuttons=Array.from(document.querySelectorAll(".cart-action>button:nth-child(2)"));
-console.log(cardscalebuttons)
+
 cardlikbuttons.forEach((btn)=>{
     btn.addEventListener("click",()=>{
     console.log("hrllo");
@@ -170,9 +170,70 @@ cardscalebuttons.forEach((btn)=>{
 var mobmainmenu=document.querySelector("#mob-main-menu");
 var hamburgericon=document.querySelector(".HamburgerIcon");
 var menuxiconmobs=document.querySelector(".menu-icon-mobs");
+var allcategorymenu=document.querySelector(".all-category-menu");
 hamburgericon.addEventListener("click",()=>{
+    mobmainmenu.classList.add("active");
+})
+allcategorymenu.addEventListener("click",()=>{
     mobmainmenu.classList.add("active");
 })
 menuxiconmobs.addEventListener("click",()=>{
     mobmainmenu.classList.remove("active");
+})
+
+//===================================================================
+ var menubuttonn=Array.from(document.querySelectorAll(".menu-button"))[1];
+var categorymenuu=document.querySelector(".category-menu");
+
+
+
+
+menubuttonn.addEventListener("click",()=>{
+    menubuttonn.classList.toggle("active");
+    if(categorymenuu.style.display=="block"){
+        categorymenuu.style.display="none" ;
+    }
+    else{
+        categorymenuu.style.display="block";
+    }
+})
+
+var productmenuuli=Array.from(document.querySelectorAll(".category-menu>.product-menu>li"))
+
+productmenuuli.forEach((li)=>{
+ li.querySelector("a").addEventListener("click",()=>{
+    document.querySelector(".category-select").classList.toggle("disnonee");
+    li.querySelector(".sub-menu").classList.toggle("active");
+   menubuttonn.classList.toggle("disnonee")
+   document.querySelector(".divu6060").classList.toggle("disnonee");
+   document.querySelector(".mobmenugeri").classList.toggle("disblockk")
+   li.querySelector(".sub-menu-open").classList.toggle("disblockk")
+   productmenuuli.forEach((lii)=>{
+    if(lii!=li){
+        lii.classList.toggle("disnonee")
+    }
+   })
+ })
+})
+
+document.querySelector(".mobmenugeri").addEventListener("click",()=>{
+    menubuttonn.classList.remove("disnonee");
+    productmenuuli.forEach((li)=>{
+        li.querySelector(".sub-menu").classList.remove("active");
+        li.querySelector(".sub-menu-open").classList.remove("disblockk")
+        li.classList.remove("disnonee");
+    })
+    document.querySelector(".divu6060").classList.toggle("disnonee");
+    document.querySelector(".mobmenugeri").classList.toggle("disblockk")
+    document.querySelector(".category-select").classList.toggle("disnonee");
+})
+
+
+
+var submenulis=Array.from(document.querySelectorAll(".category-menu>.product-menu>li>.sub-menu-open>ul>li"));
+
+submenulis.forEach((subli)=>{
+    subli.addEventListener("click",()=>{
+        subli.querySelector(".sub-menu-product-open").classList.toggle("disblockk");
+    })
 })

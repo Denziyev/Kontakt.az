@@ -109,3 +109,26 @@ function myFunction() {
   }
 
   //-----------------------------------------------------------------------------
+
+  const ModalBtn1=document.querySelector(".category-select .modalayliq2");
+const ModalContainer1=document.querySelector(" #monthly-payment-modall");
+const ModalContent1=document.querySelector("#monthly-payment-modall .Modal-content");
+
+var mobmainmenu=document.querySelector("#mob-main-menu");
+
+console.log(ModalContainer1)
+
+ModalBtn1.addEventListener("click", (x) => {
+   mobmainmenu.classList.remove("active");
+    ModalContainer1.style.display="block";
+    x.preventDefault();
+
+});
+
+ModalContainer1.addEventListener("click",()=>{
+    ModalContainer1.style.display="none";
+});
+
+ModalContent1.addEventListener("click",(e)=>{
+     e.stopPropagation();
+});
