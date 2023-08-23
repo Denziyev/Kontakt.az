@@ -844,6 +844,54 @@ body {
         margin-left: auto;
     }
 
+    .section-header{
+        font-size: 18px;
+        padding: 15px 20px;
+        background-color: #e3e3e3;
+    }
+
+    #header-breadcrumb {
+        position: relative;
+        padding: 4px 0;
+        min-height: 30px;
+        padding-left: 10px;
+        .htmlmap{
+            overflow-x: scroll;
+            height: 34px;
+            flex: 0 0 100%;
+            max-width: 100%;
+           
+            ul {
+                position: absolute;
+                width: 1000px;
+                padding: 0 !important;
+            
+
+                li {
+                    font-size: 12px !important;
+                    color: #253444 !important;
+                    font-weight: 400 !important;
+
+                    a {
+                        font-size: 12px !important;
+                        color: #253444 !important;
+                        position: relative !important;
+                        font-weight: 400 !important;
+                    }
+                }
+                li:before {
+                    bottom: 15px !important;
+                    transform: rotate(45deg) !important;
+                }
+                li:after {
+                    top: 14px !important;
+                    transform: rotate(-45deg) !important;
+                }
+            }
+
+        }
+    }
+
     
     #monthly-payment-modall {
         position: fixed;

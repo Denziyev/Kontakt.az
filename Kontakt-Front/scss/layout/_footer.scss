@@ -235,9 +235,7 @@ footer {
 
 }
 
-.footfixparent {
-    display: none;
-}
+
 
 
 
@@ -305,15 +303,15 @@ footer {
         }
     }
 
+
+}
+
+
+@media only screen and (min-width: 769px) {
     .footfixparent {
         display: none;
     }
 }
-
-
-
-
-
 @media only screen and (max-width: 768px) {
 
     .footfixparent {
