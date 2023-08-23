@@ -170,7 +170,34 @@ var ttt=false;
     }
     e.preventDefault()
 })
-  
+
+var respsortbtnqiymet=document.querySelector(".center-nav");
+
+respsortbtnqiymet.addEventListener('click',(e)=>{
+  if(bbb==false && ttt==false){
+      nineonesort();
+      bbb=true;
+      sortbtns[1].querySelector("svg").classList.toggle("sgvup");
+      sortbtns[1].querySelector("svg").parentElement.querySelector("p").textContent=`Bahadan-ucuza`;
+      respsortbtnqiymet.querySelector("p").textContent="Bahadan-ucuza";
+  }
+  e.preventDefault()
+})
+
+respsortbtnqiymet.addEventListener('click',(e)=>{
+  if(bbb==true && ttt==true){
+      oneninesort();
+      ttt=false;
+      bbb=false;
+      sortbtns[1].querySelector("svg").classList.toggle("sgvup");
+      sortbtns[1].querySelector("svg").parentElement.querySelector("p").textContent="Ucuzdan-bahaya";
+      respsortbtnqiymet.querySelector("p").textContent="Ucuzdan-bahaya"
+  }
+  else{
+      ttt=true;
+  }
+  e.preventDefault()
+})
 
 var searchlabels=Array.from(document.querySelectorAll(".producer li label"));
 searchlabels.forEach((label)=>{
@@ -217,15 +244,6 @@ btnclosee.addEventListener("click",()=>{
     footfixmenuu.style.display="flex";
  })
 
- var centernav=document.querySelector(".center-nav");
- centernav.addEventListener("click",(e)=>{
-    if(centernav.querySelector("p").textContent=="Bahadan-ucuza"){
-        centernav.querySelector("p").textContent="Ucuzdan-bahaya";
-    }else{
-        centernav.querySelector("p").textContent="Bahadan-ucuza";
-    }
 
-    e.preventDefault();
- })
 
  //=====================================================================
