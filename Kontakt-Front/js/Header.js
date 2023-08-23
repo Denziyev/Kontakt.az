@@ -69,6 +69,8 @@ for (let index = 0; index < headerproductmenu.length; index++) {
 
 }
 
+
+
 var productmenu=Array.from(document.querySelectorAll(".menusidebar .product-menu>li"));
 
 var productmenuopentop=0;
@@ -116,7 +118,7 @@ const ModalContent1=document.querySelector("#monthly-payment-modall .Modal-conte
 
 var mobmainmenu=document.querySelector("#mob-main-menu");
 
-console.log(ModalContainer1)
+
 
 ModalBtn1.addEventListener("click", (x) => {
    mobmainmenu.classList.remove("active");
