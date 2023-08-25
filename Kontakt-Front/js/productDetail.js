@@ -123,4 +123,35 @@ backtocart.addEventListener("click",()=>{
 })
 
 
+var nisye_ay_modal=Array.from(document.querySelectorAll(".nisye_ay_modal"));
+nisye_ay_modal.forEach((item)=>{
+   item.addEventListener("click",()=>{
+      nisye_ay_modal.forEach((modal)=>{
+        modal.classList.remove("active");
+      })
+      item.classList.add("active");
+      item.parentElement.nextElementSibling.querySelector(".aysay").textContent=`${item.value}`
+      item.parentElement.nextElementSibling.querySelector(".ilkin").textContent=`${item.getAttribute("data-prepay")}`
+      item.parentElement.nextElementSibling.querySelector(".ayliq").textContent=`${item.getAttribute("data-amount")}`
+   })
+})
+
+var nisye_increasebtns=Array.from(document.querySelectorAll("button.nisye_increase"))
+
+nisye_increasebtns.forEach((btn)=>{
+   btn.addEventListener("click",()=>{
+    btn.previousElementSibling.value=`${parseInt(btn.previousElementSibling.value)+1}`
+   })
+})
+
+
+var nisye_decreasebtns=Array.from(document.querySelectorAll("button.nisye_decrease"))
+
+nisye_decreasebtns.forEach((btn)=>{
+   btn.addEventListener("click",()=>{
+    if(btn.nextElementSibling.value>0){
+    btn.nextElementSibling.value=`${parseInt(btn.nextElementSibling.value)-1}`
+    }
+   })
+})
 
