@@ -2589,102 +2589,102 @@
                                                 }
                                             });
                                         </script>
-                                       <script>
-                                        function toggleSteps(element) {
-                                            if (element.value > 18) {
-                                                element.value = 24;
-                                            } else if (element.value <= 6) {
-                                                element.value = 6;
-                                            } else if (element.value <= 9) {
-                                                element.value = 9;
-                                            } else if (element.value <= 12) {
-                                                element.value = 12;
-                                            } else if (element.value <= 15) {
-                                                element.value = 15;
-                                            } else if (element.value <= 18) {
-                                                element.value = 18;
-                                            } else {
-                                                //element.step = 3;
-                                            }
-                                
-                                            document.querySelectorAll('p.faizsizmi').forEach(function (item) {
-                                                item.parentElement.style.opacity = 0;
-                                                item.innerHTML = '';
-                                            });
-                                            
-                                            var mehsul_say = parseFloat(document.querySelector('.nisye_ay').getAttribute('data-count'));
-                                            if (!(mehsul_say > 0)) {
-                                                mehsul_say = 1;
-                                            }
-                                         
-                                            var secilmis_zemanet = 0;
-                                            // var warrantyPrice = document.querySelector('.btn-add-to-cart-hisse-hisse').getAttribute('data-warranty-price');
-                                            // if (warrantyPrice !== undefined) {
-                                            //     secilmis_zemanet = parseFloat(warrantyPrice);
-                                            // }
-                                
-                                            var selectedMonth = element.value;
-                                            var ayliqmeb = mehsul_say * parseFloat(document.querySelector('.nisye_ay[data-month="' + selectedMonth + '"]').getAttribute('data-amount')) + secilmis_zemanet / selectedMonth;
-                                            var ilkinmeb = mehsul_say * parseFloat(document.querySelector('.nisye_ay[data-month="' + selectedMonth + '"]').getAttribute('data-prepay'));
-                                            ayliqmeb = Math.round(ayliqmeb * 100) / 100;
-                                            ilkinmeb = Math.round(ilkinmeb * 100) / 100;
-                                            console.log(document.querySelector('.ayliq'))
-                                            document.querySelector('.credit-calculation .ayliq').innerHTML = ayliqmeb;
-                                            document.querySelector('.credit-calculation .ilkin').innerHTML = ilkinmeb;
-                                
-                                            var noper = document.querySelector('.nisye_ay[data-month="' + selectedMonth + '"]').getAttribute('data-noper');
-                                            if (noper !== '') {
-                                                var faizsizmiElements = document.querySelectorAll('.faizsizmi');
-                                                faizsizmiElements.forEach(function (item) {
-                                                    item.innerHTML = noper;
-                                                    item.parentElement.style.opacity = 1;
-                                                    item.parentElement.style.display = 'block';
+                                        <script>
+                                            function toggleSteps(element) {
+                                                if (element.value > 18) {
+                                                    element.value = 24;
+                                                } else if (element.value <= 6) {
+                                                    element.value = 6;
+                                                } else if (element.value <= 9) {
+                                                    element.value = 9;
+                                                } else if (element.value <= 12) {
+                                                    element.value = 12;
+                                                } else if (element.value <= 15) {
+                                                    element.value = 15;
+                                                } else if (element.value <= 18) {
+                                                    element.value = 18;
+                                                } else {
+                                                    //element.step = 3;
+                                                }
+
+                                                document.querySelectorAll('p.faizsizmi').forEach(function (item) {
+                                                    item.parentElement.style.opacity = 0;
+                                                    item.innerHTML = '';
                                                 });
+
+                                                var mehsul_say = parseFloat(document.querySelector('.nisye_ay').getAttribute('data-count'));
+                                                if (!(mehsul_say > 0)) {
+                                                    mehsul_say = 1;
+                                                }
+
+                                                var secilmis_zemanet = 0;
+                                                // var warrantyPrice = document.querySelector('.btn-add-to-cart-hisse-hisse').getAttribute('data-warranty-price');
+                                                // if (warrantyPrice !== undefined) {
+                                                //     secilmis_zemanet = parseFloat(warrantyPrice);
+                                                // }
+
+                                                var selectedMonth = element.value;
+                                                var ayliqmeb = mehsul_say * parseFloat(document.querySelector('.nisye_ay[data-month="' + selectedMonth + '"]').getAttribute('data-amount')) + secilmis_zemanet / selectedMonth;
+                                                var ilkinmeb = mehsul_say * parseFloat(document.querySelector('.nisye_ay[data-month="' + selectedMonth + '"]').getAttribute('data-prepay'));
+                                                ayliqmeb = Math.round(ayliqmeb * 100) / 100;
+                                                ilkinmeb = Math.round(ilkinmeb * 100) / 100;
+                                                console.log(document.querySelector('.ayliq'))
+                                                document.querySelector('.credit-calculation .ayliq').innerHTML = ayliqmeb;
+                                                document.querySelector('.credit-calculation .ilkin').innerHTML = ilkinmeb;
+
+                                                var noper = document.querySelector('.nisye_ay[data-month="' + selectedMonth + '"]').getAttribute('data-noper');
+                                                if (noper !== '') {
+                                                    var faizsizmiElements = document.querySelectorAll('.faizsizmi');
+                                                    faizsizmiElements.forEach(function (item) {
+                                                        item.innerHTML = noper;
+                                                        item.parentElement.style.opacity = 1;
+                                                        item.parentElement.style.display = 'block';
+                                                    });
+                                                }
+
+                                                document.querySelector('.aysay').innerHTML = selectedMonth;
+
+                                                var jwarr = document.querySelector('.btn-add-to-cart.add').getAttribute('data-warranty');
+                                                if (jwarr === undefined) {
+                                                    jwarr = 0;
+                                                }
+
+                                                var gotocheckoutLink = document.querySelector('.gotocheckout');
+                                                var gotocheckoutHref = gotocheckoutLink.getAttribute('data-href') + '&aysay=' + selectedMonth + '&qizilzemanet=' + jwarr;
+                                                gotocheckoutLink.setAttribute('href', gotocheckoutHref);
                                             }
-                                
-                                            document.querySelector('.aysay').innerHTML = selectedMonth;
-                                
-                                            var jwarr = document.querySelector('.btn-add-to-cart.add').getAttribute('data-warranty');
-                                            if (jwarr === undefined) {
-                                                jwarr = 0;
-                                            }
-                                
-                                            var gotocheckoutLink = document.querySelector('.gotocheckout');
-                                            var gotocheckoutHref = gotocheckoutLink.getAttribute('data-href') + '&aysay=' + selectedMonth + '&qizilzemanet=' + jwarr;
-                                            gotocheckoutLink.setAttribute('href', gotocheckoutHref);
-                                        }
-                                
-                                        var ccRangeInput = document.getElementById('cc-range');
-                                        toggleSteps(ccRangeInput);
-                                
-                                        setTimeout(function () {
-                                            ccRangeInput.value = ccRangeInput.getAttribute('max');
-                                            ccRangeInput.dispatchEvent(new Event('input'));
-                                            document.querySelector('.nisye_ay_modal').click();
-                                        }, 300);
-                                
-                                        var nisyeAyModalElements = document.querySelectorAll('.nisye_ay_modal');
-                                        nisyeAyModalElements.forEach(function (item) {
-                                            item.addEventListener('click', function () {
-                                                nisyeAyModalElements.forEach(function (modal) {
-                                                    modal.classList.remove('active');
-                                                });
-                                                item.classList.add('active');
-                                                var ccRangeInput = document.getElementById('cc-range');
-                                                ccRangeInput.value = item.getAttribute('value');
+
+                                            var ccRangeInput = document.getElementById('cc-range');
+                                            toggleSteps(ccRangeInput);
+
+                                            setTimeout(function () {
+                                                ccRangeInput.value = ccRangeInput.getAttribute('max');
                                                 ccRangeInput.dispatchEvent(new Event('input'));
-                                                toggleSteps(ccRangeInput);
+                                                document.querySelector('.nisye_ay_modal').click();
+                                            }, 300);
+
+                                            var nisyeAyModalElements = document.querySelectorAll('.nisye_ay_modal');
+                                            nisyeAyModalElements.forEach(function (item) {
+                                                item.addEventListener('click', function () {
+                                                    nisyeAyModalElements.forEach(function (modal) {
+                                                        modal.classList.remove('active');
+                                                    });
+                                                    item.classList.add('active');
+                                                    var ccRangeInput = document.getElementById('cc-range');
+                                                    ccRangeInput.value = item.getAttribute('value');
+                                                    ccRangeInput.dispatchEvent(new Event('input'));
+                                                    toggleSteps(ccRangeInput);
+                                                });
                                             });
-                                        });
-                                
-                                        var sideMenuSliderButtons = document.querySelectorAll('.side-menu .slider button');
-                                        sideMenuSliderButtons.forEach(function (button) {
-                                            button.addEventListener('click', function () {
-                                                var mainImgLink = document.querySelector('.mainImg a');
-                                                mainImgLink.setAttribute('href', button.querySelector('img').getAttribute('src'));
+
+                                            var sideMenuSliderButtons = document.querySelectorAll('.side-menu .slider button');
+                                            sideMenuSliderButtons.forEach(function (button) {
+                                                button.addEventListener('click', function () {
+                                                    var mainImgLink = document.querySelector('.mainImg a');
+                                                    mainImgLink.setAttribute('href', button.querySelector('img').getAttribute('src'));
+                                                });
                                             });
-                                        });
-                                    </script>
+                                        </script>
                                     </div>
                                     <div class="payment-info">
                                         <ul>
@@ -2709,7 +2709,8 @@
                             <div class="mop">
                                 <button type="button" class="on-click btn-mop kontakt-button-birklik"
                                     data-toggle="modal" data-target="#kontakt-modal-birklik"> Bir kliklə al </button>
-                                <button type="button" class="cash btn-mop " onclick="kontakt_push_cart_modal(926004,1)">
+                                <button type="button" class="cash btn-mop " data-toggle="modal"
+                                    data-target="#my-cart-modal">
                                     Nağd al </button>
                                 <button type="button" class="partial btn-mop" data-toggle="modal"
                                     data-target="#partial-pay-modal"> Hissə - hissə al </button>
@@ -2743,19 +2744,21 @@
                                 <div class="form-group" style="padding-top:20px">
                                     <label for="" style="font-size:18px">Sifariş formasını seçin</label>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-lg-6">
+                                <div class="form-group roww">
+                                    <div class="colnaqd">
                                         <div class="form-check form-check-inline ocinput">
                                             <input class="form-check-input" type="radio" name="oc_payment_type"
-                                                id="inlineRadio1" value="0">
+                                                id="inlineRadio1" value="0"
+                                                onclick="jQuery('.nisye_onc').hide();jQuery('#oc_fin').removeAttr('required');">
                                             <label class="form-check-label" for="inlineRadio1">Nağd al <span
                                                     class="oc_error" style="display:none;">*</span></label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="colhisse">
                                         <div class="form-check form-check-inline ocinput">
                                             <input class="form-check-input" type="radio" name="oc_payment_type"
-                                                id="inlineRadio2" value="1">
+                                                id="inlineRadio2" value="1"
+                                                onclick="jQuery('.nisye_onc').show();jQuery('#oc_fin').attr('required','required');">
                                             <label class="form-check-label" for="inlineRadio2">Hissə-hissə ödənişlə al
                                                 <span class="oc_error" style="display:none;">*</span></label>
                                         </div>
@@ -2766,8 +2769,8 @@
                                         margin-bottom: 0px
                                     }
                                 </style>
-                                <div class="row nisye_onc form-group" style="display:none">
-                                    <div class="col-lg-6">
+                                <div class="roww nisye_onc form-group" style="display:none">
+                                    <div class="fincode">
                                         <div class="form-group">
                                             <label for="oc_fin" style="font-size:18px">Fin kodu qeyd edin <span
                                                     class="oc_error">*</span>
@@ -2785,8 +2788,29 @@
                                                         </svg>
                                                         FİN Kodu nədir?</span>
                                                 </a>
+                                                <script>
+                                                    jQuery(document).ready(function () {
+                                                        jQuery('.finpopover').popover({
+                                                            trigger: 'click',
+                                                            delay: { "hide": 15000 }
+                                                        });
+                                                    });
+                                                </script>
+                                                <style>
+                                                    .popover {
+                                                        z-index: 99999992
+                                                    }
 
+                                                    .svfinimg {
+                                                        width: 220px
+                                                    }
 
+                                                    @media(max-width:768px) {
+                                                        .finpopover {
+                                                            display: block
+                                                        }
+                                                    }
+                                                </style>
                                             </label>
                                         </div>
                                         <div class="form-group">
@@ -2794,7 +2818,7 @@
                                                 id="oc_fin" name="oc_fin" inputmode="text" value="">
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="citycode">
                                         <div class="form-group">
                                             <label for="oc_localphone" style="font-size:18px">Şəhər nömrənizi qeyd
                                                 edin</label>
@@ -2827,10 +2851,22 @@
                                 <div class="birkliker_stopped alert alert-info" style="display:none">
                                     Əməliyyat dayandırıldı </div>
                             </div>
+                            <div class="popover fade bs-popover-top show" role="tooltip" id="popover905973"
+                                style=" position: absolute; transform: translate3d(538px, 352px, 0px); top:-300px; left: -420px; will-change: transform; "
+                                x-placement="top">
+                                <div class="arrow" style="left: 124px;"></div>
+                                <h3 class="popover-header"></h3>
+                                <div class="popover-body">FİN kodu, şəxsiyyət vəsiqəsinin sağ aşağı küncündə yerləşir və
+                                    sonuncu simvolu buraxmaqla, ondan öncəki 7 simvolu təşkil edir.<img
+                                        class="svfinimg no-lazy"
+                                        src="https://kontakt.az/wp-content/uploads/2020/12/Azerb_ID-cards-872x1024.jpg">
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-                <div class="modal fade" id="partial-pay-modal" tabindex="-1" role="dialog"
+                <div class="modal fade" id="partial-pay-modal" tabindex="-1" role="dialog" style="z-index:99999991;"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -2861,7 +2897,7 @@
                                                 </div>
                                             </div>
                                             <div class="details">
-                                                <div class="row">
+                                                <div class="roww">
                                                     <div class="col-md-6 col-9">
                                                         <div class="features">
                                                             <p>
@@ -3018,6 +3054,348 @@
                                     <iframe allow="fullscreen;" id="video-lighbox-modal-iframe"
                                         src="https://www.youtube.com/embed/HhCqXiFmJxk" frameborder="0"
                                         allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="my-cart-modal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" style="display: none; z-index:99999991;"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-title head5" id="exampleModalLongTitle">Səbət</div>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <img class="k7closebut lazy loaded"
+                                        src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/x_button2.png"
+                                        data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/x_button2.png"
+                                        data-was-processed="true">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="item-box">
+                                    <input type="checkbox" class="form-check-input" id="select-items">
+                                    <label class="form-check-label" for="select-items">Hamısını seç</label>
+                                    <button class="delete">
+                                        <img class="lazy"
+                                            src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/eraser.png"
+                                            data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/eraser.png"
+                                            alt="">
+                                        <p>Seçilənləri sil</p>
+                                    </button>
+                                </div>
+                                <section class="cart_object">
+                                    <section id="selected-cart-item-1103948" data-product-guid="TM-DG-SBP-1105-SM-1959"
+                                        class="selected-cart-item cart_object">
+                                        <div class="chosen-cart">
+                                            <div class="checkbox">
+                                                <input type="checkbox" class="form-check-input cart_select_item"
+                                                    id="select-1103948" data-id="1103948">
+                                                <label class="form-check-label" for="select-1103948"></label>
+                                            </div>
+
+                                            <div class="photo-box">
+                                                <div class="imgHolder">
+                                                    <img alt="iPhone 14 Pro 128 GB Deep Purple" data-qazy="true"
+                                                        src="https://kontakt.az/wp-content/uploads/gallery-tum/TM-DG-SBP-1105-SM-1959_8d37c8d71451f30935a174bc7b869c22_w_png.webp">
+                                                </div>
+                                            </div>
+                                            <div class="details">
+                                                <div class="roww">
+                                                    <div class="details-left">
+                                                        <div class="features">
+                                                            <p>
+                                                                <a href="https://kontakt.az/iphone-14-pro-128-gb-deep-purple/"
+                                                                    data-id="1103948" data-reserve-id="1103948"
+                                                                    data-mid="TM-DG-SBP-1105-SM-1959"
+                                                                    data-price="2659.99" data-quantity="1">
+                                                                    iPhone 14 Pro 128 GB Deep Purple </a>
+                                                            </p>
+                                                            <p></p>
+
+
+                                                            <div class="labels">
+
+
+                                                                <div class="lbl-percentage">
+                                                                    <p>12 ay <span>Faizsiz</span></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="details-right">
+                                                        <div class="second-half">
+                                                            <div class="quantity">
+                                                                <p>Miqdar</p>
+                                                                <button type="button" class="decrease">-</button>
+                                                                <input type="number" id="amount_1103948" value="1"
+                                                                    min="0" readonly="readonly" max="3"
+                                                                    class="amount cart_amount cart_amount_1103948"
+                                                                    data-id="1103948">
+                                                                <button type="button" class="increase">+</button>
+                                                            </div>
+
+                                                            <div class="price">
+                                                                <p class="gridprice gridprice_cash endirimvar">
+                                                                    <span
+                                                                        style="text-decoration:line-through;font-weight:normal">2849.99
+                                                                        <small
+                                                                            class="azn_span">M</small></span><br><span
+                                                                        class="nprice" id="price-1103948">2659.99 <small
+                                                                            class="azn_span">M</small></span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="cart-summary">
+                                                                <button type="button" class="remove cart_remove"
+                                                                    data-id="1103948">
+                                                                    <img src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/bin.png"
+                                                                        alt="">
+                                                                </button>
+                                                                <p><span id="price-1103948">2849.99</span><span
+                                                                        class="azn_span">‎M</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="detail-mob">
+
+                                                    <div class="quantity">
+                                                        <p>Miqdar</p>
+                                                        <button type="button" class="decrease">-</button>
+                                                        <input type="number" id="amount_1103948" value="1" min="0"
+                                                            max="3" readonly="readonly"
+                                                            class="amount cart_amount cart_amount_1103948"
+                                                            data-id="1103948">
+                                                        <button type="button" class="increase">+</button>
+                                                    </div>
+                                                    <div>
+                                                        <p style="text-decoration:line-through ">2849.99 <small
+                                                                class="azn_span">M</small></p>
+                                                        <p style="color:red">2659.99 <small class="azn_span">M</small>
+                                                        </p>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="total-price">
+                                            <p style="display:none">Cəmi: <span class="itemtotals itemtotal-1103948"
+                                                    data-id="1103948">2659.99 </span><span class="azn_span">‎M</span>
+                                            </p>
+                                            <p style="display:none" class="catdirilma_p">Çatdırılma:
+                                                <span class="catdirilma_span"></span> <span>‎₼</span>
+                                            </p>
+
+                                        </div>
+
+
+
+
+
+
+
+                                    </section>
+                                    <section id="selected-cart-item-1322784" data-product-guid="TM-DG-SBP-1105-SM-2177"
+                                        class="selected-cart-item cart_object">
+                                        <div class="chosen-cart">
+                                            <div class="checkbox">
+                                                <input type="checkbox" class="form-check-input cart_select_item"
+                                                    id="select-1322784" data-id="1322784">
+                                                <label class="form-check-label" for="select-1322784"></label>
+                                            </div>
+
+                                            <div class="photo-box">
+                                                <div class="imgHolder">
+                                                    <img alt="Samsung Galaxy S23 Ultra (SM-S918B) 12/512 GB Lilac"
+                                                        data-qazy="true"
+                                                        src="https://kontakt.az/wp-content/uploads/gallery-tum/TM-DG-SBP-1105-SM-2177_fb0fe46be560964ec391377cd0fb50f0_w_png.webp">
+                                                </div>
+                                            </div>
+                                            <div class="details">
+                                                <div class="roww">
+                                                    <div class="details-left">
+                                                        <div class="features">
+                                                            <p>
+                                                                <a href="https://kontakt.az/samsung-galaxy-s23-ultra-sm-s918b-12-512-gb-lilac/"
+                                                                    data-id="1322784" data-reserve-id="1322784"
+                                                                    data-mid="TM-DG-SBP-1105-SM-2177"
+                                                                    data-price="2999.99" data-quantity="2">
+                                                                    Samsung Galaxy S23 Ultra (SM-S918B) 12/512 GB Lilac
+                                                                </a>
+                                                            </p>
+                                                            <p></p>
+
+
+                                                            <div class="labels">
+
+
+                                                                <div class="lbl-percentage">
+                                                                    <p>12 ay <span>Faizsiz</span></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="details-right">
+                                                        <div class="second-half">
+                                                            <div class="quantity">
+                                                                <p>Miqdar</p>
+                                                                <button type="button" class="decrease">-</button>
+                                                                <input type="number" id="amount_1322784" value="2"
+                                                                    min="0" readonly="readonly" max="3"
+                                                                    class="amount cart_amount cart_amount_1322784"
+                                                                    data-id="1322784">
+                                                                <button type="button" class="increase">+</button>
+                                                            </div>
+
+                                                            <div class="price">
+                                                                <p class="gridprice gridprice_cash endirimvar">
+                                                                    <span
+                                                                        style="text-decoration:line-through;font-weight:normal">3199.99
+                                                                        <small
+                                                                            class="azn_span">M</small></span><br><span
+                                                                        class="nprice" id="price-1322784">2999.99 <small
+                                                                            class="azn_span">M</small></span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="cart-summary">
+                                                                <button type="button" class="remove cart_remove"
+                                                                    data-id="1322784">
+                                                                    <img src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/bin.png"
+                                                                        alt="">
+                                                                </button>
+                                                                <p><span id="price-1322784">3199.99</span><span
+                                                                        class="azn_span">‎M</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="detail-mob">
+
+                                                    <div class="quantity">
+                                                        <p>Miqdar</p>
+                                                        <button type="button" class="decrease">-</button>
+                                                        <input type="number" id="amount_1322784" value="2" min="0"
+                                                            max="3" readonly="readonly"
+                                                            class="amount cart_amount cart_amount_1322784"
+                                                            data-id="1322784">
+                                                        <button type="button" class="increase">+</button>
+                                                    </div>
+                                                    <div>
+                                                        <p style="text-decoration:line-through ">3199.99 <small
+                                                                class="azn_span">M</small></p>
+                                                        <p style="color:red">2999.99 <small class="azn_span">M</small>
+                                                        </p>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="total-price">
+                                            <p style="display:none">Cəmi: <span class="itemtotals itemtotal-1322784"
+                                                    data-id="1322784">5999.98 </span><span class="azn_span">‎M</span>
+                                            </p>
+                                            <p style="display:none" class="catdirilma_p">Çatdırılma:
+                                                <span class="catdirilma_span"></span> <span>‎₼</span>
+                                            </p>
+
+                                        </div>
+
+
+
+
+
+
+
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="v-desktop">
+                                    <div class="back-to-cart">
+                                        <button type="button" class="btn-add-to-cart" data-dismiss="modal">
+                                            Alış-verişə davam et </button>
+                                    </div>
+                                    <div class="proceed-to-payment" style="display:nodne">
+                                        <div class="price-info">
+                                            <p>Məhsulun qiyməti:</p>
+                                            <p><span class="pricespan">4579.97</span><small class="azn_span">M</small>
+                                            </p>
+                                        </div>
+                                        <div class="endirim-info">
+                                            <p><span class="neqdalisaendirim_li"
+                                                    style="text-align: right; display: none;">Nağd alış endirimi:</span>
+                                            </p>
+                                            <p>-<span class="pricediscount discount">0</span> <small
+                                                    class="azn_span">M</small></p>
+                                        </div>
+                                        <div class="qizilzemanet_li zemanet-info" style="display: none;">
+                                            <p>Ultra zəmanət:</p>
+                                            <p><span class="qizilzemanet_cem">0</span> <span>‎₼</span></p>
+                                        </div>
+                                        <div class="price-summary">
+                                            <p>Yekun məbləğ</p>
+                                            <p><span class="pricetotal">4579.97</span> <small class="azn_span">M</small>
+                                            </p>
+                                        </div>
+                                        <button onclick="window.location.href='https://kontakt.az/checkout/'"
+                                            class="cash">Sifarişi rəsmiləşdir <svg version="1.1" id="Capa_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                width="792.033px" height="792.033px" viewBox="0 0 792.033 792.033"
+                                                style="enable-background:new 0 0 792.033 792.033;" xml:space="preserve">
+                                                <g>
+                                                    <g id="_x38_">
+                                                        <g>
+                                                            <path
+                                                                d="M617.858,370.896L221.513,9.705c-13.006-12.94-34.099-12.94-47.105,0c-13.006,12.939-13.006,33.934,0,46.874
+                                            l372.447,339.438L174.441,735.454c-13.006,12.94-13.006,33.935,0,46.874s34.099,12.939,47.104,0l396.346-361.191
+                                            c6.932-6.898,9.904-16.043,9.441-25.087C627.763,386.972,624.792,377.828,617.858,370.896z">
+                                                            </path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="v-mob">
+                                    <div class="head5">Səbətdəki məhsullar</div>
+                                    <ul class="cash-discount">
+                                        <li>
+                                            <div class="head6">Cəmi</div>
+                                            <p><span class="pricespan">4579.97</span> <small class="azn_span">M</small>
+                                            </p>
+                                        </li>
+                                        <li class="neqdalisaendirim_li" style="display: none;">
+                                            <div class="head6">Nağd alış endirimi</div>
+                                            <p class="discount">-<span class="pricediscount discount">0</span> <small
+                                                    class="azn_span">M</small></p>
+                                        </li>
+                                        <li>
+                                            <div class="head6">Ödəniləcək məbləğ:</div>
+                                            <p><span class="pricetotal">4579.97</span> <small class="azn_span">M</small>
+                                            </p>
+                                        </li>
+                                        <button onclick="window.location.href='https://kontakt.az/checkout'"
+                                            class="cash">Sifarişi rəsmiləşdir </button>
+                                        <button type="button" class="btn-add-to-cart" data-dismiss="modal">
+                                            Alış-verişə davam et </button>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -6249,7 +6627,6 @@
                 data-was-processed="true">
         </a>
     </div>
-   
     <div class="modalbackdrop faded"></div>
 </body>
 <script src="jquery-3.5.1.min.js"></script>
