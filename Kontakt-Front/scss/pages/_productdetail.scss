@@ -1996,3 +1996,485 @@
 .modal.show .modal-dialog {
     transform: none;
 }
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#partial-pay-modal {
+    padding-right: 0!important;
+
+    .modal-dialog {
+        margin: 1.75rem auto;
+        transition: transform .3s ease-out;
+        transform: none;
+        max-width: 900px;
+
+        .modal-content {
+            padding: 25px;
+
+            .modal-header {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 1rem;
+                border-bottom: 1px solid #dee2e6;
+                border-top-left-radius: 0.3rem;
+                border-top-right-radius: 0.3rem;
+            }
+
+            .modal-header {
+                padding: 0;
+                border-bottom: none;
+
+                .modal-title {
+                    margin-bottom: 0;
+                    line-height: 1.5;
+                }
+
+                h5 {
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: #282828;
+                    margin-bottom: 0.5rem;
+                    line-height: 1.2;
+                }
+
+                .k7closebut {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .modal-body {
+                position: relative;
+    flex: 1 1 auto;
+                padding: 0;
+
+                .selected-period {
+                    max-width: 600px;
+                    margin: 0 auto;
+
+                    .selected-month {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 20px;
+
+                        li {
+                            padding: 5px;
+                            border-radius: 100%;
+                            border: 10px solid #e3e3e3;
+                            font-size: 18px;
+                            color: #bdbdbd;
+                            font-weight: 700;
+                            height: 65px;
+                            width: 65px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            margin-right: 40px;
+                        }
+
+                        li:hover{
+                            cursor: pointer;
+                        }
+                        li:after {
+                            content: "";
+                            position: absolute;
+                            width: 50px;
+                            left: 100%;
+                            top: 50%;
+                            border: 2px solid #e3e3e3;
+                        }
+                     
+
+                        li.active:before {
+                            content: attr(data-period);
+                            position: absolute;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff;
+                            background-color: #ff003c;
+                            height: 90px;
+                            width: 90px;
+                            border-color: #ff003c;
+                            z-index: 2;
+                            border-radius: 100%;
+                            cursor: pointer;
+                        }
+
+                        li:last-child {
+                            margin-right: 0;
+                        }
+                        li:last-child::after{
+                            border: none;
+                        }
+                    }
+
+                    .payment-info {
+                        display: flex;
+                        justify-content: space-around;
+                        padding: 10px 0;
+
+                        p {
+                            font-weight: 700;
+                            color: #282828;
+                            text-align: center;
+                            font-size: 16px;
+                            margin: 0;
+                        }
+
+                        h4 {
+                            font-weight: 700;
+                            color: #282828;
+                            text-align: center;
+                            font-size: 35px;
+                        }
+
+                        .azn_span {
+                            font-size: 80%;
+                             font-weight: 400;
+                            font-family: jisaznregular;
+                        }
+                    }
+                }
+                .selected-cart-item {
+                    border: none;
+                    padding: 30px 15px;
+
+                    .chosen-cart {
+                        display: flex;
+                        margin-bottom: 15px;
+
+                        .checkbox {
+                            margin-top: 50px;
+                            height: 25px;
+                            display: none;
+
+                            .form-check-input {
+                                position: absolute;
+                                margin-top: 0.3rem;
+                                margin-left: -1.25rem;
+                            }
+
+                            label {
+                                display: inline-block;
+                                margin-bottom: 0;
+                                font-size: 14px;
+                                color: #545353;
+                                --pseudo-opacity:0;
+                            }
+
+                            input[type=checkbox]+label:before {
+                                content: "";
+                                background-color: #fff;
+                                box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, .7);
+                                border: 1px solid hsla(0, 0%, 85.1%, .59);
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 0;
+                                position: absolute;
+                                top: 3px;
+                                left: 0;
+                            }
+
+                            input[type=checkbox]+label:after {
+                                content: "";
+                                background-color: red;
+                                border: 0.5px solid #e8e8e8;
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 0;
+                                position: absolute;
+                                transform: scale(.8);
+                                top: 3px;
+                                left: 0;
+                                opacity: var(--pseudo-opacity);
+                            }
+
+                            input {
+                                left: 50px;
+                                width: 22px;
+                                height: 25px;
+                                z-index: 99;
+                            }
+
+                            input[type=checkbox] {
+                                position: absolute;
+                                opacity: 0 !important;
+                            }
+
+                            input[type=checkbox],
+                            input[type=radio] {
+                                box-sizing: border-box;
+                                padding: 0;
+                            }
+
+                            .form-check-label {
+                                margin-bottom: 0;
+                            }
+
+                            input[type=checkbox]+label {
+                                position: relative;
+                                padding: 2px 0 0 30px;
+                                cursor: pointer;
+                            }
+                        }
+
+
+                        .photo-box {
+                            width: 100px;
+                            height: 100px;
+                            display: flex;
+
+                            .imgHolder {
+                                width: 100%;
+                                padding-top: 100%;
+                                position: relative;
+                            }
+
+                            .imgHolder {
+                                padding-top: 100%;
+                                width: 100%;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    object-fit: cover;
+                                    object-position: center center;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                }
+                            }
+
+                        }
+
+                        .details {
+                            width: 100%;
+                            padding: 0 15px;
+
+                            .roww {
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin-right: -15px;
+                                margin-left: -15px;
+
+                                .details-left {
+                                    flex: 0 0 50%;
+                                    max-width: 50%;
+                                    position: relative;
+                                    width: 100%;
+                                    padding-right: 15px;
+                                    padding-left: 15px;
+
+                                    .features>p {
+                                        font-size: 17px;
+                                        color: #282828;
+                                        margin: 0;
+                                        padding: 0;
+
+                                        a {
+                                            font-size: 17px;
+                                            color: #282828;
+                                            text-decoration: none;
+                                        }
+                                    }
+
+                                    .labels {
+                                        display: none;
+                                    }
+                                }
+
+                                .details-right {
+                                    flex: 0 0 50%;
+                                    max-width: 50%;
+                                    position: relative;
+                                    width: 100%;
+                                    padding-right: 15px;
+                                    padding-left: 15px;
+
+                                    .second-half {
+                                        display: flex;
+                                        justify-content: space-between;
+
+                                        p {
+                                            font-size: 17px;
+                                            text-align: center;
+                                            color: rgba(40, 40, 40, .8);
+                                            margin-bottom: 5px;
+                                        }
+
+                                        button:not(:disabled) {
+                                            cursor: pointer;
+                                        }
+
+                                        .nisye_decrease {
+                                            background-color: transparent;
+                                            border: none;
+                                            width: 10px;
+                                        }
+
+                                        .nisye_amount {
+                                            width: 27px;
+                                            height: 27px;
+                                            border-radius: 4.2px;
+                                            border: solid 2px rgba(0, 0, 0, .08);
+                                            background-color: #fff;
+                                            text-align: center;
+                                            padding: 0px;
+                                            padding-left: 0px;
+                                        }
+
+                                        [type=button],
+                                        [type=reset],
+                                        [type=submit],
+                                        button {
+                                            -webkit-appearance: button;
+                                            text-transform: none;
+                                        }
+
+                                        .nisye_increase {
+                                            color: #ff003c;
+                                            background-color: transparent;
+                                            border: none;
+                                            width: 10px;
+                                        }
+
+                                        .price {
+                                            display: flex;
+                                            align-items: center;
+
+                                            p {
+                                                font-size: 17px;
+                                                font-weight: 700;
+                                                color: #282828;
+                                            }
+
+                                            .endirimvar {
+                                                margin-top: -20px;
+
+                                                span {
+                                                    text-decoration-color: #ff003c !important;
+                                                }
+
+                                                .nprice {
+                                                    color: #ff003c;
+                                                }
+
+                                                span {
+                                                    text-decoration-color: #ff003c !important;
+
+                                                    .azn_span {
+                                                        font-family: jisaznregular;
+                                                        font-size: 80%;
+                                                        font-weight: 400;
+                                                    }
+                                                }
+                                            }
+
+                                            
+                                            .azn_span {
+                                                font-family: jisaznregular;
+                                                font-size: 80%;
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .cart-summary {
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            align-items: flex-end;
+
+                                            .remove {
+                                                background-color: transparent;
+                                                border: none;
+                                            }
+
+                                            button {
+                                                margin-left: auto;
+                                            }
+
+                                            p {
+                                                text-align: right;
+                                                font-size: 17px;
+                                                font-weight: 700;
+                                                color: #282828;
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .detail-mob {
+                                display: none !important;
+                            }
+                        }
+                    }
+                    .total-price {
+                        display: none;
+                    }
+                }
+            }
+
+
+            .modal-footer {
+                display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+                border-top: 2px solid #e3e3e3;
+                padding: 20px 0 0;
+
+                .gotocheckout {
+                    display: block;
+                    font-family: montserrat,sans-serif;
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.13;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #000;
+                    border-radius: 5.6px;
+                    background-color: #e3e3e3;
+                    padding: 11px 0;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    padding: 10px 20px;
+                    width: unset;
+                    height: unset;
+
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 15px;
+                        transition: .5s;
+                    }
+                }
+            }
+
+            .product_notes {
+                padding: 5px;
+                margin-top: 5px;
+
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
