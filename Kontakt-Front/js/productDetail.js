@@ -4,7 +4,6 @@ var sidebarimgs=Array.from(document.querySelectorAll(".slider>div>button>img"));
 
 sidebarimgs.forEach((imgg)=>{
     imgg.addEventListener("click",()=>{
-        console.log("deyisdi")
         mainimg.src=imgg.src;
     })
 })
@@ -21,7 +20,6 @@ youtubevideoBtn.addEventListener("click",(x)=>{
 })
 
 modalbackground.addEventListener("click",()=>{
-    console.log("her");
     youtubeiframe.classList.remove("show");
     modalbackground.classList.remove("show");
     youtubeiframe.style.display="none";
@@ -34,5 +32,95 @@ embedcontainer.addEventListener("click",(e)=>{
 
 
 //===================================================================================
+
+var finpopover=document.querySelector(".finpopover");
+var popover=document.querySelector(".popover");
+
+console.log(finpopover)
+
+var closebutton=document.querySelector("#kontakt-modal-birklik .k7closebut")
+closebutton.addEventListener("click",()=>{
+    popover.classList.remove("active");
+})
+var modall=document.querySelector("#kontakt-modal-birklik")
+modall.addEventListener("click",()=>{
+    if(popover.classList.contains("active")){
+        popover.classList.remove("active");  
+    }
+})
+
+finpopover.addEventListener("click",()=>{
+    setTimeout(()=>{
+        popover.classList.add("active");
+    },100)
+})
+popover.addEventListener("click",(e)=>{
+   e.stopPropagation();
+})
+
+
+var birklikbtn=document.querySelector(".birkliker_sub");
+var nisye_onc=document.querySelector(".nisye_onc");
+var naqqd=document.querySelector("#inlineRadio1");
+birklikbtn.addEventListener("click",()=>{
+    if(nisye_onc.style.display=="none"){
+    console.log(naqqd.nextElementSibling.after());
+    }
+})
+
+
+
+
+var increasebtns=Array.from(document.querySelectorAll("button.increase"))
+
+increasebtns.forEach((btn)=>{
+   btn.addEventListener("click",()=>{
+    btn.previousElementSibling.value=`${parseInt(btn.previousElementSibling.value)+1}`
+   })
+})
+
+
+var decreasebtns=Array.from(document.querySelectorAll("button.decrease"))
+
+decreasebtns.forEach((btn)=>{
+   btn.addEventListener("click",()=>{
+    if(btn.nextElementSibling.value>0){
+    btn.nextElementSibling.value=`${parseInt(btn.nextElementSibling.value)-1}`
+    }
+   })
+})
+
+
+var checkboxes=Array.from(document.querySelectorAll(".checkbox .form-check-label"));
+console.log(checkboxes)
+checkboxes.forEach((item)=>{
+  item.addEventListener("click",()=>{
+    if(item.style.getPropertyValue("--pseudo-opacity")=="0"){
+        item.style.setProperty("--pseudo-opacity", `1`);
+    }
+    else{
+        item.style.setProperty("--pseudo-opacity", `0`);
+    }
+  })
+})
+
+// var cartamount=document.querySelectorAll(".cart_amount");
+// var yekuncash=document.querySelector(".proceed-to-payment .pricespan")
+// var cemm=0;
+// cartamount.forEach((item)=>{
+//     item.addEventListener("change",()=>{
+//         cartamount.forEach((cashh)=>{
+//             console.log(parseInt(cashh))
+//             cemm+=(parseInt(cashh)*parseInt(cashh.parentElement.nextElementSibling.querySelector(".nprice").textContent));
+//         })
+//         yekuncash.textContent=`${cemm}`;
+//     })
+// })
+
+var backtocart=document.querySelector(".back-to-cart");
+backtocart.addEventListener("click",()=>{
+    document.querySelector("#my-cart-modal").classList.remove("show");
+})
+
 
 
