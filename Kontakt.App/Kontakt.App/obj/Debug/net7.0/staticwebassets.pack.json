@@ -1,0 +1,629 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Kontakt.App.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Kontakt.App.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\css\\maps\\style.css.map",
+      "PackagePath": "staticwebassets\\Admin\\css\\maps\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Black.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Black.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Black.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Black.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Black.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Black.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Black.woff2"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Bold.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Bold.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Bold.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Bold.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Bold.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Bold.woff2"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Light.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Light.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Light.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Light.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Light.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Light.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Light.woff2"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Medium.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Medium.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Medium.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Medium.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Medium.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Medium.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Medium.woff2"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Regular.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Regular.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Regular.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Regular.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\fonts\\Roboto\\Roboto-Regular.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\Roboto\\Roboto-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\images\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\images\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\images\\auth\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\images\\auth\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\images\\faces\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\images\\faces\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\images\\kontaktminiicon.svg",
+      "PackagePath": "staticwebassets\\Admin\\images\\kontaktminiicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\js\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\chart.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\chart.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\data-table.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\data-table.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\documentation.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\documentation.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\file-upload.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\file-upload.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\hoverable-collapse.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\hoverable-collapse.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\off-canvas.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\off-canvas.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\tabs.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\tabs.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\js\\template.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\template.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\charts\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\charts\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\charts\\chartjs.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\charts\\chartjs.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\forms\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\forms\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\forms\\basic_elements.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\forms\\basic_elements.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\icons\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\icons\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\icons\\mdi.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\icons\\mdi.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\samples\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\lock-screen.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\samples\\lock-screen.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\login-2.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\samples\\login-2.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\login.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\samples\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\register-2.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\samples\\register-2.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\register.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\samples\\register.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\tables\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\tables\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\tables\\basic-table.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\tables\\basic-table.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\ui-features\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\pages\\ui-features\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\ui-features\\buttons.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\ui-features\\buttons.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\ui-features\\typography.html",
+      "PackagePath": "staticwebassets\\Admin\\pages\\ui-features\\typography.html"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\scss\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_background.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_background.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_demo.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_demo.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_fonts.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_fonts.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_layouts.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_layouts.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_misc.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_reset.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_sidebar.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_sidebar.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_typography.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_vertical-wrapper.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_vertical-wrapper.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_badges.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_badges.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_bootstrap-progress.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_bootstrap-progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_cards.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_cards.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_checkbox-radio.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_checkbox-radio.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_forms.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_icons.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_lists.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_tables.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\plugin-overrides\\_data-tables.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\components\\plugin-overrides\\_data-tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\landing-screens\\_auth.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\landing-screens\\_auth.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_animation.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\_animation.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_badges.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\_badges.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_blockqoute.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\_blockqoute.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_cards.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\_cards.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_misc.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\mixins\\_misc.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\.DS_Store",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\base\\vendor.bundle.base.css",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\base\\vendor.bundle.base.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\base\\vendor.bundle.base.js",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\base\\vendor.bundle.base.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\chart.js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\chart.js\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\datatables.net\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\mdi\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\Admin\\vendors\\mdi\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\fonts\\AZN regular (1).eps",
+      "PackagePath": "staticwebassets\\Assets\\assets\\fonts\\AZN regular (1).eps"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\fonts\\AZN regular ai.ai",
+      "PackagePath": "staticwebassets\\Assets\\assets\\fonts\\AZN regular ai.ai"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\fonts\\AZN regular.eps",
+      "PackagePath": "staticwebassets\\Assets\\assets\\fonts\\AZN regular.eps"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\fonts\\jaznr.eot",
+      "PackagePath": "staticwebassets\\Assets\\assets\\fonts\\jaznr.eot"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\fonts\\jaznr.ttf",
+      "PackagePath": "staticwebassets\\Assets\\assets\\fonts\\jaznr.ttf"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\fonts\\jaznr.woff",
+      "PackagePath": "staticwebassets\\Assets\\assets\\fonts\\jaznr.woff"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\basket.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\basket.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\hamburger.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\hamburger.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\heart.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\heart.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\kontakt.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\kontakt.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\scale.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\scale.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\search.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\search.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\sign-in.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\sign-in.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\icons\\titleicon.svg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\icons\\titleicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\logo\\kontakt.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\logo\\kontakt.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\logo\\title-icon.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\logo\\title-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\Header.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\Header.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\home.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\productDetail.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\productDetail.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\productlist.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\productlist.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\videocall.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\videocall.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\abstracts\\_functions.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\abstracts\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\abstracts\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\abstracts\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\abstracts\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\abstracts\\_placeholders.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\abstracts\\_variables.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\abstracts\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\base\\_reset.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\base\\_typography.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\components\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\components\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\components\\_carousel.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\components\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\components\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\components\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\components\\_links.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\components\\_links.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\font.css",
+      "PackagePath": "staticwebassets\\Assets\\scss\\font.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\main.css",
+      "PackagePath": "staticwebassets\\Assets\\scss\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\main.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_home.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_home.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_orderthanks.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_orderthanks.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_productcategories.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_productcategories.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_productdetail.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_productdetail.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_productlist.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_productlist.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_videoCall.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_videoCall.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_videocallResult.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_videocallResult.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Kontakt.App.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Kontakt.App.props",
+      "PackagePath": "build\\Kontakt.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Kontakt.App.props",
+      "PackagePath": "buildMultiTargeting\\Kontakt.App.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Kontakt.App.props",
+      "PackagePath": "buildTransitive\\Kontakt.App.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

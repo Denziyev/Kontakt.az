@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'JISAZNRegular';
+    src: url('../assets/fonts/jaznr.ttf');
+    src: url('../assets/fonts/jaznr.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/jaznr.woff') format('woff'),
+        url('../assets/fonts/jaznr.ttf') format('truetype'),
+        url('../assets/fonts/jaznr.svg#jaznr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
