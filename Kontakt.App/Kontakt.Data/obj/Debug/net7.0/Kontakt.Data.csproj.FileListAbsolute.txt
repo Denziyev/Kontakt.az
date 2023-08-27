@@ -1,0 +1,17 @@
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.csproj.AssemblyReference.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.AssemblyInfoInputs.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.AssemblyInfo.cs
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.csproj.CoreCompileInputs.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\bin\Debug\net7.0\Kontakt.Data.deps.json
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\bin\Debug\net7.0\Kontakt.Data.runtimeconfig.json
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\bin\Debug\net7.0\Kontakt.Data.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\bin\Debug\net7.0\Kontakt.Data.pdb
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\bin\Debug\net7.0\Kontakt.Core.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\bin\Debug\net7.0\Kontakt.Core.pdb
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.csproj.CopyComplete
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\refint\Kontakt.Data.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.pdb
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\Kontakt.Data.genruntimeconfig.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Data\obj\Debug\net7.0\ref\Kontakt.Data.dll
