@@ -1,8 +1,3 @@
-C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.csproj.AssemblyReference.cache
-C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.AssemblyInfoInputs.cache
-C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.AssemblyInfo.cs
-C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.csproj.CoreCompileInputs.cache
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kontakt.Service.deps.json
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kontakt.Service.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kontakt.Service.pdb
@@ -10,6 +5,11 @@ C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kont
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kontakt.Data.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kontakt.Data.pdb
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\bin\Debug\net7.0\Kontakt.Core.pdb
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.csproj.AssemblyReference.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.AssemblyInfoInputs.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.AssemblyInfo.cs
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.csproj.CoreCompileInputs.cache
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.csproj.CopyComplete
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\Kontakt.Service.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.Service\obj\Debug\net7.0\refint\Kontakt.Service.dll

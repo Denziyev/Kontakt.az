@@ -16,8 +16,32 @@ namespace Kontakt.App.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            IEnumerable<Category> categories= await _context.Categories.ToListAsync();
+            IEnumerable<Category> categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
+
             return View(categories);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            ViewBag.Categories = await _context.Categories.Where(x => !x.IsDeleted).ToListAsync();
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Category category)
+        {
+            ViewBag.Categories= await _context.Categories.Where(x=>!x.IsDeleted).ToListAsync();
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            category.CreatedAt = DateTime.Now;
+            await _context.Categories.AddAsync(category);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

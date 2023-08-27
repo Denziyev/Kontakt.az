@@ -17,7 +17,7 @@
             {
 
                 <tr>
-                    <th scope="row">@item.CategoryId</th>
+                    <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
                     @if (item.ParentCategoryId != null)
                         {
@@ -68,8 +68,8 @@
 
 
 
-                    <td><a asp-controller="category" asp-action="update" asp-route-id="@item.CategoryId"><i class="fas fa-edit text text-primary"></i></a></td>
-                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="category" asp-action="delete" asp-route-id="@item.CategoryId" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
+                    <td><a asp-controller="category" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
+                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="category" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
                 </tr>
             }
 
