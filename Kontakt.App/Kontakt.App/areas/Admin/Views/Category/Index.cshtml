@@ -8,6 +8,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">ParentName</th>
                 <th scope="col">Map</th>
+                <th scope="col">Count</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -21,7 +22,7 @@
                     <th>@item.Name</th>
                     @if (item.ParentCategoryId != null)
                         {
-                        <th>@item.ParentCategory.Name</th>
+                        <th>@item.ParentCategory?.Name</th>
                     }
                     else{
 
@@ -38,10 +39,13 @@
                     {
 
                         var currentItem = item; // Create a copy of the current item
-                        while (currentItem.ParentCategoryId != null)
+                        while (currentItem?.ParentCategoryId != null )
                         {
                             currentItem = currentItem.ParentCategory; // Move to the parent category
+                            if (currentItem != null)
+                            {       
                             maps.Add(currentItem.Name);
+                            }
                         }
                         
                     }
@@ -65,7 +69,7 @@
 
 
 
-
+                    <th>@item.Subcategories.Count</th>
 
 
                     <td><a asp-controller="category" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>

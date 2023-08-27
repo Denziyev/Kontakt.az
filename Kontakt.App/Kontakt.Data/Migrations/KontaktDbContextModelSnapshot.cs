@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Kontakt.App.Migrations
+namespace Kontakt.Data.Migrations
 {
     [DbContext(typeof(KontaktDbContext))]
     partial class KontaktDbContextModelSnapshot : ModelSnapshot
