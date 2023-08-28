@@ -8,6 +8,9 @@ C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Kontakt.
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Kontakt.App.pdb
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Humanizer.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
@@ -60,6 +63,7 @@ C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.AssemblyInfoInputs.cache
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.AssemblyInfo.cs
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.csproj.CoreCompileInputs.cache
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.RazorAssemblyInfo.cache
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.RazorAssemblyInfo.cs

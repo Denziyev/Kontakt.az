@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "0A8L90WgVh/Hoa0UddTpOOpe/Z4+QlwnH5kTPYXKvIVvaoC3+dk3Q8lCSPAXhg++EXbLO/awMTai7VyUJLdAPA==",
+  "dgSpecHash": "M+Txxl4ExzaOXoqi5QLFx2lG7yF66Q9Hbu6ukPDrJsJw8D4S8yM5tFW5hJCuzMz8cGFIvcUfzXCB1RTMghnNRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.Service\\Kontakt.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VO\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\VO\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\VO\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
+    "C:\\Users\\VO\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\VO\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.7.1\\fluentvalidation.dependencyinjectionextensions.11.7.1.nupkg.sha512",
     "C:\\Users\\VO\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\VO\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\VO\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

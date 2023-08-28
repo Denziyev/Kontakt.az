@@ -1,6 +1,13 @@
+using FluentValidation.AspNetCore;
 using Kontakt.App.Context;
+using Kontakt.Core.Repositories;
+using Kontakt.Data.Repositories;
+using Kontakt.Service.Services.Implementations;
+using Kontakt.Service.Services.Interfaces;
+using Kontakt.Service.Validations.Categories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +17,21 @@ builder.Services.AddDbContext<KontaktDbContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
-builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<CategoryValidation>()).AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.WriteIndented = true;
+});
+
+
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+builder.Services.AddHttpContextAccessor();
 
 
 var app = builder.Build();

@@ -11,7 +11,7 @@
         <div class="form-group">
             <select class="form-select" asp-for="ParentCategoryId" aria-label="Disabled select example">
                 <option value=@null selected>Choose Parent Category(default:Main)</option>
-                @foreach (var item in ViewBag.Categories)
+                @foreach (var item in ViewBag.Categories.Data)
                 {
                     <option value="@item.Id">@item.Name</option>
                 }

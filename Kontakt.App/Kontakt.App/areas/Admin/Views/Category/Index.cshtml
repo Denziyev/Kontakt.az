@@ -1,5 +1,6 @@
 ﻿@using Kontakt.App.Models;
-@model List<Category>
+@using Kontakt.Service.Responses;
+@model MvcResponse<List<Category>>
 <div class="container">
     <table class="table table-sm">
         <thead>
@@ -8,13 +9,13 @@
                 <th scope="col">Name</th>
                 <th scope="col">ParentName</th>
                 <th scope="col">Map</th>
-                <th scope="col">Count</th>
+                <th scope="col">SubCateCount</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model)
+            @foreach (var item in Model.Data)
             {
 
                 <tr>
