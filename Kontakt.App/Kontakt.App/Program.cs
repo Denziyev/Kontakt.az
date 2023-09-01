@@ -27,9 +27,21 @@ builder.Services.AddControllersWithViews().AddFluentValidation(x => x.RegisterVa
 
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+builder.Services.AddScoped<IDiscountCategoryRepository, DiscountCategoryRepository>();
+builder.Services.AddScoped<ITagRepository, TagRepository>();
+
 
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IDiscountService, DiscountService>();
+builder.Services.AddScoped<IDiscountCategoryService, DiscountCategoryService>();
+builder.Services.AddScoped<ITagService, TagService>();
+
+
+
 
 builder.Services.AddHttpContextAccessor();
 

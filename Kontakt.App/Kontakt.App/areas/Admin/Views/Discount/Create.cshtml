@@ -1,0 +1,25 @@
+﻿@using Kontakt.Core.Models;
+@model Discount
+<div class="container">
+    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Name">
+            <span class="alert-danger" asp-validation-for="@Model.Name"></span>
+        </div>
+        <div class="form-group">
+            <label for="StartDate">StartDate</label>
+            <input type="date" class="form-control" asp-for="@Model.StartDate">
+            <span class="alert-danger" asp-validation-for="@Model.StartDate"></span>
+        </div>
+        <div class="form-group">
+            <label for="EndDate">EndDate</label>
+            <input type="date" class="form-control" asp-for="@Model.EndDate">
+            <span class="alert-danger" asp-validation-for="@Model.EndDate"></span>
+        </div>
+      
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>

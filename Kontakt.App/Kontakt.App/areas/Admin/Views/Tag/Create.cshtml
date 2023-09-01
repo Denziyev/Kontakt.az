@@ -1,0 +1,14 @@
+﻿@using Kontakt.Core.Models;
+@model Tag
+<div class="container">
+    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Name">
+            <span class="alert-danger" asp-validation-for="@Model.Name"></span>
+        </div>
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>

@@ -1286,6 +1286,9 @@
       "Kontakt.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2"
+        },
         "compile": {
           "bin/placeholder/Kontakt.Core.dll": {}
         },
