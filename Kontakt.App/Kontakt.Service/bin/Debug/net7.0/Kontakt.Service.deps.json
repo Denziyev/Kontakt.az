@@ -619,6 +619,9 @@
         }
       },
       "Kontakt.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http": "2.2.2"
+        },
         "runtime": {
           "Kontakt.Core.dll": {}
         }

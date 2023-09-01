@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Service.Extentions
+namespace Kontakt.Service.Extentions
 {
     public static class FileUpload
     {
