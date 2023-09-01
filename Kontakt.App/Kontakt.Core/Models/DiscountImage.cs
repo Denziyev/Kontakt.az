@@ -9,6 +9,8 @@ namespace Kontakt.Core.Models
     public class DiscountImage:BaseModel
     {
         public string Image { get; set; }
-        public DiscountCategory? Category { get; set; }
+        public DiscountCategory DiscountCategory { get; set; }
+        public int DiscountCategoryId { get; set; }
+
     }
 }
