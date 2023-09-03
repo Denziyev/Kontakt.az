@@ -1952,6 +1952,54 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\icons\titleicon.svg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0ac7e6bf-e3b3-4e49-81a8-05dc07d62cc9course1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/0ac7e6bf-e3b3-4e49-81a8-05dc07d62cc9course1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0ac7e6bf-e3b3-4e49-81a8-05dc07d62cc9course1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0b66eaab-b6c6-4919-9796-d973da646838blog1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/0b66eaab-b6c6-4919-9796-d973da646838blog1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0b66eaab-b6c6-4919-9796-d973da646838blog1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0deda290-b78c-4d8d-adc5-feb7fa78aef9blog6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/0deda290-b78c-4d8d-adc5-feb7fa78aef9blog6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0deda290-b78c-4d8d-adc5-feb7fa78aef9blog6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0f93992b-ff39-42a0-941f-dacd8e5e83cbAmanda Jepson.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Kontakt.App</SourceId>
@@ -2047,6 +2095,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\1a1c0627-ad1e-4bdb-83a8-44ae039f5e03Amanda Jepson.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\1a89f980-baa2-4368-b51b-5313b9c15403blog-img.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/1a89f980-baa2-4368-b51b-5313b9c15403blog-img.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\1a89f980-baa2-4368-b51b-5313b9c15403blog-img.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\1bc6473f-8eb8-4399-bb7b-35f7cf88af0eAmanda Jepson.jpg))">
       <SourceType>Package</SourceType>
@@ -2288,6 +2352,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\66ef249e-4b16-4ebc-80f3-6c4aa4505378AMANDA WATKINS.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\67691fde-97ce-499b-93c2-446000c92767BEVERLY CLARK.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/67691fde-97ce-499b-93c2-446000c92767BEVERLY CLARK.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\67691fde-97ce-499b-93c2-446000c92767BEVERLY CLARK.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\71008941-6800-44ee-a6ca-bc23e2808619course2.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/71008941-6800-44ee-a6ca-bc23e2808619course2.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\71008941-6800-44ee-a6ca-bc23e2808619course2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\737824ef-63c1-40b2-8186-647e5e6dc712Amanda Jepson.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Kontakt.App</SourceId>
@@ -2352,6 +2448,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\77e1725b-0fd9-46ac-b213-375844d09a4eblog1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\7ad97fd9-1086-4b62-bde6-a902b10fb21bblog4.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/7ad97fd9-1086-4b62-bde6-a902b10fb21bblog4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\7ad97fd9-1086-4b62-bde6-a902b10fb21bblog4.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\7d8f9985-f53e-4653-ab87-ba5aec2bc84fAmanda Jepson.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Kontakt.App</SourceId>
@@ -2383,6 +2495,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\83dd9598-c2d5-4832-a3e4-80e64584204bblog6.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\86b01072-8353-4028-b45b-0bcca974363fblog-img.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/86b01072-8353-4028-b45b-0bcca974363fblog-img.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\86b01072-8353-4028-b45b-0bcca974363fblog-img.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\89d8ab19-2628-4fae-96fc-c70e06e09f5bAmanda Jepson.jpg))">
       <SourceType>Package</SourceType>
@@ -2416,6 +2544,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\8ce9d14c-8fac-4387-81a7-543c9ab242f8Amanda Jepson.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\9d50ae3c-1da5-4540-8cfe-40683eee72ecblog5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/9d50ae3c-1da5-4540-8cfe-40683eee72ecblog5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\9d50ae3c-1da5-4540-8cfe-40683eee72ecblog5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\9d8dd015-2b91-4fc8-92f2-71f5e4cbf18eblog1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Kontakt.App</SourceId>
@@ -2447,6 +2591,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\a1380c11-8559-48df-9dd4-486f7a879885AMANDA WATKINS.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\a42352ff-3446-4126-b420-193789e2ab2dblog3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/a42352ff-3446-4126-b420-193789e2ab2dblog3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\a42352ff-3446-4126-b420-193789e2ab2dblog3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\a4bd69a1-a48c-4455-9466-f9991fc9397cblog1.jpg))">
       <SourceType>Package</SourceType>
@@ -2495,6 +2655,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\a7170fd5-2a66-45c2-8f90-940d919956fbAMANDA WATKINS.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\aeeadc5d-77d0-4022-bc9d-2b5b2e0ed71bcourse7.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/aeeadc5d-77d0-4022-bc9d-2b5b2e0ed71bcourse7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\aeeadc5d-77d0-4022-bc9d-2b5b2e0ed71bcourse7.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\af60735a-351c-4f65-9409-d5741642d9c6AMANDA WATKINS.png))">
       <SourceType>Package</SourceType>
@@ -2575,6 +2751,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\b68e154f-9266-4c79-bc16-5a8c22ec4184Amanda Jepson.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\bb91d6f3-8551-4c04-a96a-91f9bb4da3b6course3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/bb91d6f3-8551-4c04-a96a-91f9bb4da3b6course3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\bb91d6f3-8551-4c04-a96a-91f9bb4da3b6course3.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\bc691c54-89a4-4426-bfff-7fffe448904cAMANDA WATKINS.png))">
       <SourceType>Package</SourceType>
@@ -2704,6 +2896,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\ce8c943c-bd06-4491-8bd1-5c45cb84e55dblog4.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\cf52bb83-c3e9-40ac-86bd-394517112faccourse5.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/cf52bb83-c3e9-40ac-86bd-394517112faccourse5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\cf52bb83-c3e9-40ac-86bd-394517112faccourse5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\d3bc882f-a6c1-4989-909f-466990726b78Amanda Jepson.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Kontakt.App</SourceId>
@@ -2815,6 +3023,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\ecaba825-bf06-4ab0-8b73-c08e66409d1ablog5.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\ecf78acb-4429-4679-83b4-3068fde3e024BEVERLY CLARK.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/DiscountCategory/ecf78acb-4429-4679-83b4-3068fde3e024BEVERLY CLARK.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\ecf78acb-4429-4679-83b4-3068fde3e024BEVERLY CLARK.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\f1fdf42b-0520-4340-ba16-13583c912083Amanda Jepson.jpg))">
       <SourceType>Package</SourceType>

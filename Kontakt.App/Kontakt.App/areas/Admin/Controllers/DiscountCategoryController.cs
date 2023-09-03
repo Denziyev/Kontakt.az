@@ -54,6 +54,7 @@ namespace Kontakt.App.Areas.Admin.Controllers
             discountCategory.Discount = respp.Data;
 
             discountCategory.Images = new List<DiscountImage>();
+            discountCategory.DiscountofProducts = new List<DiscountofProduct>();
            
 
             if (!ModelState.IsValid)
@@ -91,6 +92,13 @@ namespace Kontakt.App.Areas.Admin.Controllers
             
            await _discountCategoryService.CreateAsync(discountCategory);
             return RedirectToAction(nameof(Index),discountCategory.Discount);
+        }
+
+        public async Task<IActionResult> MovetoDiscountofProduct(int id)
+        {
+            var resp = await _discountCategoryService.GetAsync(id);
+            return RedirectToAction("Index", "DiscountofProduct", resp.Data);
+
         }
     }
 }

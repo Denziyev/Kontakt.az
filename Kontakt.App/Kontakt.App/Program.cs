@@ -31,6 +31,8 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 builder.Services.AddScoped<IDiscountCategoryRepository, DiscountCategoryRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<IDiscountofProductRepository, DiscountofProductRepository>();
+
 
 
 
@@ -39,6 +41,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IDiscountService, DiscountService>();
 builder.Services.AddScoped<IDiscountCategoryService, DiscountCategoryService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<IDiscountofProductService, DiscountofProductService>();
 
 
 

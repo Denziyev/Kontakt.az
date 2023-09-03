@@ -36,6 +36,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcRGlzY291bnRDYXRlZ29yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/VO/Desktop/Kontakt.az/Kontakt.App/Kontakt.App/areas/Admin/Views/DiscountofProduct/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcRGlzY291bnRvZlByb2R1Y3RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/VO/Desktop/Kontakt.az/Kontakt.App/Kontakt.App/areas/Admin/Views/DiscountofProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcRGlzY291bnRvZlByb2R1Y3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/VO/Desktop/Kontakt.az/Kontakt.App/Kontakt.App/areas/Admin/Views/Discount/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcRGlzY291bnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
