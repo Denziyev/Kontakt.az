@@ -17,32 +17,28 @@ namespace Kontakt.App.Areas.Admin.Controllers
         private readonly IDiscountService _discountService;
         private readonly ITagService _tagService;
         private readonly IWebHostEnvironment _env;
-        public DiscountCategoryController(IDiscountCategoryService discountCategoryService, ICategoryService categoryService, IDiscountService discountService, ITagService tagService)
+        public DiscountCategoryController(IDiscountCategoryService discountCategoryService, ICategoryService categoryService, IDiscountService discountService, ITagService tagService, IWebHostEnvironment env)
         {
             _discountCategoryService = discountCategoryService;
             _categoryService = categoryService;
             _discountService = discountService;
             _tagService = tagService;
+            _env = env;
         }
-        int temp =0;
+
+
         public async Task< IActionResult> Index(Discount discount)
         {
-            var resp= await _discountCategoryService.GetAllAsync(discount);
-            temp = discount.Id;
-            ViewBag.Temp = new
-            {
-                Id = temp
-            };
+            TempData["TempId"] = discount.Id;
+            ViewBag.Temp = discount.Id;
+            var resp= await _discountCategoryService.GetAllAsync(discount.Id);
             return View(resp);
         }
 
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Temp = new
-            {
-                Id = temp
-            };
+            ViewBag.Temp = TempData["TempId"];
             ViewBag.Categories = await _categoryService.GetAllAsync();
             return View();
         }
@@ -52,7 +48,13 @@ namespace Kontakt.App.Areas.Admin.Controllers
         public async Task<IActionResult> Create(DiscountCategory discountCategory)
         {
             ViewBag.Categories = await  _categoryService.GetAllAsync();
-            discountCategory.DiscountId = 1;
+            var resp = await _categoryService.GetAsync(discountCategory.CategoryId);
+            discountCategory.Category = resp.Data;
+            var respp = await _discountService.GetAsync(discountCategory.DiscountId);
+            discountCategory.Discount = respp.Data;
+
+            discountCategory.Images = new List<DiscountImage>();
+           
 
             if (!ModelState.IsValid)
                 return View(discountCategory);
@@ -76,19 +78,19 @@ namespace Kontakt.App.Areas.Admin.Controllers
                     return View(discountCategory);
                 }
 
-                DiscountImage discountImage = new DiscountImage
-                {
-                    CreatedAt = DateTime.Now,
-                    Image = item.CreateImage(_env.WebRootPath, "Assets/assets/images/DiscountCategory/"),
-                    DiscountCategory=discountCategory
-                };
+
 
                 //product.ProductImages.Add(productImage); buda olar
-                discountCategory.Images.Add(discountImage);
+                 discountCategory.Images.Add(new DiscountImage
+                 {
+                     CreatedAt = DateTime.Now,
+                     Image = item.CreateImage(_env.WebRootPath, "Assets/assets/images/DiscountCategory/"),
+                     DiscountCategory=discountCategory
+                 });
             }
             
-            _discountCategoryService.CreateAsync(discountCategory);
-            return RedirectToAction(nameof(Index));
+           await _discountCategoryService.CreateAsync(discountCategory);
+            return RedirectToAction(nameof(Index),discountCategory.Discount);
         }
     }
 }

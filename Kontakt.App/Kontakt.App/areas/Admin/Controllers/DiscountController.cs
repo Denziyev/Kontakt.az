@@ -44,9 +44,10 @@ namespace Kontakt.App.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
         public async Task<IActionResult> MovetoDiscountCategory(int id)
         {
-           var resp= await _discountService.GetAsync(id);
+            var resp = await _discountService.GetAsync(id);
             return RedirectToAction("Index", "DiscountCategory", resp.Data);
 
         }
