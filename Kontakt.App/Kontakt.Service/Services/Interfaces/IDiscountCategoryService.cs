@@ -13,7 +13,7 @@ namespace Kontakt.Service.Services.Interfaces
         public Task<MvcResponse<DiscountCategory>> CreateAsync(DiscountCategory discountCategory);
         public Task<MvcResponse<DiscountCategory>> UpdateAsync(int id, DiscountCategory discountCategory);
         public Task<MvcResponse<DiscountCategory>> GetAsync(int? id);
-        public Task<MvcResponse<List<DiscountCategory>>> GetAllAsync(Discount discount);
+        public Task<MvcResponse<List<DiscountCategory>>> GetAllAsync(int id);
         public Task<MvcResponse<DiscountCategory>> DeleteAsync(int id);
     }
 }

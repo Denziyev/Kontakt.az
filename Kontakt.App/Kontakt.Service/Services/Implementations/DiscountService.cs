@@ -46,7 +46,7 @@ namespace Kontakt.Service.Services.Implementations
 
         public async Task<MvcResponse<List<Discount>>> GetAllAsync()
         {
-            IQueryable<Discount> query = await _repository.GetAllAsync(x => !x.IsDeleted);
+            IQueryable<Discount> query = await _repository.GetAllAsync(x => !x.IsDeleted,"DiscountCategories");
             List<Discount> discounts = new List<Discount>();
             discounts = await query.Select(x => new Discount { Name = x.Name, Id = x.Id, CreatedAt = x.CreatedAt, StartDate=x.StartDate,EndDate=x.EndDate}).ToListAsync();
 

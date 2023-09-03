@@ -38,18 +38,18 @@ namespace Kontakt.Service.Services.Implementations
             throw new NotImplementedException();
         }
 
-        public async Task<MvcResponse<List<DiscountCategory>>> GetAllAsync(Discount discount)
+        public async Task<MvcResponse<List<DiscountCategory>>> GetAllAsync(int id)
         {
-            IQueryable<DiscountCategory> query = await _repository.GetAllAsync(x => !x.IsDeleted && x.DiscountId==discount.Id, "Discount", "Category");
-            List<DiscountCategory> discounts = new List<DiscountCategory>();
-            discounts = await query.Select(x => new DiscountCategory { Id = x.Id, CreatedAt = x.CreatedAt, DiscountId=x.DiscountId,CategoryId=x.CategoryId,Discount=x.Discount,Category=x.Category}).ToListAsync();
+            IQueryable<DiscountCategory> query = await _repository.GetAllAsync(x => !x.IsDeleted && x.DiscountId==id, "Discount", "Category", "DiscountofProducts","Images");
+            List<DiscountCategory> discountCategories = new List<DiscountCategory>();
+            discountCategories = await query.Select(x => new DiscountCategory { Id = x.Id, CreatedAt = x.CreatedAt, DiscountId=x.DiscountId,CategoryId=x.CategoryId,Images=x.Images,Category=x.Category,Discount=x.Discount}).ToListAsync();
 
-            return new MvcResponse<List<DiscountCategory>> { IsSuccess = true, Data = discounts };
+            return new MvcResponse<List<DiscountCategory>> { IsSuccess = true, Data = discountCategories };
         }
 
         public async Task<MvcResponse<DiscountCategory>> GetAsync(int? id)
         {
-            DiscountCategory? discount = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id, "Discount", "Category");
+            DiscountCategory? discount = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id, "Discount", "Category", "DiscountofProducts", "Images");
             if (discount == null)
             {
                 return new MvcResponse<DiscountCategory> { IsSuccess = false, Message = "This DiscountCategory doesnt exist" };
