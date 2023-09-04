@@ -11,10 +11,10 @@ namespace Kontakt.Service.Services.Interfaces
 {
     public interface IBrandService
     {
-        public Task<MvcResponse<Brand>> CreateAsync(Category category);
-        public Task<MvcResponse<Brand>> UpdateAsync(int id, Category category);
-        public Task<MvcResponse<Category>> GetAsync(int? id);
-        public Task<MvcResponse<List<Category>>> GetAllAsync();
-        public Task<MvcResponse<Category>> DeleteAsync(int id);
+        public Task<MvcResponse<Brand>> CreateAsync(Brand brand);
+        public Task<MvcResponse<Brand>> UpdateAsync(int id, Brand brand);
+        public Task<MvcResponse<Brand>> GetAsync(int? id);
+        public Task<MvcResponse<List<Brand>>> GetAllAsync();
+        public Task<MvcResponse<Brand>> DeleteAsync(int id);
     }
 }

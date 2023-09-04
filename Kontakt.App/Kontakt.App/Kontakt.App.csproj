@@ -10,6 +10,7 @@
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="ViewModels\" />
     <Folder Include="wwwroot\Assets\assets\images\DiscountCategory\" />
+    <Folder Include="wwwroot\Assets\assets\images\Brands\" />
   </ItemGroup>
 
   <ItemGroup>

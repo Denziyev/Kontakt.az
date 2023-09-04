@@ -1952,6 +1952,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\icons\titleicon.svg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\Brands\92e88ad0-aa96-42d7-8e1a-bbe06f54c0b1AMANDA WATKINS.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Kontakt.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Kontakt.App</BasePath>
+      <RelativePath>Assets/assets/images/Brands/92e88ad0-aa96-42d7-8e1a-bbe06f54c0b1AMANDA WATKINS.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\Brands\92e88ad0-aa96-42d7-8e1a-bbe06f54c0b1AMANDA WATKINS.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Assets\assets\images\DiscountCategory\0ac7e6bf-e3b3-4e49-81a8-05dc07d62cc9course1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Kontakt.App</SourceId>

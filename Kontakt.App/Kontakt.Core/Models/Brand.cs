@@ -12,9 +12,9 @@ namespace Kontakt.Core.Models
     public class Brand:BaseModel
     {
         public string Name { get; set; }    
-        public string Image { get; set; } 
-        public List<Product> Products { get; set; } 
+        public string? Image { get; set; } 
+        public List<Product>? Products { get; set; } 
         [NotMapped] 
-        public IFormFile formFile { get; set; } 
+        public IFormFile? formFile { get; set; } 
     }
 }
