@@ -19,6 +19,7 @@ namespace Kontakt.App.Context
         public DbSet<DiscountImage> DiscountsImages { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Credit> Credits { get; set; }
+        public DbSet<ProductCredit> ProductCredits { get; set; }
         public KontaktDbContext(DbContextOptions options) : base(options)
         {
         }

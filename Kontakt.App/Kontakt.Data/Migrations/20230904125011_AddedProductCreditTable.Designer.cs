@@ -4,6 +4,7 @@ using Kontakt.App.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kontakt.Data.Migrations
 {
     [DbContext(typeof(KontaktDbContext))]
-    partial class KontaktDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230904125011_AddedProductCreditTable")]
+    partial class AddedProductCreditTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

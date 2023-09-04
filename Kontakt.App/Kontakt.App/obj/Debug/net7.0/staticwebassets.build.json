@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LevLFU8upCEm6j11eEjaK9eBQcW8WOgAHzFpPg+qsl0=",
+  "Hash": "7aoOzmkORXp1RlM7MgNrnCUWANKK+aygmP2CDaZ0Mjg=",
   "Source": "Kontakt.App",
   "BasePath": "_content/Kontakt.App",
   "Mode": "Default",
@@ -901,23 +901,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\lock-screen.html"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\login-2.html",
-      "SourceId": "Kontakt.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
-      "BasePath": "_content/Kontakt.App",
-      "RelativePath": "Admin/pages/samples/login-2.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\login-2.html"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\login.html",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
@@ -935,12 +918,12 @@
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\login.html"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\register-2.html",
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\login-2.html",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
       "BasePath": "_content/Kontakt.App",
-      "RelativePath": "Admin/pages/samples/register-2.html",
+      "RelativePath": "Admin/pages/samples/login-2.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -949,7 +932,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\register-2.html"
+      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\login-2.html"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\register.html",
@@ -967,6 +950,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\register.html"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\samples\\register-2.html",
+      "SourceId": "Kontakt.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
+      "BasePath": "_content/Kontakt.App",
+      "RelativePath": "Admin/pages/samples/register-2.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\pages\\samples\\register-2.html"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\pages\\tables\\.DS_Store",
@@ -1052,6 +1052,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\pages\\ui-features\\typography.html"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\.DS_Store",
+      "SourceId": "Kontakt.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
+      "BasePath": "_content/Kontakt.App",
+      "RelativePath": "Admin/scss/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\scss\\.DS_Store"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\_background.scss",
@@ -1292,12 +1309,12 @@
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\_vertical-wrapper.scss"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\.DS_Store",
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\.DS_Store",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
       "BasePath": "_content/Kontakt.App",
-      "RelativePath": "Admin/scss/.DS_Store",
+      "RelativePath": "Admin/scss/components/.DS_Store",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,7 +1323,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\scss\\.DS_Store"
+      "OriginalItemSpec": "wwwroot\\Admin\\scss\\components\\.DS_Store"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\_badges.scss",
@@ -1479,23 +1496,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\components\\_tables.scss"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\.DS_Store",
-      "SourceId": "Kontakt.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
-      "BasePath": "_content/Kontakt.App",
-      "RelativePath": "Admin/scss/components/.DS_Store",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\scss\\components\\.DS_Store"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\components\\plugin-overrides\\_data-tables.scss",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
@@ -1528,6 +1528,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\landing-screens\\_auth.scss"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\.DS_Store",
+      "SourceId": "Kontakt.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
+      "BasePath": "_content/Kontakt.App",
+      "RelativePath": "Admin/scss/mixins/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\scss\\mixins\\.DS_Store"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\_animation.scss",
@@ -1632,23 +1649,6 @@
       "OriginalItemSpec": "wwwroot\\Admin\\scss\\mixins\\_misc.scss"
     },
     {
-      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\mixins\\.DS_Store",
-      "SourceId": "Kontakt.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
-      "BasePath": "_content/Kontakt.App",
-      "RelativePath": "Admin/scss/mixins/.DS_Store",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\scss\\mixins\\.DS_Store"
-    },
-    {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\scss\\style.scss",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
@@ -1734,6 +1734,23 @@
       "OriginalItemSpec": "wwwroot\\Admin\\vendors\\chart.js\\Chart.min.js"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js",
+      "SourceId": "Kontakt.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
+      "BasePath": "_content/Kontakt.App",
+      "RelativePath": "Admin/vendors/datatables.net/jquery.dataTables.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.css",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
@@ -1766,23 +1783,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\vendors\\datatables.net-bs4\\dataTables.bootstrap4.js"
-    },
-    {
-      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js",
-      "SourceId": "Kontakt.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
-      "BasePath": "_content/Kontakt.App",
-      "RelativePath": "Admin/vendors/datatables.net/jquery.dataTables.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\vendors\\datatables.net\\jquery.dataTables.js"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Admin\\vendors\\mdi\\css\\materialdesignicons.min.css",

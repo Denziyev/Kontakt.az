@@ -11,6 +11,6 @@ namespace Kontakt.Core.Models
         public int NumberofMonths { get; set; }
         public int Percent { get; set; }
         public double InitialPayment { get; set; }
-        public List<ProductCredit> Credits { get; set; }
+        public List<ProductCredit>? Credits { get; set; }
     }
 }
