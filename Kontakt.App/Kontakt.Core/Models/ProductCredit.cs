@@ -15,3 +15,4 @@ namespace Kontakt.Core.Models
         public int ProductId { get; set; }
     }
 }
+

@@ -38,7 +38,7 @@ namespace Kontakt.Core.Models
         public List<Product>? Products { get; set; }
         public double Percent { get; set; }
 
-        public DiscountCategory DiscountCategory { get; set; }
+        public DiscountCategory? DiscountCategory { get; set; }
         public int DiscountCategoryId { get; set; }
     }
 }
