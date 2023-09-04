@@ -545,16 +545,36 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\268b33aa-3d47-45d7-88b9-ba6c3a31d59cAmanda Jepson.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\27e205ba-ba18-427b-8bfa-653bf315897cblog4.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\27e205ba-ba18-427b-8bfa-653bf315897cblog4.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\2bb8d7b6-787b-4ddd-995b-9003f13d5327Amanda Jepson.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\2bb8d7b6-787b-4ddd-995b-9003f13d5327Amanda Jepson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\34f0771d-bcde-4311-aa55-6cd362bef95fAdressIcon.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\34f0771d-bcde-4311-aa55-6cd362bef95fAdressIcon.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\3536c225-ff9d-4543-b72a-b9f4c72eae3ablog6.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\3536c225-ff9d-4543-b72a-b9f4c72eae3ablog6.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\372e07a5-4e8e-4953-9668-8365e605e0d7AMANDA WATKINS.png",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\372e07a5-4e8e-4953-9668-8365e605e0d7AMANDA WATKINS.png"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\395c895b-7666-4857-81d4-d3b6f0d2e795AMANDA WATKINS.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\395c895b-7666-4857-81d4-d3b6f0d2e795AMANDA WATKINS.png"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\4026b234-be60-435f-b9d8-67f7c139d9dbblog5.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\4026b234-be60-435f-b9d8-67f7c139d9dbblog5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\43157b59-e807-44d8-863b-1e0741d8f275blog5.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\43157b59-e807-44d8-863b-1e0741d8f275blog5.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\4705abe3-d885-4578-a5f9-0d0a7cbece65Amanda Jepson.jpg",
@@ -577,12 +597,32 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\4f96e4a4-dac8-48a0-ad95-549b9671e43bBEVERLY CLARK.png"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\549d03d4-dfb9-4ff5-9ee5-bd960f6f36f8AMANDA WATKINS.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\549d03d4-dfb9-4ff5-9ee5-bd960f6f36f8AMANDA WATKINS.png"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\5812400a-2b08-4fc7-abad-4b28572f7bd3Amanda Jepson.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\5812400a-2b08-4fc7-abad-4b28572f7bd3Amanda Jepson.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\5b21921c-027f-479b-b67c-adf77c0916aeblog6.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\5b21921c-027f-479b-b67c-adf77c0916aeblog6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\5c034d16-613e-4db5-843e-6b5581fd877dblog1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\5c034d16-613e-4db5-843e-6b5581fd877dblog1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\5c7c5807-6656-4474-b6f6-8272c9b59f3acourse1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\5c7c5807-6656-4474-b6f6-8272c9b59f3acourse1.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\5d4780de-0abf-429e-bbf5-af45b20bed78Amanda Jepson.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\5d4780de-0abf-429e-bbf5-af45b20bed78Amanda Jepson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\6092c2b7-fc2c-4c3f-b319-0a281840e8e2blog-img.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\6092c2b7-fc2c-4c3f-b319-0a281840e8e2blog-img.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\648e4176-3205-4bd9-8246-d5485b6aac86Amanda Jepson.jpg",
@@ -595,6 +635,10 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\67691fde-97ce-499b-93c2-446000c92767BEVERLY CLARK.png",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\67691fde-97ce-499b-93c2-446000c92767BEVERLY CLARK.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\6e727022-0b36-4888-b387-88d384d26a55blog3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\6e727022-0b36-4888-b387-88d384d26a55blog3.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\71008941-6800-44ee-a6ca-bc23e2808619course2.jpg",
@@ -613,6 +657,10 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\757a763e-9a83-4682-a586-4787d320b6f1blog4.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\762086ec-44dc-440c-8fbf-2bf96ed233c1course2.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\762086ec-44dc-440c-8fbf-2bf96ed233c1course2.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\77e1725b-0fd9-46ac-b213-375844d09a4eblog1.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\77e1725b-0fd9-46ac-b213-375844d09a4eblog1.jpg"
     },
@@ -629,6 +677,10 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\83dd9598-c2d5-4832-a3e4-80e64584204bblog6.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\854d0401-ee92-4890-9f0d-5266aadeaea4blog5.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\854d0401-ee92-4890-9f0d-5266aadeaea4blog5.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\86b01072-8353-4028-b45b-0bcca974363fblog-img.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\86b01072-8353-4028-b45b-0bcca974363fblog-img.jpg"
     },
@@ -641,12 +693,24 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\8ce9d14c-8fac-4387-81a7-543c9ab242f8Amanda Jepson.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\8f36bb94-a8d8-4177-8e7f-b939f3763807course7.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\8f36bb94-a8d8-4177-8e7f-b939f3763807course7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\9aa91c9c-4edb-45dc-8f5e-0a9735f88c65blog4.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\9aa91c9c-4edb-45dc-8f5e-0a9735f88c65blog4.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\9d50ae3c-1da5-4540-8cfe-40683eee72ecblog5.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\9d50ae3c-1da5-4540-8cfe-40683eee72ecblog5.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\9d8dd015-2b91-4fc8-92f2-71f5e4cbf18eblog1.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\9d8dd015-2b91-4fc8-92f2-71f5e4cbf18eblog1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\9f7f062a-eca4-42f9-9b9d-74a8ae589f51BEVERLY CLARK.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\9f7f062a-eca4-42f9-9b9d-74a8ae589f51BEVERLY CLARK.png"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\a1380c11-8559-48df-9dd4-486f7a879885AMANDA WATKINS.png",
@@ -669,12 +733,20 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\a7170fd5-2a66-45c2-8f90-940d919956fbAMANDA WATKINS.png"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\aaa4dc3f-6c0b-41a0-ab97-2d9c5a6beaa8course3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\aaa4dc3f-6c0b-41a0-ab97-2d9c5a6beaa8course3.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\aeeadc5d-77d0-4022-bc9d-2b5b2e0ed71bcourse7.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\aeeadc5d-77d0-4022-bc9d-2b5b2e0ed71bcourse7.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\af60735a-351c-4f65-9409-d5741642d9c6AMANDA WATKINS.png",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\af60735a-351c-4f65-9409-d5741642d9c6AMANDA WATKINS.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\afa5560b-cc39-495b-aa89-3191f412a493Amanda Jepson.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\afa5560b-cc39-495b-aa89-3191f412a493Amanda Jepson.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\afab3809-408f-4c99-9774-6747dcedd9fdblog5.jpg",
@@ -711,6 +783,10 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\c3eb4abc-e030-41ba-9ab8-62b6cde7a1bfAmanda Jepson.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\c3eb4abc-e030-41ba-9ab8-62b6cde7a1bfAmanda Jepson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\c4bb887c-0cda-4eba-a357-60269e77b3dbBEVERLY CLARK.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\c4bb887c-0cda-4eba-a357-60269e77b3dbBEVERLY CLARK.png"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\caafd7b1-8713-48a4-b452-4a28dcae0561BEVERLY CLARK.png",
@@ -757,6 +833,10 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\e15e4399-d833-410f-a495-ac8365da6888Amanda Jepson.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\e4fc706f-29de-4bd2-b121-e792f289a4b3Amanda Jepson.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\e4fc706f-29de-4bd2-b121-e792f289a4b3Amanda Jepson.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\ecaba825-bf06-4ab0-8b73-c08e66409d1ablog5.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\ecaba825-bf06-4ab0-8b73-c08e66409d1ablog5.jpg"
     },
@@ -767,6 +847,10 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\f1fdf42b-0520-4340-ba16-13583c912083Amanda Jepson.jpg",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\f1fdf42b-0520-4340-ba16-13583c912083Amanda Jepson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\f271bfe3-043b-495e-8a2a-1608eda25ebccourse5.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\DiscountCategory\\f271bfe3-043b-495e-8a2a-1608eda25ebccourse5.jpg"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\DiscountCategory\\f5495d7a-d356-4031-ad68-6446ba00e043blog6.jpg",

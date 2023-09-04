@@ -1,6 +1,10 @@
 ﻿@using Kontakt.Core.Models;
 @using Kontakt.Service.Responses;
 @model MvcResponse<List<DiscountofProduct>>
+
+@{
+    var temporaryid=0; 
+}
 <div class="container">
     <table class="table table-sm">
         <thead>
@@ -16,6 +20,9 @@
             {
                 <tr>
                     <th scope="row">@item.Id</th>
+                    @{
+                        temporaryid = item.DiscountCategory.DiscountId;
+                    }
                     <th>@item.Percent</th>
                     <td><a asp-controller="DiscountofProduct" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
                     <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="DiscountofProduct" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
@@ -28,6 +35,6 @@
         <a asp-controller="DiscountofProduct" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-success">Create DiscountofProduct </div></a>
     </div>
     <div style="border-color:red">
-        <a asp-controller="DiscountCategory" asp-action="index" style=" margin-top:20px; display: block; text-decoration: none; color:red; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-secondary">Back to DiscountCategory Page </div></a>
+        <a asp-controller="Discount" asp-action="MovetoDiscountCategory" asp-route-id="@temporaryid" style=" margin-top:20px; display: block; text-decoration: none; color:red; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-secondary">Back to DiscountCategory Page </div></a>
     </div>
 </div>

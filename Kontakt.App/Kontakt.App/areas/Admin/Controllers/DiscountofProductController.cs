@@ -40,8 +40,6 @@ namespace Kontakt.App.Areas.Admin.Controllers
             var respp = await _categoryService.GetAsync(discountofProduct.DiscountCategoryId);
             discountofProduct.DiscountCategory = respp.Data;
 
-
-
             if (!ModelState.IsValid)
                 return View(discountofProduct);
 
