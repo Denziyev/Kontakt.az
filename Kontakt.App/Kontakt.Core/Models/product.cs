@@ -15,6 +15,8 @@ namespace Kontakt.App.Models
         public double DiscountinCash { get; set; }
         public Brand Brand { get; set; }
         public int BrandId { get; set; }
+
+        public List<Comment>? Comments { get; set; }
         public Category? Category { get; set; }
         public Dictionary<string,string> MainProperties { get; set; }
         public Dictionary<string, string> OtherProperties { get; set; }
