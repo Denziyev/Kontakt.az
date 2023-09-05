@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Home\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="wwwroot\Assets\assets\images\DiscountCategory\" />
     <Folder Include="wwwroot\Assets\assets\images\Brands\" />
   </ItemGroup>
@@ -30,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Kontakt.Core\Kontakt.Core.csproj" />
     <ProjectReference Include="..\Kontakt.Service\Kontakt.Service.csproj" />
   </ItemGroup>
 

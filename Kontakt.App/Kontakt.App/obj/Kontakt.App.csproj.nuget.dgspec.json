@@ -29,6 +29,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.Core\\Kontakt.Core.csproj": {
+                "projectPath": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.Core\\Kontakt.Core.csproj"
+              },
               "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.Service\\Kontakt.Service.csproj": {
                 "projectPath": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.Service\\Kontakt.Service.csproj"
               }

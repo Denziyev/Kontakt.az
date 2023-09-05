@@ -1501,7 +1501,7 @@ footer .roww:nth-child(2) .copy-right p {
   overflow-y: hidden;
   box-shadow: 1px 3px 11px rgba(0, 0, 0, 0.08);
   display: none;
-  z-index: 999;
+  z-index: 99999999;
   scrollbar-color: red;
 }
 #best-seller-similar .daily-discount-inner .shop-slider .owl-carousel .cart-item .cart-add ul {

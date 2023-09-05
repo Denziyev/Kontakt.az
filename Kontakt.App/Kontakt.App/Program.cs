@@ -34,6 +34,7 @@ builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IDiscountofProductRepository, DiscountofProductRepository>();
 builder.Services.AddScoped<ICreditRepository,CreditRepository>();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
 
 
@@ -47,6 +48,7 @@ builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IDiscountofProductService, DiscountofProductService>();
 builder.Services.AddScoped< ICreditService, CreditService>();
 builder.Services.AddScoped< IBrandService, BrandService>();
+builder.Services.AddScoped< ICommentService, CommentService>();
 
 
 
