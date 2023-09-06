@@ -9,6 +9,6 @@ namespace Kontakt.App.Models
         public Category? ParentCategory { get; set; }
         public List<Category>? Subcategories { get; set; }
         public List<Product>? Products { get; set; }
-        public List<DiscountCategory> DiscountCategory { get; set; }
+        public List<DiscountCategory>? DiscountCategory { get; set; }
     }
 }
