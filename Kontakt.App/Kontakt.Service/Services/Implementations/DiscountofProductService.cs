@@ -40,6 +40,14 @@ namespace Kontakt.Service.Services.Implementations
 
             return new MvcResponse<List<DiscountofProduct>> { IsSuccess = true, Data = discountofproducts };
         }
+        public async Task<MvcResponse<List<DiscountofProduct>>> GetAllWithoutIdAsync()
+        {
+            IQueryable<DiscountofProduct> query = await _repository.GetAllAsync(x => !x.IsDeleted , "DiscountCategory", "Products");
+            List<DiscountofProduct> discountofproducts = new List<DiscountofProduct>();
+            discountofproducts = await query.Select(x => new DiscountofProduct { Id = x.Id, CreatedAt = x.CreatedAt, Percent = x.Percent, DiscountCategoryId = x.DiscountCategoryId, DiscountCategory = x.DiscountCategory, Products = x.Products }).ToListAsync();
+
+            return new MvcResponse<List<DiscountofProduct>> { IsSuccess = true, Data = discountofproducts };
+        }
 
         public async Task<MvcResponse<DiscountofProduct>> GetAsync(int? id)
         {

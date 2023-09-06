@@ -24,12 +24,6 @@ namespace Kontakt.Service.Services.Implementations
 
         public async Task<MvcResponse<Comment>> CreateAsync(Comment comment)
         {
-            if (await _repository.isExist(x => x.Name.Trim().ToLower() == comment.Name.Trim().ToLower()))
-            {
-                return new MvcResponse<Comment> { IsSuccess = false, Message = $"{comment.Name} already exsist" };
-            }
-
-
             await _repository.AddAsync(comment);
             await _repository.SaveAsync();
             return new MvcResponse<Comment> { IsSuccess = true, Message = $"{comment.Name} is created successfully", Data = comment };
@@ -51,12 +45,14 @@ namespace Kontakt.Service.Services.Implementations
 
         public async Task<MvcResponse<List<Comment>>> GetAllAsync()
         {
-            IQueryable<Comment> query = await _repository.GetAllAsync(x => !x.IsDeleted,"Product");
+            IQueryable<Comment> query = await _repository.GetAllAsync(x => !x.IsDeleted ,"product");
             List<Comment> comments = new List<Comment>();
-            comments = await query.Select(x => new Comment {Id=x.Id,Name=x.Name,Email=x.Email,About=x.About,RatingLevel=x.RatingLevel,ProductId=x.ProductId,product=x.product}).ToListAsync();
+            comments = await query.Select(x => new Comment {Id=x.Id,Name=x.Name,Email=x.Email,IsVisible=x.IsVisible,About=x.About,RatingLevel=x.RatingLevel,ProductId=x.ProductId,product=x.product}).ToListAsync();
 
             return new MvcResponse<List<Comment>> { IsSuccess = true, Data = comments };
         }
+
+  
 
         public async Task<MvcResponse<Comment>> GetAsync(int? id)
         {
@@ -66,7 +62,6 @@ namespace Kontakt.Service.Services.Implementations
                 return new MvcResponse<Comment> { IsSuccess = false, Message = $"This comment was not found" };
             }
 
-
             return new MvcResponse<Comment> { IsSuccess = true, Data = comment };
         }
 
@@ -75,10 +70,17 @@ namespace Kontakt.Service.Services.Implementations
             Comment? comment = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id);
             if (comment == null)
             {
-                return new MvcResponse<Comment> { IsSuccess = false, Message = "This category doesnt exist" };
+                return new MvcResponse<Comment> { IsSuccess = false, Message = "This comment doesnt exist" };
             }
 
-            comment.IsVisible = true;
+            if(comment.IsVisible)
+            {
+                comment.IsVisible = false;
+            }
+            else
+            {
+                comment.IsVisible = true;
+            }
             await _repository.Update(comment);
             await _repository.SaveAsync();
             return new MvcResponse<Comment> { IsSuccess = true, Message = $"{comment.Name} is deleted successfully" };

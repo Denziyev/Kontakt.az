@@ -48,14 +48,14 @@ namespace Kontakt.Service.Services.Implementations
         {
             IQueryable<Credit> query = await _creditRepository.GetAllAsync(x => !x.IsDeleted,"Credits");
             List<Credit> credits = new List<Credit>();
-            credits = await query.Select(x => new Credit { Percent = x.Percent,Id=x.Id,InitialPayment=x.InitialPayment,NumberofMonths=x.NumberofMonths }).ToListAsync();
+            credits = await query.Select(x => new Credit { Percent = x.Percent,Id=x.Id,InitialPayment=x.InitialPayment,NumberofMonths=x.NumberofMonths, Credits=x.Credits }).ToListAsync();
 
             return new MvcResponse<List<Credit>> { IsSuccess = true, Data = credits };
         }
 
         public async Task<MvcResponse<Credit>> GetAsync(int? id)
         {
-            Credit? credit = await _creditRepository.GetByIdAsync(x => !x.IsDeleted && x.Id == id, "Products");
+            Credit? credit = await _creditRepository.GetByIdAsync(x => !x.IsDeleted && x.Id == id, "Credits");
             if (credit == null)
             {
                 return new MvcResponse<Credit> { IsSuccess = false, Message = $"This percent was not found" };

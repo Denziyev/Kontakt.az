@@ -47,6 +47,8 @@ namespace Kontakt.Service.Services.Implementations
             return new MvcResponse<List<DiscountCategory>> { IsSuccess = true, Data = discountCategories };
         }
 
+     
+
         public async Task<MvcResponse<DiscountCategory>> GetAsync(int? id)
         {
             DiscountCategory? discount = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id, "Discount", "Category", "DiscountofProducts", "Images");

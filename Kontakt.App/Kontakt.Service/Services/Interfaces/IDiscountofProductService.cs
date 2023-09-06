@@ -14,6 +14,8 @@ namespace Kontakt.Service.Services.Interfaces
         public Task<MvcResponse<DiscountofProduct>> UpdateAsync(int id, DiscountofProduct discountofproduct);
         public Task<MvcResponse<DiscountofProduct>> GetAsync(int? id);
         public Task<MvcResponse<List<DiscountofProduct>>> GetAllAsync(int id);
+        public Task<MvcResponse<List<DiscountofProduct>>> GetAllWithoutIdAsync();
+        
         public Task<MvcResponse<DiscountofProduct>> DeleteAsync(int id);
     }
 }
