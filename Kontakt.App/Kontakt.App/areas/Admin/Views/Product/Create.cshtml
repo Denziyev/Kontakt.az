@@ -1,0 +1,110 @@
+﻿@using Kontakt.App.Models;
+@using Kontakt.Core.Models;
+@model Product
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" asp-for="@Model.Name">
+            <span class="alert-danger" asp-validation-for="@Model.Name"></span>
+        </div>
+        <div class="form-group">
+            <label for="Price">Price</label>
+            <input type="number" class="form-control" asp-for="@Model.Price">
+            <span class="alert-danger" asp-validation-for="@Model.Price"></span>
+        </div>
+
+        <div class="form-group">
+            <select asp-for="CategoryId" class="form-select" aria-label="Disabled select example">
+                <option>Choose Category</option>
+                @foreach (var item in ViewBag.Categories.Data)
+                {
+
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+            </select>
+            <span class="text text-danger" asp-validation-for="CategoryId"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="BuyPrice">BuyPrice</label>
+            <input type="number" class="form-control" asp-for="@Model.BuyPrice">
+            <span class="alert-danger" asp-validation-for="@Model.BuyPrice"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="DiscountinCash">DiscountinCash</label>
+            <input type="number" class="form-control" asp-for="@Model.DiscountinCash">
+            <span class="alert-danger" asp-validation-for="@Model.DiscountinCash"></span>
+        </div>
+        <div class="form-group">
+            <select asp-for="BrandId" class="form-select" aria-label="Disabled select example">
+                <option>Choose Brand</option>
+                @foreach (var item in ViewBag.Brands.Data)
+                {
+
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+            </select>
+            <span class="text text-danger" asp-validation-for="BrandId"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="StockNumber">StockNumber</label>
+            <input type="number" class="form-control" asp-for="@Model.StockNumber">
+            <span class="alert-danger" asp-validation-for="@Model.StockNumber"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="FormFiles"></label>
+            <input multiple accept="image/*" type="file" class="form-control" asp-for="FormFiles">
+            <span class="text text-danger" asp-validation-for="FormFiles"></span>
+        </div>
+
+        <div class="form-group">
+            <select asp-for="DiscountofProductId" class="form-select" aria-label="Disabled select example">
+                <option>Choose Discount</option>
+                @foreach (var item in ViewBag.Discounts.Data)
+                {
+
+                    <option value="@item.Id">@item.Percent </option>
+
+                }
+            </select>
+            <span class="text text-danger" asp-validation-for="DiscountofProductId"></span>
+        </div>
+        <div class="form-group">
+            <select multiple asp-for="TagIds" class="form-select" aria-label="Disabled select example">
+                <option>Choose tags</option>
+                @foreach (var item in ViewBag.Tags.Data)
+                {
+
+                    <option value="@item.Id">@item.Name </option>
+
+                }
+            </select>
+            <span class="text text-danger" asp-validation-for="TagIds"></span>
+        </div>
+
+        <div class="form-group">
+            <select multiple asp-for="ProductCreditIds" class="form-select" aria-label="Disabled select example">
+                <option>Choose credits</option>
+                @foreach (var item in ViewBag.Credits.Data)
+                {
+
+                    <option value="@item.Id">@item.Percent </option>
+
+                }
+            </select>
+            <span class="text text-danger" asp-validation-for="ProductCreditIds"></span>
+        </div>
+
+
+        @Html.AntiForgeryToken()
+        <button type="submit">Create</button>
+    </form>
+</div>

@@ -1,10 +1,14 @@
-﻿using Kontakt.Core.Models;
+﻿using Kontakt.App.Models;
+using Kontakt.Core.Models;
 
 namespace Kontakt.App.ViewModels
 {
     public class ProductViewModel
     {
-        public List<Comment>? comments { get; set; }
-        public Comment comment { get; set; }
+        public List<Comment>? Comments { get; set; }
+        public Comment? Comment { get; set; }
+
+        public List<Product>? Products { get; set; }
+        public Product? Product { get; set; }
     }
 }

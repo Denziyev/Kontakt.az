@@ -12,7 +12,7 @@
                 <th scope="col">Comment</th>
                 <th scope="col">Rating</th>
                 <th scope="col">IsVisible</th>
-                <th scope="col">Update</th>
+               
                 <th scope="col">Delete</th>
             </tr>
         </thead>
@@ -26,21 +26,24 @@
                     <th>@item.Email</th>
                     <th>@item.product.Name</th>
                     <th>@item.About</th>
+                    @{
+                        item.RatingLevel += 1;
+                    }
                     <th>@item.RatingLevel</th>
+                    @if (item.IsVisible)
+                    {
+                        <td><a asp-controller="comment" asp-action="visible" asp-route-id="@item.Id"><i style="color:green;" class="fa-solid fa-circle-check"></i></a></td>
+                    }
+                    else
+                    {       
+                    <td><a asp-controller="comment" asp-action="visible" asp-route-id="@item.Id"><i style="color:darkgray;" class="fa-solid fa-circle-check"></i></a></td>
+                    }
 
-
-
-
-                    <td><a asp-controller="comment" asp-action="visible" asp-route-id="@item.Id"><i class="fa-solid fa-badge-check"></i></a></td>
-                    <td><a asp-controller="comment" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
                     <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="credit" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
                 </tr>
             }
-
         </tbody>
     </table>
-    <div>
-        <a asp-controller="comment" asp-action="create" style="display: block; text-decoration: none; color: white; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-success">Create Comment </div></a>
-    </div>
+
 
 </div>

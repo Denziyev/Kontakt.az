@@ -1,6 +1,6 @@
 ﻿@using Kontakt.App.ViewModels;
 @using Kontakt.Core.Models;
-@model Comment
+@model ProductViewModel
 
 
 
@@ -1955,6 +1955,13 @@
                             <section id="user-feedback">
                                 <div class="existing-feedbacks">
                                     <ul>
+                                       @foreach(var comment in Model.Product.Comments.Where(x=>x.IsVisible==true)){
+                                           <li>
+                                            @comment.Name  /   @{
+                                                comment.RatingLevel += 1;
+                                            }  @comment.RatingLevel   / @comment.About
+                                        </li>
+                                       }
                                     </ul>
                                 </div>
                                 <div class="feedback-form">
@@ -1964,22 +1971,22 @@
                                             <div class="comment-row-left">
                                                 <div class="form-group">
                                                     <label for="">Adınız <span>*</span></label>
-                                                    <input required="" type="text" name="review_ad"
-                                                           class="form-control" id="review_ad" asp-for="@Model.Name">
+                                                    <input required="" type="text" name="Name"
+                                                           class="form-control" id="review_ad" asp-for="@Model.Comment.Name">
                                                 </div>
                                             </div>
                                             <div class="comment-row-right">
                                                 <div class="form-group">
                                                     <label for="">E-poçt <span>*</span></label>
-                                                    <input required="" name="review_email" type="email"
-                                                           class="form-control" id="review_email" asp-for="@Model.Email">
+                                                    <input required="" name="Email" type="email"
+                                                           class="form-control" id="review_email" asp-for="@Model.Comment.Email">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Rəyiniz <span>*</span></label>
-                                            <textarea name="review_metn" required="" class="form-control"
-                                                      id="review_metn" rows="5" asp-for="@Model.About"></textarea>
+                                            <textarea name="About" required="" class="form-control"
+                                                      id="review_metn" rows="5" asp-for="@Model.Comment.About"></textarea>
                                         </div>
                                         <!-- <div class="g-recaptcha"
                                             data-sitekey="6Ld9ArMZAAAAACyX12yR41il5GvtLFgqyiOZRvqT"
@@ -1997,7 +2004,7 @@
                                         </div> -->
                                         <div class="rate-submit">
                                             <div class="rate">
-                                                <button class="star" >
+                                                <button type="button"  class="star" >
                                                     <svg enable-background="new 0 0 49.94 49.94" version="1.1"
                                                          viewBox="0 0 49.94 49.94" xml:space="preserve"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -2005,7 +2012,7 @@
                                                             </path>
                                                         </svg>
                                                 </button>
-                                                <button class="star" >
+                                                <button type="button" class="star" >
                                                     <svg enable-background="new 0 0 49.94 49.94" version="1.1"
                                                          viewBox="0 0 49.94 49.94" xml:space="preserve"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -2013,7 +2020,7 @@
                                                             </path>
                                                         </svg>
                                                 </button>
-                                                <button class="star" >
+                                                <button type="button" class="star" >
                                                     <svg enable-background="new 0 0 49.94 49.94" version="1.1"
                                                          viewBox="0 0 49.94 49.94" xml:space="preserve"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -2021,7 +2028,7 @@
                                                             </path>
                                                         </svg>
                                                 </button>
-                                                <button class="star" >
+                                                <button type="button" class="star" >
                                                     <svg enable-background="new 0 0 49.94 49.94" version="1.1"
                                                          viewBox="0 0 49.94 49.94" xml:space="preserve"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -2029,7 +2036,7 @@
                                                             </path>
                                                         </svg>
                                                 </button>
-                                                <button class="star" >
+                                            <button type="button" class="star">
                                                     <svg enable-background="new 0 0 49.94 49.94" version="1.1"
                                                          viewBox="0 0 49.94 49.94" xml:space="preserve"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -2038,7 +2045,8 @@
                                                         </svg>
                                                 </button>
                                             </div>
-                                            <input type="hidden" id="review_score" name="review_score" asp-for="@Model.RatingLevel">
+                                        <input hidden  type="number" id="review_score" name="RatingLevel" asp-for="@Model.Comment.RatingLevel">
+                                        <input hidden type="number" id="review_score" value="@Model.Product.Id" name="ProductId" asp-for="@Model.Comment.ProductId">
                                             <button type="submit" class="btn-add-to-review"
                                                    >
                                                 Göndər

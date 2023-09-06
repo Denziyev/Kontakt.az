@@ -36,9 +36,7 @@ namespace Kontakt.App.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(DiscountofProduct discountofProduct)
-        
-        
-        
+
         {
             var respp = await _categoryService.GetAsync(discountofProduct.DiscountCategoryId);
             discountofProduct.DiscountCategory = respp.Data;
