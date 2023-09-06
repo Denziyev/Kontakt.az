@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Kontakt.Data.Migrations
 {
     [DbContext(typeof(KontaktDbContext))]
-    [Migration("20230905130833_AddedCommentTablee")]
-    partial class AddedCommentTablee
+    [Migration("20230905223834_UpdatedProducttTable")]
+    partial class UpdatedProducttTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,11 +76,14 @@ namespace Kontakt.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DiscountId")
-                        .HasColumnType("int");
-
                     b.Property<double>("DiscountinCash")
                         .HasColumnType("float");
+
+                    b.Property<int>("DiscountofProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DiscountofProductId1")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -104,13 +107,18 @@ namespace Kontakt.Data.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BrandId");
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("DiscountId");
+                    b.HasIndex("DiscountofProductId");
+
+                    b.HasIndex("DiscountofProductId1");
 
                     b.ToTable("Products");
                 });
@@ -186,7 +194,7 @@ namespace Kontakt.Data.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Comment");
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Kontakt.Core.Models.Credit", b =>
@@ -492,9 +500,15 @@ namespace Kontakt.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Kontakt.Core.Models.DiscountofProduct", "Discount")
+                    b.HasOne("Kontakt.Core.Models.DiscountofProduct", "DiscountofProduct")
+                        .WithMany()
+                        .HasForeignKey("DiscountofProductId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Kontakt.Core.Models.DiscountofProduct", null)
                         .WithMany("Products")
-                        .HasForeignKey("DiscountId");
+                        .HasForeignKey("DiscountofProductId1");
 
                     b.OwnsOne("Kontakt.App.Models.Product.MainProperties#Dictionary", "MainProperties", b1 =>
                         {
@@ -542,7 +556,7 @@ namespace Kontakt.Data.Migrations
 
                     b.Navigation("Category");
 
-                    b.Navigation("Discount");
+                    b.Navigation("DiscountofProduct");
 
                     b.Navigation("MainProperties")
                         .IsRequired();
