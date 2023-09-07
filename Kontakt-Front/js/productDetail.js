@@ -155,3 +155,24 @@ nisye_decreasebtns.forEach((btn)=>{
    })
 })
 
+
+var star=Array.from(document.querySelectorAll(".star"));
+var ratinginput=document.querySelector("#review_score");
+
+star.forEach((staritem)=>{
+    staritem.addEventListener("click",(e)=>{
+        var starindex=star.indexOf(staritem);
+        for (let index = 0; index < star.length; index++) {
+            if(index<=starindex){
+                star[index].querySelector("svg path").style.fill="red";
+            }
+            else{
+                star[index].querySelector("svg path").style.fill="initial";
+            }
+            ratinginput.value=starindex;
+        }
+
+        e.preventDefault();
+    })
+})
+
