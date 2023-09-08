@@ -53,7 +53,7 @@ body {
 }
 
 .Container {
-  width: 1140px;
+  width: 1370px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -351,7 +351,7 @@ body {
 .MenuModal-container {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100vw !important;
   height: 100vh;
   display: none;
   align-items: center;
@@ -363,8 +363,8 @@ body {
   position: relative;
   transform-origin: top;
   display: flex;
-  margin-top: 123px;
-  margin-left: 197px;
+  margin-top: 83px;
+  margin-left: 6%;
   flex-direction: column;
   width: 267px;
   height: 580px;
@@ -394,8 +394,9 @@ body {
   width: 0;
   height: 0;
   left: 100%;
-  transition: 0.5s;
+  transition: 0.2s;
   background-color: #fff;
+  visibility: hidden;
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli .menuopen .menuopencontent {
   width: 100%;
@@ -513,7 +514,8 @@ body {
   background-color: #eeeff2;
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli:hover .menuopen {
-  width: 891px;
+  width: 1100px;
+  visibility: visible;
 }
 .MenuModal-container .MenuModal-content .product-menu .menuli:hover .menuopen .menuopencontent {
   display: block;
@@ -596,6 +598,13 @@ body {
 @media only screen and (min-width: 1141px) {
   #monthly-payment-modall {
     display: none;
+  }
+}
+@media only screen and (max-width: 1370px) {
+  .Container {
+    width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media only screen and (max-width: 1140px) {
@@ -1709,7 +1718,7 @@ a {
   border: 2px solid rgba(0, 0, 0, 0.08);
   background-color: #fff;
   position: relative;
-  min-width: 219.6;
+  min-width: 219.6px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1747,9 +1756,10 @@ a {
   width: 0;
   height: 700px;
   left: 100%;
-  transition: 0.5s;
+  transition: 0.2s;
   background-color: #fff;
   z-index: 999;
+  visibility: hidden;
 }
 #index .Container .roww:nth-child(1) .menusidebar .MenuModal-content .product-menu .menuli .menuopen .menuopencontent {
   width: 100%;
@@ -1869,7 +1879,8 @@ a {
   background-color: #eeeff2;
 }
 #index .Container .roww:nth-child(1) .menusidebar .MenuModal-content .product-menu .menuli:hover .menuopen {
-  width: 892px;
+  width: 1100px;
+  visibility: visible;
 }
 #index .Container .roww:nth-child(1) .menusidebar .MenuModal-content .product-menu .menuli:hover .menuopen .menuopencontent {
   display: block;
@@ -6972,24 +6983,36 @@ body {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding: 30px 0;
 }
 
-.Container .container__elem {
+#header-breadcumb {
+  background-color: white;
+}
+
+.discountare {
+  background-color: red;
+}
+.discountare a {
+  color: white;
+}
+.discountare a span {
+  color: black;
+}
+
+.Container .container__elemn {
   -ms-flex-positive: 1;
   -ms-flex-preferred-size: 0;
-  -ms-flex: 0 0 auto;
   -webkit-box-flex: 1;
-  -webkit-flex: 0 0 auto;
   box-sizing: border-box;
   flex-basis: 0;
   flex-grow: 1;
   margin-left: 5px;
   margin-right: 5px;
-  width: 100%;
 }
 .Container .container__elem--3 {
-  flex-basis: calc(20% - 10px);
-  max-width: calc(20% - 10px);
+  flex-basis: calc(20% + 20px);
+  max-width: calc(20% + 20px);
 }
 .Container .container__elem--3 .block-collapsible-nav {
   font-size: 1rem;
@@ -7126,14 +7149,15 @@ body {
 }
 .Container .lkSide ul li.active .icon-settings {
   -webkit-mask-image: url("../../assets/icons/settingicon.svg");
+          mask-image: url("../../assets/icons/settingicon.svg");
 }
 .Container .lkSide ul .item > a,
 .Container .lkSide ul .block-collapsible-nav .content .item > strong {
   border-left: 3px solid transparent;
 }
 .Container .container__elem--12 {
-  flex-basis: calc(80% - 10px);
-  max-width: calc(80% - 10px);
+  flex-basis: calc(80% - 40px);
+  max-width: calc(80% - 40px);
 }
 .Container .container__elem--12 .cont__top {
   background: #fff;
@@ -7155,6 +7179,9 @@ body {
   display: flex;
   align-items: center;
 }
+.Container .container__elem--12 .cont__top .catalog__item .catalogOptionsWrap {
+  display: none;
+}
 .Container .container__elem--12 .cont__top .container__elem--5-lg {
   flex-basis: calc(33.3333333333% - 10px);
   max-width: calc(33.3333333333% - 10px);
@@ -7172,7 +7199,354 @@ body {
   letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
+.Container .container__elem--12 .lkForm .lkForm__group {
+  margin-bottom: 40px;
+}
+.Container .container__elem--12 .lkForm .lkForm__group .lkForm__inp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 44px;
+  border-bottom: 1px solid #323232;
+}
+.Container .container__elem--12 .lkForm .lkForm__group .lkForm__inp .lkForm__name {
+  font-weight: 600;
+  font-size: 14px;
+  max-width: 244px;
+  width: 100%;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+.Container .container__elem--12 .lkForm .lkForm__group .lkForm__inp .lkForm__input {
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #777;
+}
+.Container .container__elem--12 .lkForm .lkForm__group .actions-toolbar, .Container .container__elem--12 .lkForm .lkForm__group .box-actions, .Container .container__elem--12 .lkForm .lkForm__group .cart-container .cart.actions {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.Container .container__elem--12 .lkForm .lkForm__group .actions-toolbar a, .Container .container__elem--12 .lkForm .lkForm__group .box-actions a, .Container .container__elem--12 .lkForm .lkForm__group .cart-container .cart.actions a {
+  background-color: rgb(199, 185, 185);
+  border-radius: 6px;
+  padding: 5px;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+}
+.Container .container__elem--12 .lkForm .lkForm__group .actions-toolbar a:hover, .Container .container__elem--12 .lkForm .lkForm__group .box-actions a:hover, .Container .container__elem--12 .lkForm .lkForm__group .cart-container .cart.actions a:hover {
+  background-color: red;
+  color: black;
+}
 .Container .container__elem--12 .cont__top--selfinfa {
   border-radius: 10px 10px 0 0;
   margin-bottom: 10px;
+}
+
+.form-edit-account.lkForm {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+.form-edit-account.lkForm .required {
+  display: block;
+}
+.form-edit-account.lkForm .fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+  float: left;
+  width: 48%;
+  max-width: 420px;
+  margin-right: 2%;
+  margin-bottom: 2rem;
+}
+.form-edit-account.lkForm .fieldset .legend {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 0 0 0.125rem;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.1);
+}
+.form-edit-account.lkForm .fieldset .dannie__group {
+  height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.form-edit-account.lkForm .fieldset .dannie__group label {
+  max-width: 245px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  height: 44px;
+  border-bottom: 1px solid #323232;
+  display: flex;
+  gap: 0.25rem;
+}
+.form-edit-account.lkForm .fieldset .dannie__group .dannie__input {
+  height: 100%;
+  height: 44px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+  letter-spacing: -0.02em;
+  border: none;
+  outline: none;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  border-bottom: 1px solid #323232;
+  border-radius: 0;
+}
+.form-edit-account.lkForm .fieldset .choice {
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+  line-height: 1.5rem;
+  clear: left;
+  position: relative;
+  margin-top: 0.75rem;
+}
+.form-edit-account.lkForm .fieldset .choice [type=checkbox] {
+  margin-top: 0.25rem;
+}
+.form-edit-account.lkForm .fieldset .choice [type=checkbox]:checked {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwIDAgMTYgMTYnIGZpbGw9J3doaXRlJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGQ9J00xMi4yMDcgNC43OTNhMSAxIDAgMDEwIDEuNDE0bC01IDVhMSAxIDAgMDEtMS40MTQgMGwtMi0yYTEgMSAwIDAxMS40MTQtMS40MTRMNi41IDkuMDg2bDQuMjkzLTQuMjkzYTEgMSAwIDAxMS40MTQgMHonLz48L3N2Zz4=);
+  background-color: black;
+}
+.form-edit-account.lkForm .fieldset .choice [type=checkbox], .form-edit-account.lkForm .fieldset .choice [type=radio] {
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  flex-shrink: 0;
+  min-width: 0;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+}
+.form-edit-account.lkForm .fieldset .field.required .label::after {
+  content: "*";
+  color: red;
+}
+.form-edit-account.lkForm .fieldset .field {
+  margin-top: 0.75rem;
+}
+.form-edit-account.lkForm .fieldset .field .label {
+  display: flex;
+  gap: 0.25rem;
+}
+.form-edit-account.lkForm .fieldset .field .control {
+  margin-top: 0.25rem;
+  position: relative;
+}
+.form-edit-account.lkForm .fieldset .field .control :where(input:not([type=range])), .form-edit-account.lkForm .fieldset .field .control textarea, .form-edit-account.lkForm .fieldset .field .control select {
+  outline: none;
+  position: relative;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  color: rgb(17, 24, 39);
+  background: white;
+  border: 2px solid rgb(17, 24, 39);
+  border-radius: 0.25rem;
+  box-shadow: none;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+}
+.form-edit-account.lkForm .actions-toolbar {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.form-edit-account.lkForm .actions-toolbar .primary,
+.form-edit-account.lkForm .actions-toolbar .secondary {
+  display: contents;
+}
+.form-edit-account.lkForm .actions-toolbar .primary button,
+.form-edit-account.lkForm .actions-toolbar .secondary button {
+  outline: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  color: white;
+  background: black;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none !important;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.lkForm {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+.lkForm .lkForm__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.lkForm * {
+  outline: none;
+}
+.lkForm .lkForm__group {
+  margin-bottom: 40px;
+}
+.lkForm .lkForm__group .dannie__group {
+  height: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+  overflow: hidden;
+  outline: none;
+}
+.lkForm .lkForm__group .dannie__group label.label {
+  border-bottom: 1px solid #323232;
+}
+.lkForm .lkForm__group .dannie__group label {
+  max-width: 245px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  height: 44px;
+  display: flex;
+  gap: 0.25rem;
+}
+.lkForm .lkForm__group .dannie__group label span {
+  font-weight: 500;
+  color: #ff003c;
+  margin-right: 4px;
+}
+.lkForm .lkForm__group .dannie__group .dannie__input {
+  height: 100%;
+  height: 44px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+  letter-spacing: -0.02em;
+  border: none;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  border-bottom: 1px solid #323232;
+  border-radius: 0;
+  outline: none;
+}
+.lkForm .lkForm__group .field {
+  margin-top: 0.75rem;
+}
+.lkForm .lkForm__group {
+  margin-bottom: 40px;
+}
+.lkForm .lkForm__group .lkForm__inp {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 44px;
+  border-bottom: 1px solid #323232;
+}
+.lkForm .lkForm__group .lkForm__inp .lkForm__name {
+  font-weight: 600;
+  font-size: 14px;
+  max-width: 244px;
+  width: 100%;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+.lkForm .lkForm__group .field {
+  margin-top: 0.75rem;
+}
+.lkForm .lkForm__group .field .label + .control {
+  margin-top: 0.125rem;
+}
+.lkForm .lkForm__group .field .control {
+  position: relative;
+}
+.lkForm .lkForm__group .field .control .lkForm__input {
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #323232;
+}
+.lkForm .lkForm__group .field.required > .label, .lkForm .lkForm__group .field._required > .label {
+  display: flex;
+  gap: 0.25rem;
+}
+.lkForm .lkForm__group .field.required > .label::after, .lkForm .lkForm__group .field._required > .label::after {
+  content: "*";
+  color: red;
+}
+.lkForm .actions-toolbar {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.lkForm .actions-toolbar .primary,
+.lkForm .actions-toolbar .secondary {
+  display: contents;
+}
+.lkForm .actions-toolbar .primary button,
+.lkForm .actions-toolbar .secondary button {
+  outline: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  color: white;
+  background: black;
+  border: 2px solid black;
+  border-radius: 0.25rem;
+  text-decoration: none !important;
+  white-space: nowrap;
+  cursor: pointer;
 }
