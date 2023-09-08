@@ -63,8 +63,10 @@ for (let index = 0; index < headerproductmenu.length; index++) {
     headerproductmenu[index].addEventListener("mouseover",()=>{
       headerproductmenuopentop=-((index)*38+1);
       headerproductmenu[index].querySelector(".menuopen").style.top=`${headerproductmenuopentop}px`;
-      headerproductmenu[index].querySelector(".menuopen").style.height=`${(headerproductmenu.length)*38+27}px`;
+      headerproductmenu[index].querySelector(".menuopen").style.height=`${(headerproductmenu.length)*38}px`;
       headerproductmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
+      headerproductmenu[index].querySelector(".menuopen").style.borderLeft = "0px solid rgba(0, 0, 0,0.2)";
+ 
   })
 
 }
@@ -79,8 +81,10 @@ for (let index = 0; index < productmenu.length; index++) {
   
     productmenuopentop=-((index)*46+1);
     productmenu[index].querySelector(".menuopen").style.top=`${productmenuopentop}px`;
-    productmenu[index].querySelector(".menuopen").style.height=`${(productmenu.length)*46+27}px`;
+    productmenu[index].querySelector(".menuopen").style.height=`${(productmenu.length)*46+2}px`;
     productmenu[index].querySelector(".menuopen").style.border = "1px solid rgba(0, 0, 0,0.2)";
+    productmenu[index].querySelector(".menuopen").style.borderLeft = "0px solid rgba(0, 0, 0,0.2)";
+
   })
 
 }
