@@ -1,0 +1,161 @@
+.lkForm {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+
+    .lkForm__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+    }
+
+    *{
+        outline: none;
+    }
+
+    .lkForm__group {
+        margin-bottom: 40px;
+
+        .dannie__group {
+            height: 44px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 16px;
+            overflow: hidden;
+            outline: none;
+     
+            label.label {
+                border-bottom: 1px solid #323232;
+            }
+    
+            label {
+                max-width: 245px;
+                width: 100%;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 44px;
+                letter-spacing: -0.02em;
+                height: 44px;
+                display: flex;
+                gap: 0.25rem;
+
+                span {
+                    font-weight: 500;
+                    color: #ff003c;
+                    margin-right: 4px;
+                }
+            }
+
+            .dannie__input {
+                height: 100%;
+                height: 44px;
+                width: 100%;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: #323232;
+                letter-spacing: -0.02em;
+                border: none;
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+                border-bottom: 1px solid #323232;
+                border-radius: 0;
+                outline: none;
+            }
+        }
+        .field {
+            margin-top: 0.75rem;
+        }
+
+
+    }
+
+    .lkForm__group {
+        margin-bottom: 40px;
+
+        .lkForm__inp {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            height: 44px;
+            border-bottom: 1px solid #323232;
+
+            .lkForm__name {
+                font-weight: 600;
+                font-size: 14px;
+                max-width: 244px;
+                width: 100%;
+                line-height: 20px;
+                letter-spacing: -0.02em;
+            }
+        }
+        .field {
+            margin-top: 0.75rem;
+            .label+.control {
+                margin-top: 0.125rem;
+            }
+            .control {
+                position: relative;
+
+                .lkForm__input {
+                    border: none;
+                    width: 100%;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: -0.02em;
+                    color: #323232;
+                }
+            }
+        }
+        .field.required>.label, .field._required>.label {
+            display: flex;
+            gap: 0.25rem;
+        }
+        .field.required>.label::after, .field._required>.label::after {
+            content: '*';
+            color: red;
+        }
+    }
+
+    .actions-toolbar {
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+
+        .primary,
+        .secondary {
+            display: contents;
+
+            button {
+                outline: none;
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.25rem;
+                font-weight: 600;
+                padding: 0.5rem 1.25rem;
+                color: white;
+                background: black;
+                border: 2px solid black;
+                border-radius: 0.25rem;
+                text-decoration: none !important;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+        }
+    }
+}
