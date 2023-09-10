@@ -731,6 +731,7 @@
                                 padding: 0 5px 0 20px;
                                 position: relative;
                                 margin: 0 10px;
+                                height: fit-content;
                                 max-height: 70px;
                                 overflow-y: scroll;
                                 scrollbar-color: red;
@@ -767,6 +768,19 @@
                                     height: 20px;
                                     margin-left: -1em;
                                 }
+                            }
+
+                            ul::-webkit-scrollbar-track{
+                                background: white;
+                            }
+
+                            ul::-webkit-scrollbar-thumb{
+                                background: red;
+                                border-radius: 10px;
+                            }
+
+                            ul::-webkit-scrollbar{
+                                width: 5px;
                             }
 
                             .action {

@@ -955,3 +955,17 @@ body {
 
    
 }
+
+
+html::-webkit-scrollbar-track{
+    background: linear-gradient(red,black,red,black,red,black,red,black,red);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(red,black);
+    border-radius: 5px;
+}
+
+html::-webkit-scrollbar{
+    width: 10px;
+}
