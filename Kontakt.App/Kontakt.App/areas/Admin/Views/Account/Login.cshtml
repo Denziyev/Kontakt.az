@@ -337,10 +337,10 @@ footer a:link {
     <form class="login" action="#" method="post">
         <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
 
-        <label asp-for="UserName">UserName</label>
-        <input type="text" class="form-control" asp-for="@Model.UserName">
+        <label asp-for="email">E-mail</label>
+        <input type="text" class="form-control" asp-for="@Model.email">
         <i class="fa fa-user"></i>
-        <span class="alert-danger" asp-validation-for="UserName"></span>
+        <span class="alert-danger" asp-validation-for="email"></span>
 
         <label asp-for="Password">Password</label>
         <input type="password" class="form-control" asp-for="@Model.Password">

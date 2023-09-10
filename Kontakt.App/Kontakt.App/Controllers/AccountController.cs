@@ -30,6 +30,7 @@ namespace Kontakt.App.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel registerViewModel)
         {
+            registerViewModel.IsTerms = true;
             if (!ModelState.IsValid)
             {
                 return View(registerViewModel);
@@ -88,7 +89,7 @@ namespace Kontakt.App.Controllers
                 return View(loginViewModel);
             }
 
-            AppUser appUser = await _userManager.FindByNameAsync(loginViewModel.UserName);
+            AppUser appUser = await _userManager.FindByEmailAsync(loginViewModel.email);
             if (appUser == null)
             {
                 ModelState.AddModelError("", "username or password is incorret");
@@ -202,7 +203,7 @@ namespace Kontakt.App.Controllers
                 Name = user.Name,
                 Surname = user.Surname,
                 Email = user.Email,
-                UserName = user.UserName
+                PhoneNumber = user.PhoneNumber
             };
             return View(userUpdateView);
         }
@@ -223,8 +224,8 @@ namespace Kontakt.App.Controllers
             }
             user.Name = model.Name;
             user.Surname = model.Surname;
-            user.UserName = model.UserName;
             user.Email = model.Email;
+            user.PhoneNumber = model.PhoneNumber;
             var result = await _userManager.UpdateAsync(user);
 
             if (!result.Succeeded)
@@ -253,8 +254,68 @@ namespace Kontakt.App.Controllers
         }
 
 
+        [Authorize]
+        public async Task<IActionResult> changedestination()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            AdressUpdateViewModel adressUpdateView = new AdressUpdateViewModel
+            {
+                Name = user.Name,
+                Surname = user.Surname,
+                City = user.City,
+                StreetAdress = user.StreetAdress,
+                Province = user.Province,
+                Country = user.Country,
+                PhoneNumber = user.PhoneNumber,
+                ZipCode = user.ZipCode,
+                Company= user.Company,
+                Email=user.Email
 
+            };
+            return View(adressUpdateView);
+        }
 
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> changedestination(AdressUpdateViewModel model)
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            if (user == null)
+            {
+                return NotFound();
+            }
+            user.Name = model.Name;
+            user.Surname = model.Surname;
+            user.City = model.City;
+            user.Company= model.Company;
+            user.Country = model.Country;
+            user.PhoneNumber = model.PhoneNumber;
+            user.Province = model.Province;
+            user.StreetAdress = model.StreetAdress;
+            user.ZipCode = model.ZipCode;
+            var result = await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(model);
+            }
+
+            await _signinManager.SignInAsync(user, true);
+            TempData["UserUpdate"] = "User info was updated succesfully";
+            return RedirectToAction(nameof(Info));
+        }
 
 
 

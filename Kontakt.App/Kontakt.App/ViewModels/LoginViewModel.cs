@@ -7,7 +7,7 @@ namespace Kontakt.App.ViewModels
     public class LoginViewModel
     {
         [Required]
-        public string UserName { get; set; }
+        public string email { get; set; }
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }

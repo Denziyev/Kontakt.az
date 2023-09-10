@@ -99,7 +99,7 @@
                 <div class="roww">
                     <div class="logodiv">
                         <div class="logo">
-                            <a href="../html/home.html">
+                            <a href="/">
                                 <img src="~/Assets/assets/icons/kontakt.svg" alt="">
                             </a>
                         </div>
@@ -129,12 +129,22 @@
                     <div class="login-basket">
                         <ul>
                             <li>
-                                <a id="id_my_profile" href="https://kontakt.az/profile/">
+                                  @if (User.Identity.IsAuthenticated)
+                                {                      
+                                <a id="id_my_profile" href="/account/info">
                                     <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
                                     <span>Hesabım</span>
-                                </a>
-                            </li>
-                            <li>
+                                    </a>
+                                }
+                                else {
+                                   <a id="id_my_profile" href="/account/login">
+                                    <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                    <span>Daxil ol</span>
+                                    </a>
+                                        
+                                }
+                                                </li>
+                                                <li>
                                 <a href="https://kontakt.az/kart/" style="position:relative">
                                     <img src="~/Assets/assets/icons/basket.svg" alt="basket">
                                     <span>Səbət</span>
@@ -254,7 +264,7 @@
         <div class="MenuModal-content">
             <ul class="product-menu">
                 <li class="menuli smartfonmenuli">
-                    <a href="">
+                    <a href="~/Category">
                         <div class="menuproducticon">
                             <img class="lazy" src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
                         </div>
@@ -266,7 +276,7 @@
                                 <li>
                                     <div class="menulicontainer">
                                         <a class="menuliparent_a"
-                                           href="https://kontakt.az/telefonlar/mobil-telefonlar/">
+                                           href="https://kontakt.az/telefonlar/mobil-telefonlar">
                                             <span>Smartfonlar</span>
                                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -937,7 +947,8 @@
                                         </a>
                                         <a class="subsub_a"
                                            href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/q-and-q/">
-                                            Q&amp;Q
+                                            Q&amp;
+                                Q
                                         </a>
                                     </div>
                                 </li>
@@ -1858,20 +1869,10 @@
     </div>
     <!--Menu Modal Area End-->
     <!-- Header Area End -->
-    <!--Discount Area Start-->
-    <section class="discountarea">
-        <div class=" discount_container">
-            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001624&amp;source=kontakt.az&amp;Medium=az_home-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                Əsl
-                baxılası kampaniya Kontakt-da! 13 avqustadək hissəli alışda 24 ayadək faizsiz təkliflər, nağd alışda
-                <span style="color:red">-50%-dək endirimlər var!</span>
-            </a>
-        </div>
-    </section>
-    <!--Discount Area End-->
-    <main>
+
+
         @RenderBody()
-    </main>
+
 
     <footer>
         <div class="Container">
@@ -2329,6 +2330,7 @@ bottom:0px;padding:0px;z-index:10000001">
 <script src="~/Assets/js/productDetail.js"></script>
 <script src="~/Assets/js/Header.js"></script>
 <script src="~/Assets/js/home.js"></script>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"

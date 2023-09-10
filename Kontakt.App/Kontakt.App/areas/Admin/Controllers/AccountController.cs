@@ -61,7 +61,7 @@ namespace Kontakt.App.areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel login)
         {
-            AppUser appUser = await _userManager.FindByNameAsync(login.UserName);
+            AppUser appUser = await _userManager.FindByEmailAsync(login.email);
 
             if (appUser == null)
             {
