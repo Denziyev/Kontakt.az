@@ -1,3 +1,36 @@
+var increasebtns=Array.from(document.querySelectorAll("button.increase"))
+
+increasebtns.forEach((btn)=>{
+   btn.addEventListener("click",()=>{
+    btn.previousElementSibling.value=`${parseInt(btn.previousElementSibling.value)+1}`
+   })
+})
+
+
+var decreasebtns=Array.from(document.querySelectorAll("button.decrease"))
+
+decreasebtns.forEach((btn)=>{
+   btn.addEventListener("click",()=>{
+    if(btn.nextElementSibling.value>0){
+    btn.nextElementSibling.value=`${parseInt(btn.nextElementSibling.value)-1}`
+    }
+   })
+})
+
+
+var checkboxes=Array.from(document.querySelectorAll(".checkbox .form-check-label"));
+console.log(checkboxes)
+checkboxes.forEach((item)=>{
+  item.addEventListener("click",()=>{
+    if(item.style.getPropertyValue("--pseudo-opacity")=="0"){
+        item.style.setProperty("--pseudo-opacity", `1`);
+    }
+    else{
+        item.style.setProperty("--pseudo-opacity", `0`);
+    }
+  })
+})
+
 var mainimg=document.querySelector(".mainImg .single-product-link img");
 var sidebarimgs=Array.from(document.querySelectorAll(".slider>div>button>img"));
 
@@ -71,38 +104,9 @@ birklikbtn.addEventListener("click",()=>{
 
 
 
-var increasebtns=Array.from(document.querySelectorAll("button.increase"))
-
-increasebtns.forEach((btn)=>{
-   btn.addEventListener("click",()=>{
-    btn.previousElementSibling.value=`${parseInt(btn.previousElementSibling.value)+1}`
-   })
-})
 
 
-var decreasebtns=Array.from(document.querySelectorAll("button.decrease"))
 
-decreasebtns.forEach((btn)=>{
-   btn.addEventListener("click",()=>{
-    if(btn.nextElementSibling.value>0){
-    btn.nextElementSibling.value=`${parseInt(btn.nextElementSibling.value)-1}`
-    }
-   })
-})
-
-
-var checkboxes=Array.from(document.querySelectorAll(".checkbox .form-check-label"));
-console.log(checkboxes)
-checkboxes.forEach((item)=>{
-  item.addEventListener("click",()=>{
-    if(item.style.getPropertyValue("--pseudo-opacity")=="0"){
-        item.style.setProperty("--pseudo-opacity", `1`);
-    }
-    else{
-        item.style.setProperty("--pseudo-opacity", `0`);
-    }
-  })
-})
 
 // var cartamount=document.querySelectorAll(".cart_amount");
 // var yekuncash=document.querySelector(".proceed-to-payment .pricespan")

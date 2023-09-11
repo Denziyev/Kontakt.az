@@ -821,6 +821,18 @@
                             overflow-y: auto;
                             position: relative;
                         }
+                        ul::-webkit-scrollbar-track{
+                            background: white;
+                        }
+
+                        ul::-webkit-scrollbar-thumb{
+                            background: red;
+                            border-radius: 10px;
+                        }
+
+                        ul::-webkit-scrollbar{
+                            width: 5px;
+                        }
                     }
 
                     h4 {

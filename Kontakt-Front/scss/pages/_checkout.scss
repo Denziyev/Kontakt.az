@@ -1,0 +1,403 @@
+#checkout {
+    .headline-return {
+        padding: 11px 0;
+    }
+
+    .roww {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+
+        .hert {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            .checkout-accordion-menu {
+                margin-bottom: 40px;
+
+                .btn-accordion {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #f3f4f5;
+                    border: none;
+                    width: 100%;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #282828;
+                    padding: 5px 20px;
+                    cursor: pointer;
+
+                    svg {
+                        width: 15px;
+                        transform: rotate(270deg);
+                        transition: .5s;
+                    }
+                }
+
+                .content {
+                    padding: 20px 30px;
+                    border: 2px solid rgba(0, 0, 0, .08);
+                    background-color: #fff;
+                    display: block;
+
+                    .roww {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -15px;
+                        margin-left: -15px;
+
+                        .mobile {
+                            display: flex;
+
+                            .input-group {
+                                position: relative;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-items: stretch;
+                                width: 100%;
+                                height: auto;
+
+                                .input-group-prepend {
+                                    margin-right: -1px;
+                                    display: flex;
+
+                                    .input-group-text {
+                                        display: flex;
+                                        align-items: center;
+                                        padding: 0.375rem 0.75rem;
+                                        margin-bottom: 0;
+                                        font-size: 1rem;
+                                        font-weight: 400;
+                                        line-height: 1.5;
+                                        color: #495057;
+                                        text-align: center;
+                                        white-space: nowrap;
+                                        background-color: #e9ecef;
+                                        border: 1px solid #ced4da;
+                                        border-radius: 0.25rem;
+                                    }
+                                }
+
+                                .selectHolder {
+                                    position: relative;
+                                    width: auto;
+
+                                    select {
+                                        word-wrap: normal;
+                                    }
+
+                                    select {
+                                        width: 0px !Important;
+                                        height: 0 !important;
+                                        border: 0;
+                                    }
+
+                                    select {
+                                        float: left;
+                                    }
+
+                                    .select_header {
+                                        color: #000;
+                                        border: 1px solid #000;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        cursor: pointer;
+                                        font-size: 20px;
+                                        padding: 8px 16px;
+                                        transition: .5s;
+                                        position: relative;
+                                        z-index: 1;
+                                        background: #fff;
+                                    }
+
+                                    .select_header {
+                                        height: 100%;
+                                        margin-bottom: 0;
+                                        font-size: 17px;
+                                        color: rgba(40, 40, 40, .7);
+                                        border: 1px solid #d9d9d9;
+                                        border-right: none;
+                                        border-radius: 0;
+                                        background-color: #fff;
+                                        padding-right: 35px;
+                                    }
+
+                                    .select_header {
+                                        height: auto;
+                                    }
+
+                                    .select_header:after {
+                                        content: "";
+                                        position: absolute;
+                                        width: 10px;
+                                        border: 1px solid grey;
+                                        top: 50%;
+                                        transition: .5s;
+                                    }
+
+                                    .select_header:before {
+                                        content: "";
+                                        position: absolute;
+                                        width: 10px;
+                                        border: 1px solid grey;
+                                        top: 50%;
+                                        transition: .5s;
+                                    }
+
+                                    .select_header:after {
+                                        right: 10px;
+                                        transform: rotate(-45deg);
+                                    }
+
+                                    .select_header:before {
+                                        right: 16px;
+                                        transform: rotate(45deg);
+                                    }
+
+                                    .select_body_holder {
+                                        max-height: 0;
+                                        position: absolute;
+                                        overflow: hidden;
+                                        transition: .5s;
+                                        width: 100%;
+                                        border-top-style: hidden;
+                                        background: #fff;
+                                        z-index: 6;
+
+                                        .select_body {
+                                            list-style-type: none;
+                                            overflow: auto;
+                                            font-size: 18px;
+                                            transition: .5s;
+                                            width: 100%;
+                                            max-height: 166px;
+
+                                            li {
+                                                padding: 5px 15px;
+                                                cursor: pointer;
+                                                transition: .5s;
+                                                background: inherit;
+                                                color: #000;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .form-control {
+                                    display: block;
+
+                                    height: calc(1.5em + 0.75rem + 2px);
+                                    padding: 0.375rem 0.75rem;
+                                    font-size: 1rem;
+                                    font-weight: 400;
+                                    line-height: 1.5;
+                                    color: #495057;
+                                    background-color: #fff;
+                                    background-clip: padding-box;
+                                    border: 1px solid #ced4da;
+                                    border-radius: 0.25rem;
+                                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                                }
+
+                                input {
+                                    border: 2px solid rgba(0, 0, 0, .15) !important;
+                                }
+                            }
+                        }
+
+                        .form-group.additional-ctc {
+                            display: none;
+                        }
+
+
+                        .add-ctc {
+                            background-color: transparent;
+                            color: #2a9803;
+                            font-weight: 700;
+                            font-size: 16px;
+                            display: flex;
+                            align-items: center;
+                            border: none;
+                            margin-bottom: 10px;
+                            justify-content: center;
+
+                            .icon {
+                                width: 20px;
+                                height: 20px;
+                                border: 2px solid #2a9803;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                svg {
+                                    width: 12px;
+                                    height: 16px;
+
+                                    path {
+                                        fill: #2a9803;
+                                    }
+                                }
+                            }
+                        }
+
+                        .form-group {
+                            margin-bottom: 1rem;
+
+                            label {
+                                display: inline-block;
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #282828;
+                                margin-bottom: 10px;
+
+                                span {
+                                    color: #ff003c;
+                                }
+                            }
+
+                            textarea {
+                                overflow: auto;
+                                resize: vertical;
+                            }
+
+                            .form-control {
+                                display: block;
+
+                                height: calc(1.5em + 0.75rem + 2px);
+                                padding: 0.375rem 0.75rem;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                color: #495057;
+                                background-color: #fff;
+                                background-clip: padding-box;
+                                border: 1px solid #ced4da;
+                                border-radius: 0.25rem;
+                                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                            }
+
+                            select.form-control[multiple],
+                            select.form-control[size],
+                            textarea.form-control {
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .roww {
+                        //sefsejbhwebfwe
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -15px;
+                        margin-left: -15px;
+                    }
+
+
+                    .form-group {
+                        margin-bottom: 1rem;
+
+                        .tick-checkbox-wrapper {
+                            display: flex;
+
+                            .form-check {
+                                position: relative;
+                                display: block;
+                                padding-left: 1.25rem;
+
+                                .icon {
+                                    position: relative;
+                                    width: 45px;
+                                    height: 45px;
+                                    margin: 0 auto 15px;
+                                    transition: .5s;
+
+                                    img {
+                                        opacity: 0;
+                                    }
+
+                                    img {
+                                        position: absolute;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        top: 0;
+
+                                    }
+
+                                    img.active {
+                                        opacity: 1;
+                                    }
+                                }
+
+                                input {
+                                    border: 2px solid rgba(0, 0, 0, .15);
+                                    margin-top: 0.3rem;
+                                    margin-left: -1.25rem;
+                                }
+
+                                input[type=radio]+label:before,
+                                .radiolabel:before {
+                                    content: "";
+                                    height: 20px;
+                                    width: 20px;
+                                    position: absolute;
+                                    top: 7px;
+                                    left: 0;
+                                    border: 2px solid rgba(0, 0, 0, .15);
+                                    border-radius: 100%;
+                                }
+                            }
+
+                            label {
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: #282828;
+                                margin-bottom: 10px;
+                            }
+
+                            label:before {
+                                left: 50%;
+                                background-color: #fff;
+                            }
+
+                            label:before {
+                                transform: translateX(-50%);
+                            }
+
+                            input[type=radio] {
+                                position: absolute;
+                                opacity: 0 !important;
+                            }
+                        }
+
+                        .form-check {
+                            background-color: #f3f4f5;
+                            border: 2px solid rgba(0, 0, 0, .08);
+                            padding: 10px;
+                            width: 49.999%;
+                        }
+                    }
+
+                    .alert {
+                        position: relative;
+                        padding: 0.75rem 1.25rem;
+                        margin-bottom: 1rem;
+                        border: 1px solid transparent;
+                        border-radius: 0.25rem;
+                    }
+
+                    .alert-info {
+                        color: #0c5460;
+                        background-color: #d1ecf1;
+                        border-color: #bee5eb;
+                    }
+                }
+            }
+        }
+    }
+}
