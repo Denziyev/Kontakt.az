@@ -46,7 +46,7 @@ namespace Kontakt.Service.Services.Implementations
         {
             IQueryable<Product> query = await _repository.GetAllAsync(x => !x.IsDeleted, "ProductTags", "ProductImages", "MainProperties", "OtherProperties", "Category","Brand","Comments","DiscountofProduct","ProductCredits");
             List<Product> products = new List<Product>();
-            products = await query.Select(x => new Product { Name = x.Name, Id = x.Id, CreatedAt = x.CreatedAt, CategoryId = x.CategoryId,Category=x.Category,ProductCreditIds=x.ProductCreditIds,ProductCredits=x.ProductCredits, BrandId = x.BrandId,Brand=x.Brand,Comments=x.Comments,DiscountofProductId=x.DiscountofProductId,DiscountofProduct=x.DiscountofProduct,ProductImages=x.ProductImages }).ToListAsync();
+            products = await query.Select(x => new Product { Name = x.Name, Id = x.Id, CreatedAt = x.CreatedAt, CategoryId = x.CategoryId,Category=x.Category,ProductCreditIds=x.ProductCreditIds,ProductCredits=x.ProductCredits, BrandId = x.BrandId,Brand=x.Brand,Comments=x.Comments,DiscountofProductId=x.DiscountofProductId,DiscountofProduct=x.DiscountofProduct,ProductImages=x.ProductImages,Price=x.Price,StockNumber=x.StockNumber }).ToListAsync();
 
             return new MvcResponse<List<Product>> { IsSuccess = true, Data = products };
         }
