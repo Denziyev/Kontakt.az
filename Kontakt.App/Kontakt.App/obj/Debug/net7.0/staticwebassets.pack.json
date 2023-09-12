@@ -529,6 +529,18 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\icons\\titleicon.svg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\24895058-d790-4289-a59e-0a3bc2d6b06bblog1.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\Products\\24895058-d790-4289-a59e-0a3bc2d6b06bblog1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\7b0fb26a-c6ca-47af-9305-3e2e790df4baBEVERLY CLARK.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\Products\\7b0fb26a-c6ca-47af-9305-3e2e790df4baBEVERLY CLARK.png"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\cd8496d2-4146-4417-b61d-f25f1a243af0AMANDA WATKINS.png",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\Products\\cd8496d2-4146-4417-b61d-f25f1a243af0AMANDA WATKINS.png"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\logo\\kontakt.png",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\logo\\kontakt.png"
     },
@@ -689,8 +701,16 @@
       "PackagePath": "staticwebassets\\Assets\\scss\\main.scss"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_basket.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_basket.scss"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_changedestination.scss",
       "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_changedestination.scss"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_checkout.scss",
+      "PackagePath": "staticwebassets\\Assets\\scss\\pages\\_checkout.scss"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\scss\\pages\\_editMyAccount.scss",

@@ -5,6 +5,15 @@
 @{
     Layout = null;
 }
+
+@if (!string.IsNullOrWhiteSpace((string)TempData["Login"]))
+{
+    <div style="display:none" id="message">@TempData["Login"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["UserUpdated"]))
+{
+    <div style="display:none" id="message">@TempData["UserUpdated"]</div>
+}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -128,10 +137,21 @@
                     <div class="login-basket">
                         <ul>
                             <li>
-                                <a id="id_my_profile" href="https://kontakt.az/profile/">
-                                    <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
-                                    <span>Hesabım</span>
-                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a id="id_my_profile" href="/account/info">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Hesabım</span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a id="id_my_profile" href="/account/login">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Daxil ol</span>
+                                    </a>
+
+                                }
                             </li>
                             <li>
                                 <a href="https://kontakt.az/kart/" style="position:relative">
@@ -2214,6 +2234,16 @@
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>
 <script src="~/Assets/js/Header.js"></script>
 <script src="~/Assets/js/home.js"></script>
 <script src="~/Assets/js/videocall.js"></script>

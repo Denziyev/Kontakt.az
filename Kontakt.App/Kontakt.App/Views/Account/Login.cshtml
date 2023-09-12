@@ -5,6 +5,16 @@
     Layout = null;
 }
 
+@if (!string.IsNullOrWhiteSpace((string)TempData["ResetPassword"]))
+{
+    <div style="display:none" id="message">@TempData["ResetPassword"]</div>
+}
+
+@if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
+{
+    <div style="display:none" id="message">@TempData["Register"]</div>
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +24,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/Assets/scss/font.css">
     <link rel="stylesheet" href="~/Assets/scss/main.css">
-    <link rel="icon" href="../assets/images/logo/title-icon.png">
-    <title>Kontakt/Video-Call</title>
+    <link rel="icon" href="~/Assets/assets/images/logo/title-icon.png">
+  
+
+    <title>Kontakt/Giriş</title>
 </head>
 
 <body>
@@ -128,10 +140,21 @@
                     <div class="login-basket">
                         <ul>
                             <li>
-                                <a id="id_my_profile" href="https://kontakt.az/profile/">
-                                    <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
-                                    <span>Hesabım</span>
-                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a id="id_my_profile" href="/account/info">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Hesabım</span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a id="id_my_profile" href="/account/login">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Daxil ol</span>
+                                    </a>
+
+                                }
                             </li>
                             <li>
                                 <a href="https://kontakt.az/kart/" style="position:relative">
@@ -155,7 +178,7 @@
                     </div>
                     <div class="logodiv">
                         <div class="logo">
-                            <a href="../html/home.html">
+                            <a href="~/Assets/html/home.html">
                                 <img src="~/Assets/assets/icons/kontakt.svg" alt="">
                             </a>
                         </div>
@@ -175,7 +198,7 @@
                             </li>
                             <li style="position:relative">
                                 <a href="https://kontakt.az/kart/" style="position:relative" class="basketbtn">
-                                    <img src="../assets/icons/basket.svg" alt="basket">
+                                    <img src="~/Assets/assets/icons/basket.svg" alt="basket">
                                     <span class="count cart_count">0</span>
                                 </a>
                             </li>
@@ -1875,7 +1898,7 @@
             <div class="roww">
                 <div class="htmlmap">
                     <ul>
-                        <li><a href="../html/home.html">Əsas səhifə</a></li>
+                        <li><a href="~/Assets/html/home.html">Əsas səhifə</a></li>
                         <li> Şifrənin sıfırlanması</li>
                     </ul>
                 </div>
@@ -1887,6 +1910,8 @@
 
     <main>
         <div class="Container favorit selfinfa" style="justify-content: center; width: 600px;">
+      
+
 
             <div class="container__elem container__elem--12">
                 <div style="text-align: center;"
@@ -1902,7 +1927,7 @@
 
                 <form class="form form-edit-account lkForm" asp-action="login" asp-controller="account"
                       method="post" id="form-validate" enctype="multipart/form-data" data-hasrequired="* Required Fields"
-                      autocomplete="off" novalidate="true" data-validator="true">
+                      autocomplete="on" novalidate="true" data-validator="true">
                     <fieldset class="fieldset info">
                         <input name="form_key" type="hidden" value="CFQLwtpk1PFOqAXG">
                         <legend class="legend"><span style="font-size: 16px; white-space: nowrap;">Üstünlüklərindən faydalanmaq üçün daxil olun!</span></legend>
@@ -1914,21 +1939,29 @@
                             </label>
                             <input type="email" id="telephone" name="email" value="" title="E-poçt"
                                    class="dannie__input lkForm__input input-text" placeholder="E-poçt daxil edin" asp-for="email">
+                            <span class="alert-danger" asp-validation-for="email"></span>
+
                         </div>
+                    
                         <div class="dannie__group lkForm__inp field field-phone required">
                             <label class="label lkForm__name" for="firstname">
                                 Şifrə
                             </label>
                             <input type="password" id="telephone" name="Password" value="" title="Şifrə"
-                                   class="dannie__input lkForm__input input-text" placeholder="Şifrə daxil edin" asp-for="Password">
+                                autocomplete="off"   class="dannie__input lkForm__input input-text" placeholder="Şifrə daxil edin" asp-for="Password">
+                            <span class="alert-danger" asp-validation-for="Password"></span>
+
                         </div>
+                        
 
                     </fieldset>
                     <fieldset class="fieldset password" data-container="change-email-password" style="display: flex; justify-content: center; align-items: center; margin-top: 100px; display: none;">
-                        <img style="width:400px ; margin-left: 80px;" src="../assets/images/logo/title-icon.png" alt="">
+                        <img style="width:400px ; margin-left: 80px;" src="~/Assets/assets/images/logo/title-icon.png" alt="">
                     </fieldset>
 
-                    <div class="actions-toolbar">
+                    <div  class="actions-toolbar">
+                        <div style="margin-bottom:10px; width:100%; padding:10px 20px; background:pink;" class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+
                         <div class="login-toggle-btn">
                             <input type="checkbox" id="remember">
                             <label for="remember">Remember me</label>
@@ -2065,5 +2098,15 @@
 <script src="~/Assets/js/home.js"></script>
 <script src="~/Assets/js/videocall.js"></script>
 <script src="~/Assets/js/editMyAccount.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>
 
 </html>

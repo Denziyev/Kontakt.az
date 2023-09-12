@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="~/Assets/scss/font.css">
     <link rel="stylesheet" href="~/Assets/scss/main.css">
     <link rel="icon" href="~/Assets/assets/images/logo/title-icon.png">
-    <title>Kontakt/Video-Call</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Kontakt/Register</title>
 </head>
 
 <body>
@@ -128,10 +129,21 @@
                     <div class="login-basket">
                         <ul>
                             <li>
-                                <a id="id_my_profile" href="https://kontakt.az/profile/">
-                                    <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
-                                    <span>Hesabım</span>
-                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a id="id_my_profile" href="/account/info">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Hesabım</span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a id="id_my_profile" href="/account/login">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Daxil ol</span>
+                                    </a>
+
+                                }
                             </li>
                             <li>
                                 <a href="https://kontakt.az/kart/" style="position:relative">
@@ -1861,7 +1873,7 @@
                 <form class="form form-edit-account lkForm" asp-action="register" asp-controller="account"
                       method="post" id="form-validate" enctype="multipart/form-data" data-hasrequired="* Required Fields"
                      autocomplete="on" >
-                    <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+                   
                     <fieldset class="fieldset info">
                         <legend class="legend"><span>Hesab məlumatları</span></legend>
                         <br>
@@ -1912,17 +1924,19 @@
                             <label class="label lkForm__name" for="firstname">
                                 Şifrə təkrarı
                             </label>
-                            <input type="password" id="telephone" name="ConfirmationPassword" value="" title="Telefon"
+                            <input type="password" id="telephone" name="ConfirmPassword" value="" title="Telefon"
                               autocomplete="off"     class="dannie__input lkForm__input input-text" placeholder="Şifrəni təkrar daxil edin" asp-for="@Model.ConfirmPassword">
                               <span class="alert-danger" asp-validation-for="ConfirmPassword"></span>
                         </div>
 
                     </fieldset>
+                   
                     <fieldset class="fieldset password" data-container="change-email-password" style="display: flex; justify-content: center; align-items: center; margin-top: 100px;">
                         <img style="width:400px ; margin-left: 80px;" src="~/Assets/assets/images/logo/title-icon.png" alt="">
                     </fieldset>
-
-                    <div class="actions-toolbar">
+                 
+                    <div style="display:block;" class="actions-toolbar">
+                        <div style="margin-bottom:10px; width:fit-content;" class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
                         <div class="primary">
                             <button style="background-color: rgb(237, 102, 102); color:white; border:none;width: 300px; height: 40px; font-size: 16px;" type="submit" class="action save primary" title="Yadda saxla">
                                 <span>Yeni hesab yarat</span>

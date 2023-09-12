@@ -1,5 +1,48 @@
-﻿<!DOCTYPE html>
+﻿
+@if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
+{
+    <div style="display:none" id="message">@TempData["Register"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["SendMessage"]))
+{
+    <div style="display:none" id="message">@TempData["SendMessage"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["ForgetPassword"]))
+{
+    <div style="display:none" id="message">@TempData["ForgetPassword"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Login"]))
+{
+    <div style="display:none" id="message">@TempData["Login"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Logout"]))
+{
+    <div style="display:none" id="message">@TempData["Logout"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["SendEmailno"]))
+{
+    <div style="display:none" id="message">@TempData["SendEmailno"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["SendEmail"]))
+{
+    <div style="display:none" id="message">@TempData["SendEmail"]</div>
+}
+
+@if (!string.IsNullOrWhiteSpace((string)TempData["UserUpdate"]))
+{
+    <div style="display:none" id="message">@TempData["UserUpdate"]</div>
+}
+
+<!DOCTYPE html>
 <html lang="az">
+
+    @inject Kontakt.Service.Services.Interfaces.IBasketService basketservice;
+@{
+    List<Kontakt.Service.ViewModels.BasketItemViewModel> basketItemViewModels = await basketservice.GetAllBaskets();
+
+    decimal TotalPrice=0;
+    int count = 0;
+} 
 
 <head>
     <meta charset="UTF-8">
@@ -145,10 +188,10 @@
                                 }
                                                 </li>
                                                 <li>
-                                <a href="https://kontakt.az/kart/" style="position:relative">
+                                <a href="/basket" style="position:relative">
                                     <img src="~/Assets/assets/icons/basket.svg" alt="basket">
                                     <span>Səbət</span>
-                                    <span class="count cart_count">0</span>
+                                    <span class="count cart_count">@count</span>
                                 </a>
                             </li>
                         </ul>
@@ -166,7 +209,7 @@
                     </div>
                     <div class="logodiv">
                         <div class="logo">
-                            <a href="../html/home.html">
+                            <a href="~/Assets/html/home.html">
                                 <img src="~/Assets/assets/icons/kontakt.svg" alt="">
                             </a>
                         </div>
@@ -185,9 +228,9 @@
                                 </a>
                             </li>
                             <li style="position:relative">
-                                <a href="https://kontakt.az/kart/" style="position:relative" class="basketbtn">
-                                    <img src="../assets/icons/basket.svg" alt="basket">
-                                    <span class="count cart_count">0</span>
+                                <a href="/basket" style="position:relative" class="basketbtn">
+                                    <img src="~/Assets/assets/icons/basket.svg" alt="basket">
+                                    <span class="count cart_count">@count</span>
                                 </a>
                             </li>
                         </ul>
@@ -2074,7 +2117,7 @@ bottom:0px;padding:0px;z-index:10000001">
     </div>
 
     <div id="whatsap-video-modal-opener">
-        <a href="../html/videoCall.html">
+        <a href="~/Assets/html/videoCall.html">
             <img class="lazy loaded" src="https://kontakt.az/wp-content/uploads/2021/05/video_az.png"
                  data-src="https://kontakt.az/wp-content/uploads/2021/05/video_az.png" style="width:100%"
                  data-was-processed="true">
@@ -2336,3 +2379,14 @@ bottom:0px;padding:0px;z-index:10000001">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
         integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

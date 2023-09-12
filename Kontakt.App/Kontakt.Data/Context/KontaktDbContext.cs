@@ -22,6 +22,8 @@ namespace Kontakt.App.Context
         public DbSet<Credit> Credits { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<ProductCredit> ProductCredits { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
         public KontaktDbContext(DbContextOptions<KontaktDbContext> options) : base(options)
         {
         }

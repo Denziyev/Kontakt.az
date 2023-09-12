@@ -59,9 +59,9 @@ namespace Kontakt.App.Controllers
               values: new { token = token, email = appUser.Email },
               protocol: Request.Scheme);
 
-            await _mailService.Send("ilkinhd@code.edu.az", appUser.Email, link, "Verify email","Click me for Verify Email");
+            await _mailService.Send("ilkinhd@code.edu.az", appUser.Email, link, "Təsdiqləmə maili","E-Poçt ünvanınızı təsdiq etmək üçün klik edin");
 
-            TempData["Register"] = "Please,verify your email";
+            TempData["Register"] = "Zəhmət olmasa, e-poçt ünvanınızı yoxlayın.";
             return RedirectToAction("index", "home");
         }
 
@@ -92,12 +92,12 @@ namespace Kontakt.App.Controllers
             AppUser appUser = await _userManager.FindByEmailAsync(loginViewModel.email);
             if (appUser == null)
             {
-                ModelState.AddModelError("", "username or password is incorret");
+                ModelState.AddModelError("", "İstifadəçi adı və ya şifrə yanlışdır");
                 return View(loginViewModel);
             }
             if (!await _userManager.IsInRoleAsync(appUser, "User"))
             {
-                ModelState.AddModelError("", "It is not for Admin");
+                ModelState.AddModelError("", "Admin daxil ola bilməz");
                 return View(loginViewModel);
             }
             var result = await _signinManager.PasswordSignInAsync(appUser, loginViewModel.Password, loginViewModel.isRememberMe, true);
@@ -105,14 +105,14 @@ namespace Kontakt.App.Controllers
             {
                 if (result.IsLockedOut)
                 {
-                    ModelState.AddModelError("", "your account blocked for 5 minutes");
+                    ModelState.AddModelError("", "Hesabınız 5 dəq bloklandı");
                     return View();
                 }
-                ModelState.AddModelError("", "username or password is incorret");
+                ModelState.AddModelError("", "İstifadəçi adı və ya şifrə yanlışdır");
                 return View();
             }
 
-            TempData["Login"] = "Loged In";
+            TempData["Login"] = "Artıq üstünlüklərdən yararlana bilərsiz.";
             return RedirectToAction("index", "home");
 
         }
@@ -120,7 +120,7 @@ namespace Kontakt.App.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signinManager.SignOutAsync();
-            TempData["Logout"] = "Logged out";
+            TempData["Logout"] = "Hesabdan uğurla çıxış olundu";
 
             return RedirectToAction("index", "home");
         }
@@ -154,7 +154,7 @@ namespace Kontakt.App.Controllers
                 protocol: Request.Scheme);
 
             await _mailService.Send("ilkinhd@code.edu.az", user.Email, link, "Reset password","Click me for Reset Password");
-            TempData["ForgetPassword"] = "Please,Check your email";
+            TempData["ForgetPassword"] = "Zəhmət olmasa, e-poçt ünvanınızı yoxlayın.";
             return RedirectToAction("index", "home");
         }
         [HttpGet]
@@ -185,7 +185,7 @@ namespace Kontakt.App.Controllers
             {
                 return Json(result.Errors);
             }
-            TempData["ResetPassword"] = "Password was changed succesfully";
+            TempData["ResetPassword"] = "Şifrə uğurla dəyişdirildi";
             return RedirectToAction("login", "account");
 
         }
@@ -249,7 +249,7 @@ namespace Kontakt.App.Controllers
                 }
             }
             await _signinManager.SignInAsync(user, true);
-            TempData["UserUpdate"] = "User info was updated succesfully";
+            TempData["UserUpdate"] = "İstifadəçi məlumatları uğurla yeniləndi";
             return RedirectToAction(nameof(Info));
         }
 
@@ -313,7 +313,7 @@ namespace Kontakt.App.Controllers
             }
 
             await _signinManager.SignInAsync(user, true);
-            TempData["UserUpdate"] = "User info was updated succesfully";
+            TempData["UserUpdated"] = "Ünvan məlumatları uğurla dəyişdirildi";
             return RedirectToAction(nameof(Info));
         }
 

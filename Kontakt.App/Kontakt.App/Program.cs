@@ -68,6 +68,7 @@ builder.Services.AddScoped< ICreditService, CreditService>();
 builder.Services.AddScoped< IBrandService, BrandService>();
 builder.Services.AddScoped< ICommentService, CommentService>();
 builder.Services.AddScoped<IMailService, MailService>();
+builder.Services.AddScoped<IBasketService, BasketService>();
 
 
 

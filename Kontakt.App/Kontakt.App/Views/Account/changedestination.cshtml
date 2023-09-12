@@ -128,10 +128,21 @@
                     <div class="login-basket">
                         <ul>
                             <li>
-                                <a id="id_my_profile" href="https://kontakt.az/profile/">
-                                    <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
-                                    <span>Hesabım</span>
-                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a id="id_my_profile" href="/account/info">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Hesabım</span>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a id="id_my_profile" href="/account/login">
+                                        <img src="~/Assets/assets/icons/sign-in.svg" alt="sign-in">
+                                        <span>Daxil ol</span>
+                                    </a>
+
+                                }
                             </li>
                             <li>
                                 <a href="https://kontakt.az/kart/" style="position:relative">

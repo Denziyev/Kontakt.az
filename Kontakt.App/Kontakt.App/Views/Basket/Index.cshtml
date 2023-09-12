@@ -1,0 +1,338 @@
+﻿@using Kontakt.Core.Models;
+ @model List<BasketItem>
+ <!--Discount Area Start-->
+    <section class="discountarea">
+        <div class=" discount_container">
+            <a
+                href="https://kontakt.az/kampaniyani-izle/?id=su0001624&amp;source=kontakt.az&amp;Medium=az_home-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">Əsl
+                baxılası kampaniya Kontakt-da! 13 avqustadək hissəli alışda 24 ayadək faizsiz təkliflər, nağd alışda
+                <span style="color:red">-50%-dək endirimlər var!</span></a>
+        </div>
+    </section>
+    <!--Discount Area End-->
+    <main>
+        <section id="cart">
+            <section id="mob-main-menu" class="mob-main-menu mob-main-menu-v2 ">
+                <div class="mob-main-menu-body" style="width: 75%; min-height: 739px;">
+                    <div class="category-menu-mather" style="min-height: 739px;">
+                        <div class="category-menu-header">
+                            <div class="mobmenugeri" style="display:none;">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 240.823 240.823"
+                                    style="enable-background:new 0 0 240.823 240.823;width: 15px;fill: #17A539;"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+                                            l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+                                            C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+                                    </g>
+                                </svg>
+                                <span>
+                                    Geri </span>
+                            </div>
+                            <div class="divu6060">
+                                <img class="lazy loaded"
+                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/phone-black.png"
+                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/phone-black.png"
+                                    style="width: 12.8px; height: 22px; object-fit: contain;" alt=""
+                                    data-was-processed="true">
+                                <span class="kontact-number">*6060</span>
+                            </div>
+                            <button class="menu-icon-mobs">
+                                <img class="lazy"
+                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/clear-button-black.png"
+                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/clear-button-black.png"
+                                    style=" width: 20px; height: 20px; object-fit: contain;" alt="">
+                            </button>
+                        </div>
+                        <section class="all-category-menu" id="all-category-second-menu"></section>
+                    </div>
+                </div>
+            </section>
+            <script>
+                jQuery(".menu-icon-mob").on('click', function () {
+                    if (jQuery("#all-category-second-menu").html() == '') jQuery("#all-category-second-menu").html(jsonmenuondemand_mob);
+                }); 
+            </script>
+            <div class="Container">
+                <div class="head-title">
+                    <h1 class="headline-sm">Səbət</h1>
+                </div>
+                <div class="roww cart_row">
+                    <div class="col-lg-8 lefttt">
+                        <div class="item-box-parent">
+                            <div class="item-box">
+                                <input type="checkbox" class="form-check-input select-items" id="select-items">
+                                <label class="form-check-label" for="select-items">
+                                    Hamısını seç</label>
+                                <button class="delete">
+                                    <img class="lazy loaded"
+                                        src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/eraser.png"
+                                        data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/eraser.png"
+                                        alt="" data-was-processed="true">
+                                    <p class="cart_remove_selecteds">Seçilənləri sil</p>
+                                </button>
+                            </div>
+                            <section class="cart_object">
+                            @foreach(var item in Model)
+                            {                  
+                            <section id="selected-cart-item-1103948" data-product-guid="TM-DG-SBP-1105-SM-1959"
+                                class="selected-cart-item cart_object">
+                                <div class="chosen-cart">
+                                    <div class="checkbox">
+                                        <input type="checkbox" class="form-check-input cart_select_item"
+                                            id="select-1103948" data-id="1103948">
+                                        <label class="form-check-label" for="select-1103948"></label>
+                                    </div>
+
+                                    <div class="photo-box">
+                                        <div class="imgHolder">
+                                            <img alt="iPhone 14 Pro 128 GB Deep Purple" data-qazy="true"
+                                                src="~/Assets/assets/images/Products/@item.Product.ProductImages.FirstOrDefault().Image">
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <div class="roww">
+                                            <div class="details-left">
+                                                <div class="features">
+                                                    <p>
+                                                        <a href="https://kontakt.az/iphone-14-pro-128-gb-deep-purple/"
+                                                            data-id="1103948" data-reserve-id="1103948"
+                                                            data-mid="TM-DG-SBP-1105-SM-1959"
+                                                            data-price="2659.99" data-quantity="1">
+                                                           @item.Product.Name </a>
+                                                    </p>
+                                                    <p></p>
+
+
+                                                    <div class="labels">
+
+
+                                                        <div class="lbl-percentage">
+                                                            <p>12 ay <span>Faizsiz</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="details-right">
+                                                <div class="second-half">
+                                                    <div class="quantity">
+                                                        <p>Miqdar</p>
+                                                        <button type="button" class="decrease">-</button>
+                                                        <input type="number" id="amount_1103948" value="1"
+                                                            min="0" readonly="readonly" max="3"
+                                                            class="amount cart_amount cart_amount_1103948"
+                                                            data-id="1103948">
+                                                        <button type="button" class="increase">+</button>
+                                                    </div>
+
+                                                    <div class="price">
+                                                        <p class="gridprice gridprice_cash endirimvar">
+                                                            <span
+                                                                style="text-decoration:line-through;font-weight:normal">2849.99
+                                                                <small
+                                                                    class="azn_span">M</small></span><br><span
+                                                                class="nprice" id="price-1103948">2659.99 <small class="azn_span">‎M</small>
+                                                                </span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="cart-summary">
+                                                        <button type="button" class="remove cart_remove"
+                                                            data-id="1103948">
+                                                            <img src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/bin.png"
+                                                                alt="">
+                                                        </button>
+                                                        <p><span id="price-1103948">2849.99</span><span
+                                                                class="azn_span">‎M</span></p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="detail-mob">
+
+                                            <div class="quantity">
+                                                <p>Miqdar</p>
+                                                <button type="button" class="decrease">-</button>
+                                                <input type="number" id="amount_1103948" value="1" min="0"
+                                                    max="3" readonly="readonly"
+                                                    class="amount cart_amount cart_amount_1103948"
+                                                    data-id="1103948">
+                                                <button type="button" class="increase">+</button>
+                                            </div>
+                                            <div>
+                                                <p style="text-decoration:line-through ">2849.99 <small
+                                                        class="azn_span">M</small></p>
+                                                <p style="color:red">2659.99 <small class="azn_span">M</small>
+                                                </p>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="total-price">
+                                    <p style="display:none">Cəmi: <span class="itemtotals itemtotal-1103948"
+                                            data-id="1103948">2659.99 </span><span class="azn_span">‎M</span>
+                                    </p>
+                                    <p style="display:none" class="catdirilma_p">Çatdırılma:
+                                        <span class="catdirilma_span"></span> <span>‎₼</span>
+                                    </p>
+
+                                </div>
+
+
+
+
+
+
+
+                            </section>
+                            }
+
+                            </section>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-lg-block d-none">
+                        <div class="wrapper">
+                            <h5>Səbətdəki məhsullar <span>
+                                </span></h5>
+                            <div class="about">
+                                <div class="price">
+                                    <p>Məhsullar</p>
+                                    <p><span class="pricespan">1839.97</span><span> ‎₼</span></p>
+                                </div>
+                                <div class="price qizilzemanet_li" style="display: none;">
+                                    <p>Ultra zəmanət</p>
+                                    <p><span class="qizilzemanet_cem">0</span> <span>‎₼</span>
+                                    </p>
+                                </div>
+                                <div class="price neqdalisaendirim_li" style="display: none;">
+                                    <p>Nağd alış endirimi</p>
+                                    <p><span class="pricediscount discount">0</span> <span>‎₼</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="total">
+                                <p>Yekun ödəniləcək məbləğ:</p>
+                                <span class="pricetotal">1839.97</span><span> ‎₼</span>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <button type="button" class="cash"
+                                onclick="window.location.href='https://kontakt.az/checkout/'">
+                                Sifarişi rəsmiləşdir</button>
+                        </div>
+                        <div class="wrapper contact cart-contact temporary_hidden">
+                            <p>və ya</p>
+                            <div class="phone-selection">
+                                <div class="phone">
+                                    <span>+994</span>
+                                    <input type="tel" maxlength="9" minlength="9" class="phone-no-mask" name="mobile_number_incart" inputmode="text" placeholder="(__) ___ __ __">
+                                </div>
+                                <div class="info-tooltip">
+                                    <a href="#" onclick="kontakt_birkliker_incart()">
+                                        bir kliklə al </a>
+                                </div>
+                            </div>
+                            <div class="form-check form-check-inline" style="padding-top:10px">
+                                <input onclick="jQuery('.nisye_onc').hide();jQuery('#oc_fin').removeAttr('required');"
+                                    class="form-check-input" type="radio" name="oc_payment_type" id="oc_payment_type1"
+                                    value="0">
+                                <label class="form-check-label" for="oc_payment_type1" style="padding-top:7px">Nağd
+                                    <span class="oc_error" style="display:none;">*</span></label>
+                            </div>
+                            <div class="form-check form-check-inline" style="padding-top:10px">
+                                <input
+                                    onclick="jQuery('.nisye_onc').show();jQuery('#oc_fin').attr('required','required');"
+                                    class="form-check-input" type="radio" name="oc_payment_type" id="oc_payment_type2"
+                                    value="1">
+                                <label class="form-check-label" for="oc_payment_type2"
+                                    style="padding-top:7px">Hissə-hissə <span class="oc_error"
+                                        style="display:none;">*</span></label>
+                            </div>
+                            <div class="row nisye_onc" style="display:none">
+                                <div class="col-lg-6">
+                                    <div class="form-group" style="margin-bottom:0px;margin-top:10px">
+                                        <label for="oc_fin" style="font-size:12px">Fin kodu qeyd edin <span
+                                                class="oc_error">*</span></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" style="width:100%" class="form-control form-control-sm"
+                                            id="oc_fin" name="oc_fin" inputmode="text" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group" style="margin-bottom:0px;margin-top:10px">
+                                        <label for="oc_localphone" style="font-size:12px">Şəhər nömrənizi qeyd
+                                            edin</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="phone" style="width:100%" class="form-control form-control-sm"
+                                            name="oc_localphone" inputmode="text" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oc_error" style="display:none;margin-top:10px">Sifarişi göndərmək üçün sifariş
+                                formasını seçin</div>
+                            <div class="oc_error_2 oc_error_all" style="display:none">Fin kodu qeyd edin</div>
+                            <div class="birkliker_res alert alert-success" style="display:none;margin-top:10px"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-lg-none">
+                        <div class="order-list">
+                            <div class="accordion-title h5 head5">
+                                Səbətdəki məhsullar <span>
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 240.823 240.823" style="enable-background:new 0 0 240.823 240.823;"
+                                        xml:space="preserve">
+                                        <g>
+                                            <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+            l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+            C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+                                        </g>
+                                    </svg> </span>
+                            </div>
+                            <ul class="list-content">
+                                <li>
+                                    <div class="h6 head6">Məhsullar</div>
+                                    <p><span class="pricespan">1839.97</span><span> ‎₼</span></p>
+                                </li>
+                                <li class="qizilzemanet_li" style="display: none;">
+                                    <p>Ultra zəmanət</p>
+                                    <p><span class="qizilzemanet_cem">0</span> <span>‎₼</span>
+                                    </p>
+                                </li>
+                                <li class="neqdalisaendirim_li" style="display: none;">
+                                    <div class="h6 head6">Nağd alış endirimi</div>
+                                    <p><span class="pricediscount discount">0</span> <span>‎₼</span>
+                                    </p>
+                                </li>
+                                <li class="catdirilma_li catdirilma_p" style="display:none">
+                                    <div class="h6 head6">Çatdırılma</div>
+                                    <p><span class="catdirilma_span"></span> <span>‎₼</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="h6 head6">Yekun ödəniləcək məbləğ:</div>
+                                    <p><span class="pricetotal">1839.97</span><span> ‎₼</span></p>
+                                </li>
+                                <button type="button" class="cash"
+                                    onclick="window.location.href='https://kontakt.az/checkout'">
+                                    Sifarişi rəsmiləşdir</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>

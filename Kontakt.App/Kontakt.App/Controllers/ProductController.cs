@@ -1,4 +1,5 @@
 ﻿using Kontakt.App.ViewModels;
+using Kontakt.Service.Services.Implementations;
 using Kontakt.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,11 +9,13 @@ namespace Kontakt.App.Controllers
     {
         private readonly IProductService _productService;
         private readonly ICommentService _commentService;
+        private readonly IBasketService _basketService;
 
-        public ProductController(IProductService productService, ICommentService commentService)
+        public ProductController(IProductService productService, ICommentService commentService, IBasketService basketService)
         {
             _productService = productService;
             _commentService = commentService;
+            _basketService = basketService;
         }
 
         public async Task<IActionResult> Index()
@@ -34,6 +37,22 @@ namespace Kontakt.App.Controllers
             };
 
             return View(productVm);
+        }
+
+        public async Task<IActionResult> AddBasket(int id, int? count)
+        {
+            await _basketService.AddBasket(id, count);
+            return Json(new { status = 200 });
+        }
+        public async Task<IActionResult> GetAllBaskets()
+        {
+            return Json(await _basketService.GetAllBaskets());
+        }
+
+        public async Task<IActionResult> RemoveBasket(int id)
+        {
+            await _basketService.Remove(id);
+            return Redirect(Request.Headers["Referer"].ToString());
         }
     }
 }
