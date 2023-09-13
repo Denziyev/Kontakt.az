@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BG5+YSQKLhpS/8IlkedEBJ+BxdIj9et7wumnzT2vUVs=",
+  "Hash": "8/MTH0r2TobFetpTcfysulkgdidh2rzr+nlNwpWZp2Y=",
   "Source": "Kontakt.App",
   "BasePath": "_content/Kontakt.App",
   "Mode": "Default",
@@ -2601,6 +2601,23 @@
       "OriginalItemSpec": "wwwroot\\Assets\\assets\\images\\Products\\24895058-d790-4289-a59e-0a3bc2d6b06bblog1.jpg"
     },
     {
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\622ac913-625c-4e11-8ba4-017a5cba84c2Amanda Jepson.jpg",
+      "SourceId": "Kontakt.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
+      "BasePath": "_content/Kontakt.App",
+      "RelativePath": "Assets/assets/images/Products/622ac913-625c-4e11-8ba4-017a5cba84c2Amanda Jepson.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\assets\\images\\Products\\622ac913-625c-4e11-8ba4-017a5cba84c2Amanda Jepson.jpg"
+    },
+    {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\7b0fb26a-c6ca-47af-9305-3e2e790df4baBEVERLY CLARK.png",
       "SourceId": "Kontakt.App",
       "SourceType": "Discovered",
@@ -2650,6 +2667,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\assets\\images\\slider1a.png"
+    },
+    {
+      "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\basket.js",
+      "SourceId": "Kontakt.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\",
+      "BasePath": "_content/Kontakt.App",
+      "RelativePath": "Assets/js/basket.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\js\\basket.js"
     },
     {
       "Identity": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\editMyAccount.js",

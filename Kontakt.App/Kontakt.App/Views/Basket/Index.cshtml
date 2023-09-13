@@ -1,5 +1,11 @@
 ﻿@using Kontakt.Core.Models;
  @model List<BasketItem>
+
+@if (!string.IsNullOrWhiteSpace((string)TempData["RemoveBasket"]))
+{
+    <div style="display:none" id="message"> @TempData["RemoveBasket"]</div>
+}
+
  <!--Discount Area Start-->
     <section class="discountarea">
         <div class=" discount_container">
@@ -130,20 +136,20 @@
 
                                                     <div class="price">
                                                         <p class="gridprice gridprice_cash endirimvar">
-                                                            <span
-                                                                style="text-decoration:line-through;font-weight:normal">2849.99
+                                                            <span style="text-decoration:line-through;font-weight:normal">
+                                                                    @item.Product.Price
                                                                 <small
-                                                                    class="azn_span">M</small></span><br><span
-                                                                class="nprice" id="price-1103948">2659.99 <small class="azn_span">‎M</small>
+                                                                    class="azn_span">M</small></span><br><span class="nprice" id="price-1103948">
+                                                                    @(item.Product.Price-((item.Product.DiscountofProduct.Percent*item.Product.Price)/100)) <small class="azn_span">‎M</small>
                                                                 </span>
                                                         </p>
                                                     </div>
                                                     <div class="cart-summary">
-                                                        <button type="button" class="remove cart_remove"
-                                                            data-id="1103948">
+                                                        <a type="button" class="remove cart_remove"
+                                                               data-id="1103948" href="/product/RemoveBasket/@item.Product.Id">
                                                             <img src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/bin.png"
-                                                                alt="">
-                                                        </button>
+                                                                     alt="">
+                                                        </a>
                                                         <p><span id="price-1103948">2849.99</span><span
                                                                 class="azn_span">‎M</span></p>
                                                     </div>
@@ -206,7 +212,14 @@
                             <div class="about">
                                 <div class="price">
                                     <p>Məhsullar</p>
-                                    <p><span class="pricespan">1839.97</span><span> ‎₼</span></p>
+                                @{
+                                    double totallpricee=0.00;
+                                    foreach(var item in Model)
+                                    {
+                                        totallpricee += (item.Product.Price - ((item.Product.DiscountofProduct.Percent * item.Product.Price) / 100));
+                                    }
+                                }
+                                    <p><span class="pricespan">@totallpricee.ToString("F")</span><span> ‎₼</span></p>
                                 </div>
                                 <div class="price qizilzemanet_li" style="display: none;">
                                     <p>Ultra zəmanət</p>
@@ -221,7 +234,7 @@
                             </div>
                             <div class="total">
                                 <p>Yekun ödəniləcək məbləğ:</p>
-                                <span class="pricetotal">1839.97</span><span> ‎₼</span>
+                                <span class="pricetotal">@totallpricee.ToString("F")</span><span> ‎₼</span>
                             </div>
                         </div>
                         <div class="wrapper">
@@ -336,3 +349,57 @@
         </section>
 
     </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+<script>
+    const cartremoves = document.querySelectorAll(".cart_remove");
+    const listProducts = document.querySelector(".cart_object");
+
+
+
+
+    cartremoves.forEach(prod => {
+        prod.addEventListener("click", (e) => {
+            e.preventDefault();
+            let href = prod.getAttribute("href");
+
+            fetch(href)
+                .then(x => x.json())
+                .then(x => {
+                    if (x.status == 200) {
+                        fetch("/product/getallbaskets")
+                            .then(res => res.json())
+                            .then(b => {
+                                listProducts.innerHTML = ""
+                                b.forEach(basket => {
+
+                                    let basketView = `
+                                         <div>${basket.name}</div>
+                                    `
+                                    listProducts.innerHTML += basketView;
+
+                                })
+                            })
+                    }
+                    else{
+                        console.log("olmurr")
+                    }
+
+                })
+        })
+    })
+
+</script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

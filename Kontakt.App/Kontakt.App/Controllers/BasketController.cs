@@ -75,7 +75,7 @@ namespace Kontakt.App.Controllers
                 }
             }
 
-            List<BasketItem> basketItems = await _context.BasketItems.Where(x => !x.IsDeleted).Include(x=>x.Product).ThenInclude(x=>x.ProductImages).ToListAsync();
+            List<BasketItem> basketItems = await _context.BasketItems.Where(x => !x.IsDeleted).Include(x=>x.Product).ThenInclude(x=>x.ProductImages).Include(x=>x.Product).ThenInclude(x=>x.DiscountofProduct).ToListAsync();
             return View(basketItems);
         }
     }

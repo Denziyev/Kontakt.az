@@ -533,6 +533,10 @@
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\Products\\24895058-d790-4289-a59e-0a3bc2d6b06bblog1.jpg"
     },
     {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\622ac913-625c-4e11-8ba4-017a5cba84c2Amanda Jepson.jpg",
+      "PackagePath": "staticwebassets\\Assets\\assets\\images\\Products\\622ac913-625c-4e11-8ba4-017a5cba84c2Amanda Jepson.jpg"
+    },
+    {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\assets\\images\\Products\\7b0fb26a-c6ca-47af-9305-3e2e790df4baBEVERLY CLARK.png",
       "PackagePath": "staticwebassets\\Assets\\assets\\images\\Products\\7b0fb26a-c6ca-47af-9305-3e2e790df4baBEVERLY CLARK.png"
     },
@@ -619,6 +623,10 @@
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\Header.js",
       "PackagePath": "staticwebassets\\Assets\\js\\Header.js"
+    },
+    {
+      "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\basket.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\basket.js"
     },
     {
       "Id": "C:\\Users\\VO\\Desktop\\Kontakt.az\\Kontakt.App\\Kontakt.App\\wwwroot\\Assets\\js\\editMyAccount.js",

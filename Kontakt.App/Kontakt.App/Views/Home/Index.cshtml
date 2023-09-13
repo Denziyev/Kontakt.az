@@ -5,6 +5,12 @@
 
 @model HomeViewModel
 
+@if (!string.IsNullOrWhiteSpace((string)TempData["AddBasket"]))
+{
+    <div style="display:none" id="message">@TempData["AddBasket"]</div>
+}
+
+
     <!--Discount Area Start-->
     <section class="discountarea">
         <div class=" discount_container">
@@ -14089,3 +14095,14 @@
 </section>
 
      </main>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

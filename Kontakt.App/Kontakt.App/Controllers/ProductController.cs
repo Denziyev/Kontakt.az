@@ -42,7 +42,8 @@ namespace Kontakt.App.Controllers
         public async Task<IActionResult> AddBasket(int id, int? count)
         {
             await _basketService.AddBasket(id, count);
-            return Json(new { status = 200 });
+            TempData["AddBasket"] = "Məhsul səbətə əlavə edildi";
+            return Redirect(Request.Headers["Referer"].ToString());
         }
         public async Task<IActionResult> GetAllBaskets()
         {
@@ -52,6 +53,7 @@ namespace Kontakt.App.Controllers
         public async Task<IActionResult> RemoveBasket(int id)
         {
             await _basketService.Remove(id);
+            TempData["RemoveBasket"] = "Məhsul səbətdən uğurla silindi";
             return Redirect(Request.Headers["Referer"].ToString());
         }
     }
