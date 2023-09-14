@@ -24,3 +24,24 @@ for (let index = 0; index < pricescount.length; index++) {
         totalpricce.textContent=`${totalpricee.toFixed(2)}`
     })
 }
+
+
+
+var increase=document.querySelector(".increase")
+
+    increase.addEventListener("click", function () {
+    
+        var id = $(this).attr("data-id");
+
+    $.ajax({
+        url: "/product/increase/" + id,
+    type: "POST",
+    data: {id: id, },
+    success: function (response) {
+                if (response == "ok") {
+
+
+    }
+            }
+        });
+    });

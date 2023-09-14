@@ -1,0 +1,848 @@
+﻿@using Kontakt.Core.Models;
+@model Basket
+
+       <section id="checkout">
+            <section id="mob-main-menu" class="mob-main-menu mob-main-menu-v2 ">
+                <div class="mob-main-menu-body" style="width: 75%; min-height: 460px;">
+                    <div class="category-menu-mather" style="min-height: 460px;">
+                        <div class="category-menu-header">
+                            <div class="mobmenugeri" style="display:none;"
+                                onclick="jQuery(&quot;a.sub-menu.active&quot;).trigger(&quot;click&quot;);">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 240.823 240.823"
+                                    style="enable-background:new 0 0 240.823 240.823;width: 15px;fill: #17A539;"
+                                    xml:space="preserve">
+                                    <g>
+                                        <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+                                            l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+                                            C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+                                    </g>
+                                </svg>
+                                <span>
+                                    Geri </span>
+                            </div>
+                            <div class="divu6060">
+                                <img class="lazy loaded"
+                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/phone-black.png"
+                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/phone-black.png"
+                                    style="width: 12.8px; height: 22px; object-fit: contain;" alt=""
+                                    data-was-processed="true">
+                                <span class="kontact-number">*6060</span>
+                            </div>
+                            <button class="menu-icon-mobs">
+                                <img class="lazy"
+                                    src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/clear-button-black.png"
+                                    data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/clear-button-black.png"
+                                    style=" width: 20px; height: 20px; object-fit: contain;" alt="">
+                            </button>
+                        </div>
+                        <section class="all-category-menu" id="all-category-second-menu"></section>
+                    </div>
+                </div>
+            </section>
+            <script>
+                jQuery(".menu-icon-mob").on('click', function () {
+                    if (jQuery("#all-category-second-menu").html() == '') jQuery("#all-category-second-menu").html(jsonmenuondemand_mob);
+                }); 
+            </script>
+            <div class="Container">
+                <div class="headline-return">
+                    <h2>Sifariş</h2>
+                </div>
+                <div class="roww checkout-online-thankyou" style="display:none">
+                    <div class="alert alert-danger"
+                        style="margin:10px;width:100%;color: red;margin-bottom:100px;font-weight: bold;">
+                        <p class="checkout-payment-status" style="padding-top:10px"></p>
+                    </div>
+                </div>
+                <div class="roww checkout-thankyou" style="display:none;padding-bottom:150px">
+                    <div class="alert alert-success"
+                        style="margin:10px;width:100%;color: #2fe06f;background-color: #f3f4f5;border-color: #4ad42c;font-weight: bold;">
+                        <p class="alertthanks" style="display:none">
+                            Hörmətli müştəri, müraciətiniz qeydə alındı. Sifarişinizin rəsmiləşdirilməsi üçün sizinlə
+                            əlaqə saxlanılacaqdır. Yüklənmə nəzərə alınaraq sifarişiniz mümkün ən qısa vaxtda
+                            çatdırılacaqdır. Bizi seçdiyiniz üçün təşəkkür edirik! </p>
+                        <p class="checkout-gotopayment" style="display:none;padding-top:40px">
+                            Online ödənişə yönləndirilir... <a class="btn btn-success gotopaymentbutton"
+                                href="https://kontakt.az/?do_payment_pasha=1">
+                                Online ödənişə keç</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="roww checkout-row">
+                    <div class="col-lg-9 hert">
+                        <section id="checkout-info">
+                            <form method="post" action="" id="checkout_form" novalidate="novalidate">
+                                <div class="checkout-accordion-menu checkout-contact-tab">
+                                    <button type="button" class="btn-accordion ">
+                                        Əlaqə məlumatları <svg version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 240.823 240.823"
+                                            style="enable-background:new 0 0 240.823 240.823;" xml:space="preserve">
+                                            <g>
+                                                <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <div class="content " style="display: block;">
+                                        <div class="roww">
+                                            <div class="col-md-6 hert">
+                                                <div class="form-group">
+                                                    <label for="">Adınız <span>*</span></label>
+                                                    <input required="" type="text" class="form-control"
+                                                        placeholder="Adınız" name="first_name" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Ata adı <span>*</span></label>
+                                                    <input required="" type="text" class="form-control"
+                                                        placeholder="Ata adı" name="paternal_name" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 hert">
+                                                <div class="form-group">
+                                                    <label for="">Soyadınız <span>*</span></label>
+                                                    <input required="" type="text" class="form-control"
+                                                        placeholder="Soyadınız" name="last_name" value="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="">Telefon nömrəniz <span>*</span></label>
+                                                    <div class="mobile">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">+994</div>
+                                                            </div>
+                                                            <div class="selectHolder">
+                                                                <select required="" name="mobile_number_prefix">
+                                                                    <option value="">0XX</option>
+                                                                    <option value="050">050</option>
+                                                                    <option value="051">051</option>
+                                                                    <option value="055">055</option>
+                                                                    <option value="070">070</option>
+                                                                    <option value="010">010</option>
+                                                                    <option value="077">077</option>
+                                                                    <option value="099">099</option>
+                                                                </select>
+                                                                <h5 class="select_header">0XX</h5>
+                                                                <div class="select_body_holder">
+                                                                    <ul class="select_body">
+                                                                        <li data-value="" data-disabled="false">0XX</li>
+                                                                        <li data-value="050" data-disabled="false">050
+                                                                        </li>
+                                                                        <li data-value="051" data-disabled="false">051
+                                                                        </li>
+                                                                        <li data-value="055" data-disabled="false">055
+                                                                        </li>
+                                                                        <li data-value="070" data-disabled="false">070
+                                                                        </li>
+                                                                        <li data-value="010" data-disabled="false">010
+                                                                        </li>
+                                                                        <li data-value="077" data-disabled="false">077
+                                                                        </li>
+                                                                        <li data-value="099" data-disabled="false">099
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <input required="" type="text" class="form-control mob-mask"
+                                                                inputmode="text" name="mobile_number" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group additional-ctc">
+                                                    <label for="">Əlavə telefon nömrəsi</label>
+                                                    <div class="mobile">
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">+994</div>
+                                                            </div>
+                                                            <div class="selectHolder">
+                                                                <select name="mobile_number_prefix_">
+                                                                    <option value="">0XX</option>
+                                                                    <option value="050">050</option>
+                                                                    <option value="051">051</option>
+                                                                    <option value="055">055</option>
+                                                                    <option value="070">070</option>
+                                                                    <option value="010">010</option>
+                                                                    <option value="077">077</option>
+                                                                    <option value="099">099</option>
+                                                                </select>
+                                                                <h5 class="select_header">0XX</h5>
+                                                                <div class="select_body_holder">
+                                                                    <ul class="select_body">
+                                                                        <li data-value="" data-disabled="false">0XX</li>
+                                                                        <li data-value="050" data-disabled="false">050
+                                                                        </li>
+                                                                        <li data-value="051" data-disabled="false">051
+                                                                        </li>
+                                                                        <li data-value="055" data-disabled="false">055
+                                                                        </li>
+                                                                        <li data-value="070" data-disabled="false">070
+                                                                        </li>
+                                                                        <li data-value="010" data-disabled="false">010
+                                                                        </li>
+                                                                        <li data-value="077" data-disabled="false">077
+                                                                        </li>
+                                                                        <li data-value="099" data-disabled="false">099
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control mob-mask-1"
+                                                                inputmode="text" name="mobile_number_" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="add-ctc">
+                                                    <div class="icon">
+                                                        <svg version="1.1" id="Capa_1"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                            viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;"
+                                                            xml:space="preserve">
+                                                            <path
+                                                                d="M37.059,16H26V4.941C26,2.224,23.718,0,21,0s-5,2.224-5,4.941V16H4.941C2.224,16,0,18.282,0,21 s2.224,5,4.941,5H16v11.059C16,39.776,18.282,42,21,42s5-2.224,5-4.941V26h11.059C39.776,26,42,23.718,42,21S39.776,16,37.059,16z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                    başqa mobil nömrəni əlavə edin
+                                                </button>
+                                            </div>
+                                            <div class="col-md-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <label for="">Əlavə qeydiniz (varsa) </label>
+                                                    <textarea type="text" class="form-control" name="elave_qeyd"
+                                                        rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-accordion-menu accordion-delivery">
+                                    <button type="button" class="btn-accordion ">
+                                        Çatdırılma ünvanları <svg version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 240.823 240.823"
+                                            style="enable-background:new 0 0 240.823 240.823;" xml:space="preserve">
+                                            <g>
+                                                <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <div class="content" style="display: block;">
+                                        <div class="form-group form-group-block">
+                                            <div class="tick-checkbox-wrapper address">
+                                                <div class="form-check  khidden ">
+                                                    <input required="" class="form-check-input" type="radio"
+                                                        name="catdirilma_unvani" id="different_address"
+                                                        value="different_address">
+                                                    <label class="form-check-label radiolabel" for="different_address">
+                                                        BAŞQA ÜNVAN DAXIL ET
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-new-address" style="display: block ">
+                                            <div class="roww">
+                                                <link rel="stylesheet"
+                                                    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                        <label for="">Şəhər/Rayon</label>
+                                                        <div class="dropdown bootstrap-select form-control _regioncity">
+                                                            <select class="form-control selectpicker_regioncity"
+                                                                name="region_city" data-live-search="true" required=""
+                                                                tabindex="-98">
+                                                                <option value="">Seçin</option>
+                                                                <option value="Bakı, Binəqədi rayonu"
+                                                                    data-tokens="Bakı, Binəqədi rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Binəqədi rayonu</option>
+                                                                <option value="Bakı, Qaradağ rayonu"
+                                                                    data-tokens="Bakı, Qaradağ rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Qaradağ rayonu</option>
+                                                                <option value="Bakı, Nərimanov rayonu"
+                                                                    data-tokens="Bakı, Nərimanov rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Nərimanov rayonu</option>
+                                                                <option value="Bakı, Nəsimi rayonu"
+                                                                    data-tokens="Bakı, Nəsimi rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Nəsimi rayonu</option>
+                                                                <option value="Bakı, Nizami rayonu"
+                                                                    data-tokens="Bakı, Nizami rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Nizami rayonu</option>
+                                                                <option value="Bakı, Sabunçu rayonu"
+                                                                    data-tokens="Bakı, Sabunçu rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Sabunçu rayonu</option>
+                                                                <option value="Bakı, Səbail rayonu"
+                                                                    data-tokens="Bakı, Səbail rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Səbail rayonu</option>
+                                                                <option value="Bakı, Suraxanı rayonu"
+                                                                    data-tokens="Bakı, Suraxanı rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Suraxanı rayonu</option>
+                                                                <option value="Bakı, Pirallahı rayonu"
+                                                                    data-tokens="Bakı, Pirallahı rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Pirallahı rayonu</option>
+                                                                <option value="Bakı, Xətai rayonu"
+                                                                    data-tokens="Bakı, Xətai rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Xətai rayonu</option>
+                                                                <option value="Bakı, Xəzər rayonu"
+                                                                    data-tokens="Bakı, Xəzər rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Xəzər rayonu</option>
+                                                                <option value="Bakı, Yasamal rayonu"
+                                                                    data-tokens="Bakı, Yasamal rayonu" data-code=""
+                                                                    data-fee="0">Bakı, Yasamal rayonu</option>
+                                                                <option value="Abşeron rayonu"
+                                                                    data-tokens="Abşeron rayonu" data-code=""
+                                                                    data-fee="0">Abşeron rayonu</option>
+                                                                <option value="Sumqayıt şəhəri"
+                                                                    data-tokens="Sumqayıt şəhəri" data-code=""
+                                                                    data-fee="0">Sumqayıt şəhəri</option>
+                                                                <option value="Gəncə şəhəri" data-tokens="Gəncə şəhəri"
+                                                                    data-code="" data-fee="0">Gəncə şəhəri</option>
+                                                                <option value="Astara" data-tokens="Astara" data-code=""
+                                                                    data-fee="0">Astara</option>
+                                                                <option value="Ağcabədi" data-tokens="Ağcabədi"
+                                                                    data-code="" data-fee="0">Ağcabədi</option>
+                                                                <option value="Ağdam" data-tokens="Ağdam" data-code=""
+                                                                    data-fee="0">Ağdam</option>
+                                                                <option value="Ağdaş" data-tokens="Ağdaş" data-code=""
+                                                                    data-fee="0">Ağdaş</option>
+                                                                <option value="Ağstafa" data-tokens="Ağstafa"
+                                                                    data-code="" data-fee="0">Ağstafa</option>
+                                                                <option value="Ağsu" data-tokens="Ağsu" data-code=""
+                                                                    data-fee="0">Ağsu</option>
+                                                                <option value="Balakən" data-tokens="Balakən"
+                                                                    data-code="" data-fee="0">Balakən</option>
+                                                                <option value="Beyləqan " data-tokens="Beyləqan "
+                                                                    data-code="" data-fee="0">Beyləqan </option>
+                                                                <option value="Biləsuvar" data-tokens="Biləsuvar"
+                                                                    data-code="" data-fee="0">Biləsuvar</option>
+                                                                <option value="Bərdə" data-tokens="Bərdə" data-code=""
+                                                                    data-fee="0">Bərdə</option>
+                                                                <option value="Cəlilabad" data-tokens="Cəlilabad"
+                                                                    data-code="" data-fee="0">Cəlilabad</option>
+                                                                <option value="Daşkəsən" data-tokens="Daşkəsən"
+                                                                    data-code="" data-fee="0">Daşkəsən</option>
+                                                                <option value="Füzuli" data-tokens="Füzuli" data-code=""
+                                                                    data-fee="0">Füzuli</option>
+                                                                <option value="Goranboy" data-tokens="Goranboy"
+                                                                    data-code="" data-fee="0">Goranboy</option>
+                                                                <option value="Göygöl" data-tokens="Göygöl" data-code=""
+                                                                    data-fee="0">Göygöl</option>
+                                                                <option value="Göyçay " data-tokens="Göyçay "
+                                                                    data-code="" data-fee="0">Göyçay </option>
+                                                                <option value="Gədəbəy" data-tokens="Gədəbəy"
+                                                                    data-code="" data-fee="0">Gədəbəy</option>
+                                                                <option value="Hacıqabul" data-tokens="Hacıqabul"
+                                                                    data-code="XDM-274" data-fee="19.99">Hacıqabul
+                                                                </option>
+                                                                <option value="Kürdəmir " data-tokens="Kürdəmir "
+                                                                    data-code="" data-fee="0">Kürdəmir </option>
+                                                                <option value="Lerik" data-tokens="Lerik" data-code=""
+                                                                    data-fee="0">Lerik</option>
+                                                                <option value="Lənkəran " data-tokens="Lənkəran "
+                                                                    data-code="" data-fee="0">Lənkəran </option>
+                                                                <option value="Masallı" data-tokens="Masallı"
+                                                                    data-code="" data-fee="0">Masallı</option>
+                                                                <option value="Mingəçevir" data-tokens="Mingəçevir"
+                                                                    data-code="" data-fee="0">Mingəçevir</option>
+                                                                <option value="Naftalan " data-tokens="Naftalan "
+                                                                    data-code="" data-fee="0">Naftalan </option>
+                                                                <option value="Neftçala" data-tokens="Neftçala"
+                                                                    data-code="" data-fee="0">Neftçala</option>
+                                                                <option value="Oğuz" data-tokens="Oğuz" data-code=""
+                                                                    data-fee="0">Oğuz</option>
+                                                                <option value="Qax" data-tokens="Qax" data-code=""
+                                                                    data-fee="0">Qax</option>
+                                                                <option value="Qazax " data-tokens="Qazax " data-code=""
+                                                                    data-fee="0">Qazax </option>
+                                                                <option value="Qobustan" data-tokens="Qobustan"
+                                                                    data-code="XDM-272" data-fee="19.99">Qobustan
+                                                                </option>
+                                                                <option value="Quba" data-tokens="Quba" data-code=""
+                                                                    data-fee="0">Quba</option>
+                                                                <option value="Qusar" data-tokens="Qusar" data-code=""
+                                                                    data-fee="0">Qusar</option>
+                                                                <option value="Qəbələ" data-tokens="Qəbələ" data-code=""
+                                                                    data-fee="0">Qəbələ</option>
+                                                                <option value="Saatlı" data-tokens="Saatlı"
+                                                                    data-code="XDM-276" data-fee="39.99">Saatlı</option>
+                                                                <option value="Sabirabad" data-tokens="Sabirabad"
+                                                                    data-code="XDM-277" data-fee="39.99">Sabirabad
+                                                                </option>
+                                                                <option value="Salyan" data-tokens="Salyan" data-code=""
+                                                                    data-fee="0">Salyan</option>
+                                                                <option value="Samux" data-tokens="Samux" data-code=""
+                                                                    data-fee="0">Samux</option>
+                                                                <option value="Siyəzən" data-tokens="Siyəzən"
+                                                                    data-code="" data-fee="0">Siyəzən</option>
+                                                                <option value="Tovuz" data-tokens="Tovuz" data-code=""
+                                                                    data-fee="0">Tovuz</option>
+                                                                <option value="Tərtər" data-tokens="Tərtər" data-code=""
+                                                                    data-fee="0">Tərtər</option>
+                                                                <option value="Ucar" data-tokens="Ucar" data-code=""
+                                                                    data-fee="0">Ucar</option>
+                                                                <option value="Xaçmaz" data-tokens="Xaçmaz" data-code=""
+                                                                    data-fee="0">Xaçmaz</option>
+                                                                <option value="Xızı" data-tokens="Xızı" data-code=""
+                                                                    data-fee="0">Xızı</option>
+                                                                <option value="Yardımlı" data-tokens="Yardımlı"
+                                                                    data-code="" data-fee="0">Yardımlı</option>
+                                                                <option value="Yevlax" data-tokens="Yevlax" data-code=""
+                                                                    data-fee="0">Yevlax</option>
+                                                                <option value="Zaqatala" data-tokens="Zaqatala"
+                                                                    data-code="" data-fee="0">Zaqatala</option>
+                                                                <option value="Zərdab" data-tokens="Zərdab" data-code=""
+                                                                    data-fee="0">Zərdab</option>
+                                                                <option value="İmişli" data-tokens="İmişli"
+                                                                    data-code="XDM-278" data-fee="39.99">İmişli</option>
+                                                                <option value="İsmayıllı" data-tokens="İsmayıllı"
+                                                                    data-code="" data-fee="0">İsmayıllı</option>
+                                                                <option value="Şabran" data-tokens="Şabran" data-code=""
+                                                                    data-fee="0">Şabran</option>
+                                                                <option value="Şamaxı" data-tokens="Şamaxı"
+                                                                    data-code="XDM-273" data-fee="19.99">Şamaxı</option>
+                                                                <option value="Şirvan" data-tokens="Şirvan"
+                                                                    data-code="XDM-275" data-fee="19.99">Şirvan</option>
+                                                                <option value="Şəki" data-tokens="Şəki" data-code=""
+                                                                    data-fee="0">Şəki</option>
+                                                                <option value="Şəmkir " data-tokens="Şəmkir "
+                                                                    data-code="" data-fee="0">Şəmkir </option>
+                                                            </select><button type="button"
+                                                                class="btn dropdown-toggle btn-light"
+                                                                data-toggle="dropdown" role="combobox"
+                                                                aria-owns="bs-select-1" aria-haspopup="listbox"
+                                                                aria-expanded="false" title="Seçin">
+                                                                <div class="filter-option">
+                                                                    <div class="filter-option-inner">
+                                                                        <div class="filter-option-inner-inner">Seçin
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </button>
+                                                            <div class="dropdown-menu ">
+                                                                <div class="bs-searchbox"><input type="search"
+                                                                        class="form-control" autocomplete="off"
+                                                                        role="combobox" aria-label="Search"
+                                                                        aria-controls="bs-select-1"
+                                                                        aria-autocomplete="list" required="required">
+                                                                </div>
+                                                                <div class="inner show" role="listbox" id="bs-select-1"
+                                                                    tabindex="-1">
+                                                                    <ul class="dropdown-menu inner show"
+                                                                        role="presentation"></ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="">Ünvan</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Küç., bina, blok, mənzil, mərtəbə"
+                                                    name="different_address_details" required="required">
+                                            </div>
+                                        </div>
+                                        <style>
+                                            .catdirma_novu label:before,
+                                            .catdirma_novu label:after {
+                                                display: none !important
+                                            }
+
+                                            .catdirma_novu .form-check {
+                                                width: 100% !important
+                                            }
+
+                                            .catdirma_novu label {
+                                                padding: 0px !important;
+                                                margin: 0 !important
+                                            }
+
+                                            .catdirma_novu label p {   
+                                                color: initial !important;
+                                                font-weight: normal
+                                            }
+
+                                            @@media(min-width:768px) {
+                                                .catdirma_novu label .col-md-8 {
+                                                    text-align: left
+                                                }
+
+                                                .catdirma_novu label .col-md-4 {
+                                                    text-align: right
+                                                }
+                                            }
+                                        </style>
+                                        <div class="form-group catdirma_novu">
+                                            <div class="tick-checkbox-wrapper">
+                                                <div class="form-check free-delivery-container">
+                                                    <input class="form-check-input" checked="" type="radio"
+                                                        name="delivery_type" id="free-delivery" value="free-delivery"
+                                                        data-fee="0">
+                                                    <label class="form-check-label" for="free-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+0 azn</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-274" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-274-delivery" value="XDM-274" data-fee="19.99">
+                                                    <label class="form-check-label" for="XDM-274-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 19.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-272" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-272-delivery" value="XDM-272" data-fee="19.99">
+                                                    <label class="form-check-label" for="XDM-272-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 19.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-276" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-276-delivery" value="XDM-276" data-fee="39.99">
+                                                    <label class="form-check-label" for="XDM-276-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 39.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-277" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-277-delivery" value="XDM-277" data-fee="39.99">
+                                                    <label class="form-check-label" for="XDM-277-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 39.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-278" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-278-delivery" value="XDM-278" data-fee="39.99">
+                                                    <label class="form-check-label" for="XDM-278-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 39.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-273" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-273-delivery" value="XDM-273" data-fee="19.99">
+                                                    <label class="form-check-label" for="XDM-273-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 19.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check" id="region_XDM-275" style="display:none">
+                                                    <input class="form-check-input" type="radio" name="delivery_type"
+                                                        id="XDM-275-delivery" value="XDM-275" data-fee="19.99">
+                                                    <label class="form-check-label" for="XDM-275-delivery">
+                                                        <div class="row">
+                                                            <p class="col-md-8">Çatdırılma haqqı </p>
+                                                            <p class="col-md-4">+ 19.99 AZN</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            .catdirma_novu .form-check {
+                                                display: none
+                                            }
+                                        </style>
+                                        <script>
+                                            function kontakt_recheck_delivery_area() {
+                                                if (jQuery(".tick-checkbox-wrapper.address input:checked").val() != 'different_address') {
+                                                    if (jQuery(".tick-checkbox-wrapper.address input:checked").val().indexOf("Bakı") > -1
+                                                        || jQuery(".tick-checkbox-wrapper.address input:checked").val().indexOf("Baku") > -1) {
+                                                        jQuery('.catdirma_novu .form-check').hide();
+                                                        jQuery(".free-delivery-container").show();
+                                                        jQuery(".free-delivery-container input").prop("checked", "checked");
+                                                        jQuery(".free-delivery-container input").change();
+                                                    }
+                                                }
+                                                else {
+                                                    jQuery('.selectpicker_regioncity').change();
+                                                }
+                                            }
+                                            jQuery(function () {
+                                                jQuery('.selectpicker_regioncity').selectpicker();
+                                                jQuery('.selectpicker_regioncity').on("change", function () {
+                                                    jQuery('.catdirma_novu .form-check').hide();
+                                                    if (jQuery(this).find('option:selected').attr("data-fee") > 0) {
+                                                        jQuery("#region_" + jQuery(this).find('option:selected').attr("data-code")).show();
+                                                        jQuery("#region_" + jQuery(this).find('option:selected').attr("data-code") + " input").prop("checked", "checked");
+                                                        jQuery("#region_" + jQuery(this).find('option:selected').attr("data-code") + " input").change();
+                                                    }
+                                                    else {
+                                                        jQuery(".free-delivery-container").show();
+                                                        jQuery(".free-delivery-container input").prop("checked", "checked");
+                                                        jQuery(".free-delivery-container input").change();
+                                                    }
+                                                });
+                                                kontakt_recheck_delivery_area();
+                                                jQuery(".tick-checkbox-wrapper.address input").on("change", function () {
+                                                    kontakt_recheck_delivery_area();
+                                                });
+                                            });
+
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="checkout-accordion-menu">
+                                    <button type="button" class="btn-accordion">
+                                        Sifarişin tamamlanması <svg version="1.1" id="Capa_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 240.823 240.823"
+                                            style="enable-background:new 0 0 240.823 240.823;" xml:space="preserve">
+                                            <g>
+                                                <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+                                            </g>
+                                        </svg>
+                                    </button>
+                                    <div class="content" style="display: block;">
+                                        <div class="form-group">
+                                            <div class="tick-checkbox-wrapper tick-checkbox-wrapper-resp">
+                                                <div class="form-check img">
+                                                    <div class="icon active">
+                                                        <img class="lazy loaded"
+                                                            src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cash.png"
+                                                            data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cash.png"
+                                                            alt="" data-was-processed="true">
+                                                        <img class="active lazy loaded"
+                                                            src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cash-hover.png"
+                                                            data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cash-hover.png"
+                                                            alt="" data-was-processed="true">
+                                                    </div>
+                                                    <input class="form-check-input" type="radio" name="sifaris_formasi"
+                                                        id="cash-payment" value="cash-payment" checked="checked">
+                                                    <label class="form-check-label" for="cash-payment">Çatdırıldıqda
+                                                        nağd ödə</label>
+                                                </div>
+                                                <div class="form-check img">
+                                                    <div class="icon">
+                                                        <img class="lazy loaded"
+                                                            src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cc.png"
+                                                            data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cc.png"
+                                                            alt="" data-was-processed="true">
+                                                        <img class="active lazy loaded"
+                                                            src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cc-hover.png"
+                                                            data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/cc-hover.png"
+                                                            alt="" data-was-processed="true">
+                                                    </div>
+                                                    <input class="form-check-input" type="radio" name="sifaris_formasi"
+                                                        id="cc-payment" value="cc-payment">
+                                                    <label class="form-check-label" for="cc-payment">
+                                                        Çatdırıldıqda kredit kartı ilə ödə </label>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-info" style="
+                                                        margin-top: 15px;
+                                                        ">
+                                                <p>Alış-veriş məbləğini TamKart, BolKart, UCard ilə çatdırılma zamanı
+                                                    aylara bölə bilərsiz.</p>
+                                            </div>
+                                        </div>
+                                        <div class="checkout_comment_2 alert alert-warning" style="display:none"></div>
+                                        <button type="submit"
+                                            class="btn-add-to-cart btn-add-order btn-add-order-buttons">
+                                            <i class="fa fa-spinner fa-spin" style="display:none"></i>Sifarişi
+                                            tamamla</button>
+                                    </div>
+                                </div>
+                                <div id="online-payment-note" class="alert alert-info" style="display:none">
+                                    Dəyərli müştərimiz, nəzərinizə çatdırmaq istərdik ki, hal hazırda pulsuz
+                                    çatdırılma xidməti aşağıda qeyd olunan şəhər və rayonlarımız üçün keçərlidir:<br>
+                                    Bakı, Abşeron, Sumqayıt, Xırdalan, Gəncə, Samux, Göygöl, Şəmkir,Goran, Daşkəsən,
+                                    Masallı, Lənkəran, Astara, Lerik, Yardımlı, Cəlilabad, Qəbələ, İsmayıllı, Oğuz, Şəki
+                                </div>
+                                <div class="checkout_comment alert alert-danger" style="display:none"></div>
+                            </form>
+                        </section>
+                        <input type="hidden" id="form_promo" name="form_promo">
+                        <input type="hidden" name="real_order_id" value="">
+                        <input type="hidden" name="checkout_order" value="1">
+                        <input type="hidden" id="order_form" name="order_form" value="32d6aeaae8"><input type="hidden"
+                            name="_wp_http_referer" value="/checkout/">
+
+                    </div>
+                    <div class="col-lg-3 hert">
+                        <div class="products">
+                            <div class="headline-return-resp">
+                                <h2> Məhsullar </h2>
+                            </div>
+                            <div class="content-body">
+                                <div class="content-list-prod" style="display:block">
+                            @foreach(var item in Model.basketItems)
+                            {
+                                
+                            <div class="row prodrowcheckout">
+                                        <div class="col-4">
+                                            <img class="lazy loaded" style="width:100%"
+                                             src="~/Assets/assets/images/Products/@item.Product.ProductImages.FirstOrDefault().Image"
+                                                data-src="https://kontakt.az/wp-content/uploads/2023/03/xiaomi-redmi-note-12-pro-plus-blue-1.jpg"
+                                                data-was-processed="true">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="title" data-id="1385577" data-reserve-id="1385577"
+                                                data-mid="TM-DG-SBP-1105-SM-2260" data-price="899.99" data-quantity="1">
+                                                <p>@item.Product.Name</p>
+                                            </div>
+                                            <div class="price">
+                                            <h4> @(item.Product.Price - ((item.Product.DiscountofProduct.Percent * item.Product.Price) / 100)) <small class="azn_span">M</small> </h4>
+                                            </div>
+                                        </div>
+                
+                                    </div>
+                                    <ul class="miqdar">
+                                        <li>
+                                            <p> Miqdar: <span>@item.ProductCount</span></p>
+                                        </li>
+                                    </ul>
+                            }
+                                
+                                </div>
+                            </div>
+                            <div class="footer">
+                                <h4 id="checkout_subtotal_price"> Cəmi: 1839.97 <small class="azn_span">M</small></h4>
+                                <h4 id="checkout_subtotal_shipping" class="catdirma" style="display:none">
+                                    Çatdırılma: <span class="catdirma_haqqi"></span> <small class="azn_span">M</small>
+                                </h4>
+                                <h4 id="checkout_total_price"> Yekun: <span class="yekun"
+                                        data-initial="1839.97">1839.97</span> <small class="azn_span">M</small></h4>
+                            </div>
+                        </div>
+                        <button type="button" onclick="jQuery('.btn-add-order').click()"
+                            class="btn-add-to-cart btn-order btn-add-order-buttons">
+                            <i class="fa fa-spinner fa-spin" style="display:none"></i>
+                            Sifarişi tamamla </button>
+                    </div>
+                </div>
+                <script>
+                    if (window.innerWidth > 768) {
+                        jQuery(".navdaxilol a").trigger('click');
+                    }
+                    jQuery('input[name="catdirilma_unvani"]').val('different_address');
+                    setTimeout(function () { jQuery("#different_address").trigger("click"); }, 200);
+                    submiturl = '/checkout/';
+                    jQuery(document).ready(function () {
+
+                        jQuery('[name="sifaris_formasi"]').on("change", function () {
+                            jj = jQuery(this);
+                            console.log('changed', jj.val());
+                            if (jj.val() == 'online-payment') {
+                                jQuery('#online-payment-note').show();
+                            } else jQuery('#online-payment-note').hide();
+                        });
+
+                        jQuery('[name="delivery_type"]').on("change", function () {
+                            jj = jQuery(this);
+                            jQuery(".yekun").text(parseFloat(jQuery(".yekun").attr("data-initial")) + parseFloat(jj.attr("data-fee")));
+                            jQuery(".catdirma_haqqi").text(jj.attr("data-fee"));
+                            jQuery(".catdirma").show();
+                        });
+
+                        jQuery.validator.addMethod("greaterThanZero", function (value, element) {
+                            alert(parseFloat(value));
+                            return this.optional(element) || (parseFloat(value) > 0);
+                        }, "* Amount must be greater than zero");
+
+                        jQuery("#checkout_form").validate({
+                            rules: {
+                                passport_input: {
+                                    minlength: 7
+                                },
+                                //passport_input:{minlength: 8},
+                                /*creditor_ad: {lettersonly: true}*/
+                            },
+                            messages: {
+                                kredit_phone_prefix: "Prefiks seç",
+                                mobile_number_prefix: "Prefiks seç",
+                                mobile_number: "Zəhmət olmasa mobil telefonu düzgün formada daxil edin",
+                                last_name: "Soyadınızı daxil edin",
+                                first_name: "Adınızı daxil edin",
+                                paternal_name: "Ata adınızı daxil edin",
+                                user_email: "Email ünvanınızı daxil edin",
+                            },
+                            errorElement: 'small',
+                            errorClass: 'text-danger',
+                            submitHandler: function (form) {
+                                jQuery('.btn-add-order-buttons').prop("disabled", "disabled");
+                                jQuery('.btn-add-order-buttons .fa').show();
+                                jQuery.ajax({
+                                    type: "POST",
+                                    url: submiturl,
+                                    data: jQuery("#checkout_form")
+                                        .serialize(), // serializes the form's elements.
+                                    success: function (data) {
+                                        if (data.indexOf('notavailable') > -1 || data.indexOf('yoxdur') > -1) {
+                                            jQuery('.checkout_comment').html(data);
+                                            jQuery('.checkout_comment').show();
+                                        } else if (data.indexOf('~success-checkout-message~') > -1) {
+                                            datascom = data.split("~success-checkout-message~")[1].split("~");
+                                            datas = datascom[0];
+                                            datasid = datascom[1].replace("</span>", "");
+
+                                            if (data.indexOf('gotoonlinepayment') > -1) {
+                                                jQuery(".checkout-row").hide();
+                                                jQuery(".gotopaymentbutton").attr('href', function (
+                                                    v,
+                                                    a) {
+                                                    return a + '&orderid=' + datas
+                                                });
+                                                jQuery(".checkout-gotopayment").show();
+                                                window.location.href = jQuery(".gotopaymentbutton").attr('href');
+                                            }
+                                            else {
+                                                sifaris_formasi = jQuery('[name="sifaris_formasi"]')
+                                                    .val();
+                                                arg_analytic = 11;
+                                                if (sifaris_formasi == 'cc-payment') {
+                                                    arg_analytic = 12;
+                                                }
+                                                windowlocationhref =
+                                                    'https://kontakt.az/checkout/?thankyou=1&success=' +
+                                                    arg_analytic;
+                                                window.location.href = windowlocationhref.replace(
+                                                    'thankyou=1', 'thankyou=' + datasid);
+                                            }
+                                        } else if (data.indexOf('error') > -1) {
+                                            alert(
+                                                'Bütün xanaları doldurmaq zəruridir'
+                                            );
+                                            jQuery('.btn-add-order-buttons').prop("disabled",
+                                                "false");
+                                            jQuery('.btn-add-order-buttons .fa').hide();
+                                        }
+                                    }
+                                });
+                                return false;
+                            }
+                        });
+
+                    });
+                </script>
+            </div>
+        </section>

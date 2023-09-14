@@ -126,15 +126,18 @@
                                                 <div class="second-half">
                                                     <div class="quantity">
                                                         <p>Miqdar</p>
-                                                        <button type="button" class="decrease">-</button>
-                                                        <input type="number" id="amount_1103948" value="1"
+                                                            <button type="button" data-id="@item.Id" class="decrease">-</button>
+                                                        <input type="number"  value="@item.ProductCount"
                                                             min="0" readonly="readonly" max="3"
                                                             class="amount cart_amount cart_amount_1103948"
                                                             data-id="1103948">
-                                                        <button type="button" class="increase">+</button>
-                                                    </div>
+                                                            <button type="button" data-id="@item.Id" class="increase">+</button>
+                                           
+                                                    </div> 
 
-                                                    <div class="price">
+                                                    
+
+                                                    <div class="price"> 
                                                         <p class="gridprice gridprice_cash endirimvar">
                                                             <span style="text-decoration:line-through;font-weight:normal">
                                                                     @item.Product.Price
@@ -164,16 +167,17 @@
                                             <div class="quantity">
                                                 <p>Miqdar</p>
                                                 <button type="button" class="decrease">-</button>
-                                                <input type="number" id="amount_1103948" value="1" min="0"
+                                                <input type="number" id="amount_1103948" value="0" min="1"
                                                     max="3" readonly="readonly"
                                                     class="amount cart_amount cart_amount_1103948"
                                                     data-id="1103948">
-                                                <button type="button" class="increase">+</button>
+                                                <button onclick="" type="button" class="increase">+</button>
                                             </div>
                                             <div>
                                                 <p style="text-decoration:line-through ">2849.99 <small
                                                         class="azn_span">M</small></p>
-                                                <p style="color:red">2659.99 <small class="azn_span">M</small>
+                                                    <p style="color:red">
+                                                        2659.99 <small class="azn_span">‎₼</small>
                                                 </p>
                                             </div>
 
@@ -238,11 +242,22 @@
                             </div>
                         </div>
                         <div class="wrapper">
-                            <button type="button" class="cash"
-                                onclick="window.location.href='https://kontakt.az/checkout/'">
+                            <button type="button" class="cash cashbtn"
+                                onclick="window.location.href='/order/checkout/'">
                                 Sifarişi rəsmiləşdir</button>
                         </div>
-                        <div class="wrapper contact cart-contact temporary_hidden">
+                    <script>
+                        var inputvalue = document.querySelector(".cart_amount_1103948");
+                        var TotalBtn=document.querySelector(".cashbtn");
+
+
+                        TotalBtn.addEventListener("click", () => {
+                           
+                            
+                            
+                        })
+                    </script>
+                    <div class="wrapper contact cart-contact temporary_hidden">
                             <p>və ya</p>
                             <div class="phone-selection">
                                 <div class="phone">
@@ -337,9 +352,9 @@
                                     <div class="h6 head6">Yekun ödəniləcək məbləğ:</div>
                                     <p><span class="pricetotal">1839.97</span><span> ‎₼</span></p>
                                 </li>
-                                <button type="button" class="cash"
-                                    onclick="window.location.href='https://kontakt.az/checkout'">
-                                    Sifarişi rəsmiləşdir</button>
+                                <a type="button" class="cash"
+                                    href="/checkout/">
+                                    Sifarişi rəsmiləşdir</a>
                             </ul>
                         </div>
                     </div>
@@ -353,9 +368,23 @@
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+@*<script>
+    (".increase").on("click", function () {
+        debugger
+        var id = $(this).attr("data-id");
 
+        $.ajax({
+            url: "/product/increase/" + id,
+            type: "POST",
+            data: { id: id, },
+            success: function (response) {
+             
+            }
+        });
+    });
+</script>*@
 
-<script>
+@*<script>
     const cartremoves = document.querySelectorAll(".cart_remove");
     const listProducts = document.querySelector(".cart_object");
 
@@ -393,7 +422,7 @@
         })
     })
 
-</script>
+</script>*@
 <script>
     const Message = document.getElementById("message");
     if (Message != undefined) {

@@ -1,4 +1,5 @@
 ﻿using Kontakt.App.ViewModels;
+using Kontakt.Core.Models;
 using Kontakt.Service.Services.Implementations;
 using Kontakt.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -54,6 +55,18 @@ namespace Kontakt.App.Controllers
         {
             await _basketService.Remove(id);
             TempData["RemoveBasket"] = "Məhsul səbətdən uğurla silindi";
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+
+        public async Task<IActionResult> Increase(int id)
+        {
+            await _basketService.Increase(id);
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+
+        public async Task<IActionResult> Decrease(int id)
+        {
+            await _basketService.Decrease(id);
             return Redirect(Request.Headers["Referer"].ToString());
         }
     }

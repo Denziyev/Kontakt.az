@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kontakt.Core.Models
 {
-    public class OrderItem
+    public class OrderItem:BaseModel
     {
         public int ProductId { get; set; }
         public int OrderId { get; set; }

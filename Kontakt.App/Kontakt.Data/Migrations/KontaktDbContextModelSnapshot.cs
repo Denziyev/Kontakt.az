@@ -504,6 +504,78 @@ namespace Kontakt.Data.Migrations
                     b.ToTable("DiscountofProducts");
                 });
 
+            modelBuilder.Entity("Kontakt.Core.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("isAccepted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("isCompleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Kontakt.Core.Models.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("Kontakt.Core.Models.ProductCredit", b =>
                 {
                     b.Property<int>("Id")
@@ -929,6 +1001,36 @@ namespace Kontakt.Data.Migrations
                     b.Navigation("DiscountCategory");
                 });
 
+            modelBuilder.Entity("Kontakt.Core.Models.Order", b =>
+                {
+                    b.HasOne("Kontakt.Core.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Kontakt.Core.Models.OrderItem", b =>
+                {
+                    b.HasOne("Kontakt.Core.Models.Order", "Order")
+                        .WithMany("orderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Kontakt.App.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Kontakt.Core.Models.ProductCredit", b =>
                 {
                     b.HasOne("Kontakt.Core.Models.Credit", "Credit")
@@ -1079,6 +1181,11 @@ namespace Kontakt.Data.Migrations
             modelBuilder.Entity("Kontakt.Core.Models.DiscountofProduct", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Kontakt.Core.Models.Order", b =>
+                {
+                    b.Navigation("orderItems");
                 });
 
             modelBuilder.Entity("Kontakt.Core.Models.Tag", b =>

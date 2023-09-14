@@ -37,6 +37,7 @@ C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Microsof
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\System.Drawing.Common.dll
@@ -89,4 +90,3 @@ C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\refint\K
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.pdb
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\Kontakt.App.genruntimeconfig.cache
 C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\obj\Debug\net7.0\ref\Kontakt.App.dll
-C:\Users\VO\Desktop\Kontakt.az\Kontakt.App\Kontakt.App\bin\Debug\net7.0\Newtonsoft.Json.dll

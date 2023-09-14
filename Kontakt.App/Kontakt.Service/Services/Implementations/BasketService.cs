@@ -2,10 +2,13 @@
 using Kontakt.App.Context;
 using Kontakt.App.Models;
 using Kontakt.Core.Models;
+using Kontakt.Service.Responses;
 using Kontakt.Service.Services.Interfaces;
 using Kontakt.Service.ViewModels;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -133,6 +136,7 @@ namespace Kontakt.Service.Services.Implementations
                     List<BasketItemViewModel> basketItemViewModels= new();    
                     foreach(var item in basket.basketItems)
                     {
+                
                         basketItemViewModels.Add(new BasketItemViewModel
                         {
                             ProductId=item.ProductId,
@@ -221,6 +225,29 @@ namespace Kontakt.Service.Services.Implementations
                     }
                 }
             }
+        }
+
+        public async Task Increase(int id)
+        {
+
+            BasketItem? basketitem = await _context.BasketItems.Where(x=>x.Id == id && !x.IsDeleted).FirstOrDefaultAsync();
+
+    
+            basketitem.ProductCount = basketitem.ProductCount + 1;
+            
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task Decrease(int id)
+        {
+            BasketItem? basketitem = await _context.BasketItems.Where(x => x.Id == id).FirstOrDefaultAsync();
+            
+            if (basketitem.ProductCount > 0)
+            {
+                basketitem.ProductCount = basketitem.ProductCount - 1;
+            }
+            await _context.SaveChangesAsync();
         }
     }
 }
