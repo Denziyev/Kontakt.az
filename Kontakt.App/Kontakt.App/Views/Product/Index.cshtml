@@ -1,4 +1,6 @@
-﻿ <!--Discount Area Start-->
+﻿@using Kontakt.App.ViewModels;
+ @model ProductViewModel
+<!--Discount Area Start-->
     <section class="discountarea">
         <div class=" discount_container">
             <a
@@ -15,9 +17,41 @@
             <div class="roww">
                 <div class="htmlmap">
                     <ul>
-                        <li><a href="../html/home.html">Əsas səhifə</a></li>
-                        <li><a href="https://kontakt.az/telefonlar/">Telefonlar və planşetlər</a></li>
-                        <li>Smartfonlar</li>
+                    <li><a href="/">Əsas səhifə</a></li>
+                    @{
+                        var cateitem = Model.Category;
+                    
+                        Dictionary<int, string> maps = new Dictionary<int, string>();
+
+                        maps.Add(cateitem.Id, cateitem.Name);
+                    }
+
+                    @if (cateitem.ParentCategoryId != null)
+                    {
+                 
+                        var currentItem = cateitem; // Create a copy of the current item
+                        while (currentItem?.ParentCategoryId != null)
+                        {
+                            currentItem = currentItem.ParentCategory; // Move to the parent category
+                            if (currentItem != null)
+                            {
+                                maps.Add(currentItem.Id, currentItem.Name);
+                            }
+                        }
+
+                    }
+                    @for (var i = maps.Count - 1; i >= 0; i--)
+                    {
+                        if (i != 0)
+                        {
+                            <li> <a href="/category/index/@maps.ElementAt(i).Key">@maps.ElementAt(i).Value</a>  </li>
+                        }
+                        else
+                        {
+                            <li> @maps.ElementAt(i).Value </li>
+                        }
+                    }
+
                     </ul>
                 </div>
             </div>

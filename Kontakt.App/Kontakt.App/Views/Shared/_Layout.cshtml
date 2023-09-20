@@ -162,12 +162,27 @@
                         <form autocomplete="off" class="search-form" id="menu-search-form" action="https://kontakt.az">
                             <div class="form-group">
                                 <input type="text" id="title-search-input" class="form-control title-search-input"
-                                       name="s" placeholder="iPhone 14 Plus 512 GB Yellow" autocomplete="OFF">
+                                       name="search" placeholder="iPhone 14 Plus 512 GB Yellow" autocomplete="OFF">
                                 <button type="submit" class="search">
                                     <img src="~/Assets/assets/icons/search.svg" alt="search">
                                 </button>
                             </div>
                         </form>
+                        <div id="minisearch-autocomplete-kontakt-top-search" class="search-autocomplete searchResult">
+                            <div class="smile-elasticsuite-autocomplete-result">
+                                <dl role="listbox" class="autocomplete-list searchbytag">
+                                   
+                                   
+                                </dl>
+                                <dl role="listbox" class="autocomplete-list searchbyproduct">
+                                  
+                         
+                                </dl>
+                                 <dl role="listbox" class="autocomplete-list searchbycategory">
+                                   
+                                </dl>
+                            </div>
+                        </div>
                     </div>
                     <div class="login-basket">
                         <ul>
@@ -191,7 +206,14 @@
                                 <a href="/basket" style="position:relative">
                                     <img src="~/Assets/assets/icons/basket.svg" alt="basket">
                                     <span>Səbət</span>
-                                    <span class="count cart_count">@basketItemViewModels.Count()</span>
+                                    @if(User.Identity.IsAuthenticated){
+                                        <span class="count cart_count">@basketItemViewModels.Count()</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="count cart_count">@basketItemViewModels.Count()</span>
+                                    }
+
                                 </a>
                             </li>
                         </ul>
@@ -307,7 +329,7 @@
         <div class="MenuModal-content">
             <ul class="product-menu">
                 <li class="menuli smartfonmenuli">
-                    <a href="~/Category">
+                    <a href="~/Category/index/11">
                         <div class="menuproducticon">
                             <img class="lazy" src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
                         </div>
@@ -2391,3 +2413,4 @@ bottom:0px;padding:0px;z-index:10000001">
         }
 
     }</script>
+

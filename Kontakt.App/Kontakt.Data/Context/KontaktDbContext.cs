@@ -19,6 +19,7 @@ namespace Kontakt.App.Context
         public DbSet<Tag> Tags { get; set; }
         public DbSet<DiscountImage> DiscountsImages { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<CategoryBrand> categoryBrands { get; set; }
         public DbSet<Credit> Credits { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<ProductCredit> ProductCredits { get; set; }

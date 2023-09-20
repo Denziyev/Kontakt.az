@@ -32,7 +32,7 @@ function previousslidefunction() {
 }
 
 
-setInterval(nextslidefunction, 3000);
+setInterval(nextslidefunction, 4000);
 
 //----------------------------------------------------------------------------
 

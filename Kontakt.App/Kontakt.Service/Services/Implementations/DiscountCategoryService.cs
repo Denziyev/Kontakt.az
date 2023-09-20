@@ -33,9 +33,18 @@ namespace Kontakt.Service.Services.Implementations
             return new MvcResponse<DiscountCategory> { IsSuccess = true, Message = $"DiscountCategory(id:{discountCategory.Id}) is created successfully", Data = discountCategory };
         }
 
-        public Task<MvcResponse<DiscountCategory>> DeleteAsync(int id)
+        public async Task<MvcResponse<DiscountCategory>> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+                DiscountCategory? category = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id);
+            if (category == null)
+            {
+                return new MvcResponse<DiscountCategory> { IsSuccess = false, Message = "Bu kateqoriya mövcud deyil" };
+            }
+
+            category.IsDeleted = true;
+            await _repository.Update(category);
+            await _repository.SaveAsync();
+            return new MvcResponse<DiscountCategory> { IsSuccess = true, Message = $"{category.Category.Name} kateqoriyalı endirim uğurla silindi" };
         }
 
         public async Task<MvcResponse<List<DiscountCategory>>> GetAllAsync(int id)
@@ -47,7 +56,16 @@ namespace Kontakt.Service.Services.Implementations
             return new MvcResponse<List<DiscountCategory>> { IsSuccess = true, Data = discountCategories };
         }
 
-     
+        public async Task<MvcResponse<List<DiscountCategory>>> GetAllAsync()
+        { 
+            IQueryable<DiscountCategory> query = await _repository.GetAllAsync(x => !x.IsDeleted, "Discount", "Category", "DiscountofProducts", "Images");
+            List<DiscountCategory> discountCategories = new List<DiscountCategory>();
+            discountCategories = await query.Select(x => new DiscountCategory { Id = x.Id, CreatedAt = x.CreatedAt, DiscountId = x.DiscountId, CategoryId = x.CategoryId, Images = x.Images, Category = x.Category, Discount = x.Discount }).ToListAsync();
+          
+            return new MvcResponse<List<DiscountCategory>> { IsSuccess = true, Data = discountCategories };
+        }
+
+
 
         public async Task<MvcResponse<DiscountCategory>> GetAsync(int? id)
         {

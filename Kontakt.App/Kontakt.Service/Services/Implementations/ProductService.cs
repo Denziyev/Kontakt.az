@@ -46,7 +46,7 @@ namespace Kontakt.Service.Services.Implementations
         {
             IQueryable<Product> query = await _repository.GetAllAsync(x => !x.IsDeleted, "ProductTags", "ProductImages", "MainProperties", "OtherProperties", "Category","Brand","Comments","DiscountofProduct","ProductCredits");
             List<Product> products = new List<Product>();
-            products = await query.Select(x => new Product { Name = x.Name, Id = x.Id, CreatedAt = x.CreatedAt, CategoryId = x.CategoryId,Category=x.Category,ProductCreditIds=x.ProductCreditIds,ProductCredits=x.ProductCredits, BrandId = x.BrandId,Brand=x.Brand,Comments=x.Comments,DiscountofProductId=x.DiscountofProductId,DiscountofProduct=x.DiscountofProduct,ProductImages=x.ProductImages,Price=x.Price,StockNumber=x.StockNumber }).ToListAsync();
+            products = await query.Select(x => new Product { Name = x.Name, Id = x.Id,IsVisibleinMenu=x.IsVisibleinMenu, CreatedAt = x.CreatedAt, CategoryId = x.CategoryId,Category=x.Category,ProductCreditIds=x.ProductCreditIds,ProductCredits=x.ProductCredits, BrandId = x.BrandId,Brand=x.Brand,Comments=x.Comments,DiscountofProductId=x.DiscountofProductId,DiscountofProduct=x.DiscountofProduct,ProductImages=x.ProductImages,Price=x.Price,StockNumber=x.StockNumber }).ToListAsync();
 
             return new MvcResponse<List<Product>> { IsSuccess = true, Data = products };
         }
@@ -66,6 +66,27 @@ namespace Kontakt.Service.Services.Implementations
         public Task<MvcResponse<Product>> UpdateAsync(int id, Product product)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<MvcResponse<Product>> VisibleAsync(int id)
+        {
+            Product? product = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id);
+            if (product == null)
+            {
+                return new MvcResponse<Product> { IsSuccess = false, Message = "This comment doesnt exist" };
+            }
+
+            if (product.IsVisibleinMenu)
+            {
+                product.IsVisibleinMenu = false;
+            }
+            else
+            {
+                product.IsVisibleinMenu = true;
+            }
+            await _repository.Update(product);
+            await _repository.SaveAsync();
+            return new MvcResponse<Product> { IsSuccess = true, Message = $"{product.Name} is deleted successfully" };
         }
     }
 }

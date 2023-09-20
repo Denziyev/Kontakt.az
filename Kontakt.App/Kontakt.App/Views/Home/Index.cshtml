@@ -1,4 +1,7 @@
-﻿@using Kontakt.App.ViewModels;
+﻿@using Kontakt.App.Models;
+@using Kontakt.App.ViewModels;
+@using Kontakt.Core.Models;
+@using Microsoft.EntityFrameworkCore;
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -6296,22 +6299,25 @@
             <div class="menusidebar">
                 <div class="MenuModal-content">
                     <ul class="product-menu">
+                        @foreach(var item in Model.Categories.Where(x=>x.ParentCategory==null)){
                         <li class="menuli smartfonmenuli">
-                            <a href="/Category">
+                            <a href="/Category/index/@item.Id">
                                 <div class="menuproducticon">
                                     <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
+                                                 src="~/Assets/assets/images/Categories/@item.Image">
                                 </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
+                                <span class="menuproducttitle">@item.Name </span>
                             </a>
                             <div class="menuopen">
                                 <div class="menuopencontent">
                                     <ul>
                                         <li>
-                                            <div class="menulicontainer">
+                                       @for(var i=0;i<1 && i<item.Subcategories?.Count();i++){
+                                                        var childitem = item?.Subcategories[i];
+                                                        <div class="menulicontainer">
                                                 <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/">
-                                                    <span>Smartfonlar</span>
+                                                   href="/category/index/@childitem.Id">
+                                                    <span>@childitem.Name</span>
                                                     <svg version="1.1" id="Capa_1"
                                                          xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6325,11 +6331,21 @@
                                                                 </g>
                                                             </svg>
                                                 </a>
-                                            </div>
-                                            <div class="menulicontainer">
+                                              
+                                                        </div>
+                                                         List<Brand> brandss= new List<Brand>();
+                                                        @for(var z=0;z<5 && z<childitem?.CategoryBrands?.Count();z++)
+                                                        {
+                                                            Brand branditem = null ; 
+                                                            
+                                                               if(!brandss.Contains(childitem?.CategoryBrands[z].Brand)){
+                                                             branditem = childitem?.CategoryBrands[z].Brand;
+                                                                brandss.Add(branditem);
+                                                            }
+                                                            <div class="menulicontainer">
                                                 <a class="menuliparent_a"
                                                    href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/">
-                                                    <span>Apple</span>
+                                                    <span>@branditem?.Name</span>
                                                     <svg version="1.1" id="Capa_1"
                                                          xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6343,109 +6359,29 @@
                                                                 </g>
                                                             </svg>
                                                 </a>
+                                                 @for(var s=0;s<5 && s<branditem?.Products.Where(x=>x.IsVisibleinMenu && x.CategoryId==childitem.Id).Count();s++)
+                                                        {
+                                                                    var productss = branditem?.Products.Where(x => x.IsVisibleinMenu && x.CategoryId == childitem.Id).ToList();
+                                                                    var productitem = productss[s];
+
                                                 <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=iPhone+14+Pro">
-                                                    iPhone 14 Pro
+                                                   href="/product/detail/@productitem.Id">
+                                                    @productitem.Name
                                                 </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=iPhone+14+Pro+Max">
-                                                    iPhone 14 Pro Max
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=iPhone+14+Plus">
-                                                    iPhone 14 Plus
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=iPhone+14">
-                                                    iPhone 14
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=iPhone+13">
-                                                    iPhone 13
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=iPhone+11">
-                                                    iPhone 11
-                                                </a>
+                                                }
+                                           
                                             </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/samsung-mobil-telefonlar/">
-                                                    <span>Samsung</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Samsung+Galaxy+A14">
-                                                    Samsung Galaxy A14
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/samsung-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Samsung+Galaxy+A34">
-                                                    Samsung Galaxy A34
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/samsung-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Samsung+Galaxy+A54">
-                                                    Samsung Galaxy A54
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Samsung+Galaxy+S23">
-                                                    Samsung Galaxy S23
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/">
-                                                    <span>OPPO</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=OPPO+A17">
-                                                    OPPO A17
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=OPPO+A57S">
-                                                    OPPO A57S
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=OPPO+A77S">
-                                                    OPPO A77S
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=OPPO+Reno+5G+8T">
-                                                    OPPO Reno 8T 5G
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=OPPO+Find+N2">
-                                                    OPPO Find N2
-                                                </a>
-                                            </div>
+                                         
+                                                        }  
+                                            }
                                         </li>
                                         <li>
-                                            <div class="menulicontainer">
+                                           @for(var i=1;i<3 && i<item.Subcategories?.Count();i++){
+                                                        var childitem = item?.Subcategories[i];
+                                                        <div class="menulicontainer">
                                                 <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/xiaomi-mobil-telefonlar/">
-                                                    <span>Xiaomi</span>
+                                                   href="/category/index/@childitem.Id">
+                                                    <span>@childitem.Name</span>
                                                     <svg version="1.1" id="Capa_1"
                                                          xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6459,119 +6395,21 @@
                                                                 </g>
                                                             </svg>
                                                 </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/xiaomi-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Xiaomi+Redmi+10C">
-                                                    Xiaomi Redmi 10C
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/xiaomi-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Xiaomi+Poco+X5+Pro">
-                                                    Xiaomi X5 Pro 5G
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/xiaomi-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Xiaomi+13+Lite">
-                                                    Xiaomi 13 Lite
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/xiaomi-mobil-telefonlar/?fqn=&amp;fqx=&amp;fphone_seriya%5B%5D=Xiaomi+Redmi+Note+12">
-                                                    Xiaomi Note 12
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
+                                              
+                                                        </div>
+                                                         List<Brand> brandss= new List<Brand>();
+                                                        @for(var z=0;z<4 && z<childitem?.CategoryBrands?.Count();z++)
+                                                        {
+                                                            Brand branditem = null ; 
+                                                            
+                                                               if(!brandss.Contains(childitem?.CategoryBrands[z].Brand)){
+                                                             branditem = childitem?.CategoryBrands[z].Brand;
+                                                                brandss.Add(branditem);
+                                                            }
+                                                            <div class="menulicontainer">
                                                 <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/">
-                                                    <span>Smartfonlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
                                                    href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/">
-                                                    Apple
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oppo/">
-                                                    OPPO
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/samsung-mobil-telefonlar/">
-                                                    Samsung
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/xiaomi-mobil-telefonlar/">
-                                                    Xiaomi
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/huawei-mobil-telefonlar/">
-                                                    Huawei
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/realme/">
-                                                    Realme
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/oneplus-mobil-telefonlar/">
-                                                    OnePlus
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/blackview/">
-                                                    Blackview
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/honor-mobil-telefonlar/">
-                                                    Honor
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/infinix/">
-                                                    Infinix
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/nothing/">
-                                                    Nothing
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/tcl-smartfonlar/">
-                                                    TCL
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/asus-smartfon/">
-                                                    Asus
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/vivo-mobil-telefonlar/">
-                                                    Vivo
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/motorola/">
-                                                    Motorola
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/ru/telefony-i-planshety/mobilnie-smartfoni/nokia-ru/">
-                                                    Nokia
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/google/">
-                                                    Google
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/tecno/">
-                                                    Tecno
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/qulaqliqlar-umumi/">
-                                                    <span>Qulaqlıqlar</span>
+                                                    <span>@branditem?.Name</span>
                                                     <svg version="1.1" id="Capa_1"
                                                          xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -6585,1163 +6423,29 @@
                                                                 </g>
                                                             </svg>
                                                 </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/qulaqliqlar/">
-                                                    Simli
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/qulaqliqlar-bluetooth/">
-                                                    Simsiz
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/qulaqliqlar-umumi/qulaqliqlar-bluetooth/?fqn=&amp;fqx=&amp;fqulaqliqlar_qosulma_novu%5B%5D=TWS+%28tam+simsiz%29">
-                                                    TWS (tam simsiz)
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/">
-                                                    <span>Aksesuarlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/powerbank/">
-                                                    Power Bank
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/adapterler/">
-                                                    Adapterlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/aksesuarlar-telefonlar/simsiz-adapterler/">
-                                                    Simsiz adapterlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/enerjitoplayicinaqiller/">
-                                                    USB naqillər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/qoruyucuortuk/">
-                                                    Smartfon üçün örtüklər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/qulaqliq-qablari/">
-                                                    Qulaqlıq üçün örtüklər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/aksesuarlar-telefonlar/qoruyuccu-shushe/">
-                                                    Qoruyucu şüşələr
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/microsdkart/">
-                                                    Micro SD kartlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/tutacag/">
-                                                    Telefon üçün tutacaqlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/selfie/">
-                                                    Selfi
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/aksesuarlar-telefonlar/magsafe-aksessuarlari/">
-                                                    MagSafe aksessuarları
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/aksesuarlar-telefonlar/acarliq/">
-                                                    Trekerlər
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/ev-ofis/">
-                                                    <span>Ev və ofis telefonları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/audio-video/portativakustika/">
-                                                    <span>Portativ akustikalar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a" href="https://kontakt.az/plansetler/">
-                                                    <span>Planşetlər</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/duymeli-telefonlar/">
-                                                    <span>Düyməli telefonlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="datt3">
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001628&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001628&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/smartfon_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/smartfon_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                            <a href="https://kontakt.az/landing-samsung-galaxy-a24">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/05/galaxy-a24-1x1-banner-2_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/05/galaxy-a24-1x1-banner-2_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                                <a href="/Category">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Saat.png">
-                                </div>
-                                <span class="menuproducttitle">Smart qadjetlər </span>
-                            </a>
-                            <div class="menuopen">
-                                <div class="menuopencontent">
-                                    <ul>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/smartwatch/">
-                                                    <span>Smart saatlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/apple-smartsaatlar/">
-                                                    Apple
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/samsung-smartsaatlar/">
-                                                    Samsung
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/huawei-smartsaatlar/">
-                                                    Huawei
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/xiaomi-smartsaatlar/">
-                                                    Xiaomi
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/kieslect/">
-                                                    Kieslect
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/amazfit/">
-                                                    Amazfit
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smartsaatlar/blackview-smartsaat/">
-                                                    Blackview
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smart-qolbaglar/">
-                                                    <span>Smart qolbaqlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smart-qolbaglar/xiaomi-smartqolbaglar/">
-                                                    Xiaomi
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smart-qolbaglar/huawei-smartqolbaglar/">
-                                                    Huawei
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/smart-qolbaglar/blackview-smartqolbaq/">
-                                                    Blackview
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/usaq-saatlari/">
-                                                    <span>Uşaq smart saatları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/usaq-saatlari/canyon-usaq-saatlari/">
-                                                    Canyon
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/aksesuar-saatlar/">
-                                                    <span>Smart saat üçün aksesuarlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/aksesuar-saatlar/apple-band/">
-                                                    Apple Band
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/qulaqliqlar-bluetooth/">
-                                                    <span>Qulaqlıqlar (Bluetooth)</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/neqliyyat/">
-                                                    <span>Nəqliyyat</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/neqliyyat/segway/">
-                                                    Hoverboard
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/neqliyyat/mopedler/">
-                                                    Mopedlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/neqliyyat/elektroskeyt/">
-                                                    Elektroskeytlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/giroskuter/">
-                                                    Elektrosamokatlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/neqliyyat/elektromobil/">
-                                                    Elektromobillər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/oyun-ve-eylence/neqliyyat/moped-ucun-aksesuarlar/">
-                                                    Moped üçün aksesuarlar
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/ev-bag/aghilli-ev/">
-                                                    <span>Ağıllı ev</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/ev-bag/aghilli-ev/xiaomi-mi-home/">
-                                                    Xiaomi Mi home
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/ev-bag/aghilli-ev/elsmart/">
-                                                    Elsmart
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/tv-audio-video/audio-video/smart-akustika/">
-                                                    Smart akustika
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/ev-bag/aghilli-ev/domofon/">
-                                                    Domofonlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/ev-bag/aghilli-ev/alternativ-enerjili-ishiqlar/">
-                                                    Alternativ enerjili işıqları
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/ev-bag/aghilli-ev/agilli-kilid/">
-                                                    Ağıllı kilid
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/saatlar/">
-                                                    <span>Qol saatları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/casio-saatlar/">
-                                                    Casio
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/orient/">
-                                                    Orient
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/edifice-saatlar/">
-                                                    Edifice
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/ingersoll-az/">
-                                                    Ingersoll
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/gshock-saatlar/">
-                                                    G-Shock
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/babyg/">
-                                                    Baby-G
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/saatlar-ve-qolbaglar/saatlar/q-and-q/">
-                                                    Q&amp;Q
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="datt3">
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001628&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001628&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/smart_az-1_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/smart_az-1_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Komputer.png">
-                                </div>
-                                <span class="menuproducttitle">Notbuklar, PK, planşetlər </span>
-                            </a>
-                            <div class="menuopen">
-                                <div class="menuopencontent">
-                                    <ul>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/notebook/">
-                                                    <span>Notbuklar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_kateqoriya%5B%5D=Ev+v%C9%99+i%C5%9F">
-                                                    Ev və iş
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_kateqoriya%5B%5D=Oyun">
-                                                    Oyun
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_kateqoriya%5B%5D=Ultrabuk">
-                                                    Ultrabuklar
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/notebook/">
-                                                    <span>Notbuklar brend üzrə</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Apple">
-                                                    Apple
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Acer">
-                                                    Acer
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Asus">
-                                                    Asus
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Lenovo">
-                                                    Lenovo
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=HP">
-                                                    HP
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=HUAWEI">
-                                                    HUAWEI
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Intel">
-                                                    Intel
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=MSI">
-                                                    MSI
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Honor">
-                                                    Honor
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/notebook/?fqn=&amp;fqx=&amp;fnotebook_producer%5B%5D=Dell">
-                                                    Dell
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/kompyuterler/">
-                                                    <span>Kompyuterlər</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/monobloklar/">
-                                                    Monobloklar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/sistem-bloku/">
-                                                    Sistem blokları
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/monitor/">
-                                                    <span>Monitorlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/monitorlar/?fqn=&amp;fqx=&amp;fmonitor_producer%5B%5D=HP">
-                                                    HP
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/monitorlar/?fqn=&amp;fqx=&amp;fmonitor_producer%5B%5D=Asus">
-                                                    Asus
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/monitorlar/?fqn=&amp;fqx=&amp;fmonitor_producer%5B%5D=Dell">
-                                                    Dell
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/komputer-printer-aksesuarlari/">
-                                                    <span>Kompüter hissələri</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/soyutmasistemi/">
-                                                    Keys üçün soyutma sistemi
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/komputer-printer-aksesuarlari/videokartlar/">
-                                                    Videokartlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/komputer-printer-aksesuarlari/ana-plata/">
-                                                    Ana platalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/komputer-printer-aksesuarlari/prosessor/">
-                                                    Prosessorlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/komputer-printer-aksesuarlari/sistem-bloklari-ucun-keysles/">
-                                                    Sistem bloku üçün keyslər
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a" href="https://kontakt.az/plansetler/">
-                                                    <span>Planşetlər</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/plansetler/?fqn=&amp;fqx=&amp;fphone_istehsalci%5B%5D=Apple">
-                                                    Apple
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/plansetler/?fqn=&amp;fqx=&amp;fphone_istehsalci%5B%5D=Samsung">
-                                                    Samsung
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/plansetler/?fqn=&amp;fqx=&amp;fphone_istehsalci%5B%5D=Xiaomi">
-                                                    Xiaomi
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/telefonlar/plansetler/?fqn=&amp;fqx=&amp;fphone_istehsalci%5B%5D=Blackview">
-                                                    Blackview
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/yaddash/">
-                                                    <span>Yaddaş</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/yaddash/xaricitoplayicilar/">
-                                                    Xarici və daxili toplayıcılar (HDD/SSD)
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/usbtoplayici/">
-                                                    USB toplayıcılar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/sdkart/">
-                                                    SD kartlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qadcetleraksesuarlar/microsdkart/">
-                                                    Micro SD kartlar
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/">
-                                                    <span>Oyun aksesuarları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-klaviaturalari/">
-                                                    Klaviaturalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-mouslari/">
-                                                    Mouse
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-joystikleri/">
-                                                    Joystiklər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-qulaqliqlari/">
-                                                    Qulaqlıqlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-mikrofonlari/">
-                                                    Mikrofonlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-mousepadlari/">
-                                                    Mousepad
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-kreslolari/">
-                                                    Kreslolar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-cantalari/">
-                                                    Çantalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-masasi-az/">
-                                                    Oyun masası
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/">
-                                                    <span>Kompüter aksessuarları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/klaviatura/">
-                                                    Klaviaturalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/mouse/">
-                                                    Mouse
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/mousepad/">
-                                                    Mousepad
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/noutbukcantalar/">
-                                                    Notbuk üçün çantalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/oyun-aksesuarlari/oyun-eynekleri/">
-                                                    Eynəklər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/omputeraksesuarlari/katridj/">
-                                                    Kartriclər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/noutbukaksesuarlar/oturuculer/">
-                                                    Ötürücülər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/sebekebirleshdiricileri/">
-                                                    Şəbəkə birləşdiriciləri notbuklar üçün
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/noutbukaksesuarlar/soyutmaq-ucun-altliqlar/">
-                                                    Soyutmaq üçün altlıqlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputeraksesuarlari/temizlikvasiteleri/">
-                                                    Ekran təmizləyiciləri
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/noutbukaksesuarlar/ups-notebok-aksesuar/">
-                                                    UPS
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/noutbukaksesuarlar/vebkameralar/">
-                                                    Veb kameralar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/noutbukaksesuarlar/sesguclendirici/">
-                                                    Səs gücləndiricilər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/noutbukaksesuarlar/sebeke-uzadicilari/">
-                                                    Şəbəkə uzadıcıları
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/wifi-ve-shebeke-avadanliqlari/">
-                                                    <span>Wifi və şəbəkə avadanlıqları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/wifi-ve-shebeke-avadanliqlari/modem/">
-                                                    Modemlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/wifi-ve-shebeke-avadanliqlari/ruter/">
-                                                    Routerlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/wifi-ve-shebeke-avadanliqlari/guclendirici/">
-                                                    Wi-Fi gücləndiriciləri
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/komputerler/wifi-ve-shebeke-avadanliqlari/usb-wifi/">
-                                                    Wi-Fi adapterlər
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/elektron-kitab/">
-                                                    <span>Elektron kitablar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/telefonlar/resm-plansheti/">
-                                                    <span>Rəsm üçün planşetlər</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/printer/">
-                                                    <span>Printerlər</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/komputerler/planshet-ucun-aksesuarlar/">
-                                                    <span>Planşet üçün aksesuarlar</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/ofis-avadanliqlari/ofis-levazimatlari/">
-                                                    <span>Ofis ləvazimatları</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="datt3">
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001630&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001631&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/notbuk_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/notbuk_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="	https://kontakt.az/wp-content/uploads/2022/10/soyuducu.png">
-                                </div>
-                                <span class="menuproducttitle">Mətbəx üçün məişət texnikası </span>
-                            </a>
+                                                                @for (var s = 0; s < 5 && s < branditem?.Products.Where(x => x.IsVisibleinMenu && x.CategoryId == childitem.Id).Count(); s++)
+                                                                {
+                                                                    var productss = branditem?.Products.Where(x => x.IsVisibleinMenu && x.CategoryId == childitem.Id).ToList();
+                                                                    var productitem = productss[s];
 
-                            <div class="menuopen">
-                                <div class="menuopencontent">
-                                    <ul>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/">
-                                                    <span>Böyük məişət texnikası</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/soyuducu/">
-                                                    Soyuducular
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/paltaryuyan/">
-                                                    Paltaryuyanlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/solo-soba/">
-                                                    Solo sobalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qabyuyan/">
-                                                    Qabyuyanlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/aspirator/">
-                                                    Aspiratorlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/dondurucu/">
-                                                    Dondurucular
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/dispenser/">
-                                                    Dispenserlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/sherab-soyuduculari/">
-                                                    Şərab soyuducuları
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/icki-soyuduculari/">
-                                                    İçki soyuducuları
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/siqar-ucun-dolablar/">
-                                                    Siqar üçün dolablar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/termo-canta-az/">
-                                                    Termo çanta
-                                                </a>
+                                                                    <a class="subsub_a"
+                                                                       href="/product/detail/@productitem.Id">
+                                                                        @productitem.Name
+                                                                    </a>
+                                                                }
+                                           
                                             </div>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/ickilerin-hazirlanmasi/">
-                                                    <span>İçkilərin hazırlanması</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/caydan/">
-                                                    Çaydanlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/qab-qacaq-2/qab-qacaq-az/induksion-caydan/">
-                                                    İnduksion çaydanlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/termopot/">
-                                                    Termopotlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/qehvebisiren/">
-                                                    Qəhvəbişirənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/ickilerin-hazirlanmasi/qehvedemleyenler/">
-                                                    Qəhvədəmləyənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/qehveuyuden/">
-                                                    Qəhvəüyüdənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/ickilerin-hazirlanmasi/turka/">
-                                                    Turka
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/sireceken/">
-                                                    Şirəçəkənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/metbexucun-kicik-meiset-texnikasi/sud-kopuklendirici/">
-                                                    Süd köpükləndiricilər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/boyukmeishettexnikasi/buz/">
-                                                    Buz hazırlayanlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/ickilerin-hazirlanmasi/su-filtri/">
-                                                    Su filtrləri
-                                                </a>
-                                            </div>
+                                         
+                                                        }  
+                                            }
                                         </li>
                                         <li>
-                                            <div class="menulicontainer">
+                                          @for(var i=3;i<7 && i<item.Subcategories?.Count();i++){
+                                                        var childitem = item?.Subcategories[i];
+                                                        <div class="menulicontainer">
                                                 <a class="menuliparent_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/">
-                                                    <span>Quraşdırılan texnika</span>
+                                                   href="/category/index/@childitem.Id">
+                                                    <span>@childitem.Name</span>
                                                     <svg version="1.1" id="Capa_1"
                                                          xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7755,47 +6459,21 @@
                                                                 </g>
                                                             </svg>
                                                 </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/soba/">
-                                                    Sobalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/plite/">
-                                                    Plitələr
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/aspirator/">
-                                                    Aspiratorlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/qurashdirilan-soyuducular/">
-                                                    Quraşdırılan soyuducular
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/qurashdirilan-qabyuyan-mashinlar/">
-                                                    Quraşdırılan qabyuyan maşınlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/qurashdirilan-paltaryuyan-mashinlar/">
-                                                    Quraşdırılan paltaryuyan maşınlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/qurashdirilmish-mikrosoba/">
-                                                    Quraşdırılmış mikrodalğalı sobalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/qurashdirilan-dondurucular/">
-                                                    Quraşdırılan dondurucular
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/qurashdirilmish-texnika/isitm%c9%99-siyirtm%c9%99si/">
-                                                    İsitmə siyirtmələri
-                                                </a>
-                                            </div>
-                                            <div class="menulicontainer">
+                                              
+                                                        </div>
+                                                         List<Brand> brandss= new List<Brand>();
+                                                        @for(var z=0;z<2 && z<childitem?.CategoryBrands?.Count();z++)
+                                                        {
+                                                            Brand branditem = null ; 
+                                                            
+                                                               if(!brandss.Contains(childitem?.CategoryBrands[z].Brand)){
+                                                             branditem = childitem?.CategoryBrands[z].Brand;
+                                                                brandss.Add(branditem);
+                                                            }
+                                                            <div class="menulicontainer">
                                                 <a class="menuliparent_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/ickiler/">
-                                                    <span>İçkilər</span>
+                                                   href="https://kontakt.az/telefonlar/mobil-telefonlar/apple-mobil-telefonlar/">
+                                                    <span>@branditem?.Name</span>
                                                     <svg version="1.1" id="Capa_1"
                                                          xmlns="http://www.w3.org/2000/svg"
                                                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -7809,242 +6487,42 @@
                                                                 </g>
                                                             </svg>
                                                 </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/qehve/">
-                                                    Qəhvələr
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/metbexucun-kicik-meiset-texnikasi/siroplar/">
-                                                    Siroplar
-                                                </a>
+                                                                @for (var s = 0; s < 5 && s < branditem?.Products.Where(x => x.IsVisibleinMenu && x.CategoryId == childitem.Id).Count(); s++)
+                                                                {
+                                                                    var productss = branditem?.Products.Where(x => x.IsVisibleinMenu && x.CategoryId == childitem.Id).ToList();
+                                                                    var productitem = productss[s];
+
+                                                                    <a class="subsub_a"
+                                                                       href="/product/detail/@productitem.Id">
+                                                                        @productitem.Name
+                                                                    </a>
+                                                                }
                                             </div>
-                                        </li>
-                                        <li>
-                                            <div class="menulicontainer">
-                                                <a class="menuliparent_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikas/">
-                                                    <span>Yemək hazırlanması</span>
-                                                    <svg version="1.1" id="Capa_1"
-                                                         xmlns="http://www.w3.org/2000/svg"
-                                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                                                         y="0px" viewBox="0 0 240.823 240.823"
-                                                         style="enable-background:new 0 0 240.823 240.823;"
-                                                         xml:space="preserve">
-                                                    <g>
-                                                    <path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
-                                                l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
-                                                C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
-                                                                </g>
-                                                            </svg>
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/etceken/">
-                                                    Ətçəkənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/blender/">
-                                                    Blenderlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/mikrodalgali-soba/">
-                                                    Mikrodalğalı sobalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/multibisirici/">
-                                                    Multibişiricilər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/mikser/">
-                                                    Mikserlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/corek-bisiren/">
-                                                    Çörək bişirənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/kombayn/">
-                                                    Kombaynlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/mini-soba/">
-                                                    Mini sobalar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/toster/">
-                                                    Tosterlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/izqara/">
-                                                    İzqaralar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/fritoz/">
-                                                    Fritozlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/buxarli-bisirici/">
-                                                    Buxarlı bişiricilər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/meyve_qurudan/">
-                                                    Meyvə qurudanlar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/dograyici/">
-                                                    Doğrayıcılar
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/dilimleyici/">
-                                                    Dilimləyicilər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/dondurmaduzelden/">
-                                                    Dondurma düzəldənlər
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/meiset-texnikasi/metbexucun-kicik-meiset-texnikasi/metbex_terezisi/">
-                                                    Mətbəx tərəziləri
-                                                </a>
-                                                <a class="subsub_a"
-                                                   href="https://kontakt.az/kicik-meiset-texnikasi/induksiyaliplite/">
-                                                    İnduksiyalı plitələr
-                                                </a>
-                                            </div>
+                                         
+                                                        }  
+                                            }
+                                   
                                         </li>
                                         <li class="datt3">
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001634&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                            <a href="https://kontakt.az/kampaniyani-izle/?id=su0001635&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/08/meiset_az_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/meiset_az_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
-                                            <a href="https://kontakt.az/lg-qurashdirilan-texnika">
-                                                <img class="menurightbanner menucustombnnr lazy loaded"
-                                                     src="https://kontakt.az/wp-content/uploads/2023/07/AZ-Billboards-03_png.webp"
-                                                     data-src="https://kontakt.az/wp-content/uploads/2023/07/AZ-Billboards-03_png.webp"
-                                                     data-was-processed="true">
-                                            </a>
+
+                                              @foreach(var disccate in Model.DiscountsCategories.Where(y=>y.CategoryId==item.Id)){
+                                                   @foreach(var img in disccate?.Images){
+                                                                                                                   <a href="https://kontakt.az/kampaniyani-izle/?id=su0001628&amp;source=kontakt.az&amp;Medium=az_menu-banner_banner&amp;campaign=kampaniyani_izle&amp;term=click-tracking_all_az_01.08.2023&amp;content=kampaniyani_izle_page">
+                                                                <img class="menurightbanner menucustombnnr lazy loaded"
+                                                                     src="~/Assets/assets/images/DiscountCategory/@img.Image"
+                                                                     data-src="https://kontakt.az/wp-content/uploads/2023/08/50_az_png.webp"
+                                                                     data-was-processed="true">
+                                                            </a>
+                                                   }
+                                              }
+                                            
+                                    
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-                        <li class="menuli smartfonmenuli">
-                            <a href="">
-                                <div class="menuproducticon">
-                                    <img class="lazy"
-                                         src="https://kontakt.az/wp-content/uploads/2022/10/Telefon.png">
-                                </div>
-                                <span class="menuproducttitle">Smartfonlar </span>
-                            </a>
-                        </li>
-
-
+                        }
                     </ul>
                 </div>
             </div>
@@ -8054,23 +6532,25 @@
                         <div class="discountsidebartopslidertop">
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="caritem1 carousel-item active">
+                                    @for(var i=0;i<10;i++){
+                                    <div class="caritem1 carousel-item ">
                                         <a href="">
                                             <img class="d-block w-100"
-                                                 src="https://kontakt.az/wp-content/uploads/2023/05/700x380-web-01_png.webp"
+                                                     src="https://kontakt.az/media/dinarys/banner/images/sehrtv_1.png"
                                                  alt="First slide">
                                         </a>
                                     </div>
-                                    <div class="caritem2 carousel-item ">
-                                        <img class="d-block w-100"
-                                             src="https://kontakt.az/wp-content/uploads/2023/06/web-banner-700x380-4_png.webp"
-                                             alt="Second slide">
+                                      <div class="caritem1 carousel-item ">
+                                        <a href="">
+                                            <img class="d-block w-100"
+                                                         src="https://kontakt.az/media/dinarys/banner/images/iphone15_1.png"
+                                                 alt="First slide">
+                                        </a>
                                     </div>
-                                    <div class="caritem3 carousel-item">
-                                        <img class="d-block w-100"
-                                             src="https://kontakt.az/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-03-at-15.26.02.jpeg"
-                                             alt="Third slide">
-                                    </div>
+                                    }
+                           
+
+                            
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
                                    data-slide="prev">
@@ -8184,7 +6664,7 @@
                                                 </span>
                                             </p>
                                             <div class="cart-button">
-                                                <button class="btn-add-to-cart" data-id="1306156">
+                                                <button class="btn-add-to-cart" data-id="">
                                                     Səbətə at
                                                 </button>
                                             </div>
@@ -9251,7 +7731,7 @@
                                         </span><br><span class="nprice"
                                                          id="price-1062312">3699.99 <small class="azn_span">M</small></span>
                                     </p>
-                                    <a class="btn-add-to-cart sgm" asp-controller="product" asp-action="addbasket" asp-route-id="@item.Id">
+                                    <a class="btn-add-to-cart sgm"  data-id="@item.Id">
                                         Səbətə
                                         at
                                     </a>
@@ -9276,7 +7756,7 @@
                                                  data-src="https://kontakt.az/wp-content/themes/kontakt8/ktn-assets/assets/comparisonnew.png">
                                         </div>
                                     </button>
-                                    <button class="btn-add-to-cart textbasket sgm"  asp-controller="product" asp-action="addbasket" asp-route-id="@item.Id">
+                                    <button class="btn-add-to-cart textbasket sgm"   data-id="@item.Id">
                                         <span>Səbətə at</span>
                                     </button>
                                 </div>
@@ -14095,6 +12575,31 @@
 </section>
 
      </main>
+
+     <script>
+    var addbasketbtns = document.querySelectorAll(".btn-add-to-cart");
+
+    addbasketbtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            debugger
+            var id = $(this).attr("data-id");
+
+            $.ajax({
+                url: "/product/AddBasket/" + id,
+                type: "POST",
+                data: { id: id, },
+                success: function (response) {
+                    if (response == "ok") {
+
+
+                    }
+                }
+            });
+        });
+    })
+     </script>
+
+   
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>

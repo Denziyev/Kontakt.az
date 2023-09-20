@@ -1,6 +1,18 @@
 ﻿@using Kontakt.Core.Models;
 @using Kontakt.Service.Responses;
 @model MvcResponse<List<DiscountofProduct>>
+@if (!string.IsNullOrWhiteSpace((string)TempData["discountofproduct_contoller_response_delete"]))
+{
+    <div style="display:none" id="message">@TempData["discountofproduct_contoller_response_delete"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["discountofproduct_contoller_response_create"]))
+{
+    <div style="display:none" id="message">@TempData["discountofproduct_contoller_response_create"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["discountofproduct_contoller_response_update"]))
+{
+    <div style="display:none" id="message">@TempData["discountofproduct_contoller_response_update"]</div>
+}
 
 @{
     var temporaryid=0; 
@@ -38,3 +50,13 @@
         <a asp-controller="Discount" asp-action="MovetoDiscountCategory" asp-route-id="@temporaryid" style=" margin-top:20px; display: block; text-decoration: none; color:red; width: 100%; height: 100%"> <div style="width:100%; " class="btn btn-outline-secondary">Back to DiscountCategory Page </div></a>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

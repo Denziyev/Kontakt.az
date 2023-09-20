@@ -1,4 +1,5 @@
-﻿using Kontakt.App.Models;
+﻿using Kontakt.App.Context;
+using Kontakt.App.Models;
 using Kontakt.Core.Models;
 using Kontakt.Service.Extentions;
 using Kontakt.Service.Helpers;
@@ -19,8 +20,9 @@ namespace Kontakt.App.Areas.Admin.Controllers
         private readonly IDiscountofProductService _discountService;
         private readonly ITagService _tagService;
         private readonly ICreditService _creditService;
+        private readonly KontaktDbContext _dbContext;
 
-        public ProductController(IProductService productService, ICategoryService categoryService, IBrandService brandService, IWebHostEnvironment env, IDiscountofProductService discountService, ITagService tagService, ICreditService creditService)
+        public ProductController(IProductService productService, ICategoryService categoryService, IBrandService brandService, IWebHostEnvironment env, IDiscountofProductService discountService, ITagService tagService, ICreditService creditService, KontaktDbContext dbContext)
         {
             _productService = productService;
             _categoryService = categoryService;
@@ -29,6 +31,7 @@ namespace Kontakt.App.Areas.Admin.Controllers
             _discountService = discountService;
             _tagService = tagService;
             _creditService = creditService;
+            _dbContext = dbContext;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -130,9 +133,25 @@ namespace Kontakt.App.Areas.Admin.Controllers
                 };
                 product.ProductCredits.Add(credit);
             }
-
+            product.Brand = (await _brandService.GetAsync(product.BrandId)).Data;
+            product.Category=(await _categoryService.GetAsync(product.CategoryId)).Data;
+            CategoryBrand categoryBrand = new CategoryBrand
+            {
+                BrandId = product.BrandId,
+                Brand = product.Brand,
+                Category = product.Category,
+                CategoryId = product.CategoryId,
+                CreatedAt = DateTime.Now
+            };
+             await _dbContext.AddAsync(categoryBrand);
             await _productService.CreateAsync(product);
             return RedirectToAction(nameof(Index));
+        }
+        [HttpGet]
+        public async Task<IActionResult> Visible(int id)
+        {
+            await _productService.VisibleAsync(id);
+            return Redirect(Request.Headers["Referer"].ToString());
         }
     }
 }

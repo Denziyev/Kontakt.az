@@ -1,7 +1,9 @@
-﻿using Kontakt.App.Models;
+﻿using Azure;
+using Kontakt.App.Models;
 using Kontakt.Core.Models;
 using Kontakt.Service.Extentions;
 using Kontakt.Service.Helpers;
+using Kontakt.Service.Responses;
 using Kontakt.Service.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -89,8 +91,87 @@ namespace Kontakt.App.Areas.Admin.Controllers
                  });
             }
             
-           await _discountCategoryService.CreateAsync(discountCategory);
+            MvcResponse<DiscountCategory> response= await _discountCategoryService.CreateAsync(discountCategory);
+            TempData["discountcategory_contoller_response_create"] = response.Message;
             return RedirectToAction(nameof(Index),discountCategory.Discount);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            ViewBag.Temp = TempData["TempId"];
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            MvcResponse<DiscountCategory> resp = await _discountCategoryService.GetAsync(id);
+            DiscountCategory? category = resp.Data;
+            if (category == null)
+            {
+                return NotFound();
+            }
+            return View(category);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(DiscountCategory postcategory, int id)
+        {
+            ViewBag.Categories = await _categoryService.GetAllAsync();
+            MvcResponse<DiscountCategory> resp = await _discountCategoryService.GetAsync(id);
+            DiscountCategory? category = resp.Data;
+
+            if (!ModelState.IsValid)
+            {
+                return View(postcategory);
+            }
+            var i = 0;
+            foreach(var item in postcategory.FormFiles)
+            {
+                if (item == null)
+                {
+                    ModelState.AddModelError("FormFile", "File must be choosen");
+                    return View(postcategory);
+                }
+
+                if (!Helper.IsImage(item))
+                {
+                    ModelState.AddModelError("FormFile", "File type must be image");
+                    return View(postcategory);
+                }
+
+                if (!Helper.IsSizeOk(item, 1))
+                {
+                    ModelState.AddModelError("FormFile", "File size must be less than 1mb");
+                    return View(postcategory);
+                }
+
+      
+                category.Images.Add(new DiscountImage { Image = item?.CreateImage(_env.WebRootPath, "Assets/assets/images/DiscountCategory") });
+                i++;
+            }
+
+            MvcResponse<DiscountCategory> response = await _discountCategoryService.UpdateAsync(id, postcategory);
+            TempData["discountcategory_contoller_response_update"] = response.Message;
+
+            return RedirectToAction(nameof(Index),response.Data.Discount);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            MvcResponse<DiscountCategory> resp = await _discountCategoryService.GetAsync(id);
+            DiscountCategory? category = resp.Data;
+
+            if (category == null)
+            {
+                return NotFound();
+            }
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            MvcResponse<DiscountCategory> response = await _discountCategoryService.DeleteAsync(id);
+            TempData["discountcategory_contoller_response_delete"] = response.Message;
+            return RedirectToAction("Index", "DiscountCategory",category.Discount);
         }
 
         public async Task<IActionResult> MovetoDiscountofProduct(int id)

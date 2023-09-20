@@ -1,5 +1,10 @@
 ﻿@using Kontakt.Core.Models;
 @model DiscountofProduct
+@if (!string.IsNullOrWhiteSpace((string)TempData["discountofproduct_contoller_response"]))
+{
+    <div style="display:none" id="message">@TempData["discountofproduct_contoller_response"]</div>
+}
+
 <div class="container">
     <form method="post" enctype="multipart/form-data">
         <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
@@ -17,3 +22,13 @@
         <button type="submit">Create</button>
     </form>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

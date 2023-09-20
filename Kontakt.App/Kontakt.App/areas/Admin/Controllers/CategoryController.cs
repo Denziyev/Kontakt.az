@@ -1,5 +1,9 @@
-﻿using Kontakt.App.Context;
+﻿using Azure;
+using Kontakt.App.Context;
 using Kontakt.App.Models;
+using Kontakt.Core.Models;
+using Kontakt.Service.Extentions;
+using Kontakt.Service.Helpers;
 using Kontakt.Service.Responses;
 using Kontakt.Service.Services.Implementations;
 using Kontakt.Service.Services.Interfaces;
@@ -12,10 +16,12 @@ namespace Kontakt.App.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;
+        private readonly IWebHostEnvironment _env;
 
-        public CategoryController( ICategoryService categoryService)
+        public CategoryController(ICategoryService categoryService, IWebHostEnvironment env)
         {
             _categoryService = categoryService;
+            _env = env;
         }
 
         public async Task<IActionResult> Index()
@@ -46,10 +52,29 @@ namespace Kontakt.App.Areas.Admin.Controllers
             {
                 return View();
             }
+            if (category.formFile == null)
+            {
+                ModelState.AddModelError("FormFile", "The filed image is required");
+                return View(category);
+            }
+
+            if (!Helper.IsImage(category.formFile))
+            {
+                ModelState.AddModelError("FormFile", "The file type must be image");
+                return View(category);
+            }
+            if (!Helper.IsSizeOk(category.formFile, 1))
+            {
+                ModelState.AddModelError("FormFile", "The file size can not than more 1 mb");
+                return View(category);
+            }
+
+            category.Image = category.formFile.CreateImage(_env.WebRootPath, "Assets/assets/images/Categories/");
             category.CreatedAt = DateTime.Now;
             category.Subcategories = new List<Category>();
             category.ParentCategory?.Subcategories.Add(category);
-            await _categoryService.CreateAsync(category);
+            MvcResponse<Category> response= await _categoryService.CreateAsync(category);
+            TempData["category_contoller_response"] = response.Message;
             return RedirectToAction(nameof(Index));
         }
 
@@ -77,7 +102,25 @@ namespace Kontakt.App.Areas.Admin.Controllers
             {
                 return View();
             }
-            await _categoryService.UpdateAsync(id, postcategory);
+            if (postcategory.formFile == null)
+            {
+                ModelState.AddModelError("FormFile", "The filed image is required");
+                return View(postcategory);
+            }
+
+            if (!Helper.IsImage(postcategory.formFile))
+            {
+                ModelState.AddModelError("FormFile", "The file type must be image");
+                return View(postcategory);
+            }
+            if (!Helper.IsSizeOk(postcategory.formFile, 1))
+            {
+                ModelState.AddModelError("FormFile", "The file size can not than more 1 mb");
+                return View(postcategory);
+            }
+
+            MvcResponse<Category> response = await _categoryService.UpdateAsync(id, postcategory);
+            TempData["category_contoller_response_update"] = response.Message;
             return RedirectToAction(nameof(Index));
         }
 
@@ -96,7 +139,8 @@ namespace Kontakt.App.Areas.Admin.Controllers
                 return View();
             }
 
-            await _categoryService.DeleteAsync(id);
+           MvcResponse<Category> response= await _categoryService.DeleteAsync(id);
+            TempData["category_contoller_response_delete"] = response.Message;
             return RedirectToAction("Index", "Category");
         }
     }

@@ -9,7 +9,9 @@
                 <th scope="col">Name</th>
                 <th scope="col">Price</th>
                 <th scope="col">Category</th>
+                <th scope="col">Brand</th>
                 <th scope="col">StockNumber</th>
+                <th scope="col">IsVisible in Menu</th>
                 <th scope="col">MainImage</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
@@ -19,16 +21,25 @@
             @foreach (var item in Model.Data)
             {
 
-                <tr>
-                    <th scope="row">@item.Id</th>
-                    <th>@item.Name</th>
+                <tr >
+                    <th >@item.Id</th>
+                    <th >@item.Name</th>
                     <th>@item.Price</th>
                     <th>@item.Category.Name </th>
-                    <th>@item.StockNumber</th>
+                    <th>@item.Brand.Name </th>
+                    <th style="text-align:center;">@item.StockNumber</th>
+                    @if (item.IsVisibleinMenu)
+                    {
+                        <th style="text-align:center;"><a asp-controller="product" asp-action="visible" asp-route-id="@item.Id"><i style="color:green;" class="fa-solid fa-circle-check"></i></a></th>
+                    }
+                    else
+                    {
+                        <th style="text-align:center;"><a asp-controller="product" asp-action="visible" asp-route-id="@item.Id"><i style="color:darkgray;" class="fa-solid fa-circle-check"></i></a></th>
+                    }
                     <th> <img style="width:70px;height:70px; object-fit:cover" src="~/Assets/assets/images/Products/@item.ProductImages.FirstOrDefault().Image">  </th>
 
-                    <td><a asp-controller="product" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
-                    <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="product" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
+                    <td style="text-align:center;"><a asp-controller="product" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
+                    <td style="text-align:center;"><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="product" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
                 </tr>
             }
 

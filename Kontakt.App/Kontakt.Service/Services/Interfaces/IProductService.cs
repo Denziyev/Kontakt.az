@@ -1,4 +1,5 @@
 ﻿using Kontakt.App.Models;
+using Kontakt.Core.Models;
 using Kontakt.Service.Responses;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace Kontakt.Service.Services.Interfaces
         public Task<MvcResponse<Product>> GetAsync(int? id);
         public Task<MvcResponse<List<Product>>> GetAllAsync();
         public Task<MvcResponse<Product>> DeleteAsync(int id);
+        public Task<MvcResponse<Product>> VisibleAsync(int id);
     }
 }

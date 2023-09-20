@@ -1,8 +1,12 @@
 ﻿@using Kontakt.App.Models;
 @model Category
+@if (!string.IsNullOrWhiteSpace((string)TempData["category_contoller_response"]))
+{
+    <div style="display:none" id="message">@TempData["category_contoller_response"]</div>
+}
 <div class="container">
     <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" asp-for="@Model.Name">
@@ -19,7 +23,24 @@
             </select>
             <span class="alert-danger" asp-validation-for="ParentCategoryId"></span>
         </div>
+
+        <div class="form-group">
+            <label for="formFile"></label>
+            <input name="formFile"  type="file" class="form-control" asp-for="formFile">
+            <span class="text text-danger" asp-validation-for="formFile"></span>
+        </div>
         @Html.AntiForgeryToken()
         <button type="submit">Create</button>
     </form>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

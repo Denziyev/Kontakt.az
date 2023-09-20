@@ -33,6 +33,9 @@ namespace Kontakt.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -86,6 +89,9 @@ namespace Kontakt.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsExist")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsVisibleinMenu")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -301,6 +307,38 @@ namespace Kontakt.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
+                });
+
+            modelBuilder.Entity("Kontakt.Core.Models.CategoryBrand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BrandId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("categoryBrands");
                 });
 
             modelBuilder.Entity("Kontakt.Core.Models.Comment", b =>
@@ -949,6 +987,25 @@ namespace Kontakt.Data.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Kontakt.Core.Models.CategoryBrand", b =>
+                {
+                    b.HasOne("Kontakt.Core.Models.Brand", "Brand")
+                        .WithMany("CategoryBrands")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Kontakt.App.Models.Category", "Category")
+                        .WithMany("CategoryBrands")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brand");
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Kontakt.Core.Models.Comment", b =>
                 {
                     b.HasOne("Kontakt.App.Models.Product", "product")
@@ -1133,6 +1190,8 @@ namespace Kontakt.Data.Migrations
 
             modelBuilder.Entity("Kontakt.App.Models.Category", b =>
                 {
+                    b.Navigation("CategoryBrands");
+
                     b.Navigation("DiscountCategory");
 
                     b.Navigation("Products");
@@ -1158,6 +1217,8 @@ namespace Kontakt.Data.Migrations
 
             modelBuilder.Entity("Kontakt.Core.Models.Brand", b =>
                 {
+                    b.Navigation("CategoryBrands");
+
                     b.Navigation("Products");
                 });
 

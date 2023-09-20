@@ -1,5 +1,137 @@
 
 
+
+const submit = document.querySelector(".search");
+const searchInput = document.querySelector(".title-search-input")
+const containertag = document.querySelector(".searchbytag")
+const containerproduct = document.querySelector(".searchbyproduct")
+const containercategory = document.querySelector(".searchbycategory")
+const searchresult = document.querySelector(".searchResult")
+
+searchInput.addEventListener("input", (e) => {
+    e.preventDefault();
+
+    if(searchInput.value.trim()!=""){
+    searchresult.style.display="block";
+
+    
+        let hreff = `/product/searchbytag?search=${searchInput.value}&take=${4}`;
+    fetch(hreff)
+        .then(x => x.json())
+        .then(x => {
+      
+            containertag.innerHTML = ` <dt role="listbox" class="autocomplete-list-title title-term">Axtarış şərtləri</dt>`
+         
+            x.forEach(item => {
+             
+                let view = `
+                            
+                                           <dd class="" id="qs-option-0" role="option">
+                                            <span class="qs-option-name">${item.name}</span>
+                                                <span aria-hidden="true" class="amount">${item.productTags?.length}</span>
+                                        </dd>
+                    `;
+                containertag.innerHTML += view;
+            })
+
+
+        });
+
+
+
+        let href = `/product/search?search=${searchInput.value}&take=${4}`;
+    fetch(href)
+        .then(x => x.json())
+        .then(x => {
+         
+            containerproduct.innerHTML = ` <dt role="listbox" class="autocomplete-list-title title-product">Products</dt>`
+           
+            x.forEach(item => {
+           
+                let view = `
+                    <a
+                                        class="searchResultItem" id="qs-option-5" role="option"
+                                        href="/product/detail/${item.id}">
+                                        <div class="searchResultItem__img">
+                                            <img width="50px" height="50px"
+                                                    src="/Assets/assets/images/Products/${item.productImages[0].image}"
+                                                alt="iPhone 11 128 GB Black">
+                                        </div>
+                                        <div class="searchResultItem__title">${item.name}</div>
+                                        <div class="searchResultItem__price searchResultItem__price--fd">
+                                                <em>${item.price}&nbsp;₼</em><span>  ${item.price - ((item.discountofProduct.percent * item.price) / 100 )}&nbsp;₼</span>
+                                        </div>
+                                    </a>
+            `;
+                containerproduct.innerHTML += view;
+            })
+        });
+
+        let href2 = `/product/searchbycategory?search=${searchInput.value}&take=${3}`;
+    fetch(href2)
+        .then(x => x.json())
+        .then(x => {
+
+            containercategory.innerHTML = `                                                                 <dt role="listbox" class="autocomplete-list-title title-product">Categories</dt>`
+
+            x.forEach(item => {
+              
+
+  
+                var maps = new Array();
+                maps.push(item.name)
+
+  
+
+
+if (item.parentCategory != undefined)
+{
+  
+    var currentItem = item; // Create a copy of the current item
+    while (currentItem?.parentCategory != undefined)
+    {
+        currentItem = currentItem.parentCategory; // Move to the parent category
+ 
+            maps.push(currentItem.name);
+       
+    }
+
+}
+                let view = `
+
+
+                          <a
+                                        class="" id="qs-option-10" role="option"
+                                        href="/category/index/${item.id}">         
+                `;
+
+                for (var i = maps.length-1; i >= 0; i--) {
+                    if (i != 0) {
+                       view+=` <span>${maps[i]} > </span>`
+                    }
+                    else {
+                        view += ` <span style="opacity:0.8"><strong>${maps[i]} </strong> </span>`
+                    }
+                }
+
+                view+=`</a>`;
+
+
+                containercategory.innerHTML += view;
+            })
+        })
+
+}
+else{
+containercategory.innerHTML="";
+containerproduct.innerHTML="";
+containertag.innerHTML="";
+searchresult.style.display="none";
+
+}
+
+})
+
 // const Modal=document.querySelector(".monthly-payment-modal")
 const ModalBtn=document.querySelector(".info ul .ModalBtn")
 const ModalContainer=document.querySelector(".Modal-container")

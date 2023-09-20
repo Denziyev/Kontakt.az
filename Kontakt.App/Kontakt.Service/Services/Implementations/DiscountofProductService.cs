@@ -1,4 +1,5 @@
-﻿using Kontakt.Core.Models;
+﻿using Kontakt.App.Models;
+using Kontakt.Core.Models;
 using Kontakt.Core.Repositories;
 using Kontakt.Service.Responses;
 using Kontakt.Service.Services.Interfaces;
@@ -27,9 +28,18 @@ namespace Kontakt.Service.Services.Implementations
             return new MvcResponse<DiscountofProduct> { IsSuccess = true, Message = $"DiscountofProduct(id:{discountofproduct.Id}) is created successfully", Data = discountofproduct };
         }
 
-        public Task<MvcResponse<DiscountofProduct>> DeleteAsync(int id)
+        public async Task<MvcResponse<DiscountofProduct>> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            DiscountofProduct? category = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id);
+            if (category == null)
+            {
+                return new MvcResponse<DiscountofProduct> { IsSuccess = false, Message = "Bu endirim növü mövcud deyil" };
+            }
+
+            category.IsDeleted = true;
+            await _repository.Update(category);
+            await _repository.SaveAsync();
+            return new MvcResponse<DiscountofProduct> { IsSuccess = true, Message = $"{category.Percent} faizli endirim uğurla silindi",Data=category };
         }
 
         public async Task<MvcResponse<List<DiscountofProduct>>> GetAllAsync(int id)
@@ -61,9 +71,19 @@ namespace Kontakt.Service.Services.Implementations
             return new MvcResponse<DiscountofProduct> { IsSuccess = true, Data = discount };
         }
 
-        public Task<MvcResponse<DiscountofProduct>> UpdateAsync(int id, DiscountofProduct discountofproduct)
+        public async Task<MvcResponse<DiscountofProduct>> UpdateAsync(int id, DiscountofProduct discountofproduct)
         {
-            throw new NotImplementedException();
+            DiscountofProduct? discount = await _repository.GetByIdAsync(x => !x.IsDeleted && x.Id == id, "DiscountCategory", "Products");
+            if (discount == null)
+            {
+                return new MvcResponse<DiscountofProduct> { IsSuccess = false, Message = "This DiscountofProduct doesnt exist" };
+            }
+
+            discount.Percent = discountofproduct.Percent;
+            await _repository.Update(discount);
+            await _repository.SaveAsync();
+            return new MvcResponse<DiscountofProduct> { IsSuccess = true, Message = $"{discount.Percent} faizli endirim uğurla yeniləndi", Data = discount };
+
         }
     }
 }

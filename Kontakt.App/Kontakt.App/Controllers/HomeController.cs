@@ -15,17 +15,26 @@ namespace Kontakt.App.Controllers
     {
  
         private readonly IProductService _productService;
+        private readonly ICategoryService _categoryService;
+        private readonly IDiscountService _discountService;
+        private readonly IDiscountCategoryService _discountCategoryService;
 
-        public HomeController(IProductService productService)
+        public HomeController(IProductService productService, ICategoryService categoryService, IDiscountService discountService, IDiscountCategoryService discountCategoryService)
         {
             _productService = productService;
+            _categoryService = categoryService;
+            _discountService = discountService;
+            _discountCategoryService = discountCategoryService;
         }
 
         public async Task<IActionResult> Index()
         {
             HomeViewModel model = new HomeViewModel
             {
-                Products = (await _productService.GetAllAsync()).Data
+                Products = (await _productService.GetAllAsync()).Data,
+                Categories = (await _categoryService.GetAllAsync()).Data,
+                Discounts=(await _discountService.GetAllAsync()).Data,
+                DiscountsCategories=(await _discountCategoryService.GetAllAsync()).Data
             };
             return View(model);
         }

@@ -12,8 +12,8 @@ namespace Kontakt.App.Models
         public int CategoryId { get; set; }
         public int ViewCount { get; set; }
         public int SellCount { get; set; }
-   
         public double BuyPrice { get; set; }
+        public bool IsVisibleinMenu { get; set; }
         public double DiscountinCash { get; set; }
         //public List<string> SpecialTags { get; set; }
         public Brand? Brand { get; set; }

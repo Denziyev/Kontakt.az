@@ -1,0 +1,50 @@
+﻿@using Kontakt.Core.Models;
+@model DiscountCategory
+@if (!string.IsNullOrWhiteSpace((string)TempData["discountcategory_contoller_response_update"]))
+{
+    <div style="display:none" id="message">@TempData["discountcategory_contoller_response_update"]</div>
+}
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group">
+            <input value="@ViewBag.Temp" type="hidden" class="form-control" asp-for="@Model.DiscountId">
+        </div>
+
+        <div class="form-group">
+            <select asp-for="CategoryId" class="form-select" aria-label="Disabled select example">
+                <option>Choose Category</option>
+                @foreach (var item in ViewBag.Categories.Data)
+                {
+
+                    <option value="@item.Id">@item.Name</option>
+
+                }
+            </select>
+            <span class="text text-danger" asp-validation-for="CategoryId"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="FormFiles"></label>
+            <input multiple accept="image/*" type="file" class="form-control" asp-for="FormFiles">
+            <span class="text text-danger" asp-validation-for="FormFiles"></span>
+        </div>
+        @foreach(var item in Model?.Images)
+        {
+            <img style="width:90px;height:90px; object-fit:cover" src="~/Assets/assets/images/DiscountCategory/@item?.Image">
+        }
+        @Html.AntiForgeryToken()
+        <button type="submit">Update</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

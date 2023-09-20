@@ -242,7 +242,12 @@ namespace Kontakt.Service.Services.Implementations
         public async Task Decrease(int id)
         {
             BasketItem? basketitem = await _context.BasketItems.Where(x => x.Id == id).FirstOrDefaultAsync();
-            
+
+            if (basketitem.ProductCount == 1)
+            {
+                basketitem.IsDeleted = true;
+            }
+
             if (basketitem.ProductCount > 0)
             {
                 basketitem.ProductCount = basketitem.ProductCount - 1;

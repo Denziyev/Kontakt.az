@@ -14,6 +14,7 @@ namespace Kontakt.Core.Models
         public string Name { get; set; }    
         public string? Image { get; set; } 
         public List<Product>? Products { get; set; } 
+        public List<CategoryBrand>? CategoryBrands { get; set; }
         [NotMapped] 
         public IFormFile? formFile { get; set; } 
     }

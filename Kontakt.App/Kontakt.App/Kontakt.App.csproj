@@ -11,6 +11,7 @@
     <Folder Include="wwwroot\Assets\assets\images\Brands\" />
     <Folder Include="wwwroot\Assets\assets\images\DiscountCategory\" />
     <Folder Include="wwwroot\Assets\assets\images\footer\" />
+    <Folder Include="wwwroot\Assets\assets\images\Categories\" />
     <Folder Include="wwwroot\Assets\assets\images\Products\" />
   </ItemGroup>
 

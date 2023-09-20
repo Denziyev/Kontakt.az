@@ -1,6 +1,18 @@
 ﻿@using Kontakt.App.Models;
 @using Kontakt.Service.Responses;
 @model MvcResponse<List<Category>>
+@if (!string.IsNullOrWhiteSpace((string)TempData["category_contoller_response"]))
+{
+    <div style="display:none" id="message">@TempData["category_contoller_response"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["category_contoller_response_delete"]))
+{
+    <div style="display:none" id="message">@TempData["category_contoller_response_delete"]</div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["category_contoller_response_update"]))
+{
+    <div style="display:none" id="message">@TempData["category_contoller_response_update"]</div>
+}
 <div class="container">
     <table class="table table-sm">
         <thead>
@@ -10,6 +22,9 @@
                 <th scope="col">ParentName</th>
                 <th scope="col">Map</th>
                 <th scope="col">SubCateCount</th>
+                
+                <th scope="col">Image</th>
+
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -70,8 +85,10 @@
 
 
 
-                    <th>@item.Subcategories.Count</th>
+                    @*<th>@item.Subcategories.Count</th>*@
+                    <th>@item.Products.Count</th>
 
+                    <th> <img style="width:70px;height:70px; object-fit:cover" src="~/Assets/assets/images/Categories/@item.Image">  </th>
 
                     <td><a asp-controller="category" asp-action="update" asp-route-id="@item.Id"><i class="fas fa-edit text text-primary"></i></a></td>
                     <td><a onclick="if (!confirm('Are you sure to delete?')){return false;}" asp-controller="category" asp-action="delete" asp-route-id="@item.Id" class="delete-item"><i class="fas fa-trash text text-danger"></i></a></td>
@@ -85,3 +102,14 @@
     </div>
 
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const Message = document.getElementById("message");
+    if (Message != undefined) {
+        const message = Message.innerHTML;
+        if (message != "") {
+            Swal.fire(`${message}`)
+        }
+
+    }</script>

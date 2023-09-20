@@ -726,12 +726,21 @@
                                 </div>
                             </div>
                             <div class="footer">
-                                <h4 id="checkout_subtotal_price"> Cəmi: 1839.97 <small class="azn_span">M</small></h4>
-                                <h4 id="checkout_subtotal_shipping" class="catdirma" style="display:none">
-                                    Çatdırılma: <span class="catdirma_haqqi"></span> <small class="azn_span">M</small>
+                        @{
+                            double totallpricee = 0.00;
+                            double kuryer = 0.00;
+                            foreach (var item in Model.basketItems)
+                            {
+                                totallpricee += ((item.Product.Price - ((item.Product.DiscountofProduct.Percent * item.Product.Price) / 100)) * item.ProductCount);
+                            }
+                        }
+                        <h4 id="checkout_subtotal_price"> Cəmi: @totallpricee.ToString("F")  <small class="azn_span">M</small></h4>
+                                <h4 id="checkout_subtotal_shipping" class="catdirma">
+                            Çatdırılma:<span class="catdirma_haqqi"> @kuryer.ToString("F") </span> <small class="azn_span">M</small>
                                 </h4>
                                 <h4 id="checkout_total_price"> Yekun: <span class="yekun"
-                                        data-initial="1839.97">1839.97</span> <small class="azn_span">M</small></h4>
+                                         data-initial="1839.97">@totallpricee.ToString("F")</span> <small class="azn_span">M</small>
+                        </h4>
                             </div>
                         </div>
                         <button type="button" onclick="jQuery('.btn-add-order').click()"

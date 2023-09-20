@@ -7499,34 +7499,29 @@
                         <div class="discountsidebartop">
                             <div class="discountsidebartopslider">
                                 <div class="discountsidebartopslidertop">
-                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                        <div class="carousel-inner">
-                                            <div class="caritem1 carousel-item active">
-                                                <a href=""> <img class="d-block w-100"
-                                                        src="https://kontakt.az/wp-content/uploads/2023/05/700x380-web-01_png.webp"
-                                                        alt="First slide"></a>
+                                    <div class="owl-carousel main-theme owl-theme">
+                                            <div class="caritem ">
+                                                <a href="">
+                                                    <img class="d-block w-100"
+                                                             src="https://kontakt.az/media/dinarys/banner/images/sehrtv_1.png"
+                                                         alt="First slide">
+                                                </a>
                                             </div>
-                                            <div class="caritem2 carousel-item ">
-                                                <img class="d-block w-100"
-                                                    src="https://kontakt.az/wp-content/uploads/2023/06/web-banner-700x380-4_png.webp"
-                                                    alt="Second slide">
+                                            <div class="caritem  ">
+                                                <a href="">
+                                                    <img class="d-block w-100"
+                                                             src="https://kontakt.az/media/dinarys/banner/images/sehrtv_1.png"
+                                                         alt="First slide">
+                                                </a>
                                             </div>
-                                            <div class="caritem3 carousel-item">
-                                                <img class="d-block w-100"
-                                                    src="https://kontakt.az/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-03-at-15.26.02.jpeg"
-                                                    alt="Third slide">
+                                            <div class="caritem ">
+                                                <a href="">
+                                                    <img class="d-block w-100"
+                                                             src="https://kontakt.az/media/dinarys/banner/images/sehrtv_1.png"
+                                                         alt="First slide">
+                                                </a>
                                             </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-                                        </a>
+                                                  
                                     </div>
                                 </div>
                                 <div class="discountsidebartopsliderbottom">
@@ -14429,6 +14424,33 @@ bottom:0px;padding:0px;z-index:10000001">
                 1140: {
 
                     items: 4
+                }
+            }
+        })
+
+        $('.main-theme').owlCarousel({
+            loop: false,
+            autoplay: true,
+            margin: 10,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: false,
+            nav: true,
+            dots: false,
+            responsive: {
+                100: {
+
+                    items: 1
+                },
+                450: {
+                    items: 1
+                },
+                768: {
+
+                    items: 1
+                },
+                1140: {
+
+                    items: 1
                 }
             }
         })

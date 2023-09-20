@@ -10,7 +10,7 @@ namespace Kontakt.App.areas.Admin.Controllersb
 {
     [Area("Admin")]
 
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     public class OrderController : Controller
     {
 
